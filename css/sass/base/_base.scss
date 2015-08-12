@@ -19,10 +19,10 @@ body {
 	@include fa-icon;
 }
 a{
-	text-decoration : none;
-	color : $skyblue1;
+	text-decoration : underline;
+	color : darken($grey2,30%);
 	&:hover{
-		color : $skyblue2;
+		color : $red;
 	}
 }
 // #wpadminbar{
