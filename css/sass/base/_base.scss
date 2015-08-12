@@ -13,13 +13,14 @@ body,html{
 }
 body {
 	font-family : $BYekan;
+	direction : rtl;
 }
 
 .fa {
 	@include fa-icon;
 }
 a{
-	text-decoration : underline;
+	text-decoration : none;
 	color : darken($grey2,30%);
 	&:hover{
 		color : $red;
@@ -35,7 +36,7 @@ input,textarea,button{
 	max-width : 100%;
 }
 h1,h2,h3,h4,h5,h6,a{
-	color : $black;
+	color : $black1;
 }
 ul, menu, dir {
     
