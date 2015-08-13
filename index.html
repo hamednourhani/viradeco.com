@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Index</title>
 	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/superslides.css">
 	<link rel="stylesheet" href="css/style.css">
 
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -29,7 +30,13 @@
 				<section class="layout">
 														
 					<ul id="menu-%d" class="nav main-nav cf">
-					<li id="menu-item-1663" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1663"><a href="http://#1">صفحه اصلی</a></li>
+					<li id="menu-item-1663" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1663">
+						
+						<a href="http://#1">
+							<i class="fa fa-home"></i>
+							<span>صفحه اصلی</span>
+						</a>
+					</li>
 					
 					<li id="menu-item-1665" class="mega-menu menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1665"><a href="http://#3">محصولات</a>
 						<ul class="sub-menu">
@@ -59,7 +66,7 @@
 					</ul>
 					
 					<div class="search-area">
-						<input type="search" id="s" placeholder="Search"/>
+						<input type="search" id="s" placeholder="جستجو" />
 					</div>
 				</section>
 				
@@ -76,7 +83,21 @@
 	
 	<main "site-main">
 		<div class="banner-wrapper">
-			<img src="images/02.jpg" />
+			<div id="slides">
+			    <div class="slides-container">
+			      <img src="images/slides/slide1.png" alt="Cinelli">
+			     
+			      <img src="images/slides/slide3.png" width="1024" height="683" alt="Cinelli">
+			      <img src="images/slides/slide4.png" width="1024" height="685" alt="Affinity">
+			      <img src="images/slides/slide5.png" width="1024" height="685" alt="Affinity">
+			    </div>
+
+			    <nav class="slides-navigation">
+			      <a href="#" class="next"><i class="fa fa-chevron-right"></i></a>
+			      <a href="#" class="prev"><i class="fa fa-chevron-left"></i></a>
+			    </nav>
+			  </div>
+				
 		</div>
 	</main>
 
@@ -96,13 +117,36 @@
 	<script src="js/lib/jquery-1.11.3.min.js"></script>
 	<script src="js/lib/jquery.scrollorama.js"></script>
 	<script src="js/lib/jquery-scrolltofixed-min.js"></script>
+	<script src="js/lib/jquery.superslides.min.js"></script>
 	<script src="//localhost:35729/livereload.js"></script>
+
+	<!-- scrolltofixed menu -->
+	
+	<script type="text/javascript" >
+		jQuery(document).ready(function($){
+			$('nav.main-menu').scrollToFixed();
+		});
+	</script>
 
 	<script type="text/javascript" >
 		jQuery(document).ready(function($){
-		    	 $('nav.main-menu').scrollToFixed();
+		    	 $('#slides').superslides({
+			         play: 2000
+			      });
+
+			      $('#slides').on('mouseenter', function() {
+			        $(this).superslides('stop');
+			        console.log('Stopped')
+			      });
+			      $('#slides').on('mouseleave', function() {
+			        $(this).superslides('start');
+			        console.log('Started')
+			      });
 		  });
 	</script>
+	<!-- slider script -->
+	
+
 	</div>
 </body><!-- body -->
 </html><!-- html -->

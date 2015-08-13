@@ -43,6 +43,7 @@
  
 nav.main-menu{
 	position : relative;
+	z-index : 99999 !important;
 	.search-area{
 		position : absolute;
 		left : 30px;
@@ -70,6 +71,7 @@ ul.main-nav{
 	@include single-transition(all , 0.2s , ease-in-out);
 	font-size : 90%;
 	margin-bottom : -30px;
+
 	 @include background-image(linear-gradient($white, $grey1));
 	 @include box-shadow($grey2 0px 2px 7px);
 	a{
