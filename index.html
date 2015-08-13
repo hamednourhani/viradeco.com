@@ -41,7 +41,7 @@
 					</li>
 					</ul>
 				</li>
-				<li id="menu-item-1664" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1664"><a href="http://#2">پروژه ها</a>
+				<li id="menu-item-1664" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1664 menu-item-has-children"><a href="http://#2">پروژه ها</a>
 					<ul class="sub-menu">
 						<li id="menu-item-1710" class="menu-item menu-item-type-post_type menu-item-object-notify menu-item-1710"><a href="#">پروژه ها</a></li>
 						<li id="menu-item-1711" class="menu-item menu-item-type-post_type menu-item-object-notify menu-item-has-children menu-item-1711"><a href="#">ارتباط با ما</a>
@@ -83,11 +83,19 @@
 
 	
 	<footer class="site-footer">
+	<span>All Right Reserved for ViraDeco</span>
 	</footer> <!-- footer -->
 	
 	
-	<script src="js/lib/jquery-1.11.3.min.js" defer asynce></script>
-	<script src="js/lib/jquery.sonar.min.js" defer asynce></script>
-	<script src="//localhost:35729/livereload.js" defer asynce></script>
+	<script src="js/lib/jquery-1.11.3.min.js"></script>
+	<script src="js/lib/jquery.scrollorama.js"></script>
+	<script src="js/lib/jquery-scrolltofixed-min.js"></script>
+	<script src="//localhost:35729/livereload.js"></script>
+
+	<script type="text/javascript" >
+		jQuery(document).ready(function($){
+		    	 $('ul.main-nav').scrollToFixed();
+		  });
+	</script>
 </body><!-- body -->
 </html><!-- html -->
