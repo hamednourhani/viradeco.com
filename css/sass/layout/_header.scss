@@ -31,7 +31,7 @@ ul.main-nav{
 	@include single-transition(all , 0.2s , ease-in-out);
 	font-size : 90%;
 	margin-bottom : -30px;
-	background-color: $white2;
+	@include menu-gradiant;
 	a{
 		@include single-transition(all , 0.2s , ease-in-out);
 		color : $grey3;
