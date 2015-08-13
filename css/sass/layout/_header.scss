@@ -43,7 +43,26 @@
  
 nav.main-menu{
 	position : relative;
-	background-color: $black2;
+	.search-area{
+		position : absolute;
+		left : 30px;
+		top : 10px;
+		input{
+			height : 32px;
+			color : $black1;
+			
+		}
+		&:before{
+			@extend .fa;
+			content : "\f002";
+			position : absolute;
+			    top: 5px;
+			    left: 7px;
+			    font-size: 120%;
+			    color: $grey3;
+
+		}
+	}
 	
 }
 	
