@@ -22,20 +22,20 @@
 
 // ---------- NAVIGATION---------------------------------
 @include keyframes(move-up) {
-  0%   { margin-top: 10px;opacity : 0;display:none; }
+  0%   { margin-top: 20px;opacity : 0;display:none; }
   100% { margin-top: 0px;opacity : 1;display :inline-block; }
 }
 @include keyframes(move-down) {
   0%   { margin-top: 0px;opacity : 1;display : inline-block; }
-  100% { margin-top: 10px;opacity : 0;display : none  }
+  100% { margin-top: 20px;opacity : 0;display : none  }
 }
 @include keyframes(move-right) {
-  0%   { margin-right: 10px;opacity : 0;display:none; }
-  100% { margin-right: 0px;opacity : 1;display :inline-block; }
+  0%   { margin-right: 20px;margin-top:10px;opacity : 0;display:none; }
+  100% { margin-right: 0px;margin-top:0;opacity : 1;display :inline-block; }
 }
 @include keyframes(move-left) {
-  0%   { margin-right: 0px;opacity : 1;display : inline-block; }
-  100% { margin-right: 10px;opacity : 0;display : none  }
+  0%   { margin-right: 0px;margin-top:0;opacity : 1;display : inline-block; }
+  100% { margin-right: 20px;margin-top:10px;opacity : 0;display : none  }
 }
 
 
@@ -61,7 +61,7 @@ nav.main-menu{
 			    top: 7px;
 			    left: 7px;
 			    font-size: 110%;
-			    color: $grey3;
+			    color: $grey2;
 
 		}
 	}
@@ -212,7 +212,15 @@ ul.main-nav{
 	}
 }
 
-
+li.menu-item{
+	&>a img {
+	    float: right;
+	    vertical-align: -webkit-baseline-middle;
+	}
+	&>a span {
+	    vertical-align: text-top;
+	}
+}
 
 
 
