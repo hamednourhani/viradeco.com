@@ -1089,6 +1089,74 @@ body {
         .banner-wrapper #slides .slides-pagination a.current {
           background-color: #777777; }
 
+/* line 64, sass/layout/_main.scss */
+.primary {
+  width: 66.10169%;
+  float: right;
+  margin-left: 1.69492%;
+  display: inline;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  /* line 70, sass/layout/_main.scss */
+  .primary article {
+    width: 49.15254%;
+    float: right;
+    margin-left: 1.69492%;
+    display: inline;
+    padding: 20px; }
+    /* line 72, sass/layout/_main.scss */
+    .primary article:nth-child(2n) {
+      width: 49.15254%;
+      float: left;
+      margin-left: 0;
+      *margin-right: -1em;
+      display: inline; }
+    /* line 76, sass/layout/_main.scss */
+    .primary article .article-title {
+      position: relative;
+      display: inline-block;
+      border-bottom: 1px solid #CCCCCC;
+      margin-bottom: 20px;
+      width: 100%; }
+      /* line 83, sass/layout/_main.scss */
+      .primary article .article-title h3 {
+        margin: 0;
+        padding: 10px 0; }
+        /* line 87, sass/layout/_main.scss */
+        .primary article .article-title h3:after {
+          width: 30px;
+          height: 5px;
+          background-color: #BC3154;
+          position: absolute;
+          bottom: 10px;
+          right: 0; }
+
+/* line 99, sass/layout/_main.scss */
+.secondary {
+  width: 32.20339%;
+  float: left;
+  margin-left: 0;
+  *margin-right: -1em;
+  display: inline;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  /* line 105, sass/layout/_main.scss */
+  .secondary aside {
+    padding: 20px;
+    background-color: #F8F8F8;
+    margin-bottom: 20px; }
+    /* line 109, sass/layout/_main.scss */
+    .secondary aside .widgettitle {
+      width: 100%;
+      position: relative;
+      display: inline-block;
+      border-bottom: 1px solid #CCCCCC;
+      margin-bottom: 20px; }
+      /* line 115, sass/layout/_main.scss */
+      .secondary aside .widgettitle h3 {
+        margin: 0;
+        padding: 10px 0; }
+
 /* footer style */
 /* line 2, sass/layout/_footer.scss */
 footer.site-footer, .site-footer {
