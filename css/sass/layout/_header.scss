@@ -21,6 +21,26 @@
 }
 
 // ---------- NAVIGATION---------------------------------
+@include keyframes(move-up) {
+  0%   { margin-top: 10px;opacity : 0;display:none; }
+  100% { margin-top: 0px;opacity : 1;display :inline-block; }
+}
+@include keyframes(move-down) {
+  0%   { margin-top: 0px;opacity : 1;display : inline-block; }
+  100% { margin-top: 10px;opacity : 0;display : none  }
+}
+@include keyframes(move-right) {
+  0%   { margin-right: 10px;opacity : 0;display:none; }
+  100% { margin-right: 0px;opacity : 1;display :inline-block; }
+}
+@include keyframes(move-left) {
+  0%   { margin-right: 0px;opacity : 1;display : inline-block; }
+  100% { margin-right: 10px;opacity : 0;display : none  }
+}
+
+
+ 
+ 
 nav.main-menu{
 	position : relative;
 	background-color: $black2;
@@ -31,33 +51,28 @@ ul.main-nav{
 	@include single-transition(all , 0.2s , ease-in-out);
 	font-size : 90%;
 	margin-bottom : -30px;
-	@include menu-gradiant;
+	 @include background-image(linear-gradient($white, $grey1));
+	 @include box-shadow($grey2 0px 2px 7px);
 	a{
 		@include single-transition(all , 0.2s , ease-in-out);
 		color : $grey3;
 		padding : 15px;
 		display: inline-block;
-		border-bottom : 3px solid $white2;
+		
 		&:hover{
 			// color : $black1;
 			color : $white2;
 			background-color : $black2;
-			border-color : $red;
+			
 		}
 	}
 	li{
 		display: inline-block;
 		position : relative;
+		
 
 	}
-	&>li.mega-menu{
-		&>ul>li{
-			display : inline-block;
-			ul.sub-menu{
-				display : inline-block;
-			}
-		}
-	}
+	
 	&>li.menu-item-has-children>a:after{
 		@extend .fa;
 		content: "\f0d7";
@@ -65,17 +80,26 @@ ul.main-nav{
 		padding-right: 5px;
 	}
 	
-	li ul.sub-menu{
-		@include single-transition(all , 0.2s , ease-in-out);
-		z-index : 9999;
+	&>li>ul.sub-menu,li ul.sub-menu{
+		//@include single-transition(all , 0.8s , ease-in-out);
+		z-index : 0;
 		text-align : center;
 		padding : 0;
 		margin : 0;
-		display: none;
-		background-color : $white2;
+		opacity: 0;
 		position : absolute;
 		top : 100%;
 		right : -30%;
+		@include display-none;
+		
+		
+		
+		li{
+			//display: none;
+			@include background-image(linear-gradient($white, $grey1));
+	 		@include box-shadow($grey2 0px 2px 7px);
+	 		@include animation('move-down .5s 1');
+		}
 		
 		a{
 			min-width : 180px;
@@ -94,10 +118,69 @@ ul.main-nav{
 		    vertical-align : middle;
 		}
 	}
-	li:hover>ul.sub-menu{
-		display: inline-block;
-
+	&>li:hover{
 		
+		&>ul.sub-menu{
+			opacity: 1;
+			visibility: visible;
+	  		transition-delay:0s;
+	  		z-index : 9999;
+			&>li{
+				//display: inline-block;
+				//opacity : 1;
+				@include animation('move-up .5s 1');
+			}
+
+			
+		}
+	}
+	
+	&>li>ul.sub-menu li ul{
+		//@include single-transition(all , 0.8s , ease-in-out);
+		z-index : 0;
+		text-align : center;
+		padding : 0;
+		margin : 0;
+		opacity: 0;
+		display: inline-block;
+		right : 100%;
+		top : 0;
+		@include display-none;
+		
+		
+		
+		
+		li{
+			//display: none;
+			@include background-image(linear-gradient($white, $grey1));
+	 		@include box-shadow($grey2 0px 2px 7px);
+	 		@include animation('move-left .5s 1');
+		}
+		
+		a{
+			min-width : 180px;
+			padding : 10px;
+			&:hover{
+				// color : $white2;
+				// background-color : $black2;
+			}
+		}
+	}
+	&>li>ul.sub-menu li:hover{
+		
+		&>ul.sub-menu{
+			opacity: 1;
+			visibility: visible;
+	  		transition-delay:0s;
+	  		z-index : 9999;
+			&>li{
+				//display: inline-block;
+				//opacity : 1;
+				@include animation('move-right .5s 1');
+			}
+
+			
+		}
 	}
 	ul.sub-menu li:hover ul{
 		display: inline-block;
