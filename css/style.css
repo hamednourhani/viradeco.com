@@ -1158,7 +1158,7 @@ body {
 /* line 71, sass/layout/_main.scss */
 article {
   padding: 20px; }
-  /* line 79, sass/layout/_main.scss */
+  /* line 74, sass/layout/_main.scss */
   article .article-title {
     font-size: 90%;
     position: relative;
@@ -1166,12 +1166,12 @@ article {
     border-bottom: 1px solid #CCCCCC;
     margin-bottom: 20px;
     width: 100%; }
-    /* line 86, sass/layout/_main.scss */
+    /* line 81, sass/layout/_main.scss */
     article .article-title h3 {
       margin: 0;
       padding: 10px 0;
       display: inline-block; }
-      /* line 90, sass/layout/_main.scss */
+      /* line 85, sass/layout/_main.scss */
       article .article-title h3::after {
         -moz-transition: all, 0.2s, ease-out 1s 0s;
         -o-transition: all, 0.2s, ease-out 1s 0s;
@@ -1186,11 +1186,11 @@ article {
         position: absolute;
         bottom: 0px;
         right: 0; }
-  /* line 104, sass/layout/_main.scss */
+  /* line 99, sass/layout/_main.scss */
   article:hover .article-title h3::after {
     width: 60%; }
 
-/* line 109, sass/layout/_main.scss */
+/* line 104, sass/layout/_main.scss */
 .secondary {
   width: 32.20339%;
   float: left;
@@ -1198,27 +1198,27 @@ article {
   *margin-right: -1em;
   display: inline;
   display: block;
-  font-size: 90%;
   padding-top: 20px;
   padding-bottom: 20px; }
 
-/* line 118, sass/layout/_main.scss */
+/* line 113, sass/layout/_main.scss */
 aside {
+  font-size: 90%;
   padding: 20px;
   background-color: #F8F8F8;
   margin-bottom: 20px; }
-  /* line 122, sass/layout/_main.scss */
+  /* line 118, sass/layout/_main.scss */
   aside .widgettitle {
     width: 100%;
     position: relative;
     display: inline-block;
     border-bottom: 1px solid #CCCCCC;
     margin-bottom: 20px; }
-    /* line 128, sass/layout/_main.scss */
+    /* line 124, sass/layout/_main.scss */
     aside .widgettitle h4 {
       margin: 0;
       padding: 10px 0; }
-      /* line 131, sass/layout/_main.scss */
+      /* line 127, sass/layout/_main.scss */
       aside .widgettitle h4::after {
         -moz-transition: all, 0.2s, ease-out 1s 0s;
         -o-transition: all, 0.2s, ease-out 1s 0s;
@@ -1233,18 +1233,23 @@ aside {
         position: absolute;
         bottom: 0px;
         right: 0; }
-  /* line 144, sass/layout/_main.scss */
+  /* line 140, sass/layout/_main.scss */
   aside:hover .widgettitle h4::after {
     width: 50%; }
 
-/* line 149, sass/layout/_main.scss */
+/* line 145, sass/layout/_main.scss */
 .products-area {
   background-color: #F8F8F8; }
-  /* line 152, sass/layout/_main.scss */
-  .products-area ul.products-list li {
-    display: list-item; }
 
-/* line 158, sass/layout/_main.scss */
+/* line 151, sass/layout/_main.scss */
+.product-widget ul.products-list li {
+  display: list-item; }
+  /* line 153, sass/layout/_main.scss */
+  .product-widget ul.products-list li img {
+    padding: 5px 5px 5px 8px;
+    vertical-align: middle; }
+
+/* line 164, sass/layout/_main.scss */
 .contact-area aside {
   background-color: #fff; }
 
@@ -1254,10 +1259,10 @@ footer.site-footer, .site-footer {
   width: 100%;
   margin: 0;
   padding: 15px;
-  text-align: center;
+  text-align: right;
   background-color: #111;
-  color: #fff;
-  font-size: 90%; }
+  color: #CCCCCC;
+  font-size: 70%; }
 
 /* button style */
 /* line 2, sass/modules/_btn.scss */

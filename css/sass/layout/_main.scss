@@ -69,12 +69,7 @@ body{
 	}
 }
 article{
-	// &.oneSecond{
-	// 	@include span-columns(6,12);
-	// 	&:nth-child(2n){
-	// 		@include span-columns(6 omega,12);
-	// 	}
-	// }
+	
 	padding : 20px;
 	.article-title{
 		font-size : 90%;
@@ -109,13 +104,14 @@ article{
 .secondary{
 	@include span-columns(4 omega,12);
 	display : block;
-	font-size : 90%;
+	
 	padding:{
 		top :20px;
 		bottom : 20px;
 	}
 }
 aside{
+	font-size : 90%;
 	padding:20px;
 	background-color : $white2;
 	margin-bottom : 20px;
@@ -148,9 +144,19 @@ aside{
 
 .products-area{
 	background-color : $white2;
+}
+.product-widget{
+	
 	ul.products-list{
 		li{
 			display: list-item;
+			img{
+				padding : 5px 5px 5px 8px;
+				vertical-align: middle;
+			}
+			span{
+
+			}
 		}
 	}
 }
