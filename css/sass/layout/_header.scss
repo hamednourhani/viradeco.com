@@ -51,15 +51,16 @@ nav.main-menu{
 		input{
 			height : 32px;
 			color : $black1;
+			font-size : 90%;
 			
 		}
 		&:before{
 			@extend .fa;
 			content : "\f002";
 			position : absolute;
-			    top: 5px;
+			    top: 7px;
 			    left: 7px;
-			    font-size: 120%;
+			    font-size: 110%;
 			    color: $grey3;
 
 		}

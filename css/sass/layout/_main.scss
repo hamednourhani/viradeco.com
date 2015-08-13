@@ -67,42 +67,45 @@ body{
 		top :20px;
 		bottom : 20px;
 	}
-	article{
-		@include span-columns(6,12);
-		&:nth-child(2n){
-			@include span-columns(6 omega,12);
-		}
-		padding : 20px;
-		.article-title{
-			font-size : 90%;
-			position : relative;
+}
+article{
+	// &.oneSecond{
+	// 	@include span-columns(6,12);
+	// 	&:nth-child(2n){
+	// 		@include span-columns(6 omega,12);
+	// 	}
+	// }
+	padding : 20px;
+	.article-title{
+		font-size : 90%;
+		position : relative;
+		display : inline-block;
+		border-bottom : 1px solid $grey2;
+		margin-bottom : 20px;
+		width : 100%;
+		h3{
+			margin : 0;
+			padding : 10px 0;
 			display : inline-block;
-			border-bottom : 1px solid $grey2;
-			margin-bottom : 20px;
-			width : 100%;
-			h3{
-				margin : 0;
-				padding : 10px 0;
-				display : inline-block;
-				&::after{
-					@include single-transition(all 0.2s ease-out);
-					display : block;
-					content : "";
-					width : 30px;
-					height : 3px;
-					background-color : $red;
-					position : absolute;
-					bottom : 0px;
-					right : 0;
-				}
-							
+			&::after{
+				@include single-transition(all 0.2s ease-out);
+				display : block;
+				content : "";
+				width : 30px;
+				height : 3px;
+				background-color : $red;
+				position : absolute;
+				bottom : 0px;
+				right : 0;
 			}
-		}
-		&:hover .article-title h3::after{
-			width : 60%;
+						
 		}
 	}
+	&:hover .article-title h3::after{
+		width : 60%;
+	}
 }
+
 .secondary{
 	@include span-columns(4 omega,12);
 	display : block;
@@ -111,34 +114,48 @@ body{
 		top :20px;
 		bottom : 20px;
 	}
-	aside{
-		padding:20px;
-		background-color : $white2;
+}
+aside{
+	padding:20px;
+	background-color : $white2;
+	margin-bottom : 20px;
+	.widgettitle{
+		width : 100%;
+		position : relative;
+		display : inline-block;
+		border-bottom : 1px solid $grey2;
 		margin-bottom : 20px;
-		.widgettitle{
-			width : 100%;
-			position : relative;
-			display : inline-block;
-			border-bottom : 1px solid $grey2;
-			margin-bottom : 20px;
-			h4{
-				margin : 0;
-				padding : 10px 0;
-				&::after{
-					@include single-transition(all 0.2s ease-out);
-					display : block;
-					content : "";
-					width : 30px;
-					height : 3px;
-					background-color : $red;
-					position : absolute;
-					bottom : 0px;
-					right : 0;
-				}
+		h4{
+			margin : 0;
+			padding : 10px 0;
+			&::after{
+				@include single-transition(all 0.2s ease-out);
+				display : block;
+				content : "";
+				width : 30px;
+				height : 3px;
+				background-color : $red;
+				position : absolute;
+				bottom : 0px;
+				right : 0;
 			}
 		}
-		&:hover .widgettitle h4::after{
-			width : 50%;
+	}
+	&:hover .widgettitle h4::after{
+		width : 50%;
+	}
+}
+
+.products-area{
+	background-color : $white2;
+	ul.products-list{
+		li{
+			display: list-item;
 		}
+	}
+}
+.contact-area{
+	aside{
+		background-color : $white;
 	}
 }
