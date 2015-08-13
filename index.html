@@ -134,15 +134,7 @@
 					<div class="sidebar-widget">	
 						<aside class="widget">
 							<header class="widgettitle">
-								<h3>Lorem ipsum dolor.</h3>
-							</header>
-							<main class="widgetbody">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quibusdam dolorum ratione optio earum omnis aliquam id rerum eius eaque.
-							</main>
-						</aside>
-						<!-- <aside class="widget">
-							<header class="widgettitle">
-								<h3>Lorem ipsum dolor.</h3>
+								<h4>Lorem ipsum dolor.</h4>
 							</header>
 							<main class="widgetbody">
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quibusdam dolorum ratione optio earum omnis aliquam id rerum eius eaque.
@@ -150,12 +142,20 @@
 						</aside>
 						<aside class="widget">
 							<header class="widgettitle">
-								<h3>Lorem ipsum dolor.</h3>
+								<h4>Lorem ipsum dolor.</h4>
 							</header>
 							<main class="widgetbody">
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quibusdam dolorum ratione optio earum omnis aliquam id rerum eius eaque.
 							</main>
-						</aside> -->
+						</aside>
+						<aside class="widget">
+							<header class="widgettitle">
+								<h4>Lorem ipsum dolor.</h4>
+							</header>
+							<main class="widgetbody">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quibusdam dolorum ratione optio earum omnis aliquam id rerum eius eaque.
+							</main>
+						</aside>
 					</div>
 				</div><!-- secondary -->
 
@@ -188,15 +188,15 @@
 		jQuery(document).ready(function($){
 			$('nav.main-menu').scrollToFixed();
 
-			$('.secondary').scrollToFixed({
-		        marginTop: $('nav.main-menu').outerHeight() + 20,
-		        limit: function() {
-		            var limit = $('.site-footer').offset().top - $('.secondary').outerHeight(true) + 20;
-		            return limit;
-		        },
-		        zIndex: 999,
+			// $('.secondary').scrollToFixed({
+		 //        marginTop: $('nav.main-menu').outerHeight() + 20,
+		 //        limit: function() {
+		 //            var limit = $('.site-footer').offset().top - $('.secondary').outerHeight(true) - 10;
+		 //            return limit;
+		 //        },
+		 //        zIndex: 999,
 		        
-		    });
+		 //    });
 		});
 
 	</script>

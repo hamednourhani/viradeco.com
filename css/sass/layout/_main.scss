@@ -74,30 +74,39 @@ body{
 		}
 		padding : 20px;
 		.article-title{
+			font-size : 90%;
 			position : relative;
 			display : inline-block;
 			border-bottom : 1px solid $grey2;
 			margin-bottom : 20px;
 			width : 100%;
-			
 			h3{
 				margin : 0;
 				padding : 10px 0;
-			
-				&:after{
+				display : inline-block;
+				&::after{
+					@include single-transition(all 0.2s ease-out);
+					display : block;
+					content : "";
 					width : 30px;
-					height : 5px;
+					height : 3px;
 					background-color : $red;
 					position : absolute;
-					bottom : 10px;
+					bottom : 0px;
 					right : 0;
 				}
+							
 			}
+		}
+		&:hover .article-title h3::after{
+			width : 60%;
 		}
 	}
 }
 .secondary{
 	@include span-columns(4 omega,12);
+	display : block;
+	font-size : 90%;
 	padding:{
 		top :20px;
 		bottom : 20px;
@@ -112,10 +121,24 @@ body{
 			display : inline-block;
 			border-bottom : 1px solid $grey2;
 			margin-bottom : 20px;
-			h3{
+			h4{
 				margin : 0;
 				padding : 10px 0;
+				&::after{
+					@include single-transition(all 0.2s ease-out);
+					display : block;
+					content : "";
+					width : 30px;
+					height : 3px;
+					background-color : $red;
+					position : absolute;
+					bottom : 0px;
+					right : 0;
+				}
 			}
+		}
+		&:hover .widgettitle h4::after{
+			width : 50%;
 		}
 	}
 }
