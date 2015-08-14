@@ -1,7 +1,8 @@
 /* fonts */
-@include font-face("BYekan", font-files("BYekan.ttf", "BYekan.woff"),"BYekan.eot");
+//@include font-face("BYekan", font-files("BYekan.ttf", "BYekan.woff"),"BYekan.eot");
 
-// @include font-face("Roya", font-files("IRRoya.ttf", "IRRoya.woff"),"IRRoya.eot");
+@include font-face("Roya", font-files("IRRoya.ttf", "IRRoya.woff"),"IRRoya.eot");
 
 
-$BYekan : "BYekan", tahoma;
+//$BYekan : "BYekan", tahoma;
+$Roya : "Roya","Byekan",tahoma;

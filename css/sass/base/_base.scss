@@ -12,9 +12,11 @@ body,html{
 
 }
 body {
-	font-family : $BYekan;
+	font-family : $Roya;
 	direction : rtl;
-	font-size : 90%;
+	font-size : 110%;
+	margin : auto !important;
+		
 	
 }
 
@@ -37,8 +39,9 @@ img,video,audio,iframe{
 input,textarea,button{
 	max-width : 100%;
 }
-h1,h2,h3,h4,h5,h6,a{
+h1,h2,h3,h4,h5,h6{
 	color : $black1;
+
 }
 ul, menu, dir {
     
@@ -49,10 +52,10 @@ ul, menu, dir {
     -webkit-margin-end: 0px;
     -webkit-padding-start: 0px;
 }
-.opacIn{
- opacity : 1;
+.onScreen{
+ 	@include single-transition(opacity 2s ease-in-out);
+ 	opacity : 1;
 }
-.opacOut{
-	opacity :0.8;
-
+article,aside{
+	opacity : 0.2;
 }

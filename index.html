@@ -182,11 +182,11 @@
 							</header>
 							<main class="widgetbody">
 								<ul class="products-list">
-									<li><img src="images/thumb/managment/thumb1.png" alt=""><span>نام پروژه</span></li>
-									<li><img src="images/thumb/managment/thumb2.png" alt=""><span>نام پروژه</span></li>
-									<li><img src="images/thumb/managment/thumb3.png" alt=""><span>نام پروژه</span></li>
-									<li><img src="images/thumb/managment/thumb4.png" alt=""><span>نام پروژه</span></li>
-									<li><img src="images/thumb/managment/thumb5.png" alt=""><span>نام پروژه</span></li>
+									<li><img src="images/thumb/managment/thumb1.png" alt=""><span>شرکت مسکن گستر</span></li>
+									<li><img src="images/thumb/managment/thumb2.png" alt=""><span>سازمان مدیریت اکتشاف</span></li>
+									<li><img src="images/thumb/managment/thumb3.png" alt=""><span>سازمان انتقال خون</span></li>
+									<li><img src="images/thumb/managment/thumb4.png" alt=""><span>شرکت سها</span></li>
+									<li><img src="images/thumb/managment/thumb5.png" alt=""><span>سازمان بیمه مرکزی</span></li>
 								</ul>
 							</main>
 						</aside>
@@ -295,9 +295,9 @@
 						<h4>تماس با ما</h4>
 					</header>
 					<main class="widgetbody">
-						<p>تلفن های تماس : 22259072-021 و 22259571-021</p>
-						<p>فکس : 22259884-021  </p>
-						<p>ایمیل شرکت ویرا :  info@viradeco.com</p>
+						<p><i class="fa fa-phone"></i>تلفن های تماس : 22259072-021 و 22259571-021</p>
+						<p><i class="fa fa-print"></i>فکس : 22259884-021  </p>
+						<p><i class="fa fa-envelope"></i>ایمیل شرکت ویرا :  info@viradeco.com</p>
 						
 					</main>
 				</aside>
@@ -369,18 +369,22 @@
 	<!-- onScreen -->
 	<script>
         jQuery('document').ready(function($){
-            $('article, aside').onScreen({
+            $('aside,article').onScreen({
 			   container: window,
 			   direction: 'vertical',
+			  
 			   doIn: function() {
-			      $(this).addClass('opacIn');// Do something to the matched elements as they come in
+			      
+			      
+			      // Do something to the matched elements as they come in
 			   },
 			   doOut: function() {
-			     $(this).removeClass('opacOut');
+			    
+			     
 			     // Do something to the matched elements as they get off scren
 			   },
 			   tolerance: 0,
-			   throttle: 50,
+			   throttle: 300,
 			   toggleClass: 'onScreen',
 			   lazyAttr: null,
 			   lazyPlaceholder: 'someImage.jpg',
