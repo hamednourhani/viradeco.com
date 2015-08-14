@@ -368,28 +368,26 @@
 	
 	<!-- onScreen -->
 	<script>
-            var attach = function () {
-                $('.checkMe').onScreen({
-                    toggleClass: 'itsOn',
-                    tolerance: 200,
-                    doIn: function () { console.log('It\'s on!'); },
-                    doOut: function () { console.log('It\'s off!'); }
-                });
-            };
-
-            var detach = function () {
-                $(window).onScreen('remove');
-            };
-
-            $('input[type="checkbox"]').on('change', function () {
-                var $el = $(this);
-                if ($el.is(':checked')) {
-                    attach();
-                } else {
-                    detach();
-                }
-            });
-        </script>
+        jQuery('document').ready(function($){
+            $('article, aside').onScreen({
+			   container: window,
+			   direction: 'vertical',
+			   doIn: function() {
+			      $(this).addClass('opacIn');// Do something to the matched elements as they come in
+			   },
+			   doOut: function() {
+			     $(this).removeClass('opacOut');
+			     // Do something to the matched elements as they get off scren
+			   },
+			   tolerance: 0,
+			   throttle: 50,
+			   toggleClass: 'onScreen',
+			   lazyAttr: null,
+			   lazyPlaceholder: 'someImage.jpg',
+			   debug: false
+			});
+		});	
+       </script>
 
 	</div>
 </body><!-- body -->

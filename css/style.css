@@ -743,6 +743,14 @@ ul, menu, dir {
   -webkit-margin-end: 0px;
   -webkit-padding-start: 0px; }
 
+/* line 52, sass/base/_base.scss */
+.opacIn {
+  opacity: 1; }
+
+/* line 55, sass/base/_base.scss */
+.opacOut {
+  opacity: 0.8; }
+
 /* header style */
 /* line 3, sass/layout/_header.scss */
 .hero {
