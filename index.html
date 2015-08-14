@@ -332,6 +332,7 @@
 	
 	<script src="js/lib/jquery-scrolltofixed-min.js"></script>
 	<script src="js/lib/jquery.superslides.min.js"></script>
+	<script src="js/lib/jquery.onscreen.min.js"></script>
 	<script src="//localhost:35729/livereload.js"></script>
 
 	<!-- scrolltofixed menu -->
@@ -365,6 +366,30 @@
 	</script>
 	<!-- slider script -->
 	
+	<!-- onScreen -->
+	<script>
+            var attach = function () {
+                $('.checkMe').onScreen({
+                    toggleClass: 'itsOn',
+                    tolerance: 200,
+                    doIn: function () { console.log('It\'s on!'); },
+                    doOut: function () { console.log('It\'s off!'); }
+                });
+            };
+
+            var detach = function () {
+                $(window).onScreen('remove');
+            };
+
+            $('input[type="checkbox"]').on('change', function () {
+                var $el = $(this);
+                if ($el.is(':checked')) {
+                    attach();
+                } else {
+                    detach();
+                }
+            });
+        </script>
 
 	</div>
 </body><!-- body -->
