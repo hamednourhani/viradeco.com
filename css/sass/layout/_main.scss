@@ -99,6 +99,9 @@ article{
 	&:hover .article-title h3::after{
 		width : 60%;
 	}
+	p{
+		margin : 5px;
+	}
 }
 
 .secondary{
@@ -139,6 +142,9 @@ aside{
 	}
 	&:hover .widgettitle h4::after{
 		width : 50%;
+	}
+	p{
+		margin : 5px;
 	}
 }
 

@@ -22,20 +22,20 @@
 
 // ---------- NAVIGATION---------------------------------
 @include keyframes(move-up) {
-  0%   { margin-top: 20px;opacity : 0;display:none; }
+  0%   { margin-top: 25px;opacity : 0;display:none; }
   100% { margin-top: 0px;opacity : 1;display :inline-block; }
 }
 @include keyframes(move-down) {
   0%   { margin-top: 0px;opacity : 1;display : inline-block; }
-  100% { margin-top: 20px;opacity : 0;display : none  }
+  100% { margin-top: 25px;opacity : 0;display : none  }
 }
 @include keyframes(move-right) {
-  0%   { margin-right: 20px;margin-top:10px;opacity : 0;display:none; }
+  0%   { margin-right: 25px;margin-top:10px;opacity : 0;display:none; }
   100% { margin-right: 0px;margin-top:0;opacity : 1;display :inline-block; }
 }
 @include keyframes(move-left) {
   0%   { margin-right: 0px;margin-top:0;opacity : 1;display : inline-block; }
-  100% { margin-right: 20px;margin-top:10px;opacity : 0;display : none  }
+  100% { margin-right: 25px;margin-top:10px;opacity : 0;display : none  }
 }
 
 
@@ -69,7 +69,7 @@ nav.main-menu{
 }
 	
 ul.main-nav{
-	@include single-transition(all , 0.2s , ease-in-out);
+	//@include single-transition(all , 0.2s , ease-in-out);
 	font-size : 90%;
 	margin-bottom : -30px;
 
@@ -120,7 +120,7 @@ ul.main-nav{
 			//display: none;
 			@include background-image(linear-gradient($white, $grey1));
 	 		@include box-shadow($grey2 0px 2px 7px);
-	 		@include animation('move-down .5s 1');
+	 		@include animation('move-down .8s 1');
 		}
 		
 		a{
@@ -150,7 +150,7 @@ ul.main-nav{
 			&>li{
 				//display: inline-block;
 				//opacity : 1;
-				@include animation('move-up .5s 1');
+				@include animation('move-up .8s 1');
 			}
 
 			
@@ -176,7 +176,7 @@ ul.main-nav{
 			//display: none;
 			@include background-image(linear-gradient($white, $grey1));
 	 		@include box-shadow($grey2 0px 2px 7px);
-	 		@include animation('move-left .5s 1');
+	 		@include animation('move-left .8s 1');
 		}
 		
 		a{
@@ -198,7 +198,7 @@ ul.main-nav{
 			&>li{
 				//display: inline-block;
 				//opacity : 1;
-				@include animation('move-right .5s 1');
+				@include animation('move-right .8s 1');
 			}
 
 			
