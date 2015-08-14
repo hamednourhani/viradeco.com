@@ -10,11 +10,18 @@ body{
 	margin : auto;
 	
 	z-index : 1;
+	&.body-wrapper {
+	  display: none;
+	}
+	&.pg-loaded > .body-wrapper {
+	  display: block;
+	}
 }
 .body-wrapper{
 	width : 100%;
 	background-color : $white;
 	margin:auto;
+	
 }
 .site-main{
 	z-index : 10;
