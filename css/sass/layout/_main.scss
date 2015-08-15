@@ -124,7 +124,7 @@ article{
 aside{
 	font-size : 100%;
 	padding:20px;
-	background-color : $white2;
+	background-color : $grey1;
 	margin-bottom : 20px;
 	.widgettitle{
 		width : 100%;
@@ -155,13 +155,13 @@ aside{
 		margin : 5px;
 	}
 	i.fa:before{
-		padding-left : 8px;
+		padding-left : 10px;
 		color : $grey3;
 	}
 }
 
 .products-area{
-	background-color : $white2;
+	background-color : $grey1;
 }
 .product-widget{
 	
@@ -173,9 +173,7 @@ aside{
 				padding : 5px 5px 5px 12px;
 				vertical-align: middle;
 			}
-			&:hover{
-				transform : translateX(-6px);
-			}
+			
 		}
 	}
 }

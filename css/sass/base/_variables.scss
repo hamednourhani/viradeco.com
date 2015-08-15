@@ -40,6 +40,10 @@ $larg : 75em;
 	}
 		
 }
+.Fifth{
+	@include span-columns(5,12);
+			
+}
 .lastGrid{
 	@include omega;
 }
