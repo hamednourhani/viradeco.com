@@ -12,7 +12,7 @@
  * and $rhythm-unit variables. Also, correct text resizing oddly in IE 6/7 when
  * body `font-size` is set using `em` units.
  */
-/* line 106, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
+/* line 106, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
   font-size: 100%;
   line-height: 1.5em; }
@@ -618,7 +618,7 @@ p {
   font-feature-settings: "liga", "dlig"; }
 
 /* ------------susy-------- */
-/* line 14, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.5/sass/susy/language/susyone/_grid.scss */
+/* line 14, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.5/sass/susy/language/susyone/_grid.scss */
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -763,7 +763,7 @@ ul, menu, dir {
 
 /* line 59, sass/base/_base.scss */
 article, aside {
-  opacity: 0.2; }
+  opacity: 0.3; }
 
 /* header style */
 /* line 2, sass/layout/_header.scss */
@@ -793,74 +793,58 @@ article, aside {
 
 @-webkit-keyframes move-up {
   0% {
-    margin-top: 25px;
     opacity: 0;
     display: none; }
   100% {
-    margin-top: 0px;
     opacity: 1;
     display: inline-block; } }
 @-moz-keyframes move-up {
   0% {
-    margin-top: 25px;
     opacity: 0;
     display: none; }
   100% {
-    margin-top: 0px;
     opacity: 1;
     display: inline-block; } }
 @-o-keyframes move-up {
   0% {
-    margin-top: 25px;
     opacity: 0;
     display: none; }
   100% {
-    margin-top: 0px;
     opacity: 1;
     display: inline-block; } }
 @keyframes move-up {
   0% {
-    margin-top: 25px;
     opacity: 0;
     display: none; }
   100% {
-    margin-top: 0px;
     opacity: 1;
     display: inline-block; } }
 @-webkit-keyframes move-down {
   0% {
-    margin-top: 0px;
     opacity: 1;
     display: inline-block; }
   100% {
-    margin-top: 25px;
     opacity: 0;
     display: none; } }
 @-moz-keyframes move-down {
   0% {
-    margin-top: 0px;
     opacity: 1;
     display: inline-block; }
   100% {
-    margin-top: 25px;
     opacity: 0;
     display: none; } }
 @-o-keyframes move-down {
   0% {
-    margin-top: 0px;
     opacity: 1;
     display: inline-block; }
   100% {
-    margin-top: 25px;
     opacity: 0;
     display: none; } }
 @keyframes move-down {
   0% {
-    margin-top: 0px;
     opacity: 1;
     display: inline-block; }
   100% {
-    margin-top: 25px;
     opacity: 0;
     display: none; } }
 /* line 46, sass/layout/_header.scss */
@@ -879,6 +863,9 @@ nav.main-menu {
       color: #111;
       font-size: 90%; }
     /* line 60, sass/layout/_header.scss */
+    nav.main-menu .search-area label, nav.main-menu .search-area button {
+      display: none; }
+    /* line 63, sass/layout/_header.scss */
     nav.main-menu .search-area:before {
       content: "\f002";
       position: absolute;
@@ -887,13 +874,13 @@ nav.main-menu {
       font-size: 110%;
       color: #CCCCCC; }
 
-/* line 74, sass/layout/_header.scss */
+/* line 77, sass/layout/_header.scss */
 ul.main-nav {
   font-size: 100%;
   margin-bottom: -30px;
   padding: 0;
   background-color: #F8F8F8; }
-  /* line 80, sass/layout/_header.scss */
+  /* line 83, sass/layout/_header.scss */
   ul.main-nav a {
     -moz-transition: all 0.2s ease-in-out 0s;
     -o-transition: all 0.2s ease-in-out 0s;
@@ -903,22 +890,22 @@ ul.main-nav {
     color: #777777;
     padding: 20px 15px;
     display: inline-block; }
-    /* line 86, sass/layout/_header.scss */
+    /* line 89, sass/layout/_header.scss */
     ul.main-nav a:hover {
       color: #F8F8F8;
       background-color: #282828; }
-  /* line 93, sass/layout/_header.scss */
+  /* line 96, sass/layout/_header.scss */
   ul.main-nav li {
     display: inline-block;
     position: relative;
     padding: 0;
     margin: 0; }
-  /* line 102, sass/layout/_header.scss */
+  /* line 105, sass/layout/_header.scss */
   ul.main-nav > li.menu-item-has-children > a:after {
     content: "\f0d7";
     vertical-align: middle;
     padding-right: 5px; }
-  /* line 109, sass/layout/_header.scss */
+  /* line 112, sass/layout/_header.scss */
   ul.main-nav > li > ul.sub-menu, ul.main-nav li ul.sub-menu {
     z-index: 0;
     text-align: center;
@@ -933,37 +920,37 @@ ul.main-nav {
     -o-transition: opacity .45s linear, visibility .2s linear .4s;
     transition: opacity .45s linear, visibility .2s linear .4s;
     visibility: hidden; }
-    /* line 123, sass/layout/_header.scss */
+    /* line 126, sass/layout/_header.scss */
     ul.main-nav > li > ul.sub-menu li, ul.main-nav li ul.sub-menu li {
       background-color: #F8F8F8;
       -webkit-animation: move-down .8s 1;
       -moz-animation: move-down .8s 1;
       -o-animation: move-down .8s 1;
       animation: move-down .8s 1; }
-    /* line 129, sass/layout/_header.scss */
+    /* line 132, sass/layout/_header.scss */
     ul.main-nav > li > ul.sub-menu a, ul.main-nav li ul.sub-menu a {
       min-width: 180px;
       padding: 10px; }
-    /* line 137, sass/layout/_header.scss */
+    /* line 140, sass/layout/_header.scss */
     ul.main-nav > li > ul.sub-menu li.menu-item-has-children > a:after, ul.main-nav li ul.sub-menu li.menu-item-has-children > a:after {
       content: "\f0d9";
       left: 12px;
       position: absolute;
       top: 18px;
       vertical-align: middle; }
-  /* line 148, sass/layout/_header.scss */
+  /* line 151, sass/layout/_header.scss */
   ul.main-nav > li:hover > ul.sub-menu {
     opacity: 1;
     visibility: visible;
     transition-delay: 0s;
     z-index: 9999; }
-    /* line 153, sass/layout/_header.scss */
+    /* line 156, sass/layout/_header.scss */
     ul.main-nav > li:hover > ul.sub-menu > li {
       -webkit-animation: move-up .8s 1;
       -moz-animation: move-up .8s 1;
       -o-animation: move-up .8s 1;
       animation: move-up .8s 1; }
-  /* line 163, sass/layout/_header.scss */
+  /* line 166, sass/layout/_header.scss */
   ul.main-nav > li > ul.sub-menu li ul {
     z-index: 0;
     text-align: center;
@@ -978,40 +965,40 @@ ul.main-nav {
     -o-transition: opacity .45s linear, visibility .2s linear .4s;
     transition: opacity .45s linear, visibility .2s linear .4s;
     visibility: hidden; }
-    /* line 178, sass/layout/_header.scss */
+    /* line 181, sass/layout/_header.scss */
     ul.main-nav > li > ul.sub-menu li ul li {
       background-color: #F8F8F8;
-      -webkit-animation: move-down .8s 1;
-      -moz-animation: move-down .8s 1;
-      -o-animation: move-down .8s 1;
-      animation: move-down .8s 1; }
-    /* line 184, sass/layout/_header.scss */
+      -webkit-animation: move-down .5s .5;
+      -moz-animation: move-down .5s .5;
+      -o-animation: move-down .5s .5;
+      animation: move-down .5s .5; }
+    /* line 187, sass/layout/_header.scss */
     ul.main-nav > li > ul.sub-menu li ul a {
       min-width: 180px;
       padding: 15px; }
-  /* line 195, sass/layout/_header.scss */
+  /* line 198, sass/layout/_header.scss */
   ul.main-nav > li > ul.sub-menu li:hover > ul.sub-menu {
     opacity: 1;
     visibility: visible;
     transition-delay: 0s;
     z-index: 9999; }
-    /* line 200, sass/layout/_header.scss */
+    /* line 203, sass/layout/_header.scss */
     ul.main-nav > li > ul.sub-menu li:hover > ul.sub-menu > li {
-      -webkit-animation: move-up .8s 1;
-      -moz-animation: move-up .8s 1;
-      -o-animation: move-up .8s 1;
-      animation: move-up .8s 1; }
-  /* line 209, sass/layout/_header.scss */
+      -webkit-animation: move-up .5s .5;
+      -moz-animation: move-up .5s .5;
+      -o-animation: move-up .5s .5;
+      animation: move-up .5s .5; }
+  /* line 212, sass/layout/_header.scss */
   ul.main-nav ul.sub-menu li:hover ul {
     display: inline-block;
     right: 100%;
     top: 0; }
 
-/* line 218, sass/layout/_header.scss */
+/* line 221, sass/layout/_header.scss */
 li.menu-item > a img {
   float: right;
   vertical-align: -webkit-baseline-middle; }
-/* line 222, sass/layout/_header.scss */
+/* line 225, sass/layout/_header.scss */
 li.menu-item > a span {
   vertical-align: text-top; }
 
@@ -1026,7 +1013,7 @@ li.menu-item > a span {
   margin-left: auto;
   margin-right: auto;
   position: relative; }
-  /* line 38, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
   .layout:after {
     content: "";
     display: table;
@@ -1038,12 +1025,6 @@ body {
   background-color: #CCCCCC;
   margin: auto;
   z-index: 1; }
-  /* line 13, sass/layout/_main.scss */
-  body.body-wrapper {
-    display: none; }
-  /* line 16, sass/layout/_main.scss */
-  body.pg-loaded > .body-wrapper {
-    display: block; }
 
 /* line 20, sass/layout/_main.scss */
 .body-wrapper {
@@ -1057,32 +1038,9 @@ body {
 
 /* line 29, sass/layout/_main.scss */
 .banner-wrapper {
-  width: 100%;
-  height: 400px;
-  overflow: hidden; }
-  /* line 33, sass/layout/_main.scss */
-  .banner-wrapper img {
-    width: auto;
-    max-height: 100%; }
-  /* line 37, sass/layout/_main.scss */
-  .banner-wrapper .sp-buttons {
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    padding-top: 10px;
-    bottom: 5%; }
-    /* line 43, sass/layout/_main.scss */
-    .banner-wrapper .sp-buttons div.sp-button {
-      border: 4px solid #E6E6E6;
-      background-color: #CCCCCC;
-      border-radius: 15px;
-      width: 16px;
-      height: 16px; }
-      /* line 49, sass/layout/_main.scss */
-      .banner-wrapper .sp-buttons div.sp-button.sp-selected-button {
-        background-color: #777777; }
+  width: 100%; }
 
-/* line 89, sass/layout/_main.scss */
+/* line 36, sass/layout/_main.scss */
 .primary {
   width: 66.15385%;
   float: right;
@@ -1091,10 +1049,10 @@ body {
   padding-top: 20px;
   padding-bottom: 20px; }
 
-/* line 96, sass/layout/_main.scss */
+/* line 43, sass/layout/_main.scss */
 article {
   padding: 20px; }
-  /* line 99, sass/layout/_main.scss */
+  /* line 46, sass/layout/_main.scss */
   article .article-title {
     font-size: 100%;
     position: relative;
@@ -1102,12 +1060,12 @@ article {
     border-bottom: 1px solid #CCCCCC;
     margin-bottom: 20px;
     width: 100%; }
-    /* line 106, sass/layout/_main.scss */
+    /* line 53, sass/layout/_main.scss */
     article .article-title h3 {
       margin: 0;
       padding: 10px 0;
       display: inline-block; }
-      /* line 110, sass/layout/_main.scss */
+      /* line 57, sass/layout/_main.scss */
       article .article-title h3::after {
         -moz-transition: all, 0.2s, ease-out 1s 0s;
         -o-transition: all, 0.2s, ease-out 1s 0s;
@@ -1122,14 +1080,14 @@ article {
         position: absolute;
         bottom: 0px;
         right: 0; }
-  /* line 124, sass/layout/_main.scss */
+  /* line 71, sass/layout/_main.scss */
   article:hover .article-title h3::after {
     width: 40%; }
-  /* line 127, sass/layout/_main.scss */
+  /* line 74, sass/layout/_main.scss */
   article p {
     margin: 5px; }
 
-/* line 132, sass/layout/_main.scss */
+/* line 79, sass/layout/_main.scss */
 .secondary {
   width: 32.30769%;
   float: left;
@@ -1140,24 +1098,24 @@ article {
   padding-top: 20px;
   padding-bottom: 20px; }
 
-/* line 141, sass/layout/_main.scss */
+/* line 88, sass/layout/_main.scss */
 aside {
   font-size: 100%;
   padding: 20px;
   background-color: #E6E6E6;
   margin-bottom: 20px; }
-  /* line 146, sass/layout/_main.scss */
+  /* line 93, sass/layout/_main.scss */
   aside .widgettitle {
     width: 100%;
     position: relative;
     display: inline-block;
     border-bottom: 1px solid #CCCCCC;
     margin-bottom: 20px; }
-    /* line 152, sass/layout/_main.scss */
+    /* line 99, sass/layout/_main.scss */
     aside .widgettitle h4 {
       margin: 0;
       padding: 10px 0; }
-      /* line 155, sass/layout/_main.scss */
+      /* line 102, sass/layout/_main.scss */
       aside .widgettitle h4::after {
         -moz-transition: all, 0.2s, ease-out 1s 0s;
         -o-transition: all, 0.2s, ease-out 1s 0s;
@@ -1172,27 +1130,27 @@ aside {
         position: absolute;
         bottom: 0px;
         right: 0; }
-  /* line 168, sass/layout/_main.scss */
+  /* line 115, sass/layout/_main.scss */
   aside:hover .widgettitle h4::after {
     width: 40%; }
-  /* line 171, sass/layout/_main.scss */
+  /* line 118, sass/layout/_main.scss */
   aside p {
     margin: 5px; }
-  /* line 174, sass/layout/_main.scss */
+  /* line 121, sass/layout/_main.scss */
   aside i.fa:before, aside nav.main-menu i.search-area:before, nav.main-menu aside i.search-area:before {
     padding-left: 10px;
     color: #777777;
     font-size: 120%;
     vertical-align: middle; }
-  /* line 180, sass/layout/_main.scss */
+  /* line 127, sass/layout/_main.scss */
   aside li {
     line-height: 180%; }
 
-/* line 185, sass/layout/_main.scss */
+/* line 132, sass/layout/_main.scss */
 .products-area {
   background-color: #E6E6E6; }
 
-/* line 191, sass/layout/_main.scss */
+/* line 138, sass/layout/_main.scss */
 .product-widget ul.products-list li {
   -moz-transition: all 0.2s ease-out 0s;
   -o-transition: all 0.2s ease-out 0s;
@@ -1200,12 +1158,12 @@ aside {
   -webkit-transition-delay: 0s;
   transition: all 0.2s ease-out 0s;
   display: list-item; }
-  /* line 194, sass/layout/_main.scss */
+  /* line 141, sass/layout/_main.scss */
   .product-widget ul.products-list li img {
     padding: 5px 5px 5px 12px;
     vertical-align: middle; }
 
-/* line 203, sass/layout/_main.scss */
+/* line 150, sass/layout/_main.scss */
 .contact-area aside {
   background-color: #fff; }
 

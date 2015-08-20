@@ -134,8 +134,8 @@ function viradeco_scripts_and_styles() {
   if (!is_admin()) {
 
 		// modernizr (without media query polyfill)
-		wp_register_script( 'please-wait', get_stylesheet_directory_uri() . '/js/lib/please-wait.min.js', array(), '', false );
-		wp_register_script( 'please-wait-custom', get_stylesheet_directory_uri() . '/js/please-wait-custom.js', array('please-wait'), '', false );
+		// wp_register_script( 'please-wait', get_stylesheet_directory_uri() . '/js/lib/please-wait.min.js', array(), '', false );
+		// wp_register_script( 'please-wait-custom', get_stylesheet_directory_uri() . '/js/please-wait-custom.js', array('please-wait'), '', false );
 		wp_register_script( 'viradeco-modernizr', get_stylesheet_directory_uri() . '/js/lib/modernizr.custom.min.js', array(), '2.5.3', false );
 
 		// register main stylesheet
@@ -152,14 +152,14 @@ function viradeco_scripts_and_styles() {
 		//adding scripts file in the footer
 		
 		
-		wp_register_script( 'scrolltofixed', get_stylesheet_directory_uri() . '/js/lib/jquery.scrolltofixed-min.js', array('jquery'), '', true );
+		wp_register_script( 'scrolltofixed', get_stylesheet_directory_uri() . '/js/lib/jquery-scrolltofixed-min.js', array('jquery'), '', true );
 		wp_register_script( 'onscreen', get_stylesheet_directory_uri() . '/js/lib/jquery.onscreen.min.js', array('jquery'), '', true );
-		wp_register_script( 'viradeco-js', get_stylesheet_directory_uri() . '/js/script.js', array('jquery','scrolltofixed','onscreen'), '', true );
+		wp_register_script( 'viradeco-js', get_stylesheet_directory_uri() . '/js/scripts.js', array('jquery','scrolltofixed','onscreen'), '', true );
 		
 		
 		// enqueue styles and scripts
-		wp_enqueue_script( 'please-wait' );
-		wp_enqueue_script( 'please-wait-custom' );
+		// wp_enqueue_script( 'please-wait' );
+		// wp_enqueue_script( 'please-wait-custom' );
 		wp_enqueue_script( 'viradeco-modernizr' );
 	
 		wp_enqueue_style('font-awesome' );
@@ -176,7 +176,6 @@ function viradeco_scripts_and_styles() {
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'scrolltofixed' );
 		wp_enqueue_script( 'onscreen' );
-
 		wp_enqueue_script( 'viradeco-js' );
 		
 
@@ -234,8 +233,7 @@ function viradeco_theme_support() {
 	// registering wp3+ menus
 	register_nav_menus(
 		array(
-			'main-nav' => __( 'The Main Menu', 'viradeco' ),   // main nav in header
-			'top-menu' => __( 'Top Bar Menu', 'viradeco' ) // top menu  in footer
+			'main-menu' => __( 'The Main Menu', 'viradeco' ),   // main nav in header
 		)
 	);
 

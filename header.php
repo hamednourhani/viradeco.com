@@ -42,13 +42,13 @@
 
 <body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
 	
-	<noscript>
+	<!-- <noscript>
 		<style>
 			.body-wrapper{
 				display : block;
 			}
 		</style>
-	</noscript>
+	</noscript> -->
 	<div class="body-wrapper">
 	<!-- ********************************************************************* -->
 	<!--****************** Site header ***************************************-->
@@ -57,9 +57,9 @@
 		<header class="site-header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 			<div class="top-bar">
 				<section class="layout">
-					<img src="images/fr.gif" alt="French" class="lang-icon"/>
-					<img src="images/en.gif" alt="English" class="lang-icon"/>
-					<img src="images/it.gif" alt="Italian" class="lang-icon"/>
+					<img src="<?php echo get_template_directory_uri();?>/images/ir.png" alt="Persian" class="lang-icon"/>
+					<img src="<?php echo get_template_directory_uri();?>/images/en.png" alt="English" class="lang-icon"/>
+					<img src="<?php echo get_template_directory_uri();?>/images/it.png" alt="Italian" class="lang-icon"/>
 				</section>
 			</div>
 			<div class="hero">
@@ -86,7 +86,7 @@
         			               'after' => '',                                  // after the menu
         			               'link_before' => '',                            // before each link
         			               'link_after' => '',                             // after each link
-        			               'depth' => 1,                                   // limit the depth of the nav
+        			               'depth' => 3,                                   // limit the depth of the nav
     					         'fallback_cb' => ''                             // fallback function (if there is one)
 						)); ?>
 						

@@ -2,8 +2,8 @@
 		
 		<div class="contact-area">
 			<section class="layout">
-				
-				<aside class="widget Fifth">
+				<?php dynamic_sidebar( 'footer-second' ); ?>
+				<!-- <aside class="widget Fifth">
 					<header class="widgettitle">
 						<h4>درباره ما</h4>
 					</header>
@@ -29,9 +29,9 @@
 					<main class="widgetbody">
 						<img style="width:150px;margin-top:15px;" src="images/viradeco-logo.png"  />
 					</main>
-				</aside>
+				</aside> -->
 			</section>
 		</div>		
 
-	<?php //dynamic_sidebar( 'footer-second' ); ?>  
+	  
 <?php endif; ?>

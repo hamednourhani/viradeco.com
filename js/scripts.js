@@ -1,9 +1,9 @@
 
 jQuery(document).ready(function($){
 	
-	setTimeout(function(){ 
-		window.loading_screen.finish();
-	 }, 2000);
+	// setTimeout(function(){ 
+	// 	window.loading_screen.finish();
+	//  }, 2000);
 
 	$('nav.main-menu').scrollToFixed();
 

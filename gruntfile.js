@@ -153,10 +153,10 @@ module.exports = function(grunt) {
 
 		watch: {
 			options : { livereload : true },
-      		scripts :{
-      			files: ['js/*.js'],
-      			tasks: ['jshint','uglify:dev','uglify:dist']
-    		},//scripts
+      // 		scripts :{
+      // 			files: ['js/*.js'],
+      // 			tasks: ['jshint','uglify:dev','uglify:dist']
+    		// },//scripts
     		html : {
     			files : ['*.html']
     		},//html

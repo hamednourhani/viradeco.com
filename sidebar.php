@@ -1,7 +1,8 @@
 <?php if ( is_active_sidebar( 'sidebar' )) : ?>
 		
-					<div class="sidebar-widget">	
-						<aside class="widget product-widget">
+					<div class="sidebar-widget">
+						<?php dynamic_sidebar( 'sidebar' ); ?> 	
+						<!-- <aside class="widget product-widget">
 							<header class="widgettitle">
 								<h4>لینک های مهم</h4>
 							</header>
@@ -41,11 +42,11 @@
 								</ul>
 								
 							</main>
-						</aside>
+						</aside> -->
 					</div>
 				
 				
 
 				
-	<?php// dynamic_sidebar( 'sidebar' ); ?>  
+	 
  <?php endif; ?>

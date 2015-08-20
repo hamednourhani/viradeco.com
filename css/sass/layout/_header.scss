@@ -31,12 +31,12 @@
 
 // ---------- NAVIGATION---------------------------------
 @include keyframes(move-up) {
-  0%   { margin-top: 25px;opacity : 0;display:none; }
-  100% { margin-top: 0px;opacity : 1;display :inline-block; }
+  0%   { opacity : 0;display:none; }
+  100% { opacity : 1;display :inline-block; }
 }
 @include keyframes(move-down) {
-  0%   { margin-top: 0px;opacity : 1;display : inline-block; }
-  100% { margin-top: 25px;opacity : 0;display : none  }
+  0%   { opacity : 1;display : inline-block; }
+  100% { opacity : 0;display : none  }
 }
 
 
@@ -56,6 +56,9 @@ nav.main-menu{
 			color : $black1;
 			font-size : 90%;
 			
+		}
+		label,button {
+			display : none;
 		}
 		&:before{
 			@extend .fa;
@@ -178,7 +181,7 @@ ul.main-nav{
 		li{
 			//display: none;
 			background-color : $white2;
-	 		@include animation('move-down .8s 1');
+	 		@include animation('move-down .5s .5');
 		}
 		
 		a{
@@ -200,7 +203,7 @@ ul.main-nav{
 			&>li{
 				//display: inline-block;
 				//opacity : 1;
-				@include animation('move-up .8s 1');
+				@include animation('move-up .5s .5');
 			}
 
 			

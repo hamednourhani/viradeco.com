@@ -2,9 +2,9 @@
 		
 		<div class="products-area">
 			<section class="layout">
+				<?php dynamic_sidebar( 'footer-first' ); ?>
 				
-				
-
+<!-- 
 				<aside class="widget oneFourth product-widget">
 					<header class="widgettitle">
 						<h4>کانتر</h4>
@@ -19,11 +19,11 @@
 						
 					</main>
 				</aside>
-
+ -->
 
 			</section>
 		</div>		
 
-		<?php // dynamic_sidebar( 'footer-first' ); ?>  
+		  
 				
  <?php endif; ?>
