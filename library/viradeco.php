@@ -134,15 +134,14 @@ function viradeco_scripts_and_styles() {
   if (!is_admin()) {
 
 		// modernizr (without media query polyfill)
+		wp_register_script( 'please-wait', get_stylesheet_directory_uri() . '/js/lib/please-wait.min.js', array(), '', false );
+		wp_register_script( 'please-wait-custom', get_stylesheet_directory_uri() . '/js/please-wait-custom.js', array('please-wait'), '', false );
 		wp_register_script( 'viradeco-modernizr', get_stylesheet_directory_uri() . '/js/lib/modernizr.custom.min.js', array(), '2.5.3', false );
 
 		// register main stylesheet
-		wp_register_style( 'slider-pro-css', get_stylesheet_directory_uri() . '/css/slider-pro.min.css', array(), '', 'all' );
+		
 		wp_register_style( 'font-awesome', get_stylesheet_directory_uri() . '/css/font-awesome.min.css', array(), '', 'all' );
-		wp_register_style( 'jquery-ui-css', get_stylesheet_directory_uri() . '/css/jquery-ui.min.css', array(), '', 'all' );
 		wp_register_style( 'viradeco-stylesheet', get_stylesheet_directory_uri() . '/css/style.css', array(), '', 'all' );
-
-		// ie-only style sheet
 		wp_register_style( 'viradeco-ie-only', get_stylesheet_directory_uri() . '/css/ie.css', array(), '' );
 
     // comment reply script for threaded comments
@@ -151,18 +150,19 @@ function viradeco_scripts_and_styles() {
     }
 
 		//adding scripts file in the footer
-		wp_register_script( 'slider-pro-js', get_stylesheet_directory_uri() . '/js/lib/jquery.sliderPro.min.js', array( 'jquery' ), '', true );
-		wp_register_script( 'jquery-ui-js', get_stylesheet_directory_uri() . '/js/lib/jquery-ui.min.js', array( 'jquery' ), '', true );
-		wp_register_script( 'owl-carousel', get_stylesheet_directory_uri() . '/js/lib/owl.carousel.min.js', array( 'jquery' ), '', true );
-		wp_register_script( 'viradeco-js', get_stylesheet_directory_uri() . '/js/scripts.js', array( 'jquery','slider-pro-js' ), '', true );
+		
+		
+		wp_register_script( 'scrolltofixed', get_stylesheet_directory_uri() . '/js/lib/jquery.scrolltofixed-min.js', array('jquery'), '', true );
+		wp_register_script( 'onscreen', get_stylesheet_directory_uri() . '/js/lib/jquery.onscreen.min.js', array('jquery'), '', true );
+		wp_register_script( 'viradeco-js', get_stylesheet_directory_uri() . '/js/script.js', array('jquery','scrolltofixed','onscreen'), '', true );
 		
 		
 		// enqueue styles and scripts
+		wp_enqueue_script( 'please-wait' );
+		wp_enqueue_script( 'please-wait-custom' );
 		wp_enqueue_script( 'viradeco-modernizr' );
-
-		wp_enqueue_style( 'slider-pro-css' );
+	
 		wp_enqueue_style('font-awesome' );
-		wp_enqueue_style( 'jquery-ui-css' );
 		wp_enqueue_style( 'viradeco-stylesheet' );
 		wp_enqueue_style( 'viradeco-ie-only' );
 
@@ -174,16 +174,13 @@ function viradeco_scripts_and_styles() {
 		and your site will load faster.
 		*/
 		wp_enqueue_script( 'jquery' );
-		wp_enqueue_script('owl-carousel');
-		wp_enqueue_script( 'jquery-ui-js' );
-		wp_enqueue_script( 'slider-pro' );
+		wp_enqueue_script( 'scrolltofixed' );
+		wp_enqueue_script( 'onscreen' );
+
 		wp_enqueue_script( 'viradeco-js' );
 		
 
-		// tage for taxonomy image url
-		// $image_url = apply_filters( 'taxonomy-images-queried-term-image-url', '', array(
-		 //    'image_size' => 'medium'
-	 	//    ) );	
+			
 	}
 }
 

@@ -79,9 +79,9 @@ if ( ! isset( $content_width ) ) {
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
-add_image_size( 'slider', 840, 440, array( 'center', 'center' ) );
-add_image_size( 'slider-thumb', 100, 80, array( 'center', 'center' ) );
-add_image_size( 'carousel', 320, 120, false );
+add_image_size( 'banner', 1200, 500, array( 'center', 'center' ) );
+add_image_size( 'product-thumb', 30, 30, array( 'center', 'center' ) );
+add_image_size( 'detail-thumb', 53, 53, false );
 
 add_filter( 'image_size_names_choose', 'viradeco_custom_sizes' );
  
@@ -116,8 +116,9 @@ add_filter( 'image_size_names_choose', 'viradeco_custom_image_sizes' );
 
 function viradeco_custom_image_sizes( $sizes ) {
     return array_merge( $sizes, array(
-        'viradeco-thumb-600' => __('600px by 400px'),
-        'viradeco-thumb-300' => __('300px by 250px'),
+        'banner' => __('1200px by 500px'),
+        'product-thumb' => __('30px by 30px'),
+        'detail-thumb' => __('53px by 53px'),
     ) );
 }
 
@@ -180,9 +181,18 @@ function viradeco_register_sidebars() {
 		'after_title' => '</h4>',
 	));
   register_sidebar(array(
-    'id' => 'notify-sidebar',
-    'name' => __( 'Notify Sidebar', 'viradeco' ),
-    'description' => __( 'The Notify sidebar.', 'viradeco' ),
+    'id' => 'footer-first',
+    'name' => __( 'Footer First', 'viradeco' ),
+    'description' => __( 'The first footer widget area', 'viradeco' ),
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h4 class="widgettitle">',
+    'after_title' => '</h4>',
+  ));
+  register_sidebar(array(
+    'id' => 'footer-second',
+    'name' => __( 'Footer Second', 'viradeco' ),
+    'description' => __( 'The second footer widget area', 'viradeco' ),
     'before_widget' => '<div id="%1$s" class="widget %2$s">',
     'after_widget' => '</div>',
     'before_title' => '<h4 class="widgettitle">',
