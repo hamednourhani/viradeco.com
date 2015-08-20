@@ -96,13 +96,75 @@ function viradeco_before_row_if_2( $field_args, $field ) {
 }
 
 
-/******************************************************************/
-/*--------------------Link Page-----------------------------------*/
-/******************************************************************/
 
-add_action('cmb2_init','viradeco_register_link_metabox');
-// add_action('cmb2_init','viradeco_register_tour_information_metabox');
-function viradeco_register_link_metabox() {
+
+/******************************************************************/
+/*--------------------Product Features-------------------------------*/
+/******************************************************************/
+ add_action( 'cmb2_init', 'viradeco_register_product_features_metabox' );
+function viradeco_register_product_features_metabox() {
+
+	// Start with an underscore to hide fields from custom fields list
+	$prefix = '_viradeco_group_';
+	
+	$cmb_group = new_cmb2_box( array(
+		'id'           => $prefix . 'product_features',
+		'title'        => __( 'Product Features', 'viradeco' ),
+		'object_types' => array( 'product', ),
+	) );
+
+	// $group_field_id is the field id string, so in this case: $prefix . 'demo'
+	$group_field_id = $cmb_group->add_field( array(
+		'id'          => $prefix.'feature',
+		'type'        => 'group',
+		'description' => __( 'Add Product features', 'viradeco' ),
+		'options'     => array(
+			'group_title'   => __( 'feature {#}', 'viradeco' ), // {#} gets replaced by row number
+			'add_button'    => __( 'Add Another feature', 'viradeco' ),
+			'remove_button' => __( 'Remove feature', 'viradeco' ),
+			'sortable'      => true, // beta
+		),
+	) );
+
+		
+ 	
+ 	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'Feature Name', 'viradeco' ),
+		'desc'    => __( 'write the feature name ', 'viradeco' ),
+		'id'      => 'feature_name',
+		'type'    => 'text',
+		
+			
+	) );
+	
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'Feature Description ', 'viradeco' ),
+		'desc'    => __( 'write the feature Description if needed', 'viradeco' ),
+		'id'      => 'feature_desc',
+		'type'    => 'textarea',
+		
+			
+	) );
+
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'         => __( 'Images', 'viradeco' ),
+		'desc'         => __( 'Upload or add multiple images/attachments.', 'viradeco' ),
+		'id'           => $prefix . 'image_list',
+		'type'         => 'file_list',
+		'preview_size' => array( 54	, 54 ), // Default: array( 50, 50 )
+	) );
+	
+	
+}
+
+/******************************************************************/
+/*--------------------Project Images-------------------------------*/
+/******************************************************************/
+add_action( 'cmb2_init', 'viradeco_register_project_date_metabox' );
+/**
+ * Hook in and add a demo metabox. Can only happen on the 'cmb2_init' hook.
+ */
+function viradeco_register_project_date_metabox() {
 
 	// Start with an underscore to hide fields from custom fields list
 	$prefix = '_viradeco_';
@@ -111,9 +173,9 @@ function viradeco_register_link_metabox() {
 	 * Sample metabox to demonstrate each field type included
 	 */
 	$cmb_demo = new_cmb2_box( array(
-		'id'            => $prefix . 'link_metabox',
-		'title'         => __( 'Link Information', 'viradeco' ),
-		'object_types'  => array( 'link' ), // Post type
+		'id'            => $prefix . 'project_date',
+		'title'         => __( 'Project Date', 'viradeco' ),
+		'object_types'  => array( 'project' ), // Post type
 		// 'show_on_cb' => 'viradeco_show_if_front_page', // function should return a bool value
 		// 'context'    => 'normal',
 		// 'priority'   => 'high',
@@ -122,33 +184,77 @@ function viradeco_register_link_metabox() {
 		// 'closed'     => true, // true to keep the metabox closed by default
 	) );
 
+
+	
 	$cmb_demo->add_field( array(
-		'name'       => __( 'link address', 'viradeco' ),
-		'desc'       => __( 'the web address of link', 'viradeco' ),
-		'id'         => $prefix . 'link_url',
-		'type'       => 'text_url',
-		//'show_on_cb' => 'viradeco_hide_if_no_cats', // function should return a bool value
-		// 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
-		// 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
-		// 'on_front'        => false, // Optionally designate a field to wp-admin only
-		// 'repeatable'      => true,
+		'name'         => __( 'Date', 'viradeco' ),
+		'desc'         => __( 'Enter Project Date', 'viradeco' ),
+		'id'           => $prefix . 'project_date',
+		'type'         => 'text',
+		 // Default: array( 50, 50 )
 	) );
 
 	
+
 }
 
-
-
 /******************************************************************/
-/*--------------------Gallery Page-----------------------------------*/
+/*--------------------Project Features-------------------------------*/
 /******************************************************************/
+ add_action( 'cmb2_init', 'viradeco_register_project_features_metabox' );
+function viradeco_register_project_features_metabox() {
 
+	// Start with an underscore to hide fields from custom fields list
+	$prefix = '_viradeco_group_';
+	
+	$cmb_group = new_cmb2_box( array(
+		'id'           => $prefix . 'project_features',
+		'title'        => __( 'Project Features', 'viradeco' ),
+		'object_types' => array( 'project', ),
+	) );
 
- add_action( 'cmb2_init', 'viradeco_register_gallery_metabox' );
+	// $group_field_id is the field id string, so in this case: $prefix . 'demo'
+	$group_field_id = $cmb_group->add_field( array(
+		'id'          => $prefix.'feature',
+		'type'        => 'group',
+		'description' => __( 'Add Project features', 'viradeco' ),
+		'options'     => array(
+			'group_title'   => __( 'feature {#}', 'viradeco' ), // {#} gets replaced by row number
+			'add_button'    => __( 'Add Another feature', 'viradeco' ),
+			'remove_button' => __( 'Remove feature', 'viradeco' ),
+			'sortable'      => true, // beta
+		),
+	) );
+
+		
+ 	
+ 	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'Feature Name', 'viradeco' ),
+		'desc'    => __( 'write the feature name ', 'viradeco' ),
+		'id'      => 'feature_name',
+		'type'    => 'text',
+		
+			
+	) );
+
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'Feature Value', 'viradeco' ),
+		'desc'    => __( 'write the feature Value ', 'viradeco' ),
+		'id'      => 'feature_value',
+		'type'    => 'text',
+		
+			
+	) );
+
+}
+/******************************************************************/
+/*--------------------Project Images-------------------------------*/
+/******************************************************************/
+add_action( 'cmb2_init', 'viradeco_register_project_images_metabox' );
 /**
  * Hook in and add a demo metabox. Can only happen on the 'cmb2_init' hook.
  */
-function viradeco_register_gallery_metabox() {
+function viradeco_register_project_images_metabox() {
 
 	// Start with an underscore to hide fields from custom fields list
 	$prefix = '_viradeco_';
@@ -157,9 +263,9 @@ function viradeco_register_gallery_metabox() {
 	 * Sample metabox to demonstrate each field type included
 	 */
 	$cmb_demo = new_cmb2_box( array(
-		'id'            => $prefix . 'gallery_metabox',
-		'title'         => __( 'Gallery Images', 'viradeco' ),
-		'object_types'  => array( 'gallery' ), // Post type
+		'id'            => $prefix . 'project_images',
+		'title'         => __( 'Project Images', 'viradeco' ),
+		'object_types'  => array( 'project' ), // Post type
 		// 'show_on_cb' => 'viradeco_show_if_front_page', // function should return a bool value
 		// 'context'    => 'normal',
 		// 'priority'   => 'high',
@@ -175,100 +281,22 @@ function viradeco_register_gallery_metabox() {
 		'desc'         => __( 'Upload or add multiple images/attachments.', 'viradeco' ),
 		'id'           => $prefix . 'image_list',
 		'type'         => 'file_list',
-		'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
+		'preview_size' => array( 130, 130 ), // Default: array( 50, 50 )
 	) );
 
 	
 
 }
 
+
+
 /******************************************************************/
-/*--------------------Tab Maker Page-------------------------------*/
-/******************************************************************/
- add_action( 'cmb2_init', 'viradeco_register_tab_maker_metabox' );
-function viradeco_register_tab_maker_metabox() {
-
-	// Start with an underscore to hide fields from custom fields list
-	$prefix = '_viradeco_group_';
-	
-	$cmb_group = new_cmb2_box( array(
-		'id'           => $prefix . 'tab_metabox',
-		'title'        => __( 'Tabs', 'viradeco' ),
-		'object_types' => array( 'tab', ),
-	) );
-
-	// $group_field_id is the field id string, so in this case: $prefix . 'demo'
-	$group_field_id = $cmb_group->add_field( array(
-		'id'          => $prefix.'tab',
-		'type'        => 'group',
-		'description' => __( 'Generates reusable form entries', 'viradeco' ),
-		'options'     => array(
-			'group_title'   => __( 'Sub Tab {#}', 'viradeco' ), // {#} gets replaced by row number
-			'add_button'    => __( 'Add Another Sub Tab', 'viradeco' ),
-			'remove_button' => __( 'Remove Sub Tab', 'viradeco' ),
-			'sortable'      => true, // beta
-		),
-	) );
-
-	/**
-	 * Group fields works the same, except ids only need
-	 * to be unique to the group. Prefix is not needed.
-	 *
-	 * The parent field's id needs to be passed as the first argument.
-	 */
-	// WP_Query arguments
-	
-	
-	$sub_tabs = get_posts(array(
-			'post_type' => 'sub_tab',
-			// 'posts_per_page' => -1,
-			)
-	);
-	
-
-	
-	$sub_array = array();
-	foreach ( $sub_tabs as $sub_tab ) : setup_postdata( $sub_tab );
-			$sub_array[$sub_tab->ID] = $sub_tab->post_title;
- 	endforeach; 
- 	//wp_reset_postdata();
-	
-	// $cmb_group->add_group_field( $group_field_id, array(
-	// 	'name'        => __( 'Tab Title', 'viradeco' ),
-	// 	'description' => __( 'Enter Tab Title', 'viradeco' ),
-	// 	'id'          => 'tab_title',
-	// 	'type'        => 'text',
-	// ) );
-
-	
- 	
- 	$cmb_group->add_group_field($group_field_id , array(
-		'name'    => __( 'Sub Tab Name', 'viradeco' ),
-		'desc'    => __( 'write the sub tab name ', 'viradeco' ),
-		'id'      => 'tab_name',
-		'type'    => 'text',
-		
-			
-	) );
-	
-	$cmb_group->add_group_field($group_field_id , array(
-		'name'    => __( 'Choose a sub Tab ', 'viradeco' ),
-		'desc'    => __( 'Choose a  the sub tab from list ', 'viradeco' ),
-		'id'      => 'tab_id',
-		'type'    => 'select',
-		'options' => $sub_array,
-			
-	) );
-	
-	
-}
-/******************************************************************/
-/*--------------------Section Maker-------------------------------*/
+/*--------------------Page Banner -------------------------------*/
 /******************************************************************/
 
-add_action('cmb2_init','viradeco_register_section_maker_metabox');
+add_action('cmb2_init','viradeco_register_page_banner_metabox');
 // add_action('cmb2_init','viradeco_register_tour_information_metabox');
-function viradeco_register_section_maker_metabox() {
+function viradeco_register_page_banner_metabox() {
 
 	// Start with an underscore to hide fields from custom fields list
 	$prefix = '_viradeco_';
@@ -277,9 +305,9 @@ function viradeco_register_section_maker_metabox() {
 	 * Sample metabox to demonstrate each field type included
 	 */
 	$cmb_demo = new_cmb2_box( array(
-		'id'            => $prefix . 'section_maker_metabox',
-		'title'         => __( 'Section Selection', 'viradeco' ),
-		'object_types'  => array( 'post','page','news' ), // Post type
+		'id'            => $prefix . 'page_banner',
+		'title'         => __( 'Page Banner', 'viradeco' ),
+		'object_types'  => array( 'post','page','product','project' ), // Post type
 		// 'show_on_cb' => 'viradeco_show_if_front_page', // function should return a bool value
 		// 'context'    => 'normal',
 		// 'priority'   => 'high',
@@ -291,13 +319,14 @@ function viradeco_register_section_maker_metabox() {
 	
 
 	$cmb_demo->add_field( array(
-		'name'       => __( 'news slider', 'viradeco' ),
-		'desc'       => __( 'show news slider', 'viradeco' ),
-		'id'         => $prefix . 'slider_show',
+		'name'       => __( 'Banner', 'viradeco' ),
+		'desc'       => __( 'Choose Banner Mod, SlideShow , Image Banner or Nothing', 'viradeco' ),
+		'id'         => $prefix . 'banner_mod',
 		'type'       => 'radio_inline',
 		'show_option_none' => true,
 		'options'          => array(
-			'true' => __( 'Yes', 'viradeco' ),
+			'slider' => __( 'Slider', 'viradeco' ),
+			'image' => __( 'Image', 'viradeco' ),
 			
 		),	
 		
@@ -310,305 +339,22 @@ function viradeco_register_section_maker_metabox() {
 
 	
 	$cmb_demo->add_field( array(
-		'name'       => __( 'hide content', 'viradeco' ),
-		'desc'       => __( 'hide page content', 'viradeco' ),
-		'id'         => $prefix . 'content',
-		'type'       => 'radio_inline',
-		'show_option_none' => true,
-		'options'          => array(
-			'true' => __( 'Yes', 'viradeco' ),
-			
-			
-			
-			
-		),
-		//'show_on_cb' => 'viradeco_hide_if_no_cats', // function should return a bool value
-		// 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
-		// 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
-		// 'on_front'        => false, // Optionally designate a field to wp-admin only
-		// 'repeatable'      => true,
+		'name'       => __( 'Slider Shortcode', 'viradeco' ),
+		'desc'       => __( 'write this page Revolotion Slider shortcode with alis name here', 'viradeco' ),
+		'id'         => $prefix . 'slider_shortcode',
+		'type'       => 'text',
+	
 	) );
 
 	$cmb_demo->add_field( array(
-		'name'       => __( 'show comments', 'viradeco' ),
-		'desc'       => __( 'show  page coments', 'viradeco' ),
-		'id'         => $prefix . 'comments',
-		'type'       => 'radio_inline',
-		'show_option_none' => true,
-		'options'          => array(
-			'true' => __( 'Yes', 'viradeco' ),
-			
-			
-			
-			
-		),
-		//'show_on_cb' => 'viradeco_hide_if_no_cats', // function should return a bool value
-		// 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
-		// 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
-		// 'on_front'        => false, // Optionally designate a field to wp-admin only
-		// 'repeatable'      => true,
-	) );
-	$cmb_demo->add_field( array(
-		'name'       => __( 'hide sidebar', 'viradeco' ),
-		'desc'       => __( 'hide page sidebar', 'viradeco' ),
-		'id'         => $prefix . 'sidebar',
-		'type'       => 'radio_inline',
-		'show_option_none' => true,
-		'options'          => array(
-			'true' => __( 'Yes', 'viradeco' ),
-			
-			
-			
-			
-		),
-		//'show_on_cb' => 'viradeco_hide_if_no_cats', // function should return a bool value
-		// 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
-		// 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
-		// 'on_front'        => false, // Optionally designate a field to wp-admin only
-		// 'repeatable'      => true,
+		'name'       => __( 'Banner Image', 'viradeco' ),
+		'desc'       => __( 'Upload an image to show as the banner', 'viradeco' ),
+		'id'         => $prefix . 'image',
+		'type'       => 'file',
+	
 	) );
 
-	$cmb_demo->add_field( array(
-		'name'       => __( 'show tabs', 'viradeco' ),
-		'desc'       => __( 'show tabs or not', 'viradeco' ),
-		'id'         => $prefix . 'show_tabs',
-		'type'       => 'radio_inline',
-		'show_option_none' => true,
-		'options'          => array(
-			'true' => __( 'Yes', 'viradeco' ),
-		),
-	) );
-
-	
-	$tabs_list = get_posts(array(
-			'post_type' => 'tab',
-			'posts_per_page' => '100',
-			)
-	);
-	
-
-	
-	$tab_array = array();
-	foreach ( $tabs_list as $tab ) : setup_postdata( $tab );
-			$tab_array[$tab->ID] = $tab->post_title;
- 	endforeach; 
-
-
-	$cmb_demo->add_field( array(
-		'name'       => __( 'show tabs', 'viradeco' ),
-		'desc'       => __( 'show tabs or not', 'viradeco' ),
-		'id'         => $prefix . 'tab_id',
-		'type'       => 'select',
-		'options'          => $tab_array,
-
-		
-	));
-	
-
-	$cmb_demo->add_field( array(
-		'name'       => __( 'show related links', 'viradeco' ),
-		'desc'       => __( 'show related links or not', 'viradeco' ),
-		'id'         => $prefix . 'related_links',
-		'type'       => 'radio_inline',
-		'show_option_none' => true,
-		'options'          => array(
-			'true' => __( 'Yes', 'viradeco' ),
-			
-			
-			
-		),
-		
-	) );
-
-	
-}
-
-/******************************************************************/
-/*--------------------Tab Maker Page-------------------------------*/
-/******************************************************************/
- add_action( 'cmb2_init', 'viradeco_register_management_maker_metabox' );
-function viradeco_register_management_maker_metabox() {
-
-	// Start with an underscore to hide fields from custom fields list
-	$prefix = '_viradeco_group_';
-	
-	$cmb_group = new_cmb2_box( array(
-		'id'           => $prefix . 'management_metabox',
-		'title'        => __( 'Pages', 'viradeco' ),
-		'object_types' => array( 'management', ),
-	) );
-
-	// $group_field_id is the field id string, so in this case: $prefix . 'demo'
-	$group_field_id = $cmb_group->add_field( array(
-		'id'          => $prefix . 'sub_page',
-		'type'        => 'group',
-		'description' => __( 'Generates reusable form entries', 'viradeco' ),
-		'options'     => array(
-			'group_title'   => __( 'Page {#}', 'viradeco' ), // {#} gets replaced by row number
-			'add_button'    => __( 'Add Another Page', 'viradeco' ),
-			'remove_button' => __( 'Remove Page', 'viradeco' ),
-			'sortable'      => true, // beta
-		),
-	) );
-
-	
-	
-	$pages = get_posts(array(
-			'post_type' => 'sub_management',
-			'posts_per_page' => '100',
-			)
-	);
-	
-
-	
-	$sub_array = array();
-	foreach ( $pages as $page ) : setup_postdata( $page );
-			$sub_array[$page->ID] = $page->post_title;
- 	endforeach; 
- 	
-
-	$cmb_group->add_group_field($group_field_id , array(
-		'name'    => __( 'Page Name', 'viradeco' ),
-		'desc'    => __( 'The name of Sub Page ', 'viradeco' ),
-		'id'      => 'sub_name',
-		'type'    => 'text',
-		
-			
-	) );
-
-	
-	$cmb_group->add_group_field($group_field_id , array(
-		'name'    => __( 'Page', 'viradeco' ),
-		'desc'    => __( 'choose a sub page ', 'viradeco' ),
-		'id'      => 'sub_id',
-		'type'    => 'select',
-		'options' => $sub_array,
-			
-	) );
 	
 	
 }
 
-
-
-
- add_action( 'cmb2_init', 'viradeco_register_education_maker_metabox' );
-function viradeco_register_education_maker_metabox() {
-
-	// Start with an underscore to hide fields from custom fields list
-	$prefix = '_viradeco_group_';
-	
-	$cmb_group = new_cmb2_box( array(
-		'id'           => $prefix . 'education_metabox',
-		'title'        => __( 'Pages', 'viradeco' ),
-		'object_types' => array( 'education', ),
-	) );
-
-	// $group_field_id is the field id string, so in this case: $prefix . 'demo'
-	$group_field_id = $cmb_group->add_field( array(
-		'id'          => $prefix . 'sub_page',
-		'type'        => 'group',
-		'description' => __( 'Generates reusable form entries', 'viradeco' ),
-		'options'     => array(
-			'group_title'   => __( 'Page {#}', 'viradeco' ), // {#} gets replaced by row number
-			'add_button'    => __( 'Add Another Page', 'viradeco' ),
-			'remove_button' => __( 'Remove Page', 'viradeco' ),
-			'sortable'      => true, // beta
-		),
-	) );
-
-		
-	
-	$pages = get_posts(array(
-			'post_type' => 'sub_education',
-			'posts_per_page' => '100',
-			)
-	);
-	
-
-	
-	$sub_array = array();
-	foreach ( $pages as $page ) : setup_postdata( $page );
-			$sub_array[$page->ID] = $page->post_title;
- 	endforeach; 
- 	//wp_reset_postdata();
-	
-	
-
-	$cmb_group->add_group_field($group_field_id , array(
-		'name'    => __( 'Page Name', 'viradeco' ),
-		'desc'    => __( 'The name of Sub Page ', 'viradeco' ),
-		'id'      => 'sub_name',
-		'type'    => 'text',
-		
-			
-	) );
-
-	
-	$cmb_group->add_group_field($group_field_id , array(
-		'name'    => __( 'Page', 'viradeco' ),
-		'desc'    => __( 'choose a sub page ', 'viradeco' ),
-		'id'      => 'sub_id',
-		'type'    => 'select',
-		'options' => $sub_array,
-			
-	) );
-	
-	
-}
-
-add_action( 'cmb2_init', 'viradeco_register_related_widget_metabox' );
-function viradeco_register_related_widget_metabox() {
-
-	// Start with an underscore to hide fields from custom fields list
-	$prefix = '_viradeco_group_';
-	
-	$cmb_group = new_cmb2_box( array(
-		'id'           => $prefix . 'related_widget',
-		'title'        => __( 'Related Links', 'viradeco' ),
-		'object_types' => array( 'management','education' ),
-	) );
-
-	// $group_field_id is the field id string, so in this case: $prefix . 'demo'
-	$group_field_id = $cmb_group->add_field( array(
-		'id'          => $prefix . 'related_links',
-		'type'        => 'group',
-		'description' => __( 'Generates reusable form entries', 'viradeco' ),
-		'options'     => array(
-			'group_title'   => __( 'Link {#}', 'viradeco' ), // {#} gets replaced by row number
-			'add_button'    => __( 'Add Another Link', 'viradeco' ),
-			'remove_button' => __( 'Remove Link', 'viradeco' ),
-			'sortable'      => true, // beta
-		),
-	) );
-
-	
-	
-	
- 	
-
-	$cmb_group->add_group_field($group_field_id , array(
-		'name'    => __( 'Link Name', 'viradeco' ),
-		'desc'    => __( 'The name of related link ', 'viradeco' ),
-		'id'      => 'link_name',
-		'type'    => 'text',
-		
-			
-	) );
-
-	$cmb_group->add_group_field($group_field_id , array(
-		'name'    => __( 'Link Url', 'viradeco' ),
-		'desc'    => __( 'The Url of Link ', 'viradeco' ),
-		'id'      => 'link_url',
-		'type'    => 'text_url',
-		
-			
-	) );
-
-
-
-	
-	
-	
-	
-}

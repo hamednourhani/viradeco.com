@@ -47,7 +47,7 @@
 				</section>
 			</div>
 
-		<?php endif; ?>
+		<?php } ?>
 		
 	</main>
 

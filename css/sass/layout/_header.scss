@@ -126,7 +126,7 @@ ul.main-nav{
 		li{
 			//display: none;
 			background-color : $white2;
-	 		@include animation('move-down .8s 1');
+	 		@include animation('move-down .5s 1');
 		}
 		
 		a{
@@ -156,7 +156,7 @@ ul.main-nav{
 			&>li{
 				//display: inline-block;
 				//opacity : 1;
-				@include animation('move-up .8s 1');
+				@include animation('move-up .5s 1');
 			}
 
 			
@@ -181,7 +181,7 @@ ul.main-nav{
 		li{
 			//display: none;
 			background-color : $white2;
-	 		@include animation('move-down .5s .5');
+	 		@include animation('move-down .5s 1');
 		}
 		
 		a{
@@ -203,7 +203,7 @@ ul.main-nav{
 			&>li{
 				//display: inline-block;
 				//opacity : 1;
-				@include animation('move-up .5s .5');
+				@include animation('move-up .5s 1');
 			}
 
 			

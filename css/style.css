@@ -923,10 +923,10 @@ ul.main-nav {
     /* line 126, sass/layout/_header.scss */
     ul.main-nav > li > ul.sub-menu li, ul.main-nav li ul.sub-menu li {
       background-color: #F8F8F8;
-      -webkit-animation: move-down .8s 1;
-      -moz-animation: move-down .8s 1;
-      -o-animation: move-down .8s 1;
-      animation: move-down .8s 1; }
+      -webkit-animation: move-down .5s 1;
+      -moz-animation: move-down .5s 1;
+      -o-animation: move-down .5s 1;
+      animation: move-down .5s 1; }
     /* line 132, sass/layout/_header.scss */
     ul.main-nav > li > ul.sub-menu a, ul.main-nav li ul.sub-menu a {
       min-width: 180px;
@@ -946,10 +946,10 @@ ul.main-nav {
     z-index: 9999; }
     /* line 156, sass/layout/_header.scss */
     ul.main-nav > li:hover > ul.sub-menu > li {
-      -webkit-animation: move-up .8s 1;
-      -moz-animation: move-up .8s 1;
-      -o-animation: move-up .8s 1;
-      animation: move-up .8s 1; }
+      -webkit-animation: move-up .5s 1;
+      -moz-animation: move-up .5s 1;
+      -o-animation: move-up .5s 1;
+      animation: move-up .5s 1; }
   /* line 166, sass/layout/_header.scss */
   ul.main-nav > li > ul.sub-menu li ul {
     z-index: 0;
@@ -968,10 +968,10 @@ ul.main-nav {
     /* line 181, sass/layout/_header.scss */
     ul.main-nav > li > ul.sub-menu li ul li {
       background-color: #F8F8F8;
-      -webkit-animation: move-down .5s .5;
-      -moz-animation: move-down .5s .5;
-      -o-animation: move-down .5s .5;
-      animation: move-down .5s .5; }
+      -webkit-animation: move-down .5s 1;
+      -moz-animation: move-down .5s 1;
+      -o-animation: move-down .5s 1;
+      animation: move-down .5s 1; }
     /* line 187, sass/layout/_header.scss */
     ul.main-nav > li > ul.sub-menu li ul a {
       min-width: 180px;
@@ -984,10 +984,10 @@ ul.main-nav {
     z-index: 9999; }
     /* line 203, sass/layout/_header.scss */
     ul.main-nav > li > ul.sub-menu li:hover > ul.sub-menu > li {
-      -webkit-animation: move-up .5s .5;
-      -moz-animation: move-up .5s .5;
-      -o-animation: move-up .5s .5;
-      animation: move-up .5s .5; }
+      -webkit-animation: move-up .5s 1;
+      -moz-animation: move-up .5s 1;
+      -o-animation: move-up .5s 1;
+      animation: move-up .5s 1; }
   /* line 212, sass/layout/_header.scss */
   ul.main-nav ul.sub-menu li:hover ul {
     display: inline-block;
