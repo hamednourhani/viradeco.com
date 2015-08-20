@@ -5,6 +5,7 @@
 	<title>Index</title>
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/superslides.css">
+	<link rel="stylesheet" href="css/slider-pro.min.css">
 	<link rel="stylesheet" href="css/style.css">
 
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -33,6 +34,13 @@
 	<!-- ********************************************************************* -->
 
 	<header class="site-header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+		<div class="top-bar">
+			<section class="layout">
+				<img src="images/fr.gif" alt="French" class="lang-icon"/>
+				<img src="images/en.gif" alt="English" class="lang-icon"/>
+				<img src="images/it.gif" alt="Italian" class="lang-icon"/>
+			</section>
+		</div>
 		<div class="hero">
 			<section class="layout">
 				<div class="logo-wrapper">
@@ -131,21 +139,69 @@
 	
 	<main "site-main">
 		<div class="banner-wrapper">
-			<div id="slides">
-			    <div class="slides-container">
-			      <img src="images/slides/slide1.png" alt="Cinelli">
-			     
-			      <img src="images/slides/slide3.png" width="1024" height="683" alt="Cinelli">
-			      <img src="images/slides/slide4.png" width="1024" height="685" alt="Affinity">
-			      <img src="images/slides/slide5.png" width="1024" height="685" alt="Affinity">
-			    </div>
+			<div id="header-slider" class="slider-pro">	
+					<div class="sp-slides">
+						
+				        <div class="sp-slide">
+				        	<img class="sp-image" src="images/blank.gif" 
+				        		data-src="images/slides/slide1.jpg"/>
 
-			    <nav class="slides-navigation">
-			      <a href="#" class="next"><i class="fa fa-chevron-right"></i></a>
-			      <a href="#" class="prev"><i class="fa fa-chevron-left"></i></a>
-			    </nav>
-			  </div>
-				
+							
+							<p class="sp-layer sp-black sp-padding" 
+								data-horizontal="40" data-vertical="160" data-width="350" 
+								data-show-transition="right" data-show-delay="400">
+								sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+							</p>
+						</div>
+
+						<div class="sp-slide">
+							<img class="sp-image" src="images/blank.gif" 
+								data-src="images/slides/slide2.jpg"/>
+
+							<p class="sp-layer sp-white sp-padding" 
+								data-position="centerCenter" data-vertical="-50" 
+								data-show-transition="right" data-show-delay="500" >
+								Lorem ipsum dolor sit amet
+							</p>
+
+							<p class="sp-layer sp-black sp-padding" 
+								data-position="centerCenter" data-vertical="50" 
+								data-show-transition="left" data-show-delay="700">
+								consectetur adipisicing elit
+							</p>
+						</div>
+
+						<div class="sp-slide">
+							<img class="sp-image" src="images/blank.gif" 
+								data-src="images/slides/slide3.jpg"/>
+
+							<p class="sp-layer sp-black sp-padding" 
+								data-horizontal="40" data-vertical="160" data-width="350" 
+								data-show-transition="left" data-show-delay="400">
+								sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+							</p>
+						</div>
+						<div class="sp-slide">
+							<img class="sp-image" src="images/blank.gif" 
+								data-src="images/slides/slide4.jpg"/>
+
+							<p class="sp-layer sp-white sp-padding" 
+								data-position="centerCenter" data-vertical="-50" 
+								data-show-transition="right" data-show-delay="500" >
+								Lorem ipsum dolor sit amet
+							</p>
+
+							<p class="sp-layer sp-black sp-padding" 
+								data-position="centerCenter" data-vertical="50" 
+								data-show-transition="left" data-show-delay="700">
+								consectetur adipisicing elit
+							</p>
+						</div>
+				</div><!-- sp-slides -->
+
+				<div class="sp-thumbnails">
+				</div>
+			</div>	
 		</div><!-- banner-wrapper -->
 		
 		<div class="site-content">
@@ -194,15 +250,13 @@
 					<div class="sidebar-widget">	
 						<aside class="widget product-widget">
 							<header class="widgettitle">
-								<h4> آخرین پروژه ها</h4>
+								<h4>لینک های مهم</h4>
 							</header>
 							<main class="widgetbody">
 								<ul class="products-list">
-									<li><img src="images/thumb/managment/thumb1.png" alt=""><span>شرکت مسکن گستر</span></li>
-									<li><img src="images/thumb/managment/thumb2.png" alt=""><span>سازمان مدیریت اکتشاف</span></li>
-									<li><img src="images/thumb/managment/thumb3.png" alt=""><span>سازمان انتقال خون</span></li>
-									<li><img src="images/thumb/managment/thumb4.png" alt=""><span>شرکت سها</span></li>
-									<li><img src="images/thumb/managment/thumb5.png" alt=""><span>سازمان بیمه مرکزی</span></li>
+									<li><i class="fa fa-instagram"></i><span>اینستاگرام</span></li>
+									<li><i class="fa fa-linkedin-square"></i><span>لینکداین</span></li>
+									<li><i class="fa fa-book"></i><span>دانلود کاتالوگ</span></li>
 								</ul>
 							</main>
 						</aside>
@@ -325,8 +379,8 @@
 						<h4>تماس با ما</h4>
 					</header>
 					<main class="widgetbody">
-						<p><i class="fa fa-phone"></i>تلفن های تماس : 22259072-021 و 22259571-021</p>
-						<p><i class="fa fa-print"></i>فکس : 22259884-021  </p>
+						<p><i class="fa fa-phone"></i>تلفن های تماس : <br />021-22259571 - 021-22259884</p>
+						<p><i class="fa fa-fax"></i>فکس : 22259884-021  </p>
 						<p><i class="fa fa-envelope"></i>ایمیل :  info@viradeco.com</p>
 						
 					</main>
@@ -361,7 +415,7 @@
 	<script src="js/lib/jquery-1.11.3.min.js"></script>
 	
 	<script src="js/lib/jquery-scrolltofixed-min.js"></script>
-	<script src="js/lib/jquery.superslides.min.js"></script>
+	<script src="js/lib/jquery.sliderPro.min.js"></script>
 	<script src="js/lib/jquery.onscreen.min.js"></script>
 	<script src="//localhost:35729/livereload.js"></script>
 
@@ -378,22 +432,25 @@
 		
 	<!-- slider -->
 
-	<script type="text/javascript" >
-		jQuery(document).ready(function($){
-		    	 $('#slides').superslides({
-			         play: 2000
-			      });
-
-			      $('#slides').on('mouseenter', function() {
-			        $(this).superslides('stop');
-			        console.log('Stopped')
-			      });
-			      $('#slides').on('mouseleave', function() {
-			        $(this).superslides('start');
-			        console.log('Started')
-			      });
-		  });
-	</script>
+	<script type="text/javascript">
+			$( document ).ready(function( $ ) {
+				$( '#header-slider' ).sliderPro({
+					width: 1200,
+					height: 500,
+					fade: true,
+					arrows: true,
+					buttons: true,
+					fullScreen: false,
+					shuffle: true,
+					smallSize: 500,
+					mediumSize: 1000,
+					largeSize: 3000,
+					thumbnailArrows: true,
+					autoplay: true,
+					autoplayDelay : 5000,
+				});
+			});
+		</script>
 	<!-- slider script -->
 	
 	<!-- onScreen -->

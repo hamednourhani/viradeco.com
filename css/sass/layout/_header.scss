@@ -1,5 +1,14 @@
 /* header style */
-
+.top-bar{
+	background-color : $black1;
+	text-align : left;
+	padding-left : 30px;
+	.lang-icon{
+		padding :{
+			right : 8px;
+		}
+	}
+}
 .hero{
 	background-color : $black2;
 	color : $white;
@@ -39,6 +48,7 @@ nav.main-menu{
 	z-index : 99999 !important;
 	.search-area{
 		position : absolute;
+		margin-top : 5px;
 		left : 30px;
 		top : 10px;
 		input{
@@ -51,7 +61,7 @@ nav.main-menu{
 			@extend .fa;
 			content : "\f002";
 			position : absolute;
-			    top: 7px;
+			    top: 5px;
 			    left: 7px;
 			    font-size: 110%;
 			    color: $grey2;
@@ -65,12 +75,12 @@ ul.main-nav{
 	//@include single-transition(all , 0.2s , ease-in-out);
 	font-size : 100%;
 	margin-bottom : -30px;
-
+	padding : 0;
 	 background-color : $white2;
 	a{
 		@include single-transition(all , 0.2s , ease-in-out);
 		color : $grey3;
-		padding : 15px;
+		padding : 20px 15px;
 		display: inline-block;
 		
 		&:hover{
@@ -83,6 +93,8 @@ ul.main-nav{
 	li{
 		display: inline-block;
 		position : relative;
+		padding: 0;
+    	margin: 0;
 		
 
 	}
