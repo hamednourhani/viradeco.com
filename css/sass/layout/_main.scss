@@ -25,10 +25,30 @@ body{
 }
 .site-main{
 	z-index : 10;
+	@include clearfix;
+	.single-cat-title{
+		margin-top : 50px;
+
+		h1{
+			display : inline-block;
+			border-bottom : 3px solid $red;
+			margin : 0 auto;
+			font-size : 150%;
+		}
+	}
 }
 .banner-wrapper{
 	width : 100%;
-	
+	.banner-space{
+		
+		display : block;
+		min-height :50px;
+
+	}
+	img.page-banner{
+		width : 100%;
+		height : auto;
+	}
 }
 
 
@@ -38,6 +58,28 @@ body{
  	padding:{
 		top :20px;
 		bottom : 20px;
+	}
+}
+.without-sidebar{
+	.primary{
+		@include span-columns(12,12);
+		margin : auto;
+		article .featured-image{
+			@include span-columns(5,12);
+			img{
+				max-width : 100%;
+				height : auto;
+				margin-top : 15px;
+			}
+		}
+		article .article-body{
+			@include span-columns(7 omega,12);
+			p{
+				padding : 5px;
+				text-align: justify;
+			}
+		}
+
 	}
 }
 article{
@@ -68,11 +110,19 @@ article{
 						
 		}
 	}
-	&:hover .article-title h3::after{
-		width : 40%;
-	}
+	// &:hover .article-title h3::after{
+	// 	width : 40%;
+	// }
 	p{
 		margin : 5px;
+	}
+}
+body.archive{
+	article {
+		@include span-columns(6,12);
+		&:nth-of-type(2n){
+			@include span-columns(6 omega ,12);
+		}
 	}
 }
 
@@ -112,9 +162,9 @@ aside{
 			}
 		}
 	}
-	&:hover .widgettitle h4::after{
-		width : 40%;
-	}
+	// &:hover .widgettitle h4::after{
+	// 	width : 40%;
+	// }
 	p{
 		margin : 5px;
 	}

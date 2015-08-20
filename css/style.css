@@ -2,8 +2,8 @@
 /* fonts */
 @font-face {
   font-family: "Yekan";
-  src: url('fonts/Yekan.eot?1439696507');
-  src: url('fonts/Yekan.eot?&1439696507#iefix') format('embedded-opentype'), url('fonts/Yekan.ttf?1439696507') format('truetype'), url('fonts/Yekan.woff?1439696507') format('woff');
+  src: url('fonts/Yekan.eot?1440076387');
+  src: url('fonts/Yekan.eot?&1440076387#iefix') format('embedded-opentype'), url('fonts/Yekan.ttf?1440076387') format('truetype'), url('fonts/Yekan.woff?1440076387') format('woff');
   font-weight: "Yekan.svg"; }
 /* normalize style */
 /* normalize-scss 3.0.2+normalize.3.0.2 | MIT/GPLv2 License | bit.ly/normalize-scss */
@@ -12,7 +12,7 @@
  * and $rhythm-unit variables. Also, correct text resizing oddly in IE 6/7 when
  * body `font-size` is set using `em` units.
  */
-/* line 106, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
+/* line 106, ../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
   font-size: 100%;
   line-height: 1.5em; }
@@ -618,7 +618,7 @@ p {
   font-feature-settings: "liga", "dlig"; }
 
 /* ------------susy-------- */
-/* line 14, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.5/sass/susy/language/susyone/_grid.scss */
+/* line 14, ../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/susy-2.2.2/sass/susy/language/susyone/_grid.scss */
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -714,7 +714,7 @@ body {
   margin: auto !important; }
 
 /* line 23, sass/base/_base.scss */
-.fa, nav.main-menu .search-area:before, ul.main-nav > li.menu-item-has-children > a:after, ul.main-nav li ul.sub-menu li.menu-item-has-children > a:after {
+.fa, nav.main-menu .search-area:before, ul.main-nav > li.menu-item-has-children > a:after, ul.main-nav li ul.sub-menu li.menu-item-has-children > a:after, ul.main-nav li.item-home a:before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -993,12 +993,18 @@ ul.main-nav {
     display: inline-block;
     right: 100%;
     top: 0; }
+  /* line 218, sass/layout/_header.scss */
+  ul.main-nav li.item-home a:before {
+    display: inline-block;
+    content: "\f015";
+    vertical-align: middle;
+    margin-left: 7px; }
 
-/* line 221, sass/layout/_header.scss */
+/* line 228, sass/layout/_header.scss */
 li.menu-item > a img {
   float: right;
   vertical-align: -webkit-baseline-middle; }
-/* line 225, sass/layout/_header.scss */
+/* line 232, sass/layout/_header.scss */
 li.menu-item > a span {
   vertical-align: text-top; }
 
@@ -1013,7 +1019,7 @@ li.menu-item > a span {
   margin-left: auto;
   margin-right: auto;
   position: relative; }
-  /* line 38, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
   .layout:after {
     content: "";
     display: table;
@@ -1034,13 +1040,32 @@ body {
 
 /* line 26, sass/layout/_main.scss */
 .site-main {
-  z-index: 10; }
+  z-index: 10;
+  overflow: hidden;
+  *zoom: 1; }
+  /* line 29, sass/layout/_main.scss */
+  .site-main .single-cat-title {
+    margin-top: 50px; }
+    /* line 32, sass/layout/_main.scss */
+    .site-main .single-cat-title h1 {
+      display: inline-block;
+      border-bottom: 3px solid #BC3154;
+      margin: 0 auto;
+      font-size: 150%; }
 
-/* line 29, sass/layout/_main.scss */
+/* line 40, sass/layout/_main.scss */
 .banner-wrapper {
   width: 100%; }
+  /* line 42, sass/layout/_main.scss */
+  .banner-wrapper .banner-space {
+    display: block;
+    min-height: 50px; }
+  /* line 48, sass/layout/_main.scss */
+  .banner-wrapper img.page-banner {
+    width: 100%;
+    height: auto; }
 
-/* line 36, sass/layout/_main.scss */
+/* line 56, sass/layout/_main.scss */
 .primary {
   width: 66.15385%;
   float: right;
@@ -1049,10 +1074,40 @@ body {
   padding-top: 20px;
   padding-bottom: 20px; }
 
-/* line 43, sass/layout/_main.scss */
+/* line 64, sass/layout/_main.scss */
+.without-sidebar .primary {
+  width: 100%;
+  float: right;
+  margin-left: 1.53846%;
+  display: inline;
+  margin: auto; }
+  /* line 67, sass/layout/_main.scss */
+  .without-sidebar .primary article .featured-image {
+    width: 40.76923%;
+    float: right;
+    margin-left: 1.53846%;
+    display: inline; }
+    /* line 69, sass/layout/_main.scss */
+    .without-sidebar .primary article .featured-image img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 15px; }
+  /* line 75, sass/layout/_main.scss */
+  .without-sidebar .primary article .article-body {
+    width: 57.69231%;
+    float: left;
+    margin-left: 0;
+    *margin-right: -1em;
+    display: inline; }
+    /* line 77, sass/layout/_main.scss */
+    .without-sidebar .primary article .article-body p {
+      padding: 5px;
+      text-align: justify; }
+
+/* line 85, sass/layout/_main.scss */
 article {
   padding: 20px; }
-  /* line 46, sass/layout/_main.scss */
+  /* line 88, sass/layout/_main.scss */
   article .article-title {
     font-size: 100%;
     position: relative;
@@ -1060,12 +1115,12 @@ article {
     border-bottom: 1px solid #CCCCCC;
     margin-bottom: 20px;
     width: 100%; }
-    /* line 53, sass/layout/_main.scss */
+    /* line 95, sass/layout/_main.scss */
     article .article-title h3 {
       margin: 0;
       padding: 10px 0;
       display: inline-block; }
-      /* line 57, sass/layout/_main.scss */
+      /* line 99, sass/layout/_main.scss */
       article .article-title h3::after {
         -moz-transition: all, 0.2s, ease-out 1s 0s;
         -o-transition: all, 0.2s, ease-out 1s 0s;
@@ -1080,14 +1135,25 @@ article {
         position: absolute;
         bottom: 0px;
         right: 0; }
-  /* line 71, sass/layout/_main.scss */
-  article:hover .article-title h3::after {
-    width: 40%; }
-  /* line 74, sass/layout/_main.scss */
+  /* line 116, sass/layout/_main.scss */
   article p {
     margin: 5px; }
 
-/* line 79, sass/layout/_main.scss */
+/* line 121, sass/layout/_main.scss */
+body.archive article {
+  width: 49.23077%;
+  float: right;
+  margin-left: 1.53846%;
+  display: inline; }
+  /* line 123, sass/layout/_main.scss */
+  body.archive article:nth-of-type(2n) {
+    width: 49.23077%;
+    float: left;
+    margin-left: 0;
+    *margin-right: -1em;
+    display: inline; }
+
+/* line 129, sass/layout/_main.scss */
 .secondary {
   width: 32.30769%;
   float: left;
@@ -1098,24 +1164,24 @@ article {
   padding-top: 20px;
   padding-bottom: 20px; }
 
-/* line 88, sass/layout/_main.scss */
+/* line 138, sass/layout/_main.scss */
 aside {
   font-size: 100%;
   padding: 20px;
   background-color: #E6E6E6;
   margin-bottom: 20px; }
-  /* line 93, sass/layout/_main.scss */
+  /* line 143, sass/layout/_main.scss */
   aside .widgettitle {
     width: 100%;
     position: relative;
     display: inline-block;
     border-bottom: 1px solid #CCCCCC;
     margin-bottom: 20px; }
-    /* line 99, sass/layout/_main.scss */
+    /* line 149, sass/layout/_main.scss */
     aside .widgettitle h4 {
       margin: 0;
       padding: 10px 0; }
-      /* line 102, sass/layout/_main.scss */
+      /* line 152, sass/layout/_main.scss */
       aside .widgettitle h4::after {
         -moz-transition: all, 0.2s, ease-out 1s 0s;
         -o-transition: all, 0.2s, ease-out 1s 0s;
@@ -1130,27 +1196,24 @@ aside {
         position: absolute;
         bottom: 0px;
         right: 0; }
-  /* line 115, sass/layout/_main.scss */
-  aside:hover .widgettitle h4::after {
-    width: 40%; }
-  /* line 118, sass/layout/_main.scss */
+  /* line 168, sass/layout/_main.scss */
   aside p {
     margin: 5px; }
-  /* line 121, sass/layout/_main.scss */
+  /* line 171, sass/layout/_main.scss */
   aside i.fa:before, aside nav.main-menu i.search-area:before, nav.main-menu aside i.search-area:before {
     padding-left: 10px;
     color: #777777;
     font-size: 120%;
     vertical-align: middle; }
-  /* line 127, sass/layout/_main.scss */
+  /* line 177, sass/layout/_main.scss */
   aside li {
     line-height: 180%; }
 
-/* line 132, sass/layout/_main.scss */
+/* line 182, sass/layout/_main.scss */
 .products-area {
   background-color: #E6E6E6; }
 
-/* line 138, sass/layout/_main.scss */
+/* line 188, sass/layout/_main.scss */
 .product-widget ul.products-list li {
   -moz-transition: all 0.2s ease-out 0s;
   -o-transition: all 0.2s ease-out 0s;
@@ -1158,12 +1221,12 @@ aside {
   -webkit-transition-delay: 0s;
   transition: all 0.2s ease-out 0s;
   display: list-item; }
-  /* line 141, sass/layout/_main.scss */
+  /* line 191, sass/layout/_main.scss */
   .product-widget ul.products-list li img {
     padding: 5px 5px 5px 12px;
     vertical-align: middle; }
 
-/* line 150, sass/layout/_main.scss */
+/* line 200, sass/layout/_main.scss */
 .contact-area aside {
   background-color: #fff; }
 

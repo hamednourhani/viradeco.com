@@ -1,13 +1,13 @@
 <?php get_header(); ?>
 	
-	<main "site-main">
+	<main class="site-main">
 		<?php if(have_posts()){ ?>
 			<?php while(have_posts()) { the_post(); ?>
 
 				<div class="banner-wrapper">
-					<div id="header-slider" class="slider-pro">	
+					
 							<?php get_template_part('library/banner','maker'); ?>
-					</div>	
+						
 				</div><!-- banner-wrapper -->
 				
 				<div class="site-content">

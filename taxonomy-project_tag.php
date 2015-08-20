@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 	
-	<main "site-main">
+	<main class="site-main">
 		<div class="banner-wrapper">
-			<div id="header-slider" class="slider-pro">	
+			
 				<?php get_template_part('library/banner','maker'); ?>
-			</div>	
+			
 		</div><!-- banner-wrapper -->
 		
 		<div class="site-content">

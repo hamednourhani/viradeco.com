@@ -72,9 +72,9 @@ add_action( 'after_setup_theme', 'viradeco_ahoy' );
 
 /************* OEMBED SIZE OPTIONS *************/
 
-if ( ! isset( $content_width ) ) {
-	$content_width = 640;
-}
+// if ( ! isset( $content_width ) ) {
+// 	$content_width = 640;
+// }
 
 /************* THUMBNAIL SIZE OPTIONS *************/
 

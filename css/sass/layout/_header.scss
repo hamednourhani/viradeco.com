@@ -215,6 +215,13 @@ ul.main-nav{
 		top : 0;
 
 	}
+	li.item-home a:before{
+		@extend .fa;
+		display : inline-block;
+		content : "\f015";
+		vertical-align: middle;
+		margin-left: 7px;
+	}
 }
 
 li.menu-item{

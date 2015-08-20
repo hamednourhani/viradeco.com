@@ -194,7 +194,7 @@ function viradeco_theme_support() {
 	add_theme_support( 'post-thumbnails' );
 
 	// default thumb size
-	set_post_thumbnail_size(600,400 , true);
+	set_post_thumbnail_size(200,200 , true);
 	
 	// wp custom background (thx to @bransonwerner for update)
 	add_theme_support( 'custom-background',
