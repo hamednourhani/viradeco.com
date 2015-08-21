@@ -508,4 +508,7 @@ function viradeco_widget() {
 }
 add_action( 'widgets_init', 'viradeco_widget' );
 
-
+function viradeco_get_image_src($src="" , $size=""){
+    $path_info = pathinfo($src);
+    return $path_info['dirname'].'/'.$path_info['filename'].'-'.$size.'.'.$path_info['extension'];
+}

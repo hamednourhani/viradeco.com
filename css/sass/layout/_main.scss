@@ -136,6 +136,21 @@ article{
 	p{
 		margin : 5px;
 	}
+	.product-features{
+		margin-top : 40px;
+		h4.feature-header{
+			margin : 5px auto;
+		}
+		ul.feature-images{
+			@include clearfix;
+			li{
+				display : inline-block;
+				img{
+					margin :3px;
+				}
+			}
+		}
+	}
 }
 body.archive{
 	article {

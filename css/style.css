@@ -854,7 +854,7 @@ article, aside {
 /* line 46, sass/layout/_header.scss */
 nav.main-menu {
   position: relative;
-  z-index: 99999 !important; }
+  z-index: 9998 !important; }
   /* line 49, sass/layout/_header.scss */
   nav.main-menu .search-area {
     position: absolute;
@@ -1158,14 +1158,30 @@ article {
   /* line 136, sass/layout/_main.scss */
   article p {
     margin: 5px; }
+  /* line 139, sass/layout/_main.scss */
+  article .product-features {
+    margin-top: 40px; }
+    /* line 141, sass/layout/_main.scss */
+    article .product-features h4.feature-header {
+      margin: 5px auto; }
+    /* line 144, sass/layout/_main.scss */
+    article .product-features ul.feature-images {
+      overflow: hidden;
+      *zoom: 1; }
+      /* line 146, sass/layout/_main.scss */
+      article .product-features ul.feature-images li {
+        display: inline-block; }
+        /* line 148, sass/layout/_main.scss */
+        article .product-features ul.feature-images li img {
+          margin: 3px; }
 
-/* line 141, sass/layout/_main.scss */
+/* line 156, sass/layout/_main.scss */
 body.archive article {
   width: 49.23077%;
   float: right;
   margin-left: 1.53846%;
   display: inline; }
-  /* line 143, sass/layout/_main.scss */
+  /* line 158, sass/layout/_main.scss */
   body.archive article:nth-of-type(2n) {
     width: 49.23077%;
     float: left;
@@ -1173,7 +1189,7 @@ body.archive article {
     *margin-right: -1em;
     display: inline; }
 
-/* line 149, sass/layout/_main.scss */
+/* line 164, sass/layout/_main.scss */
 .secondary {
   width: 32.30769%;
   float: left;
@@ -1184,24 +1200,24 @@ body.archive article {
   padding-top: 20px;
   padding-bottom: 20px; }
 
-/* line 158, sass/layout/_main.scss */
+/* line 173, sass/layout/_main.scss */
 aside {
   font-size: 100%;
   padding: 20px;
   background-color: #E6E6E6;
   margin-bottom: 20px; }
-  /* line 163, sass/layout/_main.scss */
+  /* line 178, sass/layout/_main.scss */
   aside .widgettitle {
     width: 100%;
     position: relative;
     display: inline-block;
     border-bottom: 1px solid #CCCCCC;
     margin-bottom: 20px; }
-    /* line 169, sass/layout/_main.scss */
+    /* line 184, sass/layout/_main.scss */
     aside .widgettitle h4 {
       margin: 0;
       padding: 10px 0; }
-      /* line 172, sass/layout/_main.scss */
+      /* line 187, sass/layout/_main.scss */
       aside .widgettitle h4::after {
         -moz-transition: all, 0.2s, ease-out 1s 0s;
         -o-transition: all, 0.2s, ease-out 1s 0s;
@@ -1216,24 +1232,24 @@ aside {
         position: absolute;
         bottom: 0px;
         right: 0; }
-  /* line 188, sass/layout/_main.scss */
+  /* line 203, sass/layout/_main.scss */
   aside p {
     margin: 5px; }
-  /* line 191, sass/layout/_main.scss */
+  /* line 206, sass/layout/_main.scss */
   aside i.fa:before, aside nav.main-menu i.search-area:before, nav.main-menu aside i.search-area:before {
     padding-left: 10px;
     color: #777777;
     font-size: 120%;
     vertical-align: middle; }
-  /* line 197, sass/layout/_main.scss */
+  /* line 212, sass/layout/_main.scss */
   aside li {
     line-height: 180%; }
 
-/* line 202, sass/layout/_main.scss */
+/* line 217, sass/layout/_main.scss */
 .products-area {
   background-color: #E6E6E6; }
 
-/* line 208, sass/layout/_main.scss */
+/* line 223, sass/layout/_main.scss */
 .product-widget ul.products-list li {
   -moz-transition: all 0.2s ease-out 0s;
   -o-transition: all 0.2s ease-out 0s;
@@ -1241,12 +1257,12 @@ aside {
   -webkit-transition-delay: 0s;
   transition: all 0.2s ease-out 0s;
   display: list-item; }
-  /* line 211, sass/layout/_main.scss */
+  /* line 226, sass/layout/_main.scss */
   .product-widget ul.products-list li img {
     padding: 5px 5px 5px 12px;
     vertical-align: middle; }
 
-/* line 220, sass/layout/_main.scss */
+/* line 235, sass/layout/_main.scss */
 .contact-area aside {
   background-color: #fff; }
 

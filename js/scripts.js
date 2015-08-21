@@ -24,5 +24,7 @@ jQuery(document).ready(function($){
 	   lazyPlaceholder: 'someImage.jpg',
 	   debug: false
 	});
+
+	
 });	
 		

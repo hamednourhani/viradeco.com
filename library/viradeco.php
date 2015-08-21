@@ -175,6 +175,7 @@ function viradeco_scripts_and_styles() {
 		*/
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'scrolltofixed' );
+
 		wp_enqueue_script( 'onscreen' );
 		wp_enqueue_script( 'viradeco-js' );
 		
