@@ -11,6 +11,8 @@
 			<section class="layout">
 				
 				<div class="primary">
+
+				<?php get_search_form( true ); ?>
 					<?php if(have_posts()){ ?>
 						<?php while(have_posts()) { the_post(); ?>
 						
