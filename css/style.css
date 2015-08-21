@@ -706,14 +706,18 @@ body, html {
   -webkit-transition-delay: 0s;
   transition: all 0.4s 1s 0s; }
 
-/* line 14, sass/base/_base.scss */
+/* line 15, sass/base/_base.scss */
 body {
   font-family: "Yekan";
   direction: rtl;
   font-size: 100%;
-  margin: auto !important; }
+  margin: auto !important;
+  line-height: 180%; }
+  /* line 21, sass/base/_base.scss */
+  body p {
+    text-align: justify; }
 
-/* line 23, sass/base/_base.scss */
+/* line 27, sass/base/_base.scss */
 .fa, nav.main-menu .search-area:before, ul.main-nav > li.menu-item-has-children > a:after, ul.main-nav li ul.sub-menu li.menu-item-has-children > a:after, ul.main-nav li.item-home a:before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -723,27 +727,27 @@ body {
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0); }
 
-/* line 26, sass/base/_base.scss */
+/* line 30, sass/base/_base.scss */
 a {
   text-decoration: none;
   color: gray; }
-  /* line 29, sass/base/_base.scss */
+  /* line 33, sass/base/_base.scss */
   a:hover {
     color: #BC3154; }
 
-/* line 36, sass/base/_base.scss */
+/* line 40, sass/base/_base.scss */
 img, video, audio, iframe {
   max-width: 100; }
 
-/* line 39, sass/base/_base.scss */
+/* line 43, sass/base/_base.scss */
 input, textarea, button {
   max-width: 100%; }
 
-/* line 42, sass/base/_base.scss */
+/* line 46, sass/base/_base.scss */
 h1, h2, h3, h4, h5, h6 {
   color: #111; }
 
-/* line 46, sass/base/_base.scss */
+/* line 50, sass/base/_base.scss */
 ul, menu, dir {
   list-style-type: none;
   -webkit-margin-before: 0;
@@ -752,7 +756,7 @@ ul, menu, dir {
   -webkit-margin-end: 0px;
   -webkit-padding-start: 0px; }
 
-/* line 55, sass/base/_base.scss */
+/* line 59, sass/base/_base.scss */
 .onScreen {
   -moz-transition: opacity, 2s, ease-in-out 1s 0s;
   -o-transition: opacity, 2s, ease-in-out 1s 0s;
@@ -761,7 +765,7 @@ ul, menu, dir {
   transition: opacity 2s ease-in-out 1s 0s;
   opacity: 1; }
 
-/* line 59, sass/base/_base.scss */
+/* line 63, sass/base/_base.scss */
 article, aside {
   opacity: 0.3; }
 
@@ -856,7 +860,7 @@ nav.main-menu {
     position: absolute;
     margin-top: 5px;
     left: 30px;
-    top: 10px; }
+    top: 13px; }
     /* line 54, sass/layout/_header.scss */
     nav.main-menu .search-area input {
       height: 32px;
@@ -869,7 +873,7 @@ nav.main-menu {
     nav.main-menu .search-area:before {
       content: "\f002";
       position: absolute;
-      top: 5px;
+      top: 8px;
       left: 7px;
       font-size: 110%;
       color: #CCCCCC; }
@@ -1056,16 +1060,16 @@ body {
 /* line 40, sass/layout/_main.scss */
 .banner-wrapper {
   width: 100%; }
-  /* line 42, sass/layout/_main.scss */
+  /* line 43, sass/layout/_main.scss */
   .banner-wrapper .banner-space {
     display: block;
     min-height: 50px; }
-  /* line 48, sass/layout/_main.scss */
+  /* line 49, sass/layout/_main.scss */
   .banner-wrapper img.page-banner {
     width: 100%;
     height: auto; }
 
-/* line 56, sass/layout/_main.scss */
+/* line 57, sass/layout/_main.scss */
 .primary {
   width: 66.15385%;
   float: right;
@@ -1073,41 +1077,57 @@ body {
   display: inline;
   padding-top: 20px;
   padding-bottom: 20px; }
+  /* line 64, sass/layout/_main.scss */
+  .primary ul.projects-list li {
+    width: 100%;
+    padding: 8px 20px;
+    background-color: #F8F8F8;
+    border: 1px solid #CCCCCC;
+    border-bottom: 0px; }
+    /* line 70, sass/layout/_main.scss */
+    .primary ul.projects-list li:nth-of-type(2n) {
+      background-color: #E6E6E6; }
+    /* line 73, sass/layout/_main.scss */
+    .primary ul.projects-list li.project-link:hover {
+      background-color: #d9d9d9; }
+    /* line 76, sass/layout/_main.scss */
+    .primary ul.projects-list li:last-child {
+      border-bottom: 1px solid #CCCCCC; }
 
-/* line 64, sass/layout/_main.scss */
+/* line 83, sass/layout/_main.scss */
 .without-sidebar .primary {
   width: 100%;
   float: right;
   margin-left: 1.53846%;
   display: inline;
   margin: auto; }
-  /* line 67, sass/layout/_main.scss */
+  /* line 86, sass/layout/_main.scss */
   .without-sidebar .primary article .featured-image {
     width: 40.76923%;
     float: right;
     margin-left: 1.53846%;
     display: inline; }
-    /* line 69, sass/layout/_main.scss */
+    /* line 88, sass/layout/_main.scss */
     .without-sidebar .primary article .featured-image img {
       max-width: 100%;
       height: auto;
       margin-top: 15px; }
-  /* line 75, sass/layout/_main.scss */
+  /* line 94, sass/layout/_main.scss */
   .without-sidebar .primary article .article-body {
     width: 57.69231%;
     float: left;
     margin-left: 0;
     *margin-right: -1em;
     display: inline; }
-    /* line 77, sass/layout/_main.scss */
+    /* line 96, sass/layout/_main.scss */
     .without-sidebar .primary article .article-body p {
       padding: 5px;
       text-align: justify; }
 
-/* line 85, sass/layout/_main.scss */
+/* line 105, sass/layout/_main.scss */
 article {
   padding: 20px; }
-  /* line 88, sass/layout/_main.scss */
+  /* line 108, sass/layout/_main.scss */
   article .article-title {
     font-size: 100%;
     position: relative;
@@ -1115,12 +1135,12 @@ article {
     border-bottom: 1px solid #CCCCCC;
     margin-bottom: 20px;
     width: 100%; }
-    /* line 95, sass/layout/_main.scss */
+    /* line 115, sass/layout/_main.scss */
     article .article-title h3 {
       margin: 0;
       padding: 10px 0;
       display: inline-block; }
-      /* line 99, sass/layout/_main.scss */
+      /* line 119, sass/layout/_main.scss */
       article .article-title h3::after {
         -moz-transition: all, 0.2s, ease-out 1s 0s;
         -o-transition: all, 0.2s, ease-out 1s 0s;
@@ -1135,17 +1155,17 @@ article {
         position: absolute;
         bottom: 0px;
         right: 0; }
-  /* line 116, sass/layout/_main.scss */
+  /* line 136, sass/layout/_main.scss */
   article p {
     margin: 5px; }
 
-/* line 121, sass/layout/_main.scss */
+/* line 141, sass/layout/_main.scss */
 body.archive article {
   width: 49.23077%;
   float: right;
   margin-left: 1.53846%;
   display: inline; }
-  /* line 123, sass/layout/_main.scss */
+  /* line 143, sass/layout/_main.scss */
   body.archive article:nth-of-type(2n) {
     width: 49.23077%;
     float: left;
@@ -1153,7 +1173,7 @@ body.archive article {
     *margin-right: -1em;
     display: inline; }
 
-/* line 129, sass/layout/_main.scss */
+/* line 149, sass/layout/_main.scss */
 .secondary {
   width: 32.30769%;
   float: left;
@@ -1164,24 +1184,24 @@ body.archive article {
   padding-top: 20px;
   padding-bottom: 20px; }
 
-/* line 138, sass/layout/_main.scss */
+/* line 158, sass/layout/_main.scss */
 aside {
   font-size: 100%;
   padding: 20px;
   background-color: #E6E6E6;
   margin-bottom: 20px; }
-  /* line 143, sass/layout/_main.scss */
+  /* line 163, sass/layout/_main.scss */
   aside .widgettitle {
     width: 100%;
     position: relative;
     display: inline-block;
     border-bottom: 1px solid #CCCCCC;
     margin-bottom: 20px; }
-    /* line 149, sass/layout/_main.scss */
+    /* line 169, sass/layout/_main.scss */
     aside .widgettitle h4 {
       margin: 0;
       padding: 10px 0; }
-      /* line 152, sass/layout/_main.scss */
+      /* line 172, sass/layout/_main.scss */
       aside .widgettitle h4::after {
         -moz-transition: all, 0.2s, ease-out 1s 0s;
         -o-transition: all, 0.2s, ease-out 1s 0s;
@@ -1196,24 +1216,24 @@ aside {
         position: absolute;
         bottom: 0px;
         right: 0; }
-  /* line 168, sass/layout/_main.scss */
+  /* line 188, sass/layout/_main.scss */
   aside p {
     margin: 5px; }
-  /* line 171, sass/layout/_main.scss */
+  /* line 191, sass/layout/_main.scss */
   aside i.fa:before, aside nav.main-menu i.search-area:before, nav.main-menu aside i.search-area:before {
     padding-left: 10px;
     color: #777777;
     font-size: 120%;
     vertical-align: middle; }
-  /* line 177, sass/layout/_main.scss */
+  /* line 197, sass/layout/_main.scss */
   aside li {
     line-height: 180%; }
 
-/* line 182, sass/layout/_main.scss */
+/* line 202, sass/layout/_main.scss */
 .products-area {
   background-color: #E6E6E6; }
 
-/* line 188, sass/layout/_main.scss */
+/* line 208, sass/layout/_main.scss */
 .product-widget ul.products-list li {
   -moz-transition: all 0.2s ease-out 0s;
   -o-transition: all 0.2s ease-out 0s;
@@ -1221,12 +1241,12 @@ aside {
   -webkit-transition-delay: 0s;
   transition: all 0.2s ease-out 0s;
   display: list-item; }
-  /* line 191, sass/layout/_main.scss */
+  /* line 211, sass/layout/_main.scss */
   .product-widget ul.products-list li img {
     padding: 5px 5px 5px 12px;
     vertical-align: middle; }
 
-/* line 200, sass/layout/_main.scss */
+/* line 220, sass/layout/_main.scss */
 .contact-area aside {
   background-color: #fff; }
 
@@ -1240,6 +1260,10 @@ footer.site-footer, .site-footer {
   background-color: #111;
   color: #CCCCCC;
   font-size: 90%; }
+  /* line 10, sass/layout/_footer.scss */
+  footer.site-footer .site-designer, .site-footer .site-designer {
+    float: left;
+    font-size: 90%; }
 
 /* button style */
 /* line 2, sass/modules/_btn.scss */

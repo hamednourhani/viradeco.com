@@ -12,23 +12,19 @@
 				
 				<div class="primary">
 					<?php if(have_posts()){ ?>
-						<?php while(have_posts()) { the_post(); ?>
-						
-							<article class="hentry">
-								<div class="featured-image single-image">
-									<?php the_post_thumbnail(); ?>
-								</div>
-								<header class="article-title">
+						<ul class="projects-list">
+							<li><span><?php echo __('Title','viradeco'); ?></span></li>
+							<?php while(have_posts()) { the_post(); 
+								$project_date = get_post_meta(get_the_ID(),'_viradeco_project_date'); ?>
+								<li class="project-link">
 									<a href="<?php the_permalink(); ?>">
-										<h3><?php the_title(); ?></h3>
+										<span><?php echo esc_html($project_date[0]).' - '; ?></span>
+										<span><?php the_title(); ?></span>
 									</a>
-								</header>
-								<main class="article-body">
-									<?php the_excerpt(); ?>
-									<?php get_template_part('library/post','meta'); ?>
-								</main>
-							</article>
-						<?php } ?>
+									
+								</li>
+							<?php } ?>
+						</ul>
 					<?php } ?>				
 				</div><!-- primary -->
 

@@ -10,13 +10,17 @@ body,html{
 	@include single-transition(all 0.4s);
 
 
+
 }
 body {
 	font-family : $Yekan;
 	direction : rtl;
 	font-size : 100%;
 	margin : auto !important;
-		
+	line-height : 180%;
+	p{
+		text-align : justify;
+	}		
 	
 }
 

@@ -8,9 +8,9 @@
 
 			<footer class="site-footer">
 				<section class="layout">
-					<span>تمامی حقوق این سایت برای شرکت هنر چیدمان ویرا محفوظ می باشد.</span>
+					<span class="site-credit">تمامی حقوق این سایت برای شرکت هنر چیدمان ویرا محفوظ می باشد.</span>
 
-					<span>
+					<span class="site-designer">
 						<?php echo __('Designed by ','viradeco');?>
 						<a href="karait.com"><?php echo __('Farakaranet ','viradeco');?></a>
 					</span>

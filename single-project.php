@@ -23,9 +23,14 @@
 									</a>
 								</header>
 								<main class="article-body">
+									<?php $project_date = get_post_meta(get_the_ID(),'_viradeco_project_date'); ?>
+									<?php var_dump($project_date); ?>
+									<?php $project_meta = get_post_meta(get_the_ID(),'_viradeco_group_feature'); ?>
+									<?php var_dump($project_meta); ?>
+									<?php $project_images = get_post_meta(get_the_ID(),'_viradeco_image_list'); ?>
+									<?php var_dump($project_images); ?>
+
 									<?php the_content(); ?>
-									<?php $product_features = get_post_meta(get_the_ID(),'_viradeco_group_feature' ); ?>
-									<?php var_dump($product_features); ?>
 									<?php get_template_part('library/post','meta'); ?>
 								</main>
 							</article>
