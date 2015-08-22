@@ -350,14 +350,13 @@ class last_products_widget extends WP_Widget {
 
         $title = apply_filters( 'widget_title', $instance['title'] );
         $number = $instance['number'];
-        $cat = get_category($instance['cat']);
+        $term = get_term($instance['cat'],'product_cat');
 
-        
-
+        //var_dump($instance);
         $products = get_posts(array(
             'post_type' => 'product',
             'posts_per_page' => $number,
-            'cat'         => $cat->slug,
+            'product_cat'         => $term->slug,
             )
         );
        
@@ -419,7 +418,10 @@ class last_products_widget extends WP_Widget {
                   'class'              => 'widefat',
                   'taxonomy'           => 'product_cat',
                   'echo'               => '1',
+                  'selected'          =>esc_attr( $cat ),
             )); ?>
+
+
         </p>
         
         <?php 
@@ -431,6 +433,7 @@ class last_products_widget extends WP_Widget {
         $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
         $instance['number'] = ( ! empty( $new_instance['number'] ) ) ? strip_tags( $new_instance['number'] ) : '';
         $instance['cat'] = ( ! empty( $new_instance['cat'] ) ) ? strip_tags( $new_instance['cat'] ) : '';
+        //var_dump($instance);
         return $instance;
     }
 } // Class wpb_widget ends here
@@ -546,13 +549,14 @@ class last_posts_by_cat_widget extends WP_Widget {
         $number = $instance['number'];
         $cat = get_category($instance['cat']);
 
-       
+      
         $posts = get_posts(array(
             'post_type' => 'post',
             'posts_per_page' => $number,
-            'cat'         => $cat->term_id,
+            'category'         => $cat->term_id,
             )
         );
+        
        
         $content = '<ul class="widget-list">';
         foreach($posts as $post) : setup_postdata( $post );
@@ -612,6 +616,7 @@ class last_posts_by_cat_widget extends WP_Widget {
                   'class'              => 'widefat',
                   'taxonomy'           => 'category',
                   'echo'               => '1',
+                  'selected'           => esc_attr($cat ),
             )); ?>
         </p>
         <?php 
