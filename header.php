@@ -75,12 +75,13 @@
 
 				<nav role="navigation" class="main-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
 					<section class="layout">
-															
+						<?php $walker = new Menu_With_Image; ?>
 						<?php wp_nav_menu(array(
     					         'container' => false,                           // remove nav container
     					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
     					         'menu' => __( 'Main Menu', 'viradeco' ),  // nav name
-    					         'menu_class' => 'nav main-nav cf',               // adding custom nav class
+    					         'menu_class' => 'nav main-nav cf', 
+    					         'walker' => $walker,             // adding custom nav class
     					         'theme_location' => 'main-menu',                 // where it's located in the theme
     					         'before' => '',                                 // before the menu
         			               'after' => '',                                  // after the menu

@@ -26,22 +26,24 @@
 									<?php the_content(); 
 										$product_features = get_post_meta(get_the_ID(),'_viradeco_group_feature' );?>
 										<div class="product-features">
-											<?php foreach($product_features[0] as $product_feature){?>
-												<h4 class="feature-header"><?php echo $product_feature['feature_name']; ?></h4>
-												<p class="feature-desc"><?php echo $product_feature['feature_desc']; ?></p>
-												 <ul class="feature-images">
-													 <?php $counter = 1; ?>
-													 <?php foreach($product_feature['_viradeco_group_image_list'] as $image_src){?>
-															<?php $img_thumb_src = viradeco_get_image_src($image_src,'53x53'); ?>													
-																
-																	<a href="<?php echo $image_src; ?>" rel="prettyPhoto" title="<?php echo $product_feature['feature_name']; ?>">
-																		<img src="<?php echo $img_thumb_src; ?>" width="53" height="53" alt="<?php echo $product_feature['feature_name']; ?>" />
-																	</a>
-																
+											<?php if(!empty($product_features)){ ?>
+												<?php foreach($product_features[0] as $product_feature){?>
+													<h4 class="feature-header"><?php echo $product_feature['feature_name']; ?></h4>
+													<p class="feature-desc"><?php echo $product_feature['feature_desc']; ?></p>
+													 <ul class="feature-images">
+														 <?php $counter = 1; ?>
+														 <?php foreach($product_feature['_viradeco_group_image_list'] as $image_src){?>
+																<?php $img_thumb_src = viradeco_get_image_src($image_src,'53x53'); ?>													
+																	
+																		<a href="<?php echo $image_src; ?>" rel="prettyPhoto" title="<?php echo $product_feature['feature_name']; ?>">
+																			<img src="<?php echo $img_thumb_src; ?>" width="53" height="53" alt="<?php echo $product_feature['feature_name']; ?>" />
+																		</a>
+																	
 
-													 <?php } ?>
-													 <?php $counter++; ?>
-												 </ul>
+														 <?php } ?>
+														 <?php $counter++; ?>
+													 </ul>
+												<?php } ?>
 											<?php } ?>
 										</div>
 									<?php get_template_part('library/post','meta'); ?>

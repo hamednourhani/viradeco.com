@@ -26,41 +26,46 @@
 									<div class="project-features">
 										<?php $project_date = get_post_meta(get_the_ID(),'_viradeco_project_date'); ?>
 										<?php $project_meta = get_post_meta(get_the_ID(),'_viradeco_group_feature'); ?>
-										<table class="project-meta">
-											<tbody>
-											<tr>
-												<td class="meta-name"><?php echo __('Date ','viradeco'); ?></td>
-												<td class="meta-value"><?php echo $project_date[0]; ?></td>
-											</tr>
+										<div class="project-meta">
+											<ul class="project-features-list">
+												<li >
+													<span class="meta-name"><?php echo __('Date ','viradeco'); ?></span>
+													<span class="meta-value"><?php echo $project_date[0]; ?></span>
+												</li>
 											<?php foreach($project_meta[0] as $meta){ ?>
 												
-												<tr>
-													<td class="meta-name"><?php echo $meta['feature_name']; ?></td>
-													<td class="meta-value"><?php echo $meta['feature_value']; ?></td>
-												</tr>
+												<li>
+													<span class="meta-name"><?php echo $meta['feature_name']; ?></span>
+													<span class="meta-value"><?php echo $meta['feature_value']; ?></span>
+												</li>
 											<?php } ?>
 											
-											</tbody>
-										</table>
+											</ul>
+										</div>
 										
 										
 
-									<?php the_content(); ?>
-									<?php $project_images = get_post_meta(get_the_ID(),'_viradeco_image_list'); ?>
-									<ul class="feature-images">
-										 <?php $counter = 1; ?>
-										 <?php foreach($project_images[0] as $image_src){?>
-												<?php $img_thumb_src = viradeco_get_image_src($image_src,'130x130'); ?>													
-													
-														<a href="<?php echo $image_src; ?>" rel="prettyPhoto" >
-															<img src="<?php echo $img_thumb_src; ?>" width="130" height="130" alt="" />
-														</a>
-													
+										<?php the_content(); ?>
 
-										 <?php } ?>
-										 <?php $counter++; ?>
-									</ul>
-									<?php get_template_part('library/post','meta'); ?>
+										<?php $project_images = get_post_meta(get_the_ID(),'_viradeco_image_list'); ?>
+										<ul class="feature-images">
+											<?php $counter = 1; ?>
+											<?php if(!empty($project_images)){ ?>
+												 <?php foreach($project_images[0] as $image_src){?>
+														<?php $img_thumb_src = viradeco_get_image_src($image_src,'130x130'); ?>													
+															<li>
+																<a href="<?php echo $image_src; ?>" rel="prettyPhoto" >
+																	<img src="<?php echo $img_thumb_src; ?>" width="130" height="130" alt="" />
+																</a>
+															</li>
+
+												 <?php } ?>
+											<?php } ?>
+											 <?php $counter++; ?>
+											
+										</ul>
+									</div>
+										<?php get_template_part('library/post','meta'); ?>
 								</main>
 							</article>
 											

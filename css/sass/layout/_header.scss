@@ -17,6 +17,7 @@
 		max-width : 140px;
 		display: inline-block;
 		padding : 20px 10px 10px;
+		overflow: hidden;
 	}
 	.site-desc{
 		// position : absolute;
@@ -25,6 +26,18 @@
 		float : left;
 		margin-top : 40px;
 		padding : 10px;
+		position : relative;
+		&:after{
+			display : inline-block;
+			position : absolute;
+			bottom : 0;
+			right : 0;
+			height : 2px;
+			width : 400px;
+			max-width: 100%;
+			background-color: $red;
+			content : "";
+		}
 	}
 
 }
@@ -83,7 +96,7 @@ ul.main-nav{
 	a{
 		@include single-transition(all , 0.2s , ease-in-out);
 		color : $grey3;
-		padding : 20px 15px;
+		padding : 20px 17px;
 		display: inline-block;
 		
 		&:hover{
@@ -107,6 +120,10 @@ ul.main-nav{
 		content: "\f0d7";
 		vertical-align : middle;
 		padding-right: 5px;
+		// width walker added
+		position: absolute;
+    	left: 1px;
+    	top: 41%;
 	}
 	
 	&>li>ul.sub-menu,li ul.sub-menu{
@@ -142,7 +159,7 @@ ul.main-nav{
 			content: "\f0d9";
 		    left: 12px;
 		    position: absolute;
-		        top: 18px;
+		        top: 16px;
 		    vertical-align : middle;
 		}
 	}

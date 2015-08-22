@@ -147,37 +147,44 @@ article{
 				display : inline-block;
 				img{
 					margin :3px;
+					border : 1px solid $grey2;
 				}
 			}
 		}
 	}
-	table.project-meta{
+	.project-meta{
 		width : 90%;
 		display: block;
-		margin : auto;
-		tbody{
+		margin : auto auto 30px;
+		ul{
 			width : 100%;
 		}
-		tr{
-			background-color: $white2;
+		li{
+			
+			display : inline-block;
 			width : 100%;
 			padding : 0;
 			margin : 0;
-			&:nth-of-type(2n){
-				background-color: $grey1;
-
-			}
-			td{
+			
+			span{
 				border : 1px solid $grey2;
 				padding : 5px 15px;
+				display : inline-block;
+				background-color: $white2;
 				&.meta-name{
-					max-width :40%;
-					width : 40%;
+					max-width :100%;
+					width : 38%;
 				}
 				&.meta-value{
-					max-width : 60%;
+					max-width : 100%;
 					width : 60%;
 				}
+			}
+			&:nth-of-type(2n){
+				span{
+					background-color: $grey1;
+				}
+
 			}
 		}
 	}
