@@ -177,8 +177,8 @@ function viradeco_register_sidebars() {
 		'id' => 'sidebar',
 		'name' => __( 'Sidebar', 'viradeco' ),
 		'description' => __( 'The first (primary) sidebar.', 'viradeco' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => '</aside>',
 		'before_title' => '<h4 class="widgettitle">',
 		'after_title' => '</h4>',
 	));
@@ -186,8 +186,8 @@ function viradeco_register_sidebars() {
     'id' => 'footer-first',
     'name' => __( 'Footer First', 'viradeco' ),
     'description' => __( 'The first footer widget area', 'viradeco' ),
-    'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    'after_widget' => '</div>',
+    'before_widget' => '<aside id="%1$s" class="footer-first widget %2$s">',
+    'after_widget' => '</aside>',
     'before_title' => '<h4 class="widgettitle">',
     'after_title' => '</h4>',
   ));
@@ -195,8 +195,8 @@ function viradeco_register_sidebars() {
     'id' => 'footer-second',
     'name' => __( 'Footer Second', 'viradeco' ),
     'description' => __( 'The second footer widget area', 'viradeco' ),
-    'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    'after_widget' => '</div>',
+    'before_widget' => '<aside id="%1$s" class="footer-second widget %2$s">',
+    'after_widget' => '</aside>',
     'before_title' => '<h4 class="widgettitle">',
     'after_title' => '</h4>',
   ));

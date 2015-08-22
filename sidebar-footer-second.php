@@ -1,4 +1,4 @@
-<?php if ( is_active_sidebar( 'second-footer' )) : ?>
+<?php if ( is_active_sidebar( 'footer-second' )) : ?>
 		
 		<div class="contact-area">
 			<section class="layout">

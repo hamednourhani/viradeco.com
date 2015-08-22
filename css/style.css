@@ -1368,6 +1368,35 @@ footer.site-footer, .site-footer {
     float: left;
     font-size: 90%; }
 
+/* line 17, sass/layout/_footer.scss */
+.products-area .widget.footer-first {
+  width: 23.84615%;
+  float: right;
+  margin-left: 1.53846%;
+  display: inline; }
+  /* line 19, sass/layout/_footer.scss */
+  .products-area .widget.footer-first:nth-of-type(4n) {
+    width: 23.84615%;
+    float: left;
+    margin-left: 0;
+    *margin-right: -1em;
+    display: inline; }
+
+/* line 27, sass/layout/_footer.scss */
+.contact-area .widget.footer-second {
+  background-color: #fff;
+  width: 32.30769%;
+  float: right;
+  margin-left: 1.53846%;
+  display: inline; }
+  /* line 30, sass/layout/_footer.scss */
+  .contact-area .widget.footer-second:nth-of-type(3n) {
+    width: 32.30769%;
+    float: left;
+    margin-left: 0;
+    *margin-right: -1em;
+    display: inline; }
+
 /* button style */
 /* line 2, sass/modules/_btn.scss */
 input[type=submit], button {

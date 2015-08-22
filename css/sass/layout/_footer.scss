@@ -11,5 +11,27 @@ footer.site-footer,.site-footer{
 		float : left;
 		font-size : 90%;
 	}
+	
 }
+.products-area{
+	.widget.footer-first{
+		@include span-columns(3,12);
+		&:nth-of-type(4n){
+			@include span-columns(3 omega,12);
+
+		}
+	}
+	
+}
+.contact-area{
+	.widget.footer-second{
+		background-color : $white;
+		@include span-columns(4,12);
+		&:nth-of-type(3n){
+			@include span-columns(4 omega,12);
+
+		}
+	}
+}
+
 
