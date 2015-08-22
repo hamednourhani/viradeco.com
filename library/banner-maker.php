@@ -12,7 +12,7 @@
 		$archive_banner = category_image_src( $params , $display );
 
 		if($archive_banner){ 
-			echo '<img class="page-banner" src="'.$archive_banner.'"/>';
+			echo '<div class="banner-inner"><img class="page-banner" src="'.$archive_banner.'"/></div>';
 		} else { ?>
 			<div class="single-cat-title">
 				<section class="layout">
@@ -26,7 +26,7 @@
 				<h1><?php printf( __( 'Search Results for: %s', 'viradeco' ), get_search_query() ); ?></h1>
 			</section>
 		</div>
-<?php } elseif(is_single()) {
+<?php } elseif(is_singular()) {
 		$banner_mod = get_post_meta(get_the_ID(),'_viradeco_banner_mod');
 		
 		switch ($banner_mod[0]) {
@@ -36,7 +36,7 @@
 				break;
 			case 'image':
 				$image = get_post_meta( get_the_ID(), '_viradeco_image' );
-				echo '<img class="page-banner" src="'.$image[0].'"/>';
+				echo '<div class="banner-inner"><img class="page-banner" src="'.$image[0].'"/></div>';
 				break;
 			default: 
 				echo '<div class="banner-space"></div>';
