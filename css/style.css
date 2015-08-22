@@ -1142,10 +1142,10 @@ body {
       text-align: justify; }
 
 /* line 105, sass/layout/_main.scss */
-article {
+article, .hentry {
   padding: 20px; }
   /* line 108, sass/layout/_main.scss */
-  article .article-title {
+  article .article-title, .hentry .article-title {
     font-size: 100%;
     position: relative;
     display: inline-block;
@@ -1153,12 +1153,12 @@ article {
     margin-bottom: 20px;
     width: 100%; }
     /* line 115, sass/layout/_main.scss */
-    article .article-title h3 {
+    article .article-title h3, .hentry .article-title h3 {
       margin: 0;
       padding: 10px 0;
       display: inline-block; }
       /* line 119, sass/layout/_main.scss */
-      article .article-title h3::after {
+      article .article-title h3::after, .hentry .article-title h3::after {
         -moz-transition: all, 0.2s, ease-out 1s 0s;
         -o-transition: all, 0.2s, ease-out 1s 0s;
         -webkit-transition: all, 0.2s, ease-out 1s;
@@ -1173,61 +1173,61 @@ article {
         bottom: 0px;
         right: 0; }
   /* line 136, sass/layout/_main.scss */
-  article p {
+  article p, .hentry p {
     margin: 5px; }
   /* line 139, sass/layout/_main.scss */
-  article .product-features, article .project-features {
+  article .product-features, article .project-features, .hentry .product-features, .hentry .project-features {
     margin-top: 40px; }
     /* line 141, sass/layout/_main.scss */
-    article .product-features h4.feature-header, article .project-features h4.feature-header {
+    article .product-features h4.feature-header, article .project-features h4.feature-header, .hentry .product-features h4.feature-header, .hentry .project-features h4.feature-header {
       margin: 5px auto; }
     /* line 144, sass/layout/_main.scss */
-    article .product-features ul.feature-images, article .project-features ul.feature-images {
+    article .product-features ul.feature-images, article .project-features ul.feature-images, .hentry .product-features ul.feature-images, .hentry .project-features ul.feature-images {
       overflow: hidden;
       *zoom: 1; }
       /* line 146, sass/layout/_main.scss */
-      article .product-features ul.feature-images li, article .project-features ul.feature-images li {
+      article .product-features ul.feature-images li, article .project-features ul.feature-images li, .hentry .product-features ul.feature-images li, .hentry .project-features ul.feature-images li {
         display: inline-block; }
         /* line 148, sass/layout/_main.scss */
-        article .product-features ul.feature-images li img, article .project-features ul.feature-images li img {
+        article .product-features ul.feature-images li img, article .project-features ul.feature-images li img, .hentry .product-features ul.feature-images li img, .hentry .project-features ul.feature-images li img {
           margin: 3px;
           border: 1px solid #CCCCCC; }
   /* line 155, sass/layout/_main.scss */
-  article .project-meta {
+  article .project-meta, .hentry .project-meta {
     width: 90%;
     display: block;
     margin: auto auto 30px; }
     /* line 159, sass/layout/_main.scss */
-    article .project-meta ul {
+    article .project-meta ul, .hentry .project-meta ul {
       width: 100%; }
     /* line 162, sass/layout/_main.scss */
-    article .project-meta li {
+    article .project-meta li, .hentry .project-meta li {
       display: inline-block;
       width: 100%;
       padding: 0;
       margin: 0; }
       /* line 169, sass/layout/_main.scss */
-      article .project-meta li span {
+      article .project-meta li span, .hentry .project-meta li span {
         border: 1px solid #CCCCCC;
         padding: 5px 15px;
         display: inline-block;
         background-color: #F8F8F8; }
         /* line 174, sass/layout/_main.scss */
-        article .project-meta li span.meta-name {
+        article .project-meta li span.meta-name, .hentry .project-meta li span.meta-name {
           max-width: 100%;
           width: 38%; }
         /* line 178, sass/layout/_main.scss */
-        article .project-meta li span.meta-value {
+        article .project-meta li span.meta-value, .hentry .project-meta li span.meta-value {
           max-width: 100%;
           width: 60%; }
       /* line 184, sass/layout/_main.scss */
-      article .project-meta li:nth-of-type(2n) span {
+      article .project-meta li:nth-of-type(2n) span, .hentry .project-meta li:nth-of-type(2n) span {
         background-color: #E6E6E6; }
   /* line 191, sass/layout/_main.scss */
-  article.page404 {
+  article.page404, .hentry.page404 {
     text-align: center; }
     /* line 193, sass/layout/_main.scss */
-    article.page404 .article-body, article.page404 p, article.page404 div {
+    article.page404 .article-body, article.page404 p, article.page404 div, .hentry.page404 .article-body, .hentry.page404 p, .hentry.page404 div {
       text-align: center; }
 
 /* line 199, sass/layout/_main.scss */
