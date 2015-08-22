@@ -715,9 +715,10 @@ body {
   line-height: 180%; }
   /* line 21, sass/base/_base.scss */
   body p {
-    text-align: justify; }
+    text-align: justify;
+    color: #4E4E4E; }
 
-/* line 27, sass/base/_base.scss */
+/* line 28, sass/base/_base.scss */
 .fa, nav.main-menu .search-area:before, ul.main-nav > li.menu-item-has-children > a:after, ul.main-nav li ul.sub-menu li.menu-item-has-children > a:after, ul.main-nav li.item-home a:before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -727,27 +728,27 @@ body {
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0); }
 
-/* line 30, sass/base/_base.scss */
+/* line 31, sass/base/_base.scss */
 a {
   text-decoration: none;
   color: gray; }
-  /* line 33, sass/base/_base.scss */
+  /* line 34, sass/base/_base.scss */
   a:hover {
     color: #BC3154; }
 
-/* line 40, sass/base/_base.scss */
+/* line 41, sass/base/_base.scss */
 img, video, audio, iframe {
   max-width: 100; }
 
-/* line 43, sass/base/_base.scss */
+/* line 44, sass/base/_base.scss */
 input, textarea, button {
   max-width: 100%; }
 
-/* line 46, sass/base/_base.scss */
+/* line 47, sass/base/_base.scss */
 h1, h2, h3, h4, h5, h6 {
   color: #111; }
 
-/* line 50, sass/base/_base.scss */
+/* line 51, sass/base/_base.scss */
 ul, menu, dir {
   list-style-type: none;
   -webkit-margin-before: 0;
@@ -756,7 +757,7 @@ ul, menu, dir {
   -webkit-margin-end: 0px;
   -webkit-padding-start: 0px; }
 
-/* line 59, sass/base/_base.scss */
+/* line 60, sass/base/_base.scss */
 .onScreen {
   -moz-transition: opacity, 2s, ease-in-out 1s 0s;
   -o-transition: opacity, 2s, ease-in-out 1s 0s;
@@ -765,7 +766,7 @@ ul, menu, dir {
   transition: opacity 2s ease-in-out 1s 0s;
   opacity: 1; }
 
-/* line 63, sass/base/_base.scss */
+/* line 64, sass/base/_base.scss */
 article, aside {
   opacity: 0.3; }
 
@@ -904,7 +905,7 @@ ul.main-nav {
     -webkit-transition: all 0.2s ease-in-out;
     -webkit-transition-delay: 0s;
     transition: all 0.2s ease-in-out 0s;
-    color: #777777;
+    color: #4E4E4E;
     padding: 20px 17px;
     display: inline-block; }
     /* line 102, sass/layout/_header.scss */
@@ -1222,14 +1223,20 @@ article {
       /* line 184, sass/layout/_main.scss */
       article .project-meta li:nth-of-type(2n) span {
         background-color: #E6E6E6; }
+  /* line 191, sass/layout/_main.scss */
+  article.page404 {
+    text-align: center; }
+    /* line 193, sass/layout/_main.scss */
+    article.page404 .article-body, article.page404 p, article.page404 div {
+      text-align: center; }
 
-/* line 193, sass/layout/_main.scss */
+/* line 199, sass/layout/_main.scss */
 body.archive article {
   width: 49.23077%;
   float: right;
   margin-left: 1.53846%;
   display: inline; }
-  /* line 195, sass/layout/_main.scss */
+  /* line 201, sass/layout/_main.scss */
   body.archive article:nth-of-type(2n) {
     width: 49.23077%;
     float: left;
@@ -1237,7 +1244,7 @@ body.archive article {
     *margin-right: -1em;
     display: inline; }
 
-/* line 201, sass/layout/_main.scss */
+/* line 207, sass/layout/_main.scss */
 .secondary {
   width: 32.30769%;
   float: left;
@@ -1248,69 +1255,101 @@ body.archive article {
   padding-top: 20px;
   padding-bottom: 20px; }
 
-/* line 210, sass/layout/_main.scss */
-aside {
+/* line 216, sass/layout/_main.scss */
+.widget {
   font-size: 100%;
   padding: 20px;
   background-color: #E6E6E6;
   margin-bottom: 20px; }
-  /* line 215, sass/layout/_main.scss */
-  aside .widgettitle {
+  /* line 221, sass/layout/_main.scss */
+  .widget h4.widgettitle {
     width: 100%;
     position: relative;
     display: inline-block;
     border-bottom: 1px solid #CCCCCC;
-    margin-bottom: 20px; }
-    /* line 221, sass/layout/_main.scss */
-    aside .widgettitle h4 {
-      margin: 0;
-      padding: 10px 0; }
-      /* line 224, sass/layout/_main.scss */
-      aside .widgettitle h4::after {
-        -moz-transition: all, 0.2s, ease-out 1s 0s;
-        -o-transition: all, 0.2s, ease-out 1s 0s;
-        -webkit-transition: all, 0.2s, ease-out 1s;
-        -webkit-transition-delay: 0s;
-        transition: all 0.2s ease-out 1s 0s;
-        display: block;
-        content: "";
-        width: 30px;
-        height: 3px;
-        background-color: #BC3154;
-        position: absolute;
-        bottom: 0px;
-        right: 0; }
-  /* line 240, sass/layout/_main.scss */
-  aside p {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 10px 0; }
+    /* line 229, sass/layout/_main.scss */
+    .widget h4.widgettitle:after {
+      -moz-transition: all, 0.2s, ease-out 1s 0s;
+      -o-transition: all, 0.2s, ease-out 1s 0s;
+      -webkit-transition: all, 0.2s, ease-out 1s;
+      -webkit-transition-delay: 0s;
+      transition: all 0.2s ease-out 1s 0s;
+      display: block;
+      content: "";
+      width: 30px;
+      height: 3px;
+      background-color: #BC3154;
+      position: absolute;
+      bottom: 0px;
+      right: 0; }
+  /* line 245, sass/layout/_main.scss */
+  .widget p {
     margin: 5px; }
-  /* line 243, sass/layout/_main.scss */
-  aside i.fa:before, aside nav.main-menu i.search-area:before, nav.main-menu aside i.search-area:before {
+  /* line 248, sass/layout/_main.scss */
+  .widget i.fa:before, .widget nav.main-menu i.search-area:before, nav.main-menu .widget i.search-area:before {
     padding-left: 10px;
-    color: #777777;
+    color: #4E4E4E;
     font-size: 120%;
     vertical-align: middle; }
-  /* line 249, sass/layout/_main.scss */
-  aside li {
+  /* line 254, sass/layout/_main.scss */
+  .widget li {
     line-height: 180%; }
 
-/* line 254, sass/layout/_main.scss */
+/* line 259, sass/layout/_main.scss */
 .products-area {
   background-color: #E6E6E6; }
 
-/* line 260, sass/layout/_main.scss */
-.product-widget ul.products-list li {
-  -moz-transition: all 0.2s ease-out 0s;
-  -o-transition: all 0.2s ease-out 0s;
-  -webkit-transition: all 0.2s ease-out;
-  -webkit-transition-delay: 0s;
-  transition: all 0.2s ease-out 0s;
+/* line 264, sass/layout/_main.scss */
+ul.widget-list li {
   display: list-item; }
-  /* line 263, sass/layout/_main.scss */
-  .product-widget ul.products-list li img {
-    padding: 5px 5px 5px 12px;
+  /* line 266, sass/layout/_main.scss */
+  ul.widget-list li img {
+    margin: 5px 5px 5px 12px;
     vertical-align: middle; }
 
-/* line 272, sass/layout/_main.scss */
+/* line 274, sass/layout/_main.scss */
+ul.social-links li {
+  padding: 5px; }
+  /* line 276, sass/layout/_main.scss */
+  ul.social-links li i:before {
+    color: #fff !important;
+    background-color: #BC3154;
+    display: inline-block;
+    padding: 7px;
+    text-align: center;
+    margin: 3px 3px 3px 12px; }
+  /* line 286, sass/layout/_main.scss */
+  ul.social-links li i.fa.fa-google:before, ul.social-links li nav.main-menu i.fa-google.search-area:before, nav.main-menu ul.social-links li i.fa-google.search-area:before {
+    background-color: #CE4334; }
+  /* line 289, sass/layout/_main.scss */
+  ul.social-links li i.fa.fa-facebook:before, ul.social-links li nav.main-menu i.fa-facebook.search-area:before, nav.main-menu ul.social-links li i.fa-facebook.search-area:before {
+    padding: 7px 12px;
+    background-color: #3D5A96; }
+  /* line 293, sass/layout/_main.scss */
+  ul.social-links li i.fa.fa-linkedin:before, ul.social-links li nav.main-menu i.fa-linkedin.search-area:before, nav.main-menu ul.social-links li i.fa-linkedin.search-area:before {
+    padding: 7px 10px;
+    background-color: #0B7CC0; }
+  /* line 297, sass/layout/_main.scss */
+  ul.social-links li i.fa.fa-instagram:before, ul.social-links li nav.main-menu i.fa-instagram.search-area:before, nav.main-menu ul.social-links li i.fa-instagram.search-area:before {
+    padding: 7px 10px;
+    background-color: #496F8C; }
+  /* line 301, sass/layout/_main.scss */
+  ul.social-links li i.fa.fa-book:before, ul.social-links li nav.main-menu i.fa-book.search-area:before, nav.main-menu ul.social-links li i.fa-book.search-area:before {
+    padding: 7px 9px;
+    background-color: #BC3154; }
+  /* line 305, sass/layout/_main.scss */
+  ul.social-links li i.fa.fa-envelope:before, ul.social-links li nav.main-menu i.fa-envelope.search-area:before, nav.main-menu ul.social-links li i.fa-envelope.search-area:before {
+    padding: 7px 9px;
+    background-color: #3896CF; }
+  /* line 309, sass/layout/_main.scss */
+  ul.social-links li i.fa.fa-unlock-alt:before, ul.social-links li nav.main-menu i.fa-unlock-alt.search-area:before, nav.main-menu ul.social-links li i.fa-unlock-alt.search-area:before {
+    padding: 7px 12px;
+    background-color: #BB9957; }
+
+/* line 318, sass/layout/_main.scss */
 .contact-area aside {
   background-color: #fff; }
 
@@ -1357,8 +1396,7 @@ input#s {
   outline: none;
   border: 1px solid #CCCCCC;
   background-color: #F8F8F8;
-  padding: 7px;
-  padding-left: 30px; }
+  padding: 7px; }
 
 /* line 10, sass/modules/_forms.scss */
 .search-area input#s {

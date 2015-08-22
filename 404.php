@@ -1,9 +1,7 @@
 <?php get_header(); ?>
 	
 	<main class="site-main">
-		<?php if(have_posts()){ ?>
-			<?php while(have_posts()) { the_post(); ?>
-
+		
 				<div class="banner-wrapper">
 					
 							<?php get_template_part('library/banner','maker'); ?>
@@ -16,12 +14,8 @@
 						<div class="primary">
 							
 								
-							<article class="hentry">
-								<header class="article-title">
-									<a href="<?php the_permalink(); ?>">
-										<h3><?php the_title(); ?></h3>
-									</a>
-								</header>
+							<article class="hentry page404">
+								
 								<main class="article-body">
 									<p><?php _e( 'This is somewhat embarrassing, isn&rsquo;t it?', 'viradeco' ); ?></p>
 									<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'viradeco' ); ?></p>
@@ -36,9 +30,7 @@
 						</div><!-- secondary -->
 					</section>
 				</div>
-			<?php } ?>
-
-		<?php } else { ?>	
+			
 			
 			<div class="site-content">
 				<section class="layout">
@@ -48,7 +40,7 @@
 				</section>
 			</div>
 
-		<?php } ?>
+		
 		
 	</main>
 

@@ -188,6 +188,12 @@ article{
 			}
 		}
 	}
+	&.page404{
+		text-align : center;
+		.article-body,p,div{
+			text-align : center;
+		}
+	}
 }
 body.archive{
 	article {
@@ -207,32 +213,31 @@ body.archive{
 		bottom : 20px;
 	}
 }
-aside{
+.widget{
 	font-size : 100%;
 	padding:20px;
 	background-color : $grey1;
 	margin-bottom : 20px;
-	.widgettitle{
+	h4.widgettitle{
 		width : 100%;
 		position : relative;
 		display : inline-block;
 		border-bottom : 1px solid $grey2;
+		margin : 0;
 		margin-bottom : 20px;
-		h4{
-			margin : 0;
-			padding : 10px 0;
-			&::after{
-				@include single-transition(all 0.2s ease-out);
-				display : block;
-				content : "";
-				width : 30px;
-				height : 3px;
-				background-color : $red;
-				position : absolute;
-				bottom : 0px;
-				right : 0;
-			}
+		padding : 10px 0;
+		&:after{
+			@include single-transition(all 0.2s ease-out);
+			display : block;
+			content : "";
+			width : 30px;
+			height : 3px;
+			background-color : $red;
+			position : absolute;
+			bottom : 0px;
+			right : 0;
 		}
+		
 	}
 	// &:hover .widgettitle h4::after{
 	// 	width : 40%;
@@ -254,20 +259,61 @@ aside{
 .products-area{
 	background-color : $grey1;
 }
-.product-widget{
 	
-	ul.products-list{
-		li{
-			@include single-transition(all, .2s, ease-out);
-			display: list-item;
-			img{
-				padding : 5px 5px 5px 12px;
-				vertical-align: middle;
-			}
-			
+ul.widget-list{
+	li{
+		display: list-item;
+		img{
+			margin : 5px 5px 5px 12px;
+			vertical-align: middle;
 		}
+		
 	}
 }
+ul.social-links{
+	li{
+		padding : 5px;
+		i:before{
+			color : $white !important;
+			background-color : $red;
+			display : inline-block;
+			padding : 7px ;
+			text-align: center;
+
+			margin : 3px 3px 3px 12px;
+			
+		}
+		i.fa.fa-google:before{
+			background-color: #CE4334;
+		}
+		i.fa.fa-facebook:before{
+			padding : 7px 12px;
+			background-color: #3D5A96;
+		}
+		i.fa.fa-linkedin:before{
+			padding : 7px 10px;
+			background-color:#0B7CC0;
+		}
+		i.fa.fa-instagram:before{
+			padding : 7px 10px;
+			background-color: #496F8C;
+		}
+		i.fa.fa-book:before{
+			padding : 7px 9px;
+			background-color: $red;
+		}
+		i.fa.fa-envelope:before{
+			padding : 7px 9px;
+			background-color: #3896CF;
+		}
+		i.fa.fa-unlock-alt:before{
+			padding : 7px 12px;
+			background-color: #BB9957;
+		}
+
+	}
+}
+
 .contact-area{
 	aside{
 		background-color : $white;

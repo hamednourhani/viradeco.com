@@ -328,18 +328,18 @@ function viradeco_fonts() {
 /*---------------Widgets----------------------*/
 
 // Creating the widget 
-class last_notify_widget extends WP_Widget {
+class last_products_widget extends WP_Widget {
 
     function __construct() {
         parent::__construct(
         // Base ID of your widget
-        'last_notify_widget', 
+        'last_products_widget', 
 
         // Widget name will appear in UI
-        __('Last Notify Widget', 'viradeco'), 
+        __('Last Products Widget', 'viradeco'), 
 
         // Widget description
-        array( 'description' => __( 'Display Last Notifies', 'viradeco' ), ) 
+        array( 'description' => __( 'Display Last Products', 'viradeco' ), ) 
         );
     }
 
@@ -350,18 +350,23 @@ class last_notify_widget extends WP_Widget {
 
         $title = apply_filters( 'widget_title', $instance['title'] );
         $number = $instance['number'];
+        $cat = get_category($instance['cat']);
 
-        $notifies = get_posts(array(
-            'post_type' => 'notify',
+        
+
+        $products = get_posts(array(
+            'post_type' => 'product',
             'posts_per_page' => $number,
+            'cat'         => $cat->slug,
             )
         );
-        //var_dump($notifies);
-        $content = '<ul>';
-        foreach($notifies as $notify) : setup_postdata( $notify );
-          $url = get_the_permalink($notify->ID);
-          $name = $notify->post_title;
-          $content .='<li><i class="fa fa-bullhorn"></i><a href="'.$url.'">'.$name.'</a><li>';
+       
+        $content = '<ul class="widget-list">';
+        foreach($products as $product) : setup_postdata( $product );
+          $url = get_the_permalink($product->ID);
+          $thumb = get_the_post_thumbnail($product->ID,'product-thumb');
+          $name = $product->post_title;
+          $content .='<li><a href="'.$url.'">'.$thumb.'<span>'.$name.'</span></a><li>';
         endforeach;
         $content .= '</ul>';
 
@@ -384,7 +389,110 @@ class last_notify_widget extends WP_Widget {
         if ( isset( $instance[ 'title' ] ) ) {
             $title = $instance[ 'title' ];
         }else {
-            $title = __( 'New title', 'viradeco' );
+            $title = __( 'Last Products', 'viradeco' );
+        }
+        if ( isset( $instance[ 'number' ] ) ) {
+            $number = $instance[ 'number' ];
+        }else {
+            $number = 5;
+        }
+        if ( isset( $instance[ 'cat' ] ) ) {
+            $cat = $instance[ 'cat' ];
+        }else {
+            $cat ="";
+        }
+        // Widget admin form
+        ?>
+        <p>
+            <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
+            <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+        </p>
+         <p>
+            <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'product Numbers :','viradeco' ); ?></label> 
+            <input class="widefat" id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo esc_attr( $number ); ?>" />
+        </p>
+        <p>
+            <label for="<?php echo $this->get_field_id( 'cat' ); ?>"><?php _e( 'Product Category :','viradeco' ); ?></label> 
+           <?php wp_dropdown_categories(array(
+                  'name'               => $this->get_field_name( 'cat' ),
+                  'id'                 => $this->get_field_id( 'cat' ),
+                  'class'              => 'widefat',
+                  'taxonomy'           => 'product_cat',
+                  'echo'               => '1',
+            )); ?>
+        </p>
+        
+        <?php 
+    }
+      
+    // Updating widget replacing old instances with new
+    public function update( $new_instance, $old_instance ) {
+        $instance = array();
+        $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+        $instance['number'] = ( ! empty( $new_instance['number'] ) ) ? strip_tags( $new_instance['number'] ) : '';
+        $instance['cat'] = ( ! empty( $new_instance['cat'] ) ) ? strip_tags( $new_instance['cat'] ) : '';
+        return $instance;
+    }
+} // Class wpb_widget ends here
+
+class last_projects_widget extends WP_Widget {
+
+    function __construct() {
+        parent::__construct(
+        // Base ID of your widget
+        'last_projects_widget', 
+
+        // Widget name will appear in UI
+        __('Last Projects Widget', 'viradeco'), 
+
+        // Widget description
+        array( 'description' => __( 'Display Last Projects', 'viradeco' ), ) 
+        );
+    }
+
+    // Creating widget front-end
+    // This is where the action happens
+    public function widget( $args, $instance ) {
+        global $wp_query;
+
+        $title = apply_filters( 'widget_title', $instance['title'] );
+        $number = $instance['number'];
+
+        $projects = get_posts(array(
+            'post_type' => 'project',
+            'posts_per_page' => $number,
+            )
+        );
+        //var_dump($notifies);
+        $content = '<ul class="widget-list">';
+        foreach($projects as $project) : setup_postdata( $project );
+          $url = get_the_permalink($project->ID);
+          $thumb = get_the_post_thumbnail($project->ID,'product-thumb');
+          $name = $project->post_title;
+          $content .='<li><a href="'.$url.'">'.$thumb.'<span>'.$name.'</span></a><li>';
+        endforeach;
+        $content .= '</ul>';
+
+      
+       
+
+        
+        // before and after widget arguments are defined by themes
+        echo $args['before_widget'];
+        
+        if ( ! empty( $title ) )
+          echo $args['before_title'] . $title . $args['after_title'];
+          echo $content;
+        // This is where you run the code and display the output
+          echo $args['after_widget'];
+    }
+        
+    // Widget Backend 
+    public function form( $instance ) {
+        if ( isset( $instance[ 'title' ] ) ) {
+            $title = $instance[ 'title' ];
+        }else {
+            $title = __( 'Last Projects', 'viradeco' );
         }
         if ( isset( $instance[ 'number' ] ) ) {
             $number = $instance[ 'number' ];
@@ -398,7 +506,7 @@ class last_notify_widget extends WP_Widget {
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
         </p>
          <p>
-            <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Notify Numbers :','viradeco' ); ?></label> 
+            <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Project Numbers :','viradeco' ); ?></label> 
             <input class="widefat" id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo esc_attr( $number ); ?>" />
         </p>
         <?php 
@@ -414,19 +522,18 @@ class last_notify_widget extends WP_Widget {
 } // Class wpb_widget ends here
 
 
-
-class last_news_widget extends WP_Widget {
+class last_posts_by_cat_widget extends WP_Widget {
 
     function __construct() {
         parent::__construct(
         // Base ID of your widget
-        'last_news_widget', 
+        'last_posts_by_cat_widget', 
 
         // Widget name will appear in UI
-        __('Last News Widget', 'viradeco'), 
+        __('Last Posts By Category Widget', 'viradeco'), 
 
         // Widget description
-        array( 'description' => __( 'Display Last News', 'viradeco' ), ) 
+        array( 'description' => __( 'Display Last Posts in Category', 'viradeco' ), ) 
         );
     }
 
@@ -437,18 +544,22 @@ class last_news_widget extends WP_Widget {
 
         $title = apply_filters( 'widget_title', $instance['title'] );
         $number = $instance['number'];
+        $cat = get_category($instance['cat']);
 
-        $news_list = get_posts(array(
-            'post_type' => 'news',
+       
+        $posts = get_posts(array(
+            'post_type' => 'post',
             'posts_per_page' => $number,
+            'cat'         => $cat->term_id,
             )
         );
-        //var_dump($notifies);
-        $content = '<ul>';
-        foreach($news_list as $news) : setup_postdata( $news );
-          $url = get_the_permalink($news->ID);
-          $name = $news->post_title;
-          $content .='<li><i class="fa fa-newspaper-o"></i><a href="'.$url.'">'.$name.'</a><li>';
+       
+        $content = '<ul class="widget-list">';
+        foreach($posts as $post) : setup_postdata( $post );
+          $url = get_the_permalink($post->ID);
+          $thumb = get_the_post_thumbnail($post->ID,'product-thumb');
+          $name = $post->post_title;
+          $content .='<li><a href="'.$url.'">'.$thumb.'<span>'.$name.'</span></a><li>';
         endforeach;
         $content .= '</ul>';
 
@@ -471,40 +582,316 @@ class last_news_widget extends WP_Widget {
         if ( isset( $instance[ 'title' ] ) ) {
             $title = $instance[ 'title' ];
         }else {
-            $title = __( 'New title', 'viradeco' );
+            $title = __( 'Last Posts', 'viradeco' );
         }
         if ( isset( $instance[ 'number' ] ) ) {
             $number = $instance[ 'number' ];
         }else {
             $number = 5;
         }
+        if ( isset( $instance[ 'cat' ] ) ) {
+            $cat = $instance[ 'cat' ];
+        }else {
+            $cat = "";
+        }
         // Widget admin form
         ?>
         <p>
-        <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
-        <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+            <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
+            <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
         </p>
          <p>
-        <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'News Numbers :','viradeco' ); ?></label> 
-        <input class="widefat" id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo esc_attr( $number ); ?>" />
+            <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Post Numbers :','viradeco' ); ?></label> 
+            <input class="widefat" id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo esc_attr( $number ); ?>" />
+        </p>
+        <p>
+        <label for="<?php echo $this->get_field_id( 'cat' ); ?>"><?php _e( 'Post Category :','viradeco' ); ?></label> 
+        <?php wp_dropdown_categories(array(
+                  'name'               => $this->get_field_name( 'cat' ),
+                  'id'                 => $this->get_field_id( 'cat' ),
+                  'class'              => 'widefat',
+                  'taxonomy'           => 'category',
+                  'echo'               => '1',
+            )); ?>
         </p>
         <?php 
     }
       
     // Updating widget replacing old instances with new
     public function update( $new_instance, $old_instance ) {
-    $instance = array();
-    $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
-    $instance['number'] = ( ! empty( $new_instance['number'] ) ) ? strip_tags( $new_instance['number'] ) : '';
-    return $instance;
+        $instance = array();
+        $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+        $instance['number'] = ( ! empty( $new_instance['number'] ) ) ? strip_tags( $new_instance['number'] ) : '';
+        $instance['cat'] = ( ! empty( $new_instance['cat'] ) ) ? strip_tags( $new_instance['cat'] ) : '';
+        return $instance;
+    }
+} // Class wpb_widget ends here
+
+class contact_info_widget extends WP_Widget {
+
+    function __construct() {
+        parent::__construct(
+        // Base ID of your widget
+        'contact_info_widget', 
+
+        // Widget name will appear in UI
+        __('Contact Informaion Widget', 'viradeco'), 
+
+        // Widget description
+        array( 'description' => __( 'Display Contact Information', 'viradeco' ), ) 
+        );
+    }
+
+    // Creating widget front-end
+    // This is where the action happens
+    public function widget( $args, $instance ) {
+        global $wp_query;
+
+        $title = apply_filters( 'widget_title', $instance['title'] );
+        $phone = $instance['phone'];
+        $fax = $instance['fax'];
+        $email = $instance['email'];
+        
+                
+        $content = '<main class="widgetbody">';
+        $content .='<p><i class="fa fa-phone"></i>'.__('Phone : ','viradeco').'<br />'.$phone.'</p>';
+        $content .='<p><i class="fa fa-fax"></i>'.__('Fax : ','viradeco').$fax.'</p>';
+        $content .='<p><i class="fa fa-envelope"></i>'.__('Email : ','viradeco').$email.'</p>';
+        $content .= '</main>';
+      
+        // before and after widget arguments are defined by themes
+        echo $args['before_widget'];
+        
+        if ( ! empty( $title ) )
+          echo $args['before_title'] . $title . $args['after_title'];
+          echo $content;
+        // This is where you run the code and display the output
+          echo $args['after_widget'];
+    }
+        
+    // Widget Backend 
+    public function form( $instance ) {
+        if ( isset( $instance[ 'title' ] ) ) {
+            $title = $instance[ 'title' ];
+        }else {
+            $title = __( 'Last Posts', 'viradeco' );
+        }
+
+        if ( isset( $instance[ 'phone' ] ) ) {
+            $phone = $instance[ 'phone' ];
+        }else {
+            $phone = "+98 ----";
+        }
+
+        if ( isset( $instance[ 'fax' ] ) ) {
+            $fax = $instance[ 'fax' ];
+        }else {
+            $fax = "+98 ----";
+        }
+
+        if ( isset( $instance[ 'email' ] ) ) {
+            $email = $instance[ 'email' ];
+        }else {
+            $email = "info@email.com";
+        }
+        
+        // Widget admin form
+        ?>
+        <p>
+            <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
+            <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+        </p>
+         <p>
+            <label for="<?php echo $this->get_field_id( 'phone' ); ?>"><?php _e( 'Phone Number :','viradeco' ); ?></label> 
+            <input class="widefat" id="<?php echo $this->get_field_id( 'phone' ); ?>" name="<?php echo $this->get_field_name( 'phone' ); ?>" type="text" value="<?php echo esc_attr( $phone ); ?>" />
+        </p>
+
+        <p>
+            <label for="<?php echo $this->get_field_id( 'fax' ); ?>"><?php _e( 'Fax Number :','viradeco' ); ?></label> 
+            <input class="widefat" id="<?php echo $this->get_field_id( 'fax' ); ?>" name="<?php echo $this->get_field_name( 'fax' ); ?>" type="text" value="<?php echo esc_attr( $fax ); ?>" />
+        </p>
+
+        <p>
+            <label for="<?php echo $this->get_field_id( 'email' ); ?>"><?php _e( 'Email Address :','viradeco' ); ?></label> 
+            <input class="widefat" id="<?php echo $this->get_field_id( 'email' ); ?>" name="<?php echo $this->get_field_name( 'email' ); ?>" type="text" value="<?php echo esc_attr( $email ); ?>" />
+        </p>
+        
+        <?php 
+    }
+      
+    // Updating widget replacing old instances with new
+    public function update( $new_instance, $old_instance ) {
+        $instance = array();
+        $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+        $instance['phone'] = ( ! empty( $new_instance['phone'] ) ) ? strip_tags( $new_instance['phone'] ) : '';
+        $instance['fax'] = ( ! empty( $new_instance['fax'] ) ) ? strip_tags( $new_instance['fax'] ) : '';
+        $instance['email'] = ( ! empty( $new_instance['email'] ) ) ? strip_tags( $new_instance['email'] ) : '';
+        return $instance;
+    }
+} // Class wpb_widget ends here
+
+class social_widget extends WP_Widget {
+
+    function __construct() {
+        parent::__construct(
+        // Base ID of your widget
+        'social_widget', 
+
+        // Widget name will appear in UI
+        __('Social Networks Widget', 'viradeco'), 
+
+        // Widget description
+        array( 'description' => __( 'Social Networks and Important links', 'viradeco' ), ) 
+        );
+    }
+
+    // Creating widget front-end
+    // This is where the action happens
+    public function widget( $args, $instance ) {
+        global $wp_query;
+
+        $title = apply_filters( 'widget_title', $instance['title'] );
+        $google = $instance['google'];
+        $facebook = $instance['facebook'];
+        $linkedin = $instance['linkedin'];
+        $instagram = $instance['instagram'];
+        $catalog = $instance['catalog'];
+        $email = $instance['email'];
+        $login = $instance['login'];
+        
+        
+                
+        $content = '<ul class="social-links">';
+        $content .='<li><i class="fa fa-google-plus"></i><a href="'.esc_url($google).'">Google Plus</a></li>';
+        $content .='<li><i class="fa fa-facebook"></i><a href="'.esc_url($facebook).'">Facebook</a></li>';
+        $content .='<li><i class="fa fa-linkedin"></i><a href="'.esc_url($linkedin).'">Linkedin</a></li>';
+        $content .='<li><i class="fa fa-instagram"></i><a href="'.esc_url($instagram).'">Instagram</a></li>';
+        $content .='<li><i class="fa fa-book"></i><a href="'.esc_url($catalog).'">'.__('Download Cataloge','viradeco').'</a></li>';
+        $content .='<li><i class="fa fa-envelope"></i><a href="'.esc_url($email).'">'.__('Send Email','viradeco').'</a></li>';
+        $content .='<li><i class="fa fa-unlock-alt"></i><a href="'.esc_url($login).'">'.__('Login','viradeco').'</li>';
+        $content .= '</ul>';
+      
+        // before and after widget arguments are defined by themes
+        echo $args['before_widget'];
+        
+        if ( ! empty( $title ) )
+          echo $args['before_title'] . $title . $args['after_title'];
+          echo $content;
+        // This is where you run the code and display the output
+          echo $args['after_widget'];
+    }
+        
+    // Widget Backend 
+    public function form( $instance ) {
+        if ( isset( $instance[ 'title' ] ) ) {
+            $title = $instance[ 'title' ];
+        }else {
+            $title = __( 'Social Links', 'viradeco' );
+        }
+
+        
+
+        if ( isset( $instance[ 'google' ] ) ) {
+            $google = $instance[ 'google' ];
+        }else {
+            $google = "";
+        }
+        if ( isset( $instance[ 'facebook' ] ) ) {
+            $facebook = $instance[ 'facebook' ];
+        }else {
+            $facebook = "";
+        }
+        if ( isset( $instance[ 'linkedin' ] ) ) {
+            $linkedin = $instance[ 'linkedin' ];
+        }else {
+            $linkedin = "";
+        }
+        if ( isset( $instance[ 'instagram' ] ) ) {
+            $instagram = $instance[ 'instagram' ];
+        }else {
+            $instagram = "";
+        }
+        if ( isset( $instance[ 'catalog' ] ) ) {
+            $catalog = $instance[ 'catalog' ];
+        }else {
+            $catalog = "";
+        }
+        if ( isset( $instance[ 'email' ] ) ) {
+            $email = $instance[ 'email' ];
+        }else {
+            $email = "";
+        }
+        if ( isset( $instance[ 'login' ] ) ) {
+            $login = $instance[ 'login' ];
+        }else {
+            $login = wp_login_url();
+        }
+        
+        // Widget admin form
+        ?>
+        <p>
+            <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
+            <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+        </p>
+         <p>
+            <label for="<?php echo $this->get_field_id( 'google' ); ?>"><?php _e( 'Google Plus Url :','viradeco' ); ?></label> 
+            <input class="widefat" id="<?php echo $this->get_field_id( 'google' ); ?>" name="<?php echo $this->get_field_name( 'google' ); ?>" type="text" value="<?php echo esc_attr( $google ); ?>" />
+        </p>
+        <p>
+            <label for="<?php echo $this->get_field_id( 'facebook' ); ?>"><?php _e( 'Facebook Url :','viradeco' ); ?></label> 
+            <input class="widefat" id="<?php echo $this->get_field_id( 'facebook' ); ?>" name="<?php echo $this->get_field_name( 'facebook' ); ?>" type="text" value="<?php echo esc_attr( $facebook ); ?>" />
+        </p>
+        <p>
+            <label for="<?php echo $this->get_field_id( 'linkedin' ); ?>"><?php _e( 'Linkedin Url :','viradeco' ); ?></label> 
+            <input class="widefat" id="<?php echo $this->get_field_id( 'linkedin' ); ?>" name="<?php echo $this->get_field_name( 'linkedin' ); ?>" type="text" value="<?php echo esc_attr( $linkedin ); ?>" />
+        </p>
+        <p>
+            <label for="<?php echo $this->get_field_id( 'instagram' ); ?>"><?php _e( 'Instagram Url :','viradeco' ); ?></label> 
+            <input class="widefat" id="<?php echo $this->get_field_id( 'instagram' ); ?>" name="<?php echo $this->get_field_name( 'instagram' ); ?>" type="text" value="<?php echo esc_attr( $instagram ); ?>" />
+        </p>
+        <p>
+            <label for="<?php echo $this->get_field_id( 'catalog' ); ?>"><?php _e( 'Catalog Download url :','viradeco' ); ?></label> 
+            <input class="widefat" id="<?php echo $this->get_field_id( 'catalog' ); ?>" name="<?php echo $this->get_field_name( 'catalog' ); ?>" type="text" value="<?php echo esc_attr( $catalog ); ?>" />
+        </p>
+        <p>
+            <label for="<?php echo $this->get_field_id( 'email' ); ?>"><?php _e( 'Send Email Url :','viradeco' ); ?></label> 
+            <input class="widefat" id="<?php echo $this->get_field_id( 'email' ); ?>" name="<?php echo $this->get_field_name( 'email' ); ?>" type="text" value="<?php echo esc_attr( $email ); ?>" />
+        </p>
+        <p>
+            <label for="<?php echo $this->get_field_id( 'login' ); ?>"><?php _e( 'Login Url :','viradeco' ); ?></label> 
+            <input class="widefat" id="<?php echo $this->get_field_id( 'login' ); ?>" name="<?php echo $this->get_field_name( 'login' ); ?>" type="text" value="<?php echo esc_attr( $login ); ?>" />
+        </p>
+
+        
+        
+        <?php 
+    }
+      
+    // Updating widget replacing old instances with new
+    public function update( $new_instance, $old_instance ) {
+        $instance = array();
+        $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+        $instance['google'] = ( ! empty( $new_instance['google'] ) ) ? strip_tags( $new_instance['google'] ) : '';
+        $instance['facebook'] = ( ! empty( $new_instance['facebook'] ) ) ? strip_tags( $new_instance['facebook'] ) : '';
+        $instance['linkedin'] = ( ! empty( $new_instance['linkedin'] ) ) ? strip_tags( $new_instance['linkedin'] ) : '';
+        $instance['instagram'] = ( ! empty( $new_instance['instagram'] ) ) ? strip_tags( $new_instance['instagram'] ) : '';
+        $instance['catalog'] = ( ! empty( $new_instance['catalog'] ) ) ? strip_tags( $new_instance['catalog'] ) : '';
+        $instance['email'] = ( ! empty( $new_instance['email'] ) ) ? strip_tags( $new_instance['email'] ) : '';
+        $instance['login'] = ( ! empty( $new_instance['login'] ) ) ? strip_tags( $new_instance['login'] ) : '';
+        
+        return $instance;
     }
 } // Class wpb_widget ends here
 
 
+
 // Register and load the widget
 function viradeco_widget() {
-  register_widget( 'last_notify_widget' );
-  register_widget( 'last_news_widget' );
+  register_widget( 'last_products_widget' );
+  register_widget( 'last_projects_widget' );
+  register_widget( 'last_posts_by_cat_widget' );
+  register_widget( 'contact_info_widget' );
+  register_widget( 'social_widget' );
 }
 add_action( 'widgets_init', 'viradeco_widget' );
 
