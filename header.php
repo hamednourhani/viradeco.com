@@ -70,7 +70,7 @@
 							<img src="<?php echo get_template_directory_uri();?>/images/viradeco-white-logo-140.png" alt="<?php echo get_bloginfo('name'); ?>"/>
 						</a>
 					</div>
-					<span class="site-desc"><?php echo __('Be Yourself Furniture Designer','viradeco'); ?></span>
+					<span class="site-desc"><?php echo __('Be Your Ideas Creator','viradeco'); ?></span>
 				</section>
 			
 
