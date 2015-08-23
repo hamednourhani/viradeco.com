@@ -10,20 +10,12 @@
 // fonts  -------------------------
 @import "rtl/fonts/fonts";
 
-// normalize --------------------
-@import "rtl/base/normalize";
-
-// typography -------------------
-@import "rtl/fonts/typography";
-
 //font-awesome mixins -----------
 @import "rtl/font-awesome/variables";
 @import "rtl/font-awesome/mixins";
 // basic styles --------------
 
 @import "rtl/base/variables";
-@import "rtl/base/functions";
-@import "rtl/base/mixins";
 @import "rtl/base/base";
 
 

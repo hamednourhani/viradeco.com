@@ -142,6 +142,7 @@ function viradeco_scripts_and_styles() {
 		
 		wp_register_style( 'font-awesome', get_stylesheet_directory_uri() . '/css/font-awesome.min.css', array(), '', 'all' );
 		wp_register_style( 'viradeco-stylesheet', get_stylesheet_directory_uri() . '/css/style.css', array(), '', 'all' );
+		wp_register_style( 'viradeco-rtl-stylesheet', get_stylesheet_directory_uri() . '/css/rtl.css', array('viradeco-stylesheet'), '', 'all' );
 		wp_register_style( 'viradeco-ie-only', get_stylesheet_directory_uri() . '/css/ie.css', array(), '' );
 
     // comment reply script for threaded comments
@@ -164,6 +165,9 @@ function viradeco_scripts_and_styles() {
 	
 		wp_enqueue_style('font-awesome' );
 		wp_enqueue_style( 'viradeco-stylesheet' );
+		if(is_rtl()){
+			wp_enqueue_style('viradeco-rtl-stylesheet');
+		}
 		wp_enqueue_style( 'viradeco-ie-only' );
 
 		$wp_styles->add_data( 'viradeco-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet

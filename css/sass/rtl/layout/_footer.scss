@@ -1,21 +1,16 @@
 /* footer style */
 footer.site-footer,.site-footer{
-	width : 100%;
-	margin :0;
-	padding : 15px;
+	
 	text-align : right;
-	background-color: $black1;
-	color : $grey2;
-	font-size : 90%;
 	.site-designer{
 		float : left;
-		font-size : 90%;
 	}
 	
 }
 .products-area{
 	.widget.footer-first{
 		@include span-columns(3,12);
+		margin-right : auto;
 		&:nth-of-type(4n){
 			@include span-columns(3 omega,12);
 
@@ -27,6 +22,7 @@ footer.site-footer,.site-footer{
 	.widget.footer-second{
 		background-color : $white;
 		@include span-columns(4,12);
+		margin-right : auto;
 		&:nth-of-type(3n){
 			@include span-columns(4 omega,12);
 

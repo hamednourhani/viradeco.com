@@ -1,53 +1,30 @@
 /* header style */
 .top-bar{
-	background-color : $black1;
+	
 	text-align : left;
 	padding-left : 30px;
 	.lang-icon{
 		padding :{
 			right : 8px;
+			left: auto;
 		}
 	}
-	#lang_sel_list {
-	    height: 26px;
-	    position: relative;
-	    z-index: 99;
-	    font-family: verdana, arial, sans-serif;
-	    padding: 5px;
-
-	    a{
-	    	background-color : $black1;
-	    }
-	}
+	
 }
 .hero{
-	background-color : $black2;
-	color : $white;
-	position: relative;
-	.logo-wrapper{
-		max-width : 140px;
-		display: inline-block;
-		padding : 20px 10px 10px;
-		overflow: hidden;
-	}
+	
 	.site-desc{
 		// position : absolute;
 		// top : 40px;
 		// left : 20px;
 		float : left;
-		margin-top : 40px;
-		padding : 10px;
 		position : relative;
 		&:after{
-			display : inline-block;
 			position : absolute;
 			bottom : 0;
 			right : 0;
-			height : 2px;
-			width : 400px;
-			max-width: 100%;
-			background-color: $red;
-			content : "";
+			left : auto;
+			
 		}
 	}
 
@@ -68,30 +45,21 @@
  
  
 nav.main-menu{
-	position : relative;
-	z-index : 9998 !important;
+	
 	.search-area{
 		position : absolute;
-		margin-top : 5px;
+		
 		left : 30px;
+		right : auto;
 		top : 13px;
-		input{
-			height : 32px;
-			color : $black1;
-			font-size : 90%;
-			
-		}
-		label,button {
-			display : none;
-		}
+		
+		
 		&:before{
-			@extend .fa;
-			content : "\f002";
 			position : absolute;
 			    top: 8px;
 			    left: 7px;
-			    font-size: 110%;
-			    color: $grey2;
+			    right : auto;
+			    
 
 		}
 	}
@@ -101,164 +69,80 @@ nav.main-menu{
 ul.main-nav{
 	//@include single-transition(all , 0.2s , ease-in-out);
 	font-size : 100%;
-	margin-bottom : -30px;
-	padding : 0;
-	 background-color : $white2;
-	a{
-		@include single-transition(all , 0.2s , ease-in-out);
-		color : $grey3;
-		padding : 20px 17px;
-		display: inline-block;
-		
-		&:hover{
-			// color : $black1;
-			color : $white2;
-			background-color : $black2;
-			
-		}
-	}
-	li{
-		display: inline-block;
-		position : relative;
-		padding: 0;
-    	margin: 0;
-		
-
-	}
+	
+	
+	
 	
 	&>li.menu-item-has-children>a:after{
 		@extend .fa;
 		content: "\f0d7";
-		vertical-align : middle;
 		padding-right: 5px;
+		padding-left: auto;
+
 		// width walker added
 		position: absolute;
     	left: 1px;
+    	right: auto;
     	top: 41%;
 	}
 	
 	&>li>ul.sub-menu,li ul.sub-menu{
 		//@include single-transition(all , 0.8s , ease-in-out);
-		z-index : 0;
-		text-align : center;
-		padding : 0;
-		margin : 0;
-		opacity: 0;
+		
 		position : absolute;
 		top : 100%;
 		right : -30%;
-		@include display-none;
+		left : auto;
 		
 		
 		
-		li{
-			//display: none;
-			background-color : $white2;
-	 		@include animation('move-down .5s 1');
-		}
 		
-		a{
-			min-width : 220px;
-			padding : 10px 20px;
-			&:hover{
-				// color : $white2;
-				// background-color : $black2;
-			}
-		}
+		
 		li.menu-item-has-children>a:after{
-			@extend .fa;
-			content: "\f0d9";
-		    left: 12px;
-		    position: absolute;
-		        top: 16px;
-		    vertical-align : middle;
-		}
-	}
-	&>li:hover{
-		
-		&>ul.sub-menu{
-			opacity: 1;
-			visibility: visible;
-	  		transition-delay:0s;
-	  		z-index : 9999;
-			&>li{
-				//display: inline-block;
-				//opacity : 1;
-				@include animation('move-up .5s 1');
-			}
-
 			
+			content: "\f0d9";
+		    left: 14px;
+		    right: auto;
+		    position: absolute;
+		    top: 16px;
+		    
 		}
 	}
 	
+	
 	&>li>ul.sub-menu li ul{
 		//@include single-transition(all , 0.8s , ease-in-out);
-		z-index : 0;
-		text-align : center;
-		padding : 0;
-		margin : 0;
-		opacity: 0;
-		display: inline-block;
+		
 		right : 100%;
+		left : auto;
 		top : 0;
-		@include display-none;
 		
 		
 		
 		
-		li{
-			//display: none;
-			background-color : $white2;
-	 		@include animation('move-down .5s 1');
-		}
 		
-		a{
-			min-width : 180px;
-			padding : 15px;
-			&:hover{
-				// color : $white2;
-				// background-color : $black2;
-			}
-		}
+		
+		
 	}
-	&>li>ul.sub-menu li:hover{
-		
-		&>ul.sub-menu{
-			opacity: 1;
-			visibility: visible;
-	  		transition-delay:0s;
-	  		z-index : 9999;
-			&>li{
-				//display: inline-block;
-				//opacity : 1;
-				@include animation('move-up .5s 1');
-			}
-
-			
-		}
-	}
+	
 	ul.sub-menu li:hover ul{
-		display: inline-block;
+		
 		right : 100%;
+		left : auto;
 		top : 0;
 
 	}
 	li.item-home a:before{
-		@extend .fa;
-		display : inline-block;
-		content : "\f015";
-		vertical-align: middle;
 		margin-left: 7px;
+		margin-right: auto;
 	}
 }
 
 li.menu-item{
 	&>a img {
 	    float: right;
-	    vertical-align: -webkit-baseline-middle;
+	    
 	}
-	&>a span {
-	    vertical-align: text-top;
-	}
+	
 }
 

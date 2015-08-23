@@ -707,7 +707,7 @@ body, html {
 
 /* line 15, sass/base/_base.scss */
 body {
-  font-family: "Bgothic";
+  font-family: "Bgothic", "Georgia", Cambria, Times New Roman, Times, serif;
   direction: ltr;
   font-size: 100%;
   margin: auto !important;
@@ -903,7 +903,7 @@ nav.main-menu {
 
 /* line 101, sass/layout/_header.scss */
 ul.main-nav {
-  font-size: 100%;
+  font-size: 90%;
   margin-bottom: -30px;
   padding: 0;
   background-color: #F8F8F8; }
@@ -1324,7 +1324,7 @@ ul.widget-list li {
   display: list-item; }
   /* line 274, sass/layout/_main.scss */
   ul.widget-list li img {
-    margin: 5px 5px 5px 12px;
+    margin: 5px 12px 5px 5px;
     vertical-align: middle; }
 
 /* line 282, sass/layout/_main.scss */
@@ -1390,8 +1390,9 @@ footer.site-footer, .site-footer {
   width: 23.84615%;
   float: left;
   margin-right: 1.53846%;
-  display: inline; }
-  /* line 19, sass/layout/_footer.scss */
+  display: inline;
+  margin-right: auto; }
+  /* line 20, sass/layout/_footer.scss */
   .products-area .widget.footer-first:nth-of-type(4n) {
     width: 23.84615%;
     float: right;
@@ -1399,14 +1400,13 @@ footer.site-footer, .site-footer {
     *margin-left: -1em;
     display: inline; }
 
-/* line 27, sass/layout/_footer.scss */
+/* line 28, sass/layout/_footer.scss */
 .contact-area .widget.footer-second {
-  background-color: #fff;
   width: 32.30769%;
   float: left;
   margin-right: 1.53846%;
   display: inline; }
-  /* line 30, sass/layout/_footer.scss */
+  /* line 32, sass/layout/_footer.scss */
   .contact-area .widget.footer-second:nth-of-type(3n) {
     width: 32.30769%;
     float: right;

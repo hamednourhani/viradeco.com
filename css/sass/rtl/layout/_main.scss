@@ -4,100 +4,26 @@
 	@include container;
 	position : relative;
 }
-body{
-	max-width : 1400px;
-	background-color : $grey2;
-	margin : auto;
-	
-	z-index : 1;
-	// &.body-wrapper {
-	//   display: none;
-	// }
-	// &.pg-loaded > .body-wrapper {
-	//   display: block;
-	// }
-}
-.body-wrapper{
-	width : 100%;
-	background-color : $white;
-	margin:auto;
-	
-}
-.site-main{
-	z-index : 10;
-	@include clearfix;
-	.single-cat-title{
-		margin-top : 50px;
-
-		h1{
-			display : inline-block;
-			border-bottom : 3px solid $red;
-			margin : 0 auto;
-			font-size : 150%;
-		}
-	}
-}
-.banner-wrapper{
-	width : 100%;
-	//max-height : 500px;
-	.banner-inner{
-		max-height : 460px;
-		overflow: hidden;
-	}
-	.banner-space{
-		
-		display : block;
-		min-height :50px;
-
-	}
-	.banner-inner{
-		max-height : 460px;
-		overflow : hidden;
-	}
-	img.page-banner{
-		width : 100%;
-		height : auto;
-	}
-}
-
 
 //-------------site-content-------------------
 .primary{
  	@include span-columns(8,12);
+ 	margin-right : auto;
  	padding:{
 		top :20px;
 		bottom : 20px;
 	}
-	ul.projects-list{
-		li {
-			width : 100%;
-			padding : 8px 20px;
-			background-color: $white2;
-			border : 1px solid $grey2;
-			border-bottom : 0px;
-			&:nth-of-type(2n){
-				background-color: $grey1;
-			}
-			&.project-link:hover{
-				background-color: darken($grey1, 5%);
-			}
-			&:last-child{
-				border-bottom : 1px solid $grey2;
-			}
-		}
-	}
+	
 }
 .without-sidebar{
 	.primary{
 		@include span-columns(12,12);
+		margin-right : auto;
 		margin : auto;
 		article .featured-image{
 			@include span-columns(5,12);
-			img{
-				max-width : 100%;
-				height : auto;
-				margin-top : 15px;
-			}
+			margin-right : auto;
+			
 		}
 		article .article-body{
 			@include span-columns(7 omega,12);
@@ -112,100 +38,28 @@ body{
 }
 article,.hentry{
 	
-	padding : 20px;
+	
 	.article-title{
 		font-size : 100%;
 		position : relative;
-		display : inline-block;
-		border-bottom : 1px solid $grey2;
-		margin-bottom : 20px;
-		width : 100%;
 		h3{
-			margin : 0;
-			padding : 10px 0;
-			display : inline-block;
 			&::after{
-				@include single-transition(all 0.2s ease-out);
-				display : block;
-				content : "";
-				width : 30px;
-				height : 3px;
-				background-color : $red;
 				position : absolute;
 				bottom : 0px;
 				right : 0;
+				left : auto;
 			}
 						
 		}
 	}
-	// &:hover .article-title h3::after{
-	// 	width : 40%;
-	// }
-	p{
-		margin : 5px;
-	}
-	.product-features,.project-features{
-		margin-top : 40px;
-		h4.feature-header{
-			margin : 5px auto;
-		}
-		ul.feature-images{
-			@include clearfix;
-			li{
-				display : inline-block;
-				img{
-					margin :3px;
-					border : 1px solid $grey2;
-				}
-			}
-		}
-	}
-	.project-meta{
-		width : 90%;
-		display: block;
-		margin : auto auto 30px;
-		ul{
-			width : 100%;
-		}
-		li{
-			
-			display : inline-block;
-			width : 100%;
-			padding : 0;
-			margin : 0;
-			
-			span{
-				border : 1px solid $grey2;
-				padding : 5px 15px;
-				display : inline-block;
-				background-color: $white2;
-				&.meta-name{
-					max-width :100%;
-					width : 38%;
-				}
-				&.meta-value{
-					max-width : 100%;
-					width : 60%;
-				}
-			}
-			&:nth-of-type(2n){
-				span{
-					background-color: $grey1;
-				}
-
-			}
-		}
-	}
-	&.page404{
-		text-align : center;
-		.article-body,p,div{
-			text-align : center;
-		}
-	}
+	
+	
+	
 }
 body.archive{
 	article {
 		@include span-columns(6,12);
+		margin-right : auto;
 		&:nth-of-type(2n){
 			@include span-columns(6 omega ,12);
 		}
@@ -223,107 +77,52 @@ body.archive{
 }
 .widget{
 	font-size : 100%;
-	padding:20px;
-	background-color : $grey1;
-	margin-bottom : 20px;
+	
 	h4.widgettitle{
-		width : 100%;
+		
 		position : relative;
-		display : inline-block;
-		border-bottom : 1px solid $grey2;
-		margin : 0;
-		margin-bottom : 20px;
-		padding : 10px 0;
+		
 		&:after{
-			@include single-transition(all 0.2s ease-out);
-			display : block;
-			content : "";
-			width : 30px;
-			height : 3px;
-			background-color : $red;
 			position : absolute;
 			bottom : 0px;
 			right : 0;
+			left : auto;
 		}
 		
 	}
 	// &:hover .widgettitle h4::after{
 	// 	width : 40%;
 	// }
-	p{
-		margin : 5px;
-	}
+	
 	i.fa:before{
 		padding-left : 10px;
-		color : $grey3;
-		font-size : 120%;
-		vertical-align: middle;
+		padding-right : auto;
+		
 	}
-	li{
-	 	line-height: 180%;
-	 }
+	
 }
 
-.products-area{
-	background-color : $grey1;
-}
+
 	
 ul.widget-list{
 	li{
-		display: list-item;
+		
 		img{
 			margin : 5px 5px 5px 12px;
-			vertical-align: middle;
+			
 		}
 		
 	}
 }
 ul.social-links{
 	li{
-		padding : 5px;
+	
 		i:before{
-			color : $white !important;
-			background-color : $red;
-			display : inline-block;
-			padding : 7px ;
-			text-align: center;
-
 			margin : 3px 3px 3px 12px;
 			
 		}
-		i.fa.fa-google:before{
-			background-color: #CE4334;
-		}
-		i.fa.fa-facebook:before{
-			padding : 7px 12px;
-			background-color: #3D5A96;
-		}
-		i.fa.fa-linkedin:before{
-			padding : 7px 10px;
-			background-color:#0B7CC0;
-		}
-		i.fa.fa-instagram:before{
-			padding : 7px 10px;
-			background-color: #496F8C;
-		}
-		i.fa.fa-book:before{
-			padding : 7px 9px;
-			background-color: $red;
-		}
-		i.fa.fa-envelope:before{
-			padding : 7px 9px;
-			background-color: #3896CF;
-		}
-		i.fa.fa-unlock-alt:before{
-			padding : 7px 12px;
-			background-color: #BB9957;
-		}
+		
 
 	}
 }
 
-.contact-area{
-	aside{
-		background-color : $white;
-	}
-}
