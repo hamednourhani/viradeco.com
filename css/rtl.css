@@ -106,13 +106,15 @@ body {
 
 /* line 16, sass/rtl/layout/_header.scss */
 .hero .site-desc {
+  margin-left: 40px;
+  margin-right: auto;
   float: left;
   position: relative; }
-  /* line 22, sass/rtl/layout/_header.scss */
+  /* line 24, sass/rtl/layout/_header.scss */
   .hero .site-desc:after {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 20px;
+    right: 100%;
     left: auto; }
 
 @-moz-keyframes move-up {
@@ -157,23 +159,23 @@ body {
   100% {
     opacity: 0;
     display: none; } }
-/* line 49, sass/rtl/layout/_header.scss */
+/* line 51, sass/rtl/layout/_header.scss */
 nav.main-menu .search-area {
   position: absolute;
   left: 30px;
   right: auto;
   top: 13px; }
-  /* line 57, sass/rtl/layout/_header.scss */
+  /* line 59, sass/rtl/layout/_header.scss */
   nav.main-menu .search-area:before {
     position: absolute;
     top: 8px;
     left: 7px;
     right: auto; }
 
-/* line 69, sass/rtl/layout/_header.scss */
+/* line 71, sass/rtl/layout/_header.scss */
 ul.main-nav {
   font-size: 100%; }
-  /* line 76, sass/rtl/layout/_header.scss */
+  /* line 78, sass/rtl/layout/_header.scss */
   ul.main-nav > li.menu-item-has-children > a:after {
     content: "\f0d7";
     padding-right: 5px;
@@ -182,35 +184,35 @@ ul.main-nav {
     left: 1px;
     right: auto;
     top: 41%; }
-  /* line 89, sass/rtl/layout/_header.scss */
+  /* line 91, sass/rtl/layout/_header.scss */
   ul.main-nav > li > ul.sub-menu, ul.main-nav li ul.sub-menu {
     position: absolute;
     top: 100%;
     right: -30%;
     left: auto; }
-    /* line 101, sass/rtl/layout/_header.scss */
+    /* line 103, sass/rtl/layout/_header.scss */
     ul.main-nav > li > ul.sub-menu li.menu-item-has-children > a:after, ul.main-nav li ul.sub-menu li.menu-item-has-children > a:after {
       content: "\f0d9";
       left: 14px;
       right: auto;
       position: absolute;
       top: 16px; }
-  /* line 113, sass/rtl/layout/_header.scss */
+  /* line 115, sass/rtl/layout/_header.scss */
   ul.main-nav > li > ul.sub-menu li ul {
     right: 100%;
     left: auto;
     top: 0; }
-  /* line 128, sass/rtl/layout/_header.scss */
+  /* line 130, sass/rtl/layout/_header.scss */
   ul.main-nav ul.sub-menu li:hover ul {
     right: 100%;
     left: auto;
     top: 0; }
-  /* line 135, sass/rtl/layout/_header.scss */
+  /* line 137, sass/rtl/layout/_header.scss */
   ul.main-nav li.item-home a:before {
     margin-left: 7px;
     margin-right: auto; }
 
-/* line 142, sass/rtl/layout/_header.scss */
+/* line 144, sass/rtl/layout/_header.scss */
 li.menu-item > a img {
   float: right; }
 

@@ -17,12 +17,14 @@
 		// position : absolute;
 		// top : 40px;
 		// left : 20px;
+		margin-left : 40px;
+		margin-right : auto;
 		float : left;
 		position : relative;
 		&:after{
 			position : absolute;
-			bottom : 0;
-			right : 0;
+			bottom : 20px;
+			right : 100%;
 			left : auto;
 			
 		}
