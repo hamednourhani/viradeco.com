@@ -8,6 +8,17 @@
 			right : 8px;
 		}
 	}
+	#lang_sel_list {
+	    height: 26px;
+	    position: relative;
+	    z-index: 99;
+	    font-family: verdana, arial, sans-serif;
+	    padding: 5px;
+
+	    a{
+	    	background-color : $black1;
+	    }
+	}
 }
 .hero{
 	background-color : $black2;
@@ -147,8 +158,8 @@ ul.main-nav{
 		}
 		
 		a{
-			min-width : 180px;
-			padding : 10px;
+			min-width : 220px;
+			padding : 10px 20px;
 			&:hover{
 				// color : $white2;
 				// background-color : $black2;

@@ -57,9 +57,10 @@
 		<header class="site-header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 			<div class="top-bar">
 				<section class="layout">
-					<img src="<?php echo get_template_directory_uri();?>/images/ir.png" alt="Persian" class="lang-icon"/>
+					<!-- <img src="<?php echo get_template_directory_uri();?>/images/ir.png" alt="Persian" class="lang-icon"/>
 					<img src="<?php echo get_template_directory_uri();?>/images/en.png" alt="English" class="lang-icon"/>
-					<img src="<?php echo get_template_directory_uri();?>/images/it.png" alt="Italian" class="lang-icon"/>
+					<img src="<?php echo get_template_directory_uri();?>/images/it.png" alt="Italian" class="lang-icon"/> -->
+					<?php do_action('wpml_add_language_selector'); ?>
 				</section>
 			</div>
 			<div class="hero">
