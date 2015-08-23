@@ -9,11 +9,14 @@ footer.site-footer,.site-footer{
 }
 .products-area{
 	.widget.footer-first{
-		@include span-columns(3,12);
-		margin-right : auto;
-		&:nth-of-type(4n){
-			@include span-columns(3 omega,12);
+		@include span-columns(12,12);
+		@include at-breakpoint($medium){
+			@include span-columns(3,12);
+			margin-right : auto;
+			&:nth-of-type(4n){
+				@include span-columns(3 omega,12);
 
+			}
 		}
 	}
 	
@@ -21,11 +24,14 @@ footer.site-footer,.site-footer{
 .contact-area{
 	.widget.footer-second{
 		background-color : $white;
-		@include span-columns(4,12);
-		margin-right : auto;
-		&:nth-of-type(3n){
-			@include span-columns(4 omega,12);
+		@include span-columns(12,12);
+		@include at-breakpoint($medium){
+			@include span-columns(4,12);
+			margin-right : auto;
+			&:nth-of-type(3n){
+				@include span-columns(4 omega,12);
 
+			}
 		}
 	}
 }

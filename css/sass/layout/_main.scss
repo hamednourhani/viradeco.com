@@ -63,7 +63,10 @@ body{
 
 //-------------site-content-------------------
 .primary{
- 	@include span-columns(8,12);
+ 	@include span-columns(12,12);
+ 	@include at-breakpoint($medium){
+ 		@include span-columns(8,12);
+ 	}
  	padding:{
 		top :20px;
 		bottom : 20px;
@@ -92,7 +95,10 @@ body{
 		@include span-columns(12,12);
 		margin : auto;
 		article .featured-image{
-			@include span-columns(5,12);
+			@include span-columns(12,12);
+		 	@include at-breakpoint($medium){
+		 		@include span-columns(5,12);
+		 	}
 			img{
 				max-width : 100%;
 				height : auto;
@@ -100,7 +106,10 @@ body{
 			}
 		}
 		article .article-body{
-			@include span-columns(7 omega,12);
+			@include span-columns(12,12);
+		 	@include at-breakpoint($medium){
+		 		@include span-columns(7 omega,12);
+		 	}
 			p{
 				padding : 5px;
 				text-align: justify;
@@ -181,11 +190,17 @@ article,.hentry{
 				background-color: $white2;
 				&.meta-name{
 					max-width :100%;
-					width : 38%;
+					width : 100%;
+					@include at-breakpoint($medium){
+						width : 38%;
+					}
 				}
 				&.meta-value{
 					max-width : 100%;
-					width : 60%;
+					width : 100%;
+					@include at-breakpoint($medium){
+						width : 60%;
+					}
 				}
 			}
 			&:nth-of-type(2n){
@@ -205,15 +220,22 @@ article,.hentry{
 }
 body.archive{
 	article {
-		@include span-columns(6,12);
-		&:nth-of-type(2n){
-			@include span-columns(6 omega ,12);
-		}
+		@include span-columns(12,12);
+	 	@include at-breakpoint($medium){
+	 		@include span-columns(6,12);
+			&:nth-of-type(2n){
+				@include span-columns(6 omega ,12);
+			}
+	 	}
+
 	}
 }
 
 .secondary{
-	@include span-columns(4 omega,12);
+	@include span-columns(12,12);
+ 	@include at-breakpoint($medium){
+ 		@include span-columns(4 omega,12);
+ 	}
 	display : block;
 	
 	padding:{

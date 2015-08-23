@@ -7,8 +7,12 @@
 
 //-------------site-content-------------------
 .primary{
- 	@include span-columns(8,12);
- 	margin-right : auto;
+ 	@include span-columns(12,12);
+ 	@include at-breakpoint($medium){
+ 		@include span-columns(8,12);
+ 		margin-right : auto;
+ 	}
+ 	
  	padding:{
 		top :20px;
 		bottom : 20px;
@@ -21,12 +25,19 @@
 		margin-right : auto;
 		margin : auto;
 		article .featured-image{
-			@include span-columns(5,12);
-			margin-right : auto;
+			@include span-columns(12,12);
+		 	@include at-breakpoint($medium){
+		 		@include span-columns(5,12);
+		 		margin-right : auto;
+		 	}
 			
 		}
 		article .article-body{
-			@include span-columns(7 omega,12);
+			@include span-columns(12,12);
+		 	@include at-breakpoint($medium){
+		 		@include span-columns(7 omega,12);
+		 		margin-right : auto;
+		 	}
 			p{
 				padding : 5px;
 				text-align: justify;
@@ -58,16 +69,25 @@ article,.hentry{
 }
 body.archive{
 	article {
-		@include span-columns(6,12);
-		margin-right : auto;
-		&:nth-of-type(2n){
-			@include span-columns(6 omega ,12);
+			
+		@include span-columns(12,12);
+		@include at-breakpoint($medium){
+			@include span-columns(6,12);
+			margin-right : auto;
+			&:nth-of-type(2n){
+				@include span-columns(6 omega ,12);
+			}
 		}
 	}
 }
 
 .secondary{
-	@include span-columns(4 omega,12);
+	@include span-columns(12,12);
+	@include at-breakpoint($medium){
+		@include span-columns(4 omega,12);
+		margin-right : auto;
+		
+	}
 	display : block;
 	
 	padding:{

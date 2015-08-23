@@ -25,12 +25,21 @@
 	color : $white;
 	position: relative;
 	.logo-wrapper{
-		max-width : 140px;
+		width : 100%;
+		max-width : 100%;
+		text-align : center;
+		@include at-breakpoint($medium) {
+			max-width : 140px;
+		}
 		display: inline-block;
 		padding : 20px 10px 10px;
 		overflow: hidden;
 	}
 	.site-desc{
+		display : none;
+		@include at-breakpoint($medium) {
+			display : inline-block;
+		}
 		// position : absolute;
 		// top : 40px;
 		// left : 20px;
@@ -71,6 +80,10 @@ nav.main-menu{
 	position : relative;
 	z-index : 9998 !important;
 	.search-area{
+		display: none;
+		@include at-breakpoint($medium) {
+		  	display : inline-block;
+		}
 		position : absolute;
 		margin-top : 5px;
 		right : 30px;

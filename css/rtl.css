@@ -233,15 +233,21 @@ li.menu-item > a img {
 
 /* line 9, sass/rtl/layout/_main.scss */
 .primary {
-  width: 66.15385%;
+  width: 100%;
   float: right;
   margin-left: 1.53846%;
   display: inline;
-  margin-right: auto;
   padding-top: 20px;
   padding-bottom: 20px; }
+  @media (min-width: 45em) {
+    /* line 9, sass/rtl/layout/_main.scss */
+    .primary {
+      width: 66.15385%;
+      float: right;
+      margin-left: 1.53846%;
+      margin-right: auto; } }
 
-/* line 19, sass/rtl/layout/_main.scss */
+/* line 23, sass/rtl/layout/_main.scss */
 .without-sidebar .primary {
   width: 100%;
   float: right;
@@ -249,84 +255,106 @@ li.menu-item > a img {
   display: inline;
   margin-right: auto;
   margin: auto; }
-  /* line 23, sass/rtl/layout/_main.scss */
+  /* line 27, sass/rtl/layout/_main.scss */
   .without-sidebar .primary article .featured-image {
-    width: 40.76923%;
+    width: 100%;
     float: right;
     margin-left: 1.53846%;
-    display: inline;
-    margin-right: auto; }
-  /* line 28, sass/rtl/layout/_main.scss */
-  .without-sidebar .primary article .article-body {
-    width: 57.69231%;
-    float: left;
-    margin-left: 0;
-    *margin-right: -1em;
     display: inline; }
-    /* line 30, sass/rtl/layout/_main.scss */
+    @media (min-width: 45em) {
+      /* line 27, sass/rtl/layout/_main.scss */
+      .without-sidebar .primary article .featured-image {
+        width: 40.76923%;
+        float: right;
+        margin-left: 1.53846%;
+        margin-right: auto; } }
+  /* line 35, sass/rtl/layout/_main.scss */
+  .without-sidebar .primary article .article-body {
+    width: 100%;
+    float: right;
+    margin-left: 1.53846%;
+    display: inline; }
+    @media (min-width: 45em) {
+      /* line 35, sass/rtl/layout/_main.scss */
+      .without-sidebar .primary article .article-body {
+        width: 57.69231%;
+        float: left;
+        margin-left: 0;
+        margin-right: auto; } }
+    /* line 41, sass/rtl/layout/_main.scss */
     .without-sidebar .primary article .article-body p {
       padding: 5px;
       text-align: justify; }
 
-/* line 42, sass/rtl/layout/_main.scss */
+/* line 53, sass/rtl/layout/_main.scss */
 article .article-title, .hentry .article-title {
   font-size: 100%;
   position: relative; }
-  /* line 46, sass/rtl/layout/_main.scss */
+  /* line 57, sass/rtl/layout/_main.scss */
   article .article-title h3::after, .hentry .article-title h3::after {
     position: absolute;
     bottom: 0px;
     right: 0;
     left: auto; }
 
-/* line 60, sass/rtl/layout/_main.scss */
+/* line 71, sass/rtl/layout/_main.scss */
 body.archive article {
-  width: 49.23077%;
+  width: 100%;
   float: right;
   margin-left: 1.53846%;
-  display: inline;
-  margin-right: auto; }
-  /* line 63, sass/rtl/layout/_main.scss */
-  body.archive article:nth-of-type(2n) {
-    width: 49.23077%;
-    float: left;
-    margin-left: 0;
-    *margin-right: -1em;
-    display: inline; }
+  display: inline; }
+  @media (min-width: 45em) {
+    /* line 71, sass/rtl/layout/_main.scss */
+    body.archive article {
+      width: 49.23077%;
+      float: right;
+      margin-left: 1.53846%;
+      margin-right: auto; }
+      /* line 77, sass/rtl/layout/_main.scss */
+      body.archive article:nth-of-type(2n) {
+        width: 49.23077%;
+        float: left;
+        margin-left: 0; } }
 
-/* line 69, sass/rtl/layout/_main.scss */
+/* line 84, sass/rtl/layout/_main.scss */
 .secondary {
-  width: 32.30769%;
-  float: left;
-  margin-left: 0;
-  *margin-right: -1em;
+  width: 100%;
+  float: right;
+  margin-left: 1.53846%;
   display: inline;
   display: block;
   padding-top: 20px;
   padding-bottom: 20px; }
+  @media (min-width: 45em) {
+    /* line 84, sass/rtl/layout/_main.scss */
+    .secondary {
+      width: 32.30769%;
+      float: left;
+      margin-left: 0;
+      margin-right: auto; } }
 
-/* line 78, sass/rtl/layout/_main.scss */
+/* line 98, sass/rtl/layout/_main.scss */
 .widget {
   font-size: 100%; }
-  /* line 81, sass/rtl/layout/_main.scss */
+  /* line 101, sass/rtl/layout/_main.scss */
   .widget h4.widgettitle {
     position: relative; }
-    /* line 85, sass/rtl/layout/_main.scss */
+    /* line 105, sass/rtl/layout/_main.scss */
     .widget h4.widgettitle:after {
       position: absolute;
       bottom: 0px;
       right: 0;
       left: auto; }
-  /* line 97, sass/rtl/layout/_main.scss */
+  /* line 117, sass/rtl/layout/_main.scss */
   .widget i.fa:before {
     padding-left: 10px;
     padding-right: auto; }
 
-/* line 110, sass/rtl/layout/_main.scss */
+/* line 130, sass/rtl/layout/_main.scss */
 ul.widget-list li img {
   margin: 5px 5px 5px 12px; }
 
-/* line 120, sass/rtl/layout/_main.scss */
+/* line 140, sass/rtl/layout/_main.scss */
 ul.social-links li i:before {
   margin: 3px 3px 3px 12px; }
 
@@ -340,34 +368,42 @@ footer.site-footer, .site-footer {
 
 /* line 11, sass/rtl/layout/_footer.scss */
 .products-area .widget.footer-first {
-  width: 23.84615%;
+  width: 100%;
   float: right;
   margin-left: 1.53846%;
-  display: inline;
-  margin-right: auto; }
-  /* line 14, sass/rtl/layout/_footer.scss */
-  .products-area .widget.footer-first:nth-of-type(4n) {
-    width: 23.84615%;
-    float: left;
-    margin-left: 0;
-    *margin-right: -1em;
-    display: inline; }
+  display: inline; }
+  @media (min-width: 45em) {
+    /* line 11, sass/rtl/layout/_footer.scss */
+    .products-area .widget.footer-first {
+      width: 23.84615%;
+      float: right;
+      margin-left: 1.53846%;
+      margin-right: auto; }
+      /* line 16, sass/rtl/layout/_footer.scss */
+      .products-area .widget.footer-first:nth-of-type(4n) {
+        width: 23.84615%;
+        float: left;
+        margin-left: 0; } }
 
-/* line 22, sass/rtl/layout/_footer.scss */
+/* line 25, sass/rtl/layout/_footer.scss */
 .contact-area .widget.footer-second {
   background-color: #fff;
-  width: 32.30769%;
+  width: 100%;
   float: right;
   margin-left: 1.53846%;
-  display: inline;
-  margin-right: auto; }
-  /* line 26, sass/rtl/layout/_footer.scss */
-  .contact-area .widget.footer-second:nth-of-type(3n) {
-    width: 32.30769%;
-    float: left;
-    margin-left: 0;
-    *margin-right: -1em;
-    display: inline; }
+  display: inline; }
+  @media (min-width: 45em) {
+    /* line 25, sass/rtl/layout/_footer.scss */
+    .contact-area .widget.footer-second {
+      width: 32.30769%;
+      float: right;
+      margin-left: 1.53846%;
+      margin-right: auto; }
+      /* line 31, sass/rtl/layout/_footer.scss */
+      .contact-area .widget.footer-second:nth-of-type(3n) {
+        width: 32.30769%;
+        float: left;
+        margin-left: 0; } }
 
 /* button style */
 /* line 2, sass/rtl/modules/_btn.scss */
