@@ -133,7 +133,7 @@ article,.hentry{
 				background-color : $red;
 				position : absolute;
 				bottom : 0px;
-				left : 0;
+				right : 0;
 			}
 						
 		}
@@ -243,7 +243,7 @@ body.archive{
 			background-color : $red;
 			position : absolute;
 			bottom : 0px;
-			left : 0;
+			right : 0;
 		}
 		
 	}
@@ -254,7 +254,7 @@ body.archive{
 		margin : 5px;
 	}
 	i.fa:before{
-		padding-right : 10px;
+		padding-left : 10px;
 		color : $grey3;
 		font-size : 120%;
 		vertical-align: middle;
@@ -288,7 +288,7 @@ ul.social-links{
 			padding : 7px ;
 			text-align: center;
 
-			margin : 3px 12px 3px 3px;
+			margin : 3px 3px 3px 12px;
 			
 		}
 		i.fa.fa-google:before{

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Viradeco\n"
-"POT-Creation-Date: 2015-08-22 15:56+0430\n"
-"PO-Revision-Date: 2015-08-22 16:21+0430\n"
+"POT-Creation-Date: 2015-08-23 14:08+0430\n"
+"PO-Revision-Date: 2015-08-23 14:10+0430\n"
 "Last-Translator: \n"
 "Language-Team: iTstar <info@itstar.ir>\n"
 "Language: fa_IR\n"
@@ -30,6 +30,10 @@ msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 "به نظر می رسد صفحه ای که به دنبال آن هستید در این آدرس وجود ندارد. جستجو می "
 "تواند به شما کمک نماید!"
+
+#: footer.php:11
+msgid "Vira Co © 2015. All rights reserved."
+msgstr "شرکت ویرا © 1394 . تمامی حقوق محفوظ می باشد."
 
 #: footer.php:14
 msgid "Designed by "
@@ -120,144 +124,148 @@ msgstr "ابزارک آخرین محصولات"
 msgid "Display Last Products"
 msgstr "نمایش آخرین محصولات در یک دسته بندی خاص"
 
-#: functions.php:392
+#: functions.php:391
 msgid "Last Products"
 msgstr "آخرین محصولات"
 
-#: functions.php:407 functions.php:505 functions.php:600 functions.php:701
-#: functions.php:833
+#: functions.php:406 functions.php:508 functions.php:604 functions.php:706
+#: functions.php:838
 msgid "Title:"
 msgstr "عنوان : "
 
-#: functions.php:411
+#: functions.php:410
 msgid "product Numbers :"
 msgstr "تعداد محصولات : "
 
-#: functions.php:415
+#: functions.php:414
 msgid "Product Category :"
 msgstr "دسته بندی محصولات : "
 
-#: functions.php:446
+#: functions.php:449
 msgid "Last Projects Widget"
 msgstr "ابزارک آخرین پروژه ها"
 
-#: functions.php:449
+#: functions.php:452
 msgid "Display Last Projects"
 msgstr "نمایش آخرین پروژه ها"
 
-#: functions.php:495
+#: functions.php:498
 msgid "Last Projects"
 msgstr "آخرین پروژه ها"
 
-#: functions.php:509
+#: functions.php:512
 msgid "Project Numbers :"
 msgstr "تعداد پروژه ها: "
 
-#: functions.php:533
+#: functions.php:536
 msgid "Last Posts By Category Widget"
 msgstr "آخرین مطالب یک دسته بندی"
 
-#: functions.php:536
+#: functions.php:539
 msgid "Display Last Posts in Category"
 msgstr "نمایش آخرین مطالب منتشر شده در یک دسته بندی خاص"
 
-#: functions.php:585 functions.php:677
+#: functions.php:589 functions.php:682
 msgid "Last Posts"
 msgstr "آخرین مطالب"
 
-#: functions.php:604
+#: functions.php:608
 msgid "Post Numbers :"
 msgstr "تعداد مطالب : "
 
-#: functions.php:608
+#: functions.php:612
 msgid "Post Category :"
 msgstr "دسته بندی مطالب : "
 
-#: functions.php:638
+#: functions.php:643
 msgid "Contact Informaion Widget"
 msgstr "ابزارک اطلاعات تماس"
 
-#: functions.php:641
+#: functions.php:646
 msgid "Display Contact Information"
 msgstr "نمایش اطلاعات تماس"
 
-#: functions.php:657
+#: functions.php:662
 msgid "Phone : "
 msgstr "تلفن : "
 
-#: functions.php:658
+#: functions.php:663
 msgid "Fax : "
 msgstr "فکس : "
 
-#: functions.php:659
+#: functions.php:664
 msgid "Email : "
 msgstr "ایمیل : "
 
-#: functions.php:705
+#: functions.php:710
 msgid "Phone Number :"
 msgstr "شماره تلفن : "
 
-#: functions.php:710
+#: functions.php:715
 msgid "Fax Number :"
 msgstr "شماره فکس : "
 
-#: functions.php:715
+#: functions.php:720
 msgid "Email Address :"
 msgstr "آدرس ایمیل : "
 
-#: functions.php:741
+#: functions.php:746
 msgid "Social Networks Widget"
 msgstr "ابزارک لینک های اجتماعی"
 
-#: functions.php:744
+#: functions.php:749
 msgid "Social Networks and Important links"
 msgstr "نمایش لینک های اجتماعی و لینک های مهم"
 
-#: functions.php:769
+#: functions.php:774
 msgid "Download Cataloge"
 msgstr "دانلود کاتالوگ"
 
-#: functions.php:770
+#: functions.php:775
 msgid "Send Email"
 msgstr "ارسال ایمیل"
 
-#: functions.php:771
+#: functions.php:776
 msgid "Login"
 msgstr "ورود"
 
-#: functions.php:789
+#: functions.php:794
 msgid "Social Links"
 msgstr "لینک های اجتماعی"
 
-#: functions.php:837
+#: functions.php:842
 msgid "Google Plus Url :"
 msgstr "آدرس گوگل پلاس :"
 
-#: functions.php:841
+#: functions.php:846
 msgid "Facebook Url :"
 msgstr "آدرس فیسبوک : "
 
-#: functions.php:845
+#: functions.php:850
 msgid "Linkedin Url :"
 msgstr "آدرس لینکداین : "
 
-#: functions.php:849
+#: functions.php:854
 msgid "Instagram Url :"
 msgstr "آدرس اینستاگرام : "
 
-#: functions.php:853
+#: functions.php:858
 msgid "Catalog Download url :"
 msgstr "آدرس صفحه یا لینک دانلود کاتالوگ : "
 
-#: functions.php:857
+#: functions.php:862
 msgid "Send Email Url :"
 msgstr "آدرس صفحه یا لینک ارسال ایمیل : "
 
-#: functions.php:861
+#: functions.php:866
 msgid "Login Url :"
 msgstr "آدرس ورود به سایت :"
 
-#: header.php:82
+#: header.php:73
+msgid "Be Yourself Furniture Designer"
+msgstr "خالق فضا و مبلمان خود باشید"
+
+#: header.php:83
 msgid "Main Menu"
 msgstr "منوی اصلی"
 
@@ -478,7 +486,6 @@ msgid "Add New Products"
 msgstr "افزودن محصول جدید"
 
 #: library/custom-post-type.php:36 library/custom-post-type.php:81
-#: page-templates/contributors.php:35
 msgid "Edit"
 msgstr "ویرایش"
 

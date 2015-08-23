@@ -1,10 +1,6 @@
 /* fonts */
-//@include font-face("BYekan", font-files("BYekan.ttf", "BYekan.woff"),"BYekan.eot");
-@include font-face("Yekan", font-files("Yekan.ttf", "Yekan.woff"),"Yekan.eot","Yekan.svg");
-
-//@include font-face("Roya", font-files("IRRoya.ttf", "IRRoya.woff"),"IRRoya.eot");
+@include font-face("Bgothic", font-files("bank-gothic-medium.ttf", "bank-gothic-medium.woff"),"bank-gothic-medium.eot");
 
 
-//$BYekan : "BYekan";
-$Yekan : "Yekan";
-//$Roya : "Roya","Byekan",tahoma;
+
+$Bgothic : "Bgothic";

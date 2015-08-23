@@ -1,0 +1,12 @@
+/* base style */
+body {
+	font-family : $Yekan;
+	direction : rtl;
+	font-size : 100%;
+	line-height : 180%;
+}
+.fa {
+	@include fa-icon;
+}
+
+

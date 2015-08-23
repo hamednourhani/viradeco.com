@@ -8,7 +8,7 @@
 
 			<footer class="site-footer">
 				<section class="layout">
-					<span class="site-credit">تمامی حقوق این سایت برای شرکت هنر چیدمان ویرا محفوظ می باشد.</span>
+					<span class="site-credit"><?php echo __( "Vira Co © 2015. All rights reserved.","viradeco"); ?></span>
 
 					<span class="site-designer">
 						<?php echo __('Designed by ','viradeco');?>

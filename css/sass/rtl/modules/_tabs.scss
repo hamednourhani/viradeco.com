@@ -1,0 +1,104 @@
+// .ui-tabs .ui-tabs-nav li, .ui-tabs .ui-tabs-nav li.ui-tabs-active {
+//     float: right;
+//     margin: 0 -12px 0px 0;
+//     border-top-left-radius: 30px;
+//     padding-left: 6px;
+//     outline : none;
+// }
+// .ui-tabs .ui-tabs-nav {
+//     margin-right: 10px;
+// }
+// .ui-state-default.ui-corner-top,
+// .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active,
+// .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover{
+
+// border-color : $navy1;
+// background: #5a6b9f; /* Old browsers */
+// background: -moz-linear-gradient(top, #5a6b9f 21%, #253b80 86%); /* FF3.6+ */
+// background: -webkit-gradient(linear, left top, left bottom, color-stop(21%,#5a6b9f), color-stop(86%,#253b80)); /* Chrome,Safari4+ */
+// background: -webkit-linear-gradient(top, #5a6b9f 21%,#253b80 86%); /* Chrome10+,Safari5.1+ */
+// background: -o-linear-gradient(top, #5a6b9f 21%,#253b80 86%); /* Opera 11.10+ */
+// background: -ms-linear-gradient(top, #5a6b9f 21%,#253b80 86%); /* IE10+ */
+// background: linear-gradient(to bottom, #5a6b9f 21%,#253b80 86%); /* W3C */
+// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5a6b9f', endColorstr='#253b80',GradientType=0 );
+// font-family : $BYekan;
+// font-size : 16px;
+
+// }
+// .ui-tabs-panel.ui-widget-content{
+// background: #253b80; /* Old browsers */
+// background: -moz-linear-gradient(left, #253b80 0%, #253b80 0%, #5a6b9f 20%, #5a6b9f 79%, #253b80 100%); /* FF3.6+ */
+// background: -webkit-gradient(linear, left top, right top, color-stop(0%,#253b80), color-stop(0%,#253b80), color-stop(20%,#5a6b9f), color-stop(79%,#5a6b9f), color-stop(100%,#253b80)); /* Chrome,Safari4+ */
+// background: -webkit-linear-gradient(left, #253b80 0%,#253b80 0%,#5a6b9f 20%,#5a6b9f 79%,#253b80 100%); /* Chrome10+,Safari5.1+ */
+// background: -o-linear-gradient(left, #253b80 0%,#253b80 0%,#5a6b9f 20%,#5a6b9f 79%,#253b80 100%); /* Opera 11.10+ */
+// background: -ms-linear-gradient(left, #253b80 0%,#253b80 0%,#5a6b9f 20%,#5a6b9f 79%,#253b80 100%); /* IE10+ */
+// background: linear-gradient(to right, #253b80 0%,#253b80 0%,#5a6b9f 20%,#5a6b9f 79%,#253b80 100%); /* W3C */
+// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#253b80', endColorstr='#253b80',GradientType=1 ); /* IE6-9 */
+
+// overflow : hidden;
+// font-family : $BYekan;
+// font-size : 14px;
+// }
+
+// .ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited{
+// 	color: $grey1;
+// }
+// .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited,
+// .ui-state-hover a, .ui-state-hover a:link, .ui-state-hover a:visited {
+//     color : $skyblue2;
+    
+// }
+// .ui-widget-header {
+//     border: none;
+//     background: none;
+//     color: #fff;
+    
+// }
+// .ui-widget-content {
+//     border: 0px;
+//     background: none;
+//     color: $grey1;
+// }
+
+// .notify-tabs-wrap{
+// 	padding :{
+// 		top: 30px;
+// 		bottom : 30px;
+// 	}
+// 	background-color: $navy1;
+// 	color : $grey1;
+// 	ul.notifies-list li{
+// 		@include span-columns(4,12);
+// 		border : 1px dashed $grey1;
+// 		padding : 10px 32px 10px 10px;
+// 		margin-bottom : 10px;
+// 		@include single-transition(all ,0.3s , ease-ion-out);
+// 		&:nth-child(3n){
+// 			@include span-columns(4 omega,12);
+// 		}
+// 		&:hover{
+// 			border : 1px dashed $skyblue2;
+
+// 		}
+// 		a{
+// 			color : $grey1;
+// 			position : relative;
+// 			@include single-transition(all ,0.3s , ease-ion-out);
+// 		}
+// 		a:hover{
+// 			color : $skyblue2;
+// 		}
+// 		a:before{
+// 			@extend .fa;
+// 			content : "\F067";
+// 			position : absolute;
+// 			right : -20px;
+// 			top : 5px;
+// 		}
+
+
+// 	}
+// 	.tab-content{
+// 		padding : 15px;
+// 	}
+// }

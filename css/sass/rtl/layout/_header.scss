@@ -1,11 +1,11 @@
 /* header style */
 .top-bar{
 	background-color : $black1;
-	text-align : right;
+	text-align : left;
 	padding-left : 30px;
 	.lang-icon{
 		padding :{
-			left : 8px;
+			right : 8px;
 		}
 	}
 	#lang_sel_list {
@@ -34,7 +34,7 @@
 		// position : absolute;
 		// top : 40px;
 		// left : 20px;
-		float : right;
+		float : left;
 		margin-top : 40px;
 		padding : 10px;
 		position : relative;
@@ -42,7 +42,7 @@
 			display : inline-block;
 			position : absolute;
 			bottom : 0;
-			left : 0;
+			right : 0;
 			height : 2px;
 			width : 400px;
 			max-width: 100%;
@@ -73,7 +73,7 @@ nav.main-menu{
 	.search-area{
 		position : absolute;
 		margin-top : 5px;
-		right : 30px;
+		left : 30px;
 		top : 13px;
 		input{
 			height : 32px;
@@ -89,7 +89,7 @@ nav.main-menu{
 			content : "\f002";
 			position : absolute;
 			    top: 8px;
-			    right: 7px;
+			    left: 7px;
 			    font-size: 110%;
 			    color: $grey2;
 
@@ -130,10 +130,10 @@ ul.main-nav{
 		@extend .fa;
 		content: "\f0d7";
 		vertical-align : middle;
-		padding-left: 5px;
+		padding-right: 5px;
 		// width walker added
 		position: absolute;
-    	right: 1px;
+    	left: 1px;
     	top: 41%;
 	}
 	
@@ -146,7 +146,7 @@ ul.main-nav{
 		opacity: 0;
 		position : absolute;
 		top : 100%;
-		left : -30%;
+		right : -30%;
 		@include display-none;
 		
 		
@@ -167,8 +167,8 @@ ul.main-nav{
 		}
 		li.menu-item-has-children>a:after{
 			@extend .fa;
-			content: "\f0da";
-		    right: 12px;
+			content: "\f0d9";
+		    left: 12px;
 		    position: absolute;
 		        top: 16px;
 		    vertical-align : middle;
@@ -199,7 +199,7 @@ ul.main-nav{
 		margin : 0;
 		opacity: 0;
 		display: inline-block;
-		left : 100%;
+		right : 100%;
 		top : 0;
 		@include display-none;
 		
@@ -239,7 +239,7 @@ ul.main-nav{
 	}
 	ul.sub-menu li:hover ul{
 		display: inline-block;
-		left : 100%;
+		right : 100%;
 		top : 0;
 
 	}
@@ -248,13 +248,13 @@ ul.main-nav{
 		display : inline-block;
 		content : "\f015";
 		vertical-align: middle;
-		margin-right: 7px;
+		margin-left: 7px;
 	}
 }
 
 li.menu-item{
 	&>a img {
-	    float: left;
+	    float: right;
 	    vertical-align: -webkit-baseline-middle;
 	}
 	&>a span {
