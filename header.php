@@ -42,13 +42,13 @@
 
 <body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
 	
-	<!-- <noscript>
+	<noscript>
 		<style>
 			.body-wrapper{
 				display : block;
 			}
 		</style>
-	</noscript> -->
+	</noscript>
 	<div class="body-wrapper">
 	<!-- ********************************************************************* -->
 	<!--****************** Site header ***************************************-->

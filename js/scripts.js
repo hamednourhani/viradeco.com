@@ -27,6 +27,10 @@ jQuery(document).ready(function($){
 	   debug: false
 	});
 
+	// setTimeout(function(){
+	// 	window.loading_screen.finish();
+	// },2000);
+
 	
 });	
 		

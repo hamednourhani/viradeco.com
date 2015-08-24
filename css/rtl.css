@@ -366,9 +366,9 @@ body.archive article {
 ul.widget-list li img {
   margin: 5px 5px 5px 12px; }
 
-/* line 140, sass/rtl/layout/_main.scss */
-ul.social-links li i:before {
-  margin: 3px 3px 3px 12px; }
+/* line 141, sass/rtl/layout/_main.scss */
+ul.social-links li i.sicon:before {
+  margin: 0px 3px 0px 12px; }
 
 /* footer style */
 /* line 2, sass/rtl/layout/_footer.scss */

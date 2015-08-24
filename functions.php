@@ -767,13 +767,13 @@ class social_widget extends WP_Widget {
         
                 
         $content = '<ul class="social-links">';
-        $content .='<li><i class="fa fa-google-plus"></i><a href="'.esc_url($google).'">Google Plus</a></li>';
-        $content .='<li><i class="fa fa-facebook"></i><a href="'.esc_url($facebook).'">Facebook</a></li>';
-        $content .='<li><i class="fa fa-linkedin"></i><a href="'.esc_url($linkedin).'">Linkedin</a></li>';
-        $content .='<li><i class="fa fa-instagram"></i><a href="'.esc_url($instagram).'">Instagram</a></li>';
-        $content .='<li><i class="fa fa-book"></i><a href="'.esc_url($catalog).'">'.__('Download Cataloge','viradeco').'</a></li>';
-        $content .='<li><i class="fa fa-envelope"></i><a href="'.esc_url($email).'">'.__('Send Email','viradeco').'</a></li>';
-        $content .='<li><i class="fa fa-unlock-alt"></i><a href="'.esc_url($login).'">'.__('Login','viradeco').'</li>';
+        $content .='<li><i class="sicon google-plus"></i><a href="'.esc_url($google).'">Google Plus</a></li>';
+        $content .='<li><i class="sicon facebook"></i><a href="'.esc_url($facebook).'">Facebook</a></li>';
+        $content .='<li><i class="sicon linkedin"></i><a href="'.esc_url($linkedin).'">Linkedin</a></li>';
+        $content .='<li><i class="sicon instagram"></i><a href="'.esc_url($instagram).'">Instagram</a></li>';
+        $content .='<li><i class="sicon catalog"></i><a href="'.esc_url($catalog).'">'.__('Download Cataloge','viradeco').'</a></li>';
+        $content .='<li><i class="sicon envelope"></i><a href="'.esc_url($email).'">'.__('Send Email','viradeco').'</a></li>';
+        $content .='<li><i class="sicon unlock"></i><a href="'.esc_url($login).'">'.__('Login','viradeco').'</li>';
         $content .= '</ul>';
       
         // before and after widget arguments are defined by themes
