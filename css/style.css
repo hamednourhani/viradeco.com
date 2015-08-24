@@ -802,7 +802,7 @@ article, aside {
     display: inline-block;
     padding: 5px 10px 0px;
     overflow: hidden;
-    margin-bottom: -12px; }
+    margin-bottom: -10px; }
     @media (min-width: 45em) {
       /* line 27, sass/layout/_header.scss */
       .hero .logo-wrapper {
@@ -905,13 +905,23 @@ nav.main-menu {
         display: inline-block; } }
     /* line 94, sass/layout/_header.scss */
     nav.main-menu .search-area input {
+      float: right;
+      -moz-transition: all 0.8s ease-in-out 0s;
+      -o-transition: all 0.8s ease-in-out 0s;
+      -webkit-transition: all 0.8s ease-in-out;
+      -webkit-transition-delay: 0s;
+      transition: all 0.8s ease-in-out 0s;
+      width: 130px;
       height: 32px;
       color: #111;
       font-size: 90%; }
-    /* line 100, sass/layout/_header.scss */
+      /* line 101, sass/layout/_header.scss */
+      nav.main-menu .search-area input:focus {
+        width: 160px; }
+    /* line 106, sass/layout/_header.scss */
     nav.main-menu .search-area label, nav.main-menu .search-area button {
       display: none; }
-    /* line 103, sass/layout/_header.scss */
+    /* line 109, sass/layout/_header.scss */
     nav.main-menu .search-area:before {
       content: "\f002";
       position: absolute;
@@ -920,13 +930,13 @@ nav.main-menu {
       font-size: 110%;
       color: #CCCCCC; }
 
-/* line 117, sass/layout/_header.scss */
+/* line 123, sass/layout/_header.scss */
 ul.main-nav {
   font-size: 90%;
   margin-bottom: -30px;
   padding: 0;
   background-color: #F8F8F8; }
-  /* line 123, sass/layout/_header.scss */
+  /* line 129, sass/layout/_header.scss */
   ul.main-nav a {
     -moz-transition: all 0.2s ease-in-out 0s;
     -o-transition: all 0.2s ease-in-out 0s;
@@ -936,17 +946,17 @@ ul.main-nav {
     color: #4E4E4E;
     padding: 20px 17px;
     display: inline-block; }
-    /* line 129, sass/layout/_header.scss */
+    /* line 135, sass/layout/_header.scss */
     ul.main-nav a:hover {
       color: #F8F8F8;
       background-color: #282828; }
-  /* line 136, sass/layout/_header.scss */
+  /* line 142, sass/layout/_header.scss */
   ul.main-nav li {
     display: inline-block;
     position: relative;
     padding: 0;
     margin: 0; }
-  /* line 145, sass/layout/_header.scss */
+  /* line 151, sass/layout/_header.scss */
   ul.main-nav > li.menu-item-has-children > a:after {
     content: "\f0d7";
     vertical-align: middle;
@@ -954,7 +964,7 @@ ul.main-nav {
     position: absolute;
     right: 1px;
     top: 41%; }
-  /* line 156, sass/layout/_header.scss */
+  /* line 162, sass/layout/_header.scss */
   ul.main-nav > li > ul.sub-menu, ul.main-nav li ul.sub-menu {
     z-index: 0;
     text-align: center;
@@ -969,37 +979,37 @@ ul.main-nav {
     -o-transition: opacity .45s linear, visibility .2s linear .4s;
     transition: opacity .45s linear, visibility .2s linear .4s;
     visibility: hidden; }
-    /* line 170, sass/layout/_header.scss */
+    /* line 176, sass/layout/_header.scss */
     ul.main-nav > li > ul.sub-menu li, ul.main-nav li ul.sub-menu li {
       background-color: #F8F8F8;
       -webkit-animation: move-down .5s 1;
       -moz-animation: move-down .5s 1;
       -o-animation: move-down .5s 1;
       animation: move-down .5s 1; }
-    /* line 176, sass/layout/_header.scss */
+    /* line 182, sass/layout/_header.scss */
     ul.main-nav > li > ul.sub-menu a, ul.main-nav li ul.sub-menu a {
       min-width: 220px;
       padding: 10px 20px; }
-    /* line 184, sass/layout/_header.scss */
+    /* line 190, sass/layout/_header.scss */
     ul.main-nav > li > ul.sub-menu li.menu-item-has-children > a:after, ul.main-nav li ul.sub-menu li.menu-item-has-children > a:after {
       content: "\f0da";
       right: 12px;
       position: absolute;
       top: 16px;
       vertical-align: middle; }
-  /* line 195, sass/layout/_header.scss */
+  /* line 201, sass/layout/_header.scss */
   ul.main-nav > li:hover > ul.sub-menu {
     opacity: 1;
     visibility: visible;
     transition-delay: 0s;
     z-index: 9999; }
-    /* line 200, sass/layout/_header.scss */
+    /* line 206, sass/layout/_header.scss */
     ul.main-nav > li:hover > ul.sub-menu > li {
       -webkit-animation: move-up .5s 1;
       -moz-animation: move-up .5s 1;
       -o-animation: move-up .5s 1;
       animation: move-up .5s 1; }
-  /* line 210, sass/layout/_header.scss */
+  /* line 216, sass/layout/_header.scss */
   ul.main-nav > li > ul.sub-menu li ul {
     z-index: 0;
     text-align: center;
@@ -1014,46 +1024,46 @@ ul.main-nav {
     -o-transition: opacity .45s linear, visibility .2s linear .4s;
     transition: opacity .45s linear, visibility .2s linear .4s;
     visibility: hidden; }
-    /* line 225, sass/layout/_header.scss */
+    /* line 231, sass/layout/_header.scss */
     ul.main-nav > li > ul.sub-menu li ul li {
       background-color: #F8F8F8;
       -webkit-animation: move-down .5s 1;
       -moz-animation: move-down .5s 1;
       -o-animation: move-down .5s 1;
       animation: move-down .5s 1; }
-    /* line 231, sass/layout/_header.scss */
+    /* line 237, sass/layout/_header.scss */
     ul.main-nav > li > ul.sub-menu li ul a {
       min-width: 180px;
       padding: 15px; }
-  /* line 242, sass/layout/_header.scss */
+  /* line 248, sass/layout/_header.scss */
   ul.main-nav > li > ul.sub-menu li:hover > ul.sub-menu {
     opacity: 1;
     visibility: visible;
     transition-delay: 0s;
     z-index: 9999; }
-    /* line 247, sass/layout/_header.scss */
+    /* line 253, sass/layout/_header.scss */
     ul.main-nav > li > ul.sub-menu li:hover > ul.sub-menu > li {
       -webkit-animation: move-up .5s 1;
       -moz-animation: move-up .5s 1;
       -o-animation: move-up .5s 1;
       animation: move-up .5s 1; }
-  /* line 256, sass/layout/_header.scss */
+  /* line 262, sass/layout/_header.scss */
   ul.main-nav ul.sub-menu li:hover ul {
     display: inline-block;
     left: 100%;
     top: 0; }
-  /* line 262, sass/layout/_header.scss */
+  /* line 268, sass/layout/_header.scss */
   ul.main-nav li.item-home a:before {
     display: inline-block;
     content: "\f015";
     vertical-align: middle;
     margin-right: 7px; }
 
-/* line 272, sass/layout/_header.scss */
+/* line 278, sass/layout/_header.scss */
 li.menu-item > a img {
   float: left;
   vertical-align: -webkit-baseline-middle; }
-/* line 276, sass/layout/_header.scss */
+/* line 282, sass/layout/_header.scss */
 li.menu-item > a span {
   vertical-align: text-top; }
 

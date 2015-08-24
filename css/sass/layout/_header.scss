@@ -34,7 +34,7 @@
 		display: inline-block;
 		padding : 5px 10px 0px;
 		overflow: hidden;
-		margin-bottom: -12px;
+		margin-bottom: -10px;
 	}
 	.site-desc{
 		display : none;
@@ -92,9 +92,15 @@ nav.main-menu{
 		right : 30px;
 		top : 13px;
 		input{
+			float : right;
+			@include single-transition(all, 0.8s, ease-in-out);
+			width : 130px;
 			height : 32px;
 			color : $black1;
 			font-size : 90%;
+			&:focus{
+				width : 160px;
+			}
 			
 		}
 		label,button {
