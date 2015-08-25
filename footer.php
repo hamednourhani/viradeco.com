@@ -12,7 +12,7 @@
 
 					<span class="site-designer">
 						<?php echo __('Designed by ','viradeco');?>
-						<a href="karait.com"><?php echo __('Farakaranet ','viradeco');?></a>
+						<a href="http://karait.com"><?php echo __('Farakaranet ','viradeco');?></a>
 					</span>
 				</section>
 			</footer> <!-- footer -->

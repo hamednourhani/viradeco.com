@@ -1402,7 +1402,7 @@ ul.social-links li {
     height: 36px;
     content: "";
     display: inline-block;
-    background-image: url('../images/social-icons.png?1440422942');
+    background-image: url('../images/social-icons.png?1440481984');
     vertical-align: middle; }
   /* line 320, sass/layout/_main.scss */
   ul.social-links li i.sicon.google-plus:before {
@@ -1418,13 +1418,13 @@ ul.social-links li {
     background-position: -111px 0; }
   /* line 332, sass/layout/_main.scss */
   ul.social-links li i.sicon.catalog:before {
-    background-position: -147px 0; }
+    background-position: -148px 0; }
   /* line 335, sass/layout/_main.scss */
   ul.social-links li i.sicon.envelope:before {
-    background-position: -183px 0; }
+    background-position: -184px 0; }
   /* line 338, sass/layout/_main.scss */
   ul.social-links li i.sicon.unlock:before {
-    background-position: -219px 0; }
+    background-position: -221px 0; }
 
 /* line 348, sass/layout/_main.scss */
 .contact-area aside {
