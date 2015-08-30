@@ -3,7 +3,7 @@ jQuery(document).ready(function($){
 	
 	// setTimeout(function(){ 
 	// 	window.loading_screen.finish();
-	//  }, 2000);
+	//  }, 1000);
 
 	$('nav.main-menu').scrollToFixed({
 		minWidth : 700,

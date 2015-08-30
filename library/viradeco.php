@@ -133,9 +133,16 @@ function viradeco_scripts_and_styles() {
 
   if (!is_admin()) {
 
+		$please_wait = array(
+			'theme_dir' => get_template_directory_uri(),
+			
+		);
+		
 		// modernizr (without media query polyfill)
-		// wp_register_script( 'please-wait', get_stylesheet_directory_uri() . '/js/lib/please-wait.min.js', array(), '', false );
-		// wp_register_script( 'please-wait-custom', get_stylesheet_directory_uri() . '/js/please-wait-custom.js', array('please-wait'), '', false );
+		wp_register_script( 'please-wait', get_stylesheet_directory_uri() . '/js/lib/please-wait.min.js', array(), '', false );
+		wp_register_script( 'please-wait-custom', get_stylesheet_directory_uri() . '/js/please-wait-custom.js', array('please-wait'), '', false );
+		wp_localize_script( 'please-wait-custom', 'theme_info', $please_wait );
+
 		wp_register_script( 'viradeco-modernizr', get_stylesheet_directory_uri() . '/js/lib/modernizr.custom.min.js', array(), '2.5.3', false );
 
 		// register main stylesheet
@@ -159,9 +166,9 @@ function viradeco_scripts_and_styles() {
 		
 		
 		// enqueue styles and scripts
-		// wp_enqueue_script( 'please-wait' );
-		// wp_enqueue_script( 'please-wait-custom' );
-		wp_enqueue_script( 'viradeco-modernizr' );
+		wp_enqueue_script( 'please-wait' );
+		wp_enqueue_script( 'please-wait-custom' );
+		//wp_enqueue_script( 'viradeco-modernizr' );
 	
 		wp_enqueue_style('font-awesome' );
 		wp_enqueue_style( 'viradeco-stylesheet' );
