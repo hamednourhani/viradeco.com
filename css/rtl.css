@@ -1,10 +1,21 @@
 /* theme */
 /* fonts */
 @font-face {
+<<<<<<< HEAD
   font-family: "Yekan";
   src: url('fonts/Yekan.eot?1440076387');
   src: url('fonts/Yekan.eot?&1440076387#iefix') format('embedded-opentype'), url('fonts/Yekan.ttf?1440076387') format('truetype'), url('fonts/Yekan.woff?1440076387') format('woff');
   font-weight: "Yekan.svg"; }
+=======
+  font-family: "Weblogma_Yekan";
+  src: url('fonts/Weblogma_Yekan.eot?1389781388');
+  src: url('fonts/Weblogma_Yekan.eot?&1389781388#iefix') format('embedded-opentype'), url('fonts/Weblogma_Yekan.ttf?1389781390') format('truetype'), url('fonts/Weblogma_Yekan.woff2') format('woff2');
+  font-weight: "Weblogma_Yekan.svg"; }
+@font-face {
+  font-family: "BKoodakBold";
+  src: url('fonts/BKoodakBold.eot?1440393555');
+  src: url('fonts/BKoodakBold.eot?&1440393555#iefix') format('embedded-opentype'), url('fonts/BKoodakBold.ttf?1440393516') format('truetype'), url('fonts/BKoodakBold.woff?1440377834') format('woff'); }
+>>>>>>> cf28487e273842db9fa950014170ecf43a9e2d41
 /* ------------susy-------- */
 /* line 14, ../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/susy-2.2.2/sass/susy/language/susyone/_grid.scss */
 * {
@@ -79,7 +90,7 @@
 /* base style */
 /* line 2, sass/rtl/base/_base.scss */
 body {
-  font-family: "Yekan";
+  font-family: "Weblogma_Yekan", "BKoodakBold";
   direction: rtl;
   font-size: 100%;
   line-height: 180%; }
@@ -106,9 +117,16 @@ body {
 
 /* line 16, sass/rtl/layout/_header.scss */
 .hero .site-desc {
+<<<<<<< HEAD
+=======
+  font-size: 110%;
+  font-weight: 600;
+  margin-left: 40px;
+  margin-right: auto;
+>>>>>>> cf28487e273842db9fa950014170ecf43a9e2d41
   float: left;
   position: relative; }
-  /* line 24, sass/rtl/layout/_header.scss */
+  /* line 26, sass/rtl/layout/_header.scss */
   .hero .site-desc:after {
     position: absolute;
     bottom: 20px;
@@ -157,23 +175,27 @@ body {
   100% {
     opacity: 0;
     display: none; } }
-/* line 51, sass/rtl/layout/_header.scss */
+/* line 53, sass/rtl/layout/_header.scss */
 nav.main-menu .search-area {
   position: absolute;
   left: 30px;
   right: auto;
   top: 13px; }
   /* line 59, sass/rtl/layout/_header.scss */
+  nav.main-menu .search-area input {
+    float: left; }
+  /* line 63, sass/rtl/layout/_header.scss */
   nav.main-menu .search-area:before {
     position: absolute;
     top: 8px;
     left: 7px;
     right: auto; }
 
-/* line 71, sass/rtl/layout/_header.scss */
+/* line 75, sass/rtl/layout/_header.scss */
 ul.main-nav {
-  font-size: 100%; }
-  /* line 78, sass/rtl/layout/_header.scss */
+  font-size: 110%;
+  font-weight: bold; }
+  /* line 83, sass/rtl/layout/_header.scss */
   ul.main-nav > li.menu-item-has-children > a:after {
     content: "\f0d7";
     padding-right: 5px;
@@ -182,35 +204,35 @@ ul.main-nav {
     left: 1px;
     right: auto;
     top: 41%; }
-  /* line 91, sass/rtl/layout/_header.scss */
+  /* line 96, sass/rtl/layout/_header.scss */
   ul.main-nav > li > ul.sub-menu, ul.main-nav li ul.sub-menu {
     position: absolute;
     top: 100%;
     right: -30%;
     left: auto; }
-    /* line 103, sass/rtl/layout/_header.scss */
+    /* line 108, sass/rtl/layout/_header.scss */
     ul.main-nav > li > ul.sub-menu li.menu-item-has-children > a:after, ul.main-nav li ul.sub-menu li.menu-item-has-children > a:after {
       content: "\f0d9";
       left: 14px;
       right: auto;
       position: absolute;
       top: 16px; }
-  /* line 115, sass/rtl/layout/_header.scss */
+  /* line 120, sass/rtl/layout/_header.scss */
   ul.main-nav > li > ul.sub-menu li ul {
     right: 100%;
     left: auto;
     top: 0; }
-  /* line 130, sass/rtl/layout/_header.scss */
+  /* line 135, sass/rtl/layout/_header.scss */
   ul.main-nav ul.sub-menu li:hover ul {
     right: 100%;
     left: auto;
     top: 0; }
-  /* line 137, sass/rtl/layout/_header.scss */
+  /* line 142, sass/rtl/layout/_header.scss */
   ul.main-nav li.item-home a:before {
     margin-left: 7px;
     margin-right: auto; }
 
-/* line 144, sass/rtl/layout/_header.scss */
+/* line 149, sass/rtl/layout/_header.scss */
 li.menu-item > a img {
   float: right; }
 
@@ -354,9 +376,9 @@ body.archive article {
 ul.widget-list li img {
   margin: 5px 5px 5px 12px; }
 
-/* line 140, sass/rtl/layout/_main.scss */
-ul.social-links li i:before {
-  margin: 3px 3px 3px 12px; }
+/* line 141, sass/rtl/layout/_main.scss */
+ul.social-links li i.sicon:before {
+  margin: 0px 3px 0px 12px; }
 
 /* footer style */
 /* line 2, sass/rtl/layout/_footer.scss */

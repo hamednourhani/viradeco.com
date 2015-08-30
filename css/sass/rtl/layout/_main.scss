@@ -137,9 +137,13 @@ ul.widget-list{
 ul.social-links{
 	li{
 	
-		i:before{
-			margin : 3px 3px 3px 12px;
-			
+		i.sicon{
+			&:before{
+				
+				margin : 0px 3px 0px 12px;
+				
+				
+			}
 		}
 		
 

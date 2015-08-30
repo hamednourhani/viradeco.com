@@ -14,6 +14,8 @@
 .hero{
 	
 	.site-desc{
+		font-size : 110%;
+		font-weight : 600;
 		// position : absolute;
 		// top : 40px;
 		// left : 20px;
@@ -54,7 +56,9 @@ nav.main-menu{
 		left : 30px;
 		right : auto;
 		top : 13px;
-		
+		input{
+			float : left;
+		}
 		
 		&:before{
 			position : absolute;
@@ -70,7 +74,8 @@ nav.main-menu{
 	
 ul.main-nav{
 	//@include single-transition(all , 0.2s , ease-in-out);
-	font-size : 100%;
+	font-size : 110%;
+	font-weight : bold;
 	
 	
 	

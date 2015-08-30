@@ -22,7 +22,11 @@ body{
 	background-color : $white;
 	margin:auto;
 	overflow : hidden;
+<<<<<<< HEAD
 	display : none;
+=======
+	//display : none;
+>>>>>>> cf28487e273842db9fa950014170ecf43a9e2d41
 	
 }
 .site-main{
@@ -305,43 +309,41 @@ ul.widget-list{
 ul.social-links{
 	li{
 		padding : 5px;
-		i:before{
-			color : $white !important;
-			background-color : $red;
-			display : inline-block;
-			padding : 7px ;
-			text-align: center;
-
-			margin : 3px 12px 3px 3px;
-			
+		i.sicon{
+			&:before{
+				text-align: center;
+				margin : 0px 12px 0px 3px;
+				width : 35px;
+				height : 36px;
+				content : "";
+				display : inline-block;
+				background-image : image-url('social-icons.png');
+				vertical-align: middle;
+				
+			}
+			&.google-plus:before{
+				background-position : 0 0;
+			}
+			&.facebook:before{
+				background-position : -36px 0;
+			}
+			&.linkedin:before{
+				background-position : -71px 0;
+			}
+			&.instagram:before{
+				background-position : -107px 0;
+			}
+			&.catalog:before{
+				background-position : -141px 0;
+			}
+			&.envelope:before{
+				background-position : -177px 0;
+			}
+			&.unlock:before{
+				background-position : -214px 0;
+			}
 		}
-		i.fa.fa-google:before{
-			background-color: #CE4334;
-		}
-		i.fa.fa-facebook:before{
-			padding : 7px 12px;
-			background-color: #3D5A96;
-		}
-		i.fa.fa-linkedin:before{
-			padding : 7px 10px;
-			background-color:#0B7CC0;
-		}
-		i.fa.fa-instagram:before{
-			padding : 7px 10px;
-			background-color: #496F8C;
-		}
-		i.fa.fa-book:before{
-			padding : 7px 9px;
-			background-color: $red;
-		}
-		i.fa.fa-envelope:before{
-			padding : 7px 9px;
-			background-color: #3896CF;
-		}
-		i.fa.fa-unlock-alt:before{
-			padding : 7px 12px;
-			background-color: #BB9957;
-		}
+		
 
 	}
 }
