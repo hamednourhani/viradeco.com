@@ -34,7 +34,8 @@
 		display: inline-block;
 		padding : 5px 10px 0px;
 		overflow: hidden;
-		margin-bottom: -10px;
+		margin-bottom: -38px;
+		-webkit-margin-after: -8px;
 	}
 	.site-desc{
 		display : none;
@@ -82,6 +83,10 @@
 nav.main-menu{
 	position : relative;
 	z-index : 9998 !important;
+	&.scroll-to-fixed-fixed{
+		margin-top : -30px;
+		-webkit-margin-before: 0px;
+	}
 	.search-area{
 		display: none;
 		@include at-breakpoint($medium) {
@@ -124,6 +129,7 @@ ul.main-nav{
 	//@include single-transition(all , 0.2s , ease-in-out);
 	font-size : 90%;
 	margin-bottom : -30px;
+
 	padding : 0;
 	 background-color : $white2;
 	a{
