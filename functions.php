@@ -73,7 +73,7 @@ add_action( 'after_setup_theme', 'viradeco_ahoy' );
 /************* OEMBED SIZE OPTIONS *************/
 
 // if ( ! isset( $content_width ) ) {
-// 	$content_width = 640;
+//  $content_width = 640;
 // }
 
 /************* THUMBNAIL SIZE OPTIONS *************/
@@ -173,15 +173,15 @@ add_action( 'customize_register', 'viradeco_theme_customizer' );
 
 // Sidebars & Widgetizes Areas
 function viradeco_register_sidebars() {
-	register_sidebar(array(
-		'id' => 'sidebar',
-		'name' => __( 'Sidebar', 'viradeco' ),
-		'description' => __( 'The first (primary) sidebar.', 'viradeco' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => '</aside>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
-	));
+  register_sidebar(array(
+    'id' => 'sidebar',
+    'name' => __( 'Sidebar', 'viradeco' ),
+    'description' => __( 'The first (primary) sidebar.', 'viradeco' ),
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'after_widget' => '</aside>',
+    'before_title' => '<h4 class="widgettitle">',
+    'after_title' => '</h4>',
+  ));
   register_sidebar(array(
     'id' => 'footer-first',
     'name' => __( 'Footer First', 'viradeco' ),
@@ -201,30 +201,30 @@ function viradeco_register_sidebars() {
     'after_title' => '</h4>',
   ));
 
-	/*
-	to add more sidebars or widgetized areas, just copy
-	and edit the above sidebar code. In order to call
-	your new sidebar just use the following code:
+  /*
+  to add more sidebars or widgetized areas, just copy
+  and edit the above sidebar code. In order to call
+  your new sidebar just use the following code:
 
-	Just change the name to whatever your new
-	sidebar's id is, for example:
+  Just change the name to whatever your new
+  sidebar's id is, for example:
 
-	register_sidebar(array(
-		'id' => 'sidebar2',
-		'name' => __( 'Sidebar 2', 'viradeco' ),
-		'description' => __( 'The second (secondary) sidebar.', 'viradeco' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
-	));
+  register_sidebar(array(
+    'id' => 'sidebar2',
+    'name' => __( 'Sidebar 2', 'viradeco' ),
+    'description' => __( 'The second (secondary) sidebar.', 'viradeco' ),
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h4 class="widgettitle">',
+    'after_title' => '</h4>',
+  ));
 
-	To call the sidebar in your template, you can just copy
-	the sidebar.php file and rename it to your sidebar's name.
-	So using the above example, it would be:
-	sidebar-sidebar2.php
+  To call the sidebar in your template, you can just copy
+  the sidebar.php file and rename it to your sidebar's name.
+  So using the above example, it would be:
+  sidebar-sidebar2.php
 
-	*/
+  */
 } // don't remove this bracket!
 
 
@@ -316,11 +316,11 @@ function viradeco_fonts() {
 //add_action('wp_enqueue_scripts', 'viradeco_fonts');
 
 // Enable support for HTML5 markup.
-	add_theme_support( 'html5', array(
-		'comment-list',
-		'search-form',
-		'comment-form'
-	) );
+  add_theme_support( 'html5', array(
+    'comment-list',
+    'search-form',
+    'comment-form'
+  ) );
 
 
 
@@ -460,10 +460,12 @@ class last_projects_widget extends WP_Widget {
 
         $title = apply_filters( 'widget_title', $instance['title'] );
         $number = $instance['number'];
+        $term = get_term($instance['cat'],'project_cat');
 
         $projects = get_posts(array(
             'post_type' => 'project',
             'posts_per_page' => $number,
+            'project_cat' => $term->slug,
             )
         );
         //var_dump($notifies);
@@ -502,6 +504,11 @@ class last_projects_widget extends WP_Widget {
         }else {
             $number = 5;
         }
+        if ( isset( $instance[ 'cat' ] ) ) {
+            $cat = $instance[ 'cat' ];
+        }else {
+            $cat = "";
+        }
         // Widget admin form
         ?>
         <p>
@@ -512,6 +519,17 @@ class last_projects_widget extends WP_Widget {
             <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Project Numbers :','viradeco' ); ?></label> 
             <input class="widefat" id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo esc_attr( $number ); ?>" />
         </p>
+        <p>
+            <label for="<?php echo $this->get_field_id( 'cat' ); ?>"><?php _e( 'Project Category :','viradeco' ); ?></label> 
+           <?php wp_dropdown_categories(array(
+                  'name'               => $this->get_field_name( 'cat' ),
+                  'id'                 => $this->get_field_id( 'cat' ),
+                  'class'              => 'widefat',
+                  'taxonomy'           => 'project_cat',
+                  'echo'               => '1',
+                  'selected'          =>esc_attr( $cat ),
+            )); ?>
+        </p>
         <?php 
     }
       
@@ -520,6 +538,7 @@ class last_projects_widget extends WP_Widget {
         $instance = array();
         $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
         $instance['number'] = ( ! empty( $new_instance['number'] ) ) ? strip_tags( $new_instance['number'] ) : '';
+        $instance['cat'] = ( ! empty( $new_instance['cat'] ) ) ? strip_tags( $new_instance['cat'] ) : '';
         return $instance;
     }
 } // Class wpb_widget ends here
