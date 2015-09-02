@@ -169,8 +169,8 @@ function viradeco_scripts_and_styles() {
 		
 		
 		// enqueue styles and scripts
-		wp_enqueue_script( 'please-wait' );
-		wp_enqueue_script( 'please-wait-custom' );
+		//wp_enqueue_script( 'please-wait' );
+		//wp_enqueue_script( 'please-wait-custom' );
 		//wp_enqueue_script( 'viradeco-modernizr' );
 	
 		wp_enqueue_style('font-awesome' );
