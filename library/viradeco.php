@@ -141,11 +141,11 @@ function viradeco_scripts_and_styles() {
 		// modernizr (without media query polyfill)
 		wp_register_script( 'please-wait', get_stylesheet_directory_uri() . '/js/lib/please-wait.min.js', array(), '', false );
 		wp_register_script( 'please-wait-custom', get_stylesheet_directory_uri() . '/js/please-wait-custom.js', array('please-wait'), '', false );
-<<<<<<< HEAD
+
 		wp_localize_script( 'please-wait-custom', 'theme_info', $please_wait );
 
-=======
->>>>>>> cf28487e273842db9fa950014170ecf43a9e2d41
+
+
 		wp_register_script( 'viradeco-modernizr', get_stylesheet_directory_uri() . '/js/lib/modernizr.custom.min.js', array(), '2.5.3', false );
 
 		// register main stylesheet

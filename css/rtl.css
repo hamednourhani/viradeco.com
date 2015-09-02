@@ -1,23 +1,16 @@
 /* theme */
 /* fonts */
 @font-face {
-<<<<<<< HEAD
-  font-family: "Yekan";
-  src: url('fonts/Yekan.eot?1440076387');
-  src: url('fonts/Yekan.eot?&1440076387#iefix') format('embedded-opentype'), url('fonts/Yekan.ttf?1440076387') format('truetype'), url('fonts/Yekan.woff?1440076387') format('woff');
-  font-weight: "Yekan.svg"; }
-=======
   font-family: "Weblogma_Yekan";
   src: url('fonts/Weblogma_Yekan.eot?1389781388');
-  src: url('fonts/Weblogma_Yekan.eot?&1389781388#iefix') format('embedded-opentype'), url('fonts/Weblogma_Yekan.ttf?1389781390') format('truetype'), url('fonts/Weblogma_Yekan.woff2') format('woff2');
+  src: url('fonts/Weblogma_Yekan.eot?&1389781388#iefix') format('embedded-opentype'), url('fonts/Weblogma_Yekan.ttf?1389781390') format('truetype'), url('fonts/Weblogma_Yekan.woff?1389781380') format('woff');
   font-weight: "Weblogma_Yekan.svg"; }
 @font-face {
   font-family: "BKoodakBold";
   src: url('fonts/BKoodakBold.eot?1440393555');
   src: url('fonts/BKoodakBold.eot?&1440393555#iefix') format('embedded-opentype'), url('fonts/BKoodakBold.ttf?1440393516') format('truetype'), url('fonts/BKoodakBold.woff?1440377834') format('woff'); }
->>>>>>> cf28487e273842db9fa950014170ecf43a9e2d41
 /* ------------susy-------- */
-/* line 14, ../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/susy-2.2.2/sass/susy/language/susyone/_grid.scss */
+/* line 14, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.5/sass/susy/language/susyone/_grid.scss */
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -117,13 +110,8 @@ body {
 
 /* line 16, sass/rtl/layout/_header.scss */
 .hero .site-desc {
-<<<<<<< HEAD
-=======
   font-size: 110%;
   font-weight: 600;
-  margin-left: 40px;
-  margin-right: auto;
->>>>>>> cf28487e273842db9fa950014170ecf43a9e2d41
   float: left;
   position: relative; }
   /* line 26, sass/rtl/layout/_header.scss */
@@ -247,7 +235,7 @@ li.menu-item > a img {
   margin-left: auto;
   margin-right: auto;
   position: relative; }
-  /* line 38, ../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
   .layout:after {
     content: "";
     display: table;
