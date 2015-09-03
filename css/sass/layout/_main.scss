@@ -296,6 +296,13 @@ body.archive{
 	li{
 	 	line-height: 180%;
 	 }
+	 &.widget_social_widget{
+	 	background-color: $white;
+	 	li:hover{
+	 		@include single-transition(all , 0.2s , ease-in-out);
+	 		background-color: $grey1;
+	 	}
+	 }
 
 }
 
