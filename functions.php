@@ -991,21 +991,25 @@ function viradeco_create_account(){
         if($email && $pass && $user){
 
           // if( $birthday && (!is_int($birthday) || $birthday < 1 || $birthday > 31)){
-          //   $user_errors->add( 'birthday',__('Birth Day must be a number between 1 & 31','viradeco') );         
+          //   $user_errors->add( 'birthday',__('Birth Day must be a number between 1 & 31','viradeco'),$birthday );         
+          //   var_dump(is_int($birthday));
              
           // }
           // if($birthmonth && (!is_int($birthmonth) || $birthmonth < 1 || $birthmonth > 12)){
-          //   $user_errors->add( 'birthmonth',__('Birth Month must be a number between 1 & 31','viradeco') );         
+          //   $user_errors->add( 'birthmonth',__('Birth Month must be a number between 1 & 31','viradeco'),$birthmonth );         
+          //   var_dump(is_int($birthmonth));
              
           // }
           // if($birthyear && !is_int($birthyear)){
-          //   $user_errors->add( 'birthyear',__('Birth Year must be Number','viradeco') );         
+          //   $user_errors->add( 'birthyear',__('Birth Year must be Number','viradeco'),$birthyear );         
+          //  var_dump(is_int($birthyear));
              
           // }
-          if($phone && !is_int($phone)){
-            $user_errors->add( 'phone',__('Phone must be a Number','viradeco') );         
-             
-          }
+          // if($phone && !is_int($phone)){
+          //   $user_errors->add( 'phone',__('Phone must be a Number','viradeco'),$phone );         
+          //    var_dump(is_int($phone));
+          // }
+         
           
               if ( !username_exists( $user )  && !email_exists( $email ) && 1 > count($user_errors->get_error_messages()) ) {
 
@@ -1079,7 +1083,9 @@ function viradeco_user_register( $atts, $content = null ) {
 
     
     $register_form = '';
-    $register_form .= '<div id="container">';
+    $register_form .= '<div class="forms_buttons"><a href="#" id="register-show" class="register-show">'.__('Vira Club Registeration','viradeco').'</a>';
+    $register_form .= '<a href="#" id="login-show" class="login-show">'.__('Login to Site','viradeco').'</a></div>';
+    $register_form .= '<div class="register-container">';
         $register_form .= '<label class="form_error">'.$required[0].'</label>';
         $register_form .= '<label class="form_error">'.$userexists[0].'</label>';
         $register_form .= '<form method="post" name="registerForm">';
@@ -1095,25 +1101,25 @@ function viradeco_user_register( $atts, $content = null ) {
                     
                 $register_form .= '<tr><th>'.__('Job','viradeco').'</th><td>'. '<input id="job" type="text" name="job" />'.'</td></tr>';
                 $register_form .= '<tr><th>'.__('Phone','viradeco').'</th><td>'. '<input id="phone" type="number" min="1111"  name="phone" />'.'</td></tr>';
-                    $register_form .= '<tr>'.'<label class="form_error">'.$phone[0].'</label>'.'</tr>';
+                    
                 $register_form .= '<tr><th>'.__('Email','viradeco').'</th><td>'. '<input id="email" type="text" name="uemail" />'.'</td></tr>';
                 $register_form .= '<tr><th>'.__('Password','viradeco').'</th><td>'.'<input type="password" pattern=".{6,}"  name="upass" />'.'</td></tr>';
                 $register_form .= '<tr><th></th><td><small>'.__('At least 6 character.','viradeco').'</small></td></tr>';
-                $register_form .= '<tr>'.'<input type="submit" value="Submit" />'.'</tr>';
+                $register_form .= '<tr><td>'.'<input type="submit" value="Submit" />'.'</td></tr>';
             $register_form .= '</table>';
         $register_form .= '</form>';
     $register_form .= '</div>';
     if ( !is_user_logged_in() ) {
-        echo $register_form;
+        return $register_form;
     }
 }
 add_shortcode( 'vira_register', 'viradeco_user_register' );
 
 //user login shortcode
 function viradeco_user_login(){
-  $args = array();
+  $args = array('echo'=>false);
   if ( !is_user_logged_in() ) {
-      return wp_login_form( $args );
+      return '<div class="login-container">'.wp_login_form( $args ).'</div>';
   }
 }
 add_shortcode( 'vira_login', 'viradeco_user_login' );
@@ -1121,12 +1127,12 @@ add_shortcode( 'vira_login', 'viradeco_user_login' );
 
 // user profile shortcode
 function viradeco_user_profile( $atts, $content = null ) {
-    $a = shortcode_atts( array(
-        'attr_1' => 'attribute 1 default',
-        'attr_2' => 'attribute 2 default',
-        // ...etc
-    ), $atts );
-
+    // $a = shortcode_atts( array(
+    //     'attr_1' => 'attribute 1 default',
+    //     'attr_2' => 'attribute 2 default',
+    //     // ...etc
+    // ), $atts );
+    $user_profile = "";
     if ( is_user_logged_in() ) {
       $current_user = wp_get_current_user();
     /**
@@ -1134,22 +1140,28 @@ function viradeco_user_profile( $atts, $content = null ) {
      * if ( !($current_user instanceof WP_User) )
      *     return;
      */
-      echo 'Username: ' . $current_user->user_login . '<br />';
-      echo 'User email: ' . $current_user->user_email . '<br />';
-      echo 'User first name: ' . $current_user->user_firstname . '<br />';
-      echo 'User last name: ' . $current_user->user_lastname . '<br />';
-      echo 'User display name: ' . $current_user->display_name . '<br />';
-      echo 'User ID: ' . $current_user->ID . '<br />';
-      if(!current_user_can('edit_posts')){
-          echo 'Vira Club ID: ' .'V'.get_user_meta($current_user->ID , 'viraclub')[0] . '<br />';
+      $user_profile .= '<h3 class="article-title">'.__('User Profile','viradeco').'</h3>';
+       $user_profile .=  '<div class="avatar-container">'.get_avatar($current_user->ID).'</div>';
+       
+      $user_profile .= __('first name: ','viradeco') . $current_user->user_firstname . '<br />';
+       $user_profile .= __('last name: ','viradeco') . $current_user->user_lastname . '<br />';
+       $user_profile .= __('Username: ','viradeco') . $current_user->user_login . '<br />';
+      
+        $user_profile .= __('Birthday: ','viradeco') .get_user_meta($current_user->ID , 'birthday',true).' - '.get_user_meta($current_user->ID , 'birthmonth',true) .' - '.get_user_meta($current_user->ID , 'birthyear',true). '<br />';
+        $user_profile .= __('Phone: ','viradeco') .get_user_meta($current_user->ID , 'phone',true) . '<br />';
+         $user_profile .= __('Email: ','viradeco') . $current_user->user_email . '<br />';
+        $user_profile .= __('Job: ','viradeco') .get_user_meta($current_user->ID , 'job',true) . '<br />';
+       if(!current_user_can('edit_posts')){
+           $user_profile .= __('Vira Club ID: ','viradeco') .'<span class="viraid">V'.get_user_meta($current_user->ID , 'viraclub',true) . '</span><br />';
           
       }
-       echo 'Birthday: ' .get_user_meta($current_user->ID , 'birthyear')[0].' - '.get_user_meta($current_user->ID , 'birthmonth')[0] .' - '.get_user_meta($current_user->ID , 'birthday')[0]. '<br />';
-       echo 'Phone: ' .get_user_meta($current_user->ID , 'phone')[0] . '<br />';
-       echo 'Job: ' .get_user_meta($current_user->ID , 'job')[0] . '<br />';
-      echo '<a href="'.wp_logout_url( get_permalink() ).'">'.__('Logout','viradeco').'</a>';
+       $user_profile .= '<br />'.'<a class="vira_logout" href="'.wp_logout_url( get_permalink() ).'">'.__('Logout','viradeco').'</a>';
+
+       
       
     } 
+
+    return $user_profile;
 }
 add_shortcode( 'vira_profile', 'viradeco_user_profile' );
 
@@ -1163,50 +1175,50 @@ function viradeco_extra_user_profile_fields( $user ) {
   <h3><?php _e("Extra profile information", "viradeco"); ?></h3>
   <table class="form-table">
     <tr>
-      <th><label for="birthday"><?php _e("birthday",'viradeco'); ?></label></th>
+      <th><label for="birthday"><?php __("birthday",'viradeco'); ?></label></th>
       <td>
         <input type="text" name="birthday" id="Birth Day" class="regular-text" 
-            value="<?php echo esc_attr( get_the_author_meta( 'birthday', $user->ID ) ); ?>" /><br />
-        <span class="description"><?php _e("Please enter your Birthday.","viradeco"); ?></span>
+            value="<?php echo esc_attr( get_user_meta( $user->ID,'birthday' ,true) ); ?>" /><br />
+        <span class="description"><?php __("Please enter your Birthday.","viradeco"); ?></span>
     </td>
     </tr>
     <tr>
-      <th><label for="birthmonth"><?php _e("Birth Month",'viradeco'); ?></label></th>
+      <th><label for="birthmonth"><?php __("Birth Month",'viradeco'); ?></label></th>
       <td>
         <input type="text" name="birthmonth" id="birthmonth" class="regular-text" 
-            value="<?php echo esc_attr( get_the_author_meta( 'birthmonth', $user->ID ) ); ?>" /><br />
-        <span class="description"><?php _e("Please enter your Birth Month.","viradeco"); ?></span>
+            value="<?php echo esc_attr( get_user_meta( $user->ID,'birthmonth' ,true) ); ?>" /><br />
+        <span class="description"><?php __("Please enter your Birth Month.","viradeco"); ?></span>
     </td>
     </tr>
     <tr>
-      <th><label for="birthyear"><?php _e("Birth Year",'viradeco'); ?></label></th>
+      <th><label for="birthyear"><?php __("Birth Year",'viradeco'); ?></label></th>
       <td>
         <input type="text" name="birthyear" id="birthyear" class="regular-text" 
-            value="<?php echo esc_attr( get_the_author_meta( 'birthyear', $user->ID ) ); ?>" /><br />
-        <span class="description"><?php _e("Please enter your Birth Year.","viradeco"); ?></span>
+            value="<?php echo esc_attr( get_user_meta( $user->ID,'birthyear' ,true) ); ?>" /><br />
+        <span class="description"><?php __("Please enter your Birth Year.","viradeco"); ?></span>
     </td>
     </tr>
     <tr>
-      <th><label for="phone"><?php _e("Phone",'viradeco'); ?></label></th>
+      <th><label for="phone"><?php __("Phone",'viradeco'); ?></label></th>
       <td>
         <input type="text" name="phone" id="phone" class="regular-text" 
-            value="<?php echo esc_attr( get_the_author_meta( 'phone', $user->ID ) ); ?>" /><br />
-        <span class="description"><?php _e("Please enter your phone.","viradeco"); ?></span>
+            value="<?php echo esc_attr( get_user_meta(  $user->ID ,'phone',true) ); ?>" /><br />
+        <span class="description"><?php __("Please enter your phone.","viradeco"); ?></span>
     </td>
     </tr>
     <tr>
-      <th><label for="job"><?php _e("Job",'viradeco'); ?></label></th>
+      <th><label for="job"><?php __("Job",'viradeco'); ?></label></th>
       <td>
         <input type="text" name="job" id="job" class="regular-text" 
-            value="<?php echo esc_attr( get_the_author_meta( 'job', $user->ID ) ); ?>" /><br />
-        <span class="description"><?php _e("Please enter your Job.","viradeco"); ?></span>
+            value="<?php echo esc_attr( get_user_meta( $user->ID ,'job',true) ); ?>" /><br />
+        <span class="description"><?php __("Please enter your Job.","viradeco"); ?></span>
     </td>
     </tr>
     <tr>
-      <th><label for="viraclub"><?php _e("Vira club ID",'viradeco'); ?></label></th>
+      <th><label for="viraclub"><?php __("Vira club ID",'viradeco'); ?></label></th>
       <td>
         <input type="text" disabled name="viraclub" id="viraclub" class="regular-text" 
-            value="<?php echo 'V'.esc_attr( get_the_author_meta( 'viraclub', $user->ID ) ); ?>" /><br />
+            value="<?php echo 'V'.esc_attr( get_user_meta( $user->ID,'viraclub' ,true) ); ?>" /><br />
         
     </td>
     </tr>
@@ -1240,3 +1252,33 @@ function log_me_the_f_in( $user_id ) {
     do_action('wp_login', $username, $user);
 }
 add_action( 'user_register', 'log_me_the_f_in' );
+
+//add columns to User panel list page
+function Viradeco_add_user_columns($column) {
+    $column['viraclub'] = __('ViraClub ID','viradeco');
+    $column['phone'] = __('Phone','viradeco');
+    $column['email'] = __('Email','viradeco');
+    
+    return $column;
+}
+add_filter( 'manage_users_columns', 'viradeco_add_user_columns' );
+
+//add the data
+function viradeco_add_user_column_data( $val, $column_name, $user_id ) {
+    
+
+    switch ($column_name) {
+        case 'viraclub' :
+            return 'V'.get_user_meta($user_id,'viraclub',true);
+            break;
+        case 'phone' :
+            return get_user_meta($user_id,'phone',true);
+            break;
+        case 'email' :
+            return get_user_meta($user_id,'uemail',true);
+            break;
+        default:
+    }
+    return;
+}
+add_filter( 'manage_users_custom_column', 'viradeco_add_user_column_data', 10, 3 );

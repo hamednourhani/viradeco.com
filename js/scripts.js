@@ -27,6 +27,18 @@ jQuery(document).ready(function($){
 	   debug: false
 	});
 
+	$('a#register-show').click(function(event){
+		event.preventDefault();
+		$('.register-container').toggleClass('form-display');
+		$('.login-container').removeClass('form-display');
+	});
+
+	$('a#login-show').click(function(event){
+		event.preventDefault();
+		$('.login-container').toggleClass('form-display');
+		$('.register-container').removeClass('form-display');
+	});
+
 	// setTimeout(function(){
 	// 	window.loading_screen.finish();
 	// },2000);

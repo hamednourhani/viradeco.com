@@ -287,7 +287,7 @@ ul.main-nav{
 		margin-right: 7px;
 	}
 
-	&>li.mega-menu.col-4{
+	&>li.mega-menu{
 		&>ul.sub-menu{
 			display : flex;
 			&>li{
@@ -299,26 +299,16 @@ ul.main-nav{
 				&:first-child{
 					border : 0px;
 				}
-				&:hover{
-					ul.sub-menu>li{
-						display : inline-block !important;
-						opacity : 1 !important;
-						visibility: visible !important;
-						@include animation(move-slow);
-
-					}
-				}
+				
 				ul.sub-menu{
-					&>li{
-						display : inline-block !important;
-						opacity : 1 !important;
-						visibility: visible !important;
-						@include animation(move-slow);
+					// &>li{
+					// 	display : inline-block ;
+					// 	opacity: 1;
+    	// 				// visibility: visible;
 
-					}
-					display : inline-block !important;
-					opacity : 1 !important;
-					visibility: visible !important;
+					// }
+					display : inline-block ;
+					
 
 					
 					position : relative;
@@ -332,14 +322,28 @@ ul.main-nav{
 				&.menu-item-has-children>a:after{
 					content : "";
 				}
-				&:hover{
-					ul.sub-menu{
-						opacity : 1;
-					visibility: visible;
+				// &:hover{
+				// 	ul.sub-menu{
+				// 		opacity : 1;
+				// 	visibility: visible;
 
-					}
-				}
+				// 	}
+				// }
 			}
+		}
+		
+		&:hover>ul.sub-menu>li>ul{
+			display : inline-block;
+			visibility: visible !important;
+			opacity : 1 !important;
+			animation : none !important;
+			-webkit-animation: none !important;
+		}
+		&>ul.sub-menu>li:hover>ul>li,
+		&>ul.sub-menu>li>ul>li{
+			animation : none !important;
+			-webkit-animation: none !important;
+
 		}
 
 		
