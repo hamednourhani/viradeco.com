@@ -314,27 +314,35 @@ article .article-title, .hentry .article-title {
 /* line 66, sass/rtl/layout/_main.scss */
 article .avatar-container, .hentry .avatar-container {
   float: left; }
+/* line 72, sass/rtl/layout/_main.scss */
+article .forms_buttons .login-show:before, .hentry .forms_buttons .login-show:before {
+  margin-left: 10px;
+  margin-right: auto; }
+/* line 80, sass/rtl/layout/_main.scss */
+article .forms_buttons .register-show:before, .hentry .forms_buttons .register-show:before {
+  margin-left: 10px;
+  margin-right: auto; }
 
-/* line 74, sass/rtl/layout/_main.scss */
+/* line 92, sass/rtl/layout/_main.scss */
 body.archive article {
   width: 100%;
   float: right;
   margin-left: 1.53846%;
   display: inline; }
   @media (min-width: 45em) {
-    /* line 74, sass/rtl/layout/_main.scss */
+    /* line 92, sass/rtl/layout/_main.scss */
     body.archive article {
       width: 49.23077%;
       float: right;
       margin-left: 1.53846%;
       margin-right: auto; }
-      /* line 80, sass/rtl/layout/_main.scss */
+      /* line 98, sass/rtl/layout/_main.scss */
       body.archive article:nth-of-type(2n) {
         width: 49.23077%;
         float: left;
         margin-left: 0; } }
 
-/* line 87, sass/rtl/layout/_main.scss */
+/* line 105, sass/rtl/layout/_main.scss */
 .secondary {
   width: 100%;
   float: right;
@@ -344,35 +352,35 @@ body.archive article {
   padding-top: 20px;
   padding-bottom: 20px; }
   @media (min-width: 45em) {
-    /* line 87, sass/rtl/layout/_main.scss */
+    /* line 105, sass/rtl/layout/_main.scss */
     .secondary {
       width: 32.30769%;
       float: left;
       margin-left: 0;
       margin-right: auto; } }
 
-/* line 101, sass/rtl/layout/_main.scss */
+/* line 119, sass/rtl/layout/_main.scss */
 .widget {
   font-size: 100%; }
-  /* line 104, sass/rtl/layout/_main.scss */
+  /* line 122, sass/rtl/layout/_main.scss */
   .widget h4.widgettitle {
     position: relative; }
-    /* line 108, sass/rtl/layout/_main.scss */
+    /* line 126, sass/rtl/layout/_main.scss */
     .widget h4.widgettitle:after {
       position: absolute;
       bottom: 0px;
       right: 0;
       left: auto; }
-  /* line 120, sass/rtl/layout/_main.scss */
+  /* line 138, sass/rtl/layout/_main.scss */
   .widget i.fa:before {
     padding-left: 10px;
     padding-right: auto; }
 
-/* line 133, sass/rtl/layout/_main.scss */
+/* line 151, sass/rtl/layout/_main.scss */
 ul.widget-list li img {
   margin: 5px 5px 5px 12px; }
 
-/* line 144, sass/rtl/layout/_main.scss */
+/* line 162, sass/rtl/layout/_main.scss */
 ul.social-links li a.sicon:before {
   margin: 0px 3px 0px 12px; }
 

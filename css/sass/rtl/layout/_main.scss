@@ -66,6 +66,24 @@ article,.hentry{
 	.avatar-container{
 		float : left;
 	}
+	.forms_buttons{
+		
+		.login-show{
+			&:before{
+				margin-left : 10px;
+				margin-right : auto;
+			}
+
+		}
+		.register-show{
+			
+			&:before{
+				margin-left : 10px;
+				margin-right : auto;
+			}
+
+		}
+	}
 	
 	
 	
