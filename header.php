@@ -41,10 +41,7 @@
 </head>
 
 <body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
-<<<<<<< HEAD
-=======
-	
->>>>>>> cf28487e273842db9fa950014170ecf43a9e2d41
+
 	<noscript>
 		<style>
 			.body-wrapper{

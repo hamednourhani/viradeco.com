@@ -323,7 +323,9 @@ ul.widget-list{
 ul.social-links{
 	li{
 		padding : 5px;
-		i.sicon{
+		a.sicon{
+			    display: block;
+    			width: 100%;
 			&:before{
 				text-align: center;
 				margin : 0px 12px 0px 3px;
@@ -339,13 +341,13 @@ ul.social-links{
 				background-position : 0 0;
 			}
 			&.facebook:before{
-				background-position : -36px 0;
+				background-position : -35.7px 0;
 			}
 			&.linkedin:before{
 				background-position : -71px 0;
 			}
 			&.instagram:before{
-				background-position : -107px 0;
+				background-position : -106px 0;
 			}
 			&.catalog:before{
 				background-position : -141px 0;

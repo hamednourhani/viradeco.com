@@ -76,6 +76,12 @@
   100% { opacity : 0;display : none  }
 }
 
+@include keyframes(move-slow) {
+  0%   { opacity : 1;display : inline-block; }
+  100% { opacity : 1;display : inline-block  }
+}
+
+
 
 
  
@@ -256,10 +262,12 @@ ul.main-nav{
 			visibility: visible;
 	  		transition-delay:0s;
 	  		z-index : 9999;
+	  		
 			&>li{
 				//display: inline-block;
 				//opacity : 1;
 				@include animation('move-up .5s 1');
+				
 			}
 
 			
@@ -277,6 +285,64 @@ ul.main-nav{
 		content : "\f015";
 		vertical-align: middle;
 		margin-right: 7px;
+	}
+
+	&>li.mega-menu.col-4{
+		&>ul.sub-menu{
+			display : flex;
+			&>li{
+				&>a{
+					min-width : 180px;
+				}
+				float : left;
+				border-left : 1px solid $grey1;
+				&:first-child{
+					border : 0px;
+				}
+				&:hover{
+					ul.sub-menu>li{
+						display : inline-block !important;
+						opacity : 1 !important;
+						visibility: visible !important;
+						@include animation(move-slow);
+
+					}
+				}
+				ul.sub-menu{
+					&>li{
+						display : inline-block !important;
+						opacity : 1 !important;
+						visibility: visible !important;
+						@include animation(move-slow);
+
+					}
+					display : inline-block !important;
+					opacity : 1 !important;
+					visibility: visible !important;
+
+					
+					position : relative;
+					right : auto;
+					left : auto;
+					top : auto;
+					a{
+						padding : 5px 15px;
+					}
+				}
+				&.menu-item-has-children>a:after{
+					content : "";
+				}
+				&:hover{
+					ul.sub-menu{
+						opacity : 1;
+					visibility: visible;
+
+					}
+				}
+			}
+		}
+
+		
 	}
 }
 
