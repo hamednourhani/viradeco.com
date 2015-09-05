@@ -292,12 +292,12 @@ ul.main-nav{
 			background-color: $white2;
 			left : -85%;
 			display : block;
-			width : 50em;
-			max-width : 50em;
+			width : 45em;
+			max-width : 45em;
 			
 			@include at-breakpoint(60em){
-				width : 67em;
-				max-width : 67em;
+				width : 60em;
+				max-width : 60em;
 			}
 
 			&>.sub-menu-wrap{
@@ -307,17 +307,17 @@ ul.main-nav{
 					background-color: none;
 					@include span-columns(3,12);
 					width : 25%;
-					&:nth-of-type(4n){
-						@include omega;
-					}
+					// &:nth-of-type(4n){
+					// 	@include omega;
+					// }
 					margin-right : auto;
 				
 				@include at-breakpoint(60em){
 					@include span-columns(2,12);
 					width : 16.6%;
-					&:nth-of-type(6n){
-						@include omega;
-					}
+					// &:nth-of-type(6n){
+					// 	@include omega;
+					// }
 					margin-right : auto;
 				}
 				margin-right : auto;

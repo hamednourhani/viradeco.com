@@ -152,7 +152,7 @@ function viradeco_scripts_and_styles() {
 		
 		wp_register_style( 'font-awesome', get_stylesheet_directory_uri() . '/css/font-awesome.min.css', array(), '', 'all' );
 		wp_register_style( 'viradeco-stylesheet', get_stylesheet_directory_uri() . '/css/style.css', array(), '', 'all' );
-		wp_register_style( 'viradeco-rtl-stylesheet', get_stylesheet_directory_uri() . '/css/rtl.min.css', array('viradeco-stylesheet'), '', 'all' );
+		wp_register_style( 'viradeco-rtl-stylesheet', get_stylesheet_directory_uri() . '/css/rtl.css', array('viradeco-stylesheet'), '', 'all' );
 		wp_register_style( 'viradeco-ie-only', get_stylesheet_directory_uri() . '/css/ie.css', array(), '' );
 
     // comment reply script for threaded comments

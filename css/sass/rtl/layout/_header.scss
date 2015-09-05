@@ -151,12 +151,13 @@ ul.main-nav{
 
 			
 			&>.sub-menu-wrap>li{
+					font-size: smaller;
 					
 					@include span-columns(3,12);
 					width : 25%;
-					&:nth-of-type(4n){
-						@include omega;
-					}
+					// &:nth-of-type(4n){
+					// 	@include omega;
+					// }
 					margin-right : auto;
 					margin-left : auto;
 
@@ -164,9 +165,9 @@ ul.main-nav{
 				@include at-breakpoint(60em){
 					@include span-columns(2,12);
 					width : 16.6%;
-					&:nth-of-type(6n){
-						@include omega;
-					}
+					// &:nth-of-type(6n){
+					// 	@include omega;
+					// }
 					margin-right : auto;
 					margin-left : auto;
 
