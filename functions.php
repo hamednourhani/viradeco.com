@@ -928,18 +928,62 @@ function viradeco_get_image_src($src="" , $size=""){
 class Menu_With_Image extends Walker_Nav_Menu {
   function start_el(&$output, $item, $depth = '0', $args = array(), $id = '0') {
     global $wp_query;
+
+    $class_names = $value = '';
+    $classes = empty( $item->classes ) ? array() : (array) $item->classes;
+    
+    global $sub_wrapper_before;
+    $sub_wrapper_before = "";
+    global $sub_wrapper_after;
+    $sub_wrapper_after = '';
+    
+    if(in_array('mega-menu',$classes)){
+      $sub_wrapper_before = '<div class="sub-menu-wrap">';
+      $sub_wrapper_after = '</div>';
+    }
+
+
     $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
+    $output .= "\n$indent\n";
     
     $menu_thumb = "";
     if($item->object == 'project' || $item->object == 'product'){
        $menu_thumb = get_the_post_thumbnail($item->object_id , 'product-thumb');
        //var_dump($menu_thumb);
     }
+    $products = array();
+    $sub_content = "";
+    
+    if($item->object == 'product_cat'){
+        $term = get_term($item->object_id,'product_cat');
+        
+        //var_dump($instance);
+        $products = get_posts(array(
+            'post_type' => 'product',
+            'posts_per_page' => -1,
+            'product_cat'         => $term->slug,
+            )
+        );
+        //var_dump($products);
+        $sub_content = '<ul class="sub-menu">'.$sub_wrapper_before;
+        foreach($products as $product) : setup_postdata( $product );
+          //var_dump($product);
+          $url = get_the_permalink($product->ID);
+          $thumb = get_the_post_thumbnail($product->ID,'product-thumb');
+          $name = $product->post_title;
+          $sub_content .='<li id="menu-item-'.$product->ID.'" class="menu-item menu-item-type-post_type menu-item-object-product"><a href="'.$url.'">'.$thumb.$name.'</a><li>';
+        endforeach;
+        $sub_content .= '</ul>';
 
-    $class_names = $value = '';
-    $classes = empty( $item->classes ) ? array() : (array) $item->classes;
+    }
+    
+   
+
+    
+
     $class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) );
     $class_names = ' class="' . esc_attr( $class_names ) . '"';
+    
     $output .= $indent . '<li id="menu-item-'. $item->ID . '"' . $value . $class_names .'>';
     $attributes = ! empty( $item->attr_title ) ? ' title="' . esc_attr( $item->attr_title ) .'"' : '';
     $attributes .= ! empty( $item->target ) ? ' target="' . esc_attr( $item->target ) .'"' : '';
@@ -950,9 +994,31 @@ class Menu_With_Image extends Walker_Nav_Menu {
     $item_output .= $args->link_before .$menu_thumb. apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
     //$item_output .= '<br /><span class="sub">' . $item->description . '</span>';
     $item_output .= '</a>';
+     //$item_output .= ;
+    //show posts of product cat  
+     $item_output .= $sub_content;
+
     $item_output .= $args->after;
     $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
   }
+
+  function start_lvl( &$output, $depth = 0, $args = array() ) {
+    // depth dependent classes
+    global $sub_wrapper_before;
+    $indent = ( $depth > 0  ? str_repeat( "\t", $depth ) : '' ); // code indent
+    $display_depth = ( $depth + 1); // because it counts the first submenu as 0
+    $classes = array(
+        'sub-menu',
+        ( $display_depth % 2  ? 'menu-odd' : 'menu-even' ),
+        ( $display_depth >=2 ? 'sub-sub-menu' : '' ),
+        'menu-depth-' . $display_depth
+        );
+    $class_names = implode( ' ', $classes );
+  
+    // build html
+    $output .= "\n" . $indent . '<ul class="' . $class_names . '">' .$sub_wrapper_before. "\n";
+  }
+
 }
 
 function viradeco_filter_search($query) {
@@ -1088,7 +1154,7 @@ function viradeco_user_register( $atts, $content = null ) {
     $register_form .= '<div class="register-container">';
         $register_form .= '<label class="form_error">'.$required[0].'</label>';
         $register_form .= '<label class="form_error">'.$userexists[0].'</label>';
-        $register_form .= '<form method="post" name="registerForm">';
+        $register_form .= '<form method="post" class="register_form" name="registerForm">';
            $register_form .='<table>';
                $register_form .= '<tr><th>'.__('First Name','viradeco').'</th><td>'.'<input id="fname" type="text"  name="fname" />'.'</td></tr>';
                 $register_form .='<tr><th>'. __('Last Name','viradeco').'</th><td>'. '<input id="lname" type="text" name="lname" />'.'</td></tr>';
@@ -1105,7 +1171,7 @@ function viradeco_user_register( $atts, $content = null ) {
                 $register_form .= '<tr><th>'.__('Email','viradeco').'</th><td>'. '<input id="email" type="text" name="uemail" />'.'</td></tr>';
                 $register_form .= '<tr><th>'.__('Password','viradeco').'</th><td>'.'<input type="password" pattern=".{6,}"  name="upass" />'.'</td></tr>';
                 $register_form .= '<tr><th></th><td><small>'.__('At least 6 character.','viradeco').'</small></td></tr>';
-                $register_form .= '<tr><td>'.'<input type="submit" value="Submit" />'.'</td></tr>';
+                $register_form .= '<tr><td>'.'<input type="submit" value="'.__('Submit','viradeco').'" />'.'</td></tr>';
             $register_form .= '</table>';
         $register_form .= '</form>';
     $register_form .= '</div>';
@@ -1140,22 +1206,25 @@ function viradeco_user_profile( $atts, $content = null ) {
      * if ( !($current_user instanceof WP_User) )
      *     return;
      */
-      $user_profile .= '<h3 class="article-title">'.__('User Profile','viradeco').'</h3>';
+      $user_profile .= '<div  class="article-title"><h3>'.__('User Profile','viradeco').'</h3></div>';
        $user_profile .=  '<div class="avatar-container">'.get_avatar($current_user->ID).'</div>';
+       $user_profile .=  '<div class="profile-container">';
        
-      $user_profile .= __('first name: ','viradeco') . $current_user->user_firstname . '<br />';
-       $user_profile .= __('last name: ','viradeco') . $current_user->user_lastname . '<br />';
-       $user_profile .= __('Username: ','viradeco') . $current_user->user_login . '<br />';
+      $user_profile .= '<strong>'.__('first name: ','viradeco') .'</strong>'. $current_user->user_firstname . '<br />';
+       $user_profile .= '<strong>'.__('last name: ','viradeco') .'</strong>'. $current_user->user_lastname . '<br />';
+       $user_profile .= '<strong>'.__('Username: ','viradeco') .'</strong>'. $current_user->user_login . '<br />';
       
-        $user_profile .= __('Birthday: ','viradeco') .get_user_meta($current_user->ID , 'birthday',true).' - '.get_user_meta($current_user->ID , 'birthmonth',true) .' - '.get_user_meta($current_user->ID , 'birthyear',true). '<br />';
-        $user_profile .= __('Phone: ','viradeco') .get_user_meta($current_user->ID , 'phone',true) . '<br />';
-         $user_profile .= __('Email: ','viradeco') . $current_user->user_email . '<br />';
-        $user_profile .= __('Job: ','viradeco') .get_user_meta($current_user->ID , 'job',true) . '<br />';
+        $user_profile .= '<strong>'.__('Birthday: ','viradeco') .'</strong>'.get_user_meta($current_user->ID , 'birthday',true).' - '.get_user_meta($current_user->ID , 'birthmonth',true) .' - '.get_user_meta($current_user->ID , 'birthyear',true). '<br />';
+        $user_profile .= '<strong>'.__('Phone: ','viradeco') .'</strong>'.get_user_meta($current_user->ID , 'phone',true) . '<br />';
+         $user_profile .= '<strong>'.__('Email: ','viradeco') .'</strong>'. $current_user->user_email . '<br />';
+        $user_profile .= '<strong>'.__('Job: ','viradeco') .'</strong>'.get_user_meta($current_user->ID , 'job',true) . '<br />';
        if(!current_user_can('edit_posts')){
-           $user_profile .= __('Vira Club ID: ','viradeco') .'<span class="viraid">V'.get_user_meta($current_user->ID , 'viraclub',true) . '</span><br />';
+           $user_profile .= '<strong>'.__('Vira Club ID: ','viradeco') .'</strong>'.'<span class="viraid">V'.get_user_meta($current_user->ID , 'viraclub',true) . '</span><br />';
           
       }
        $user_profile .= '<br />'.'<a class="vira_logout" href="'.wp_logout_url( get_permalink() ).'">'.__('Logout','viradeco').'</a>';
+       $user_profile .=  '</div>';
+
 
        
       

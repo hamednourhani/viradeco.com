@@ -64,12 +64,20 @@ article,.hentry{
 		}
 	}
 	.avatar-container{
-		float : left;
+		float : right;
 	}
+	.profile-container {
+		padding-left : auto;
+		padding-right : 30px;
+		 
+	}
+	
 	.forms_buttons{
 		
 		.login-show{
+			
 			&:before{
+				
 				margin-left : 10px;
 				margin-right : auto;
 			}
@@ -78,10 +86,26 @@ article,.hentry{
 		.register-show{
 			
 			&:before{
+				
 				margin-left : 10px;
 				margin-right : auto;
 			}
 
+		}
+	}
+	.login-container{
+		
+	}
+	.register-container{
+		
+		form.register_form{
+			
+			table{
+				th{
+				    text-align: right;
+				}
+			}
+			
 		}
 	}
 	

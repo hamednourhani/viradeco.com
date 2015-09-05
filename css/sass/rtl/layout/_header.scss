@@ -137,16 +137,53 @@ ul.main-nav{
 		margin-left: 7px;
 		margin-right: auto;
 	}
-	&>li.mega-menu.col-4{
+	&>li.mega-menu{
 		&>ul.sub-menu{
-			&>li{
-				float : right;
-				border-right : 1px solid $grey1;
+			
+			right : -85%;
+			left : auto;
+			
+			
+			@include at-breakpoint(60em){
+				width : 67em;
+				max-width : 67em;
+			}
+
+			
+			&>.sub-menu-wrap>li{
+					
+					@include span-columns(3,12);
+					width : 25%;
+					&:nth-of-type(4n){
+						@include omega;
+					}
+					margin-right : auto;
+					margin-left : auto;
+
+				
+				@include at-breakpoint(60em){
+					@include span-columns(2,12);
+					width : 16.6%;
+					&:nth-of-type(6n){
+						@include omega;
+					}
+					margin-right : auto;
+					margin-left : auto;
+
+				}
+				margin-right : auto;
+				margin-left : auto;
 				border-left : 0px;
-											
+				border-right : 1px solid $grey1;
+
+							
 				
 			}
 		}
+		
+		
+
+		
 	}
 	
 }

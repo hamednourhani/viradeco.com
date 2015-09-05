@@ -289,12 +289,42 @@ ul.main-nav{
 
 	&>li.mega-menu{
 		&>ul.sub-menu{
-			display : flex;
-			&>li{
-				&>a{
-					min-width : 180px;
+			background-color: $white2;
+			left : -85%;
+			display : block;
+			width : 50em;
+			max-width : 50em;
+			
+			@include at-breakpoint(60em){
+				width : 67em;
+				max-width : 67em;
+			}
+
+			&>.sub-menu-wrap{
+				@extend .layout;
+			}
+			&>.sub-menu-wrap>li{
+					background-color: none;
+					@include span-columns(3,12);
+					width : 25%;
+					&:nth-of-type(4n){
+						@include omega;
+					}
+					margin-right : auto;
+				
+				@include at-breakpoint(60em){
+					@include span-columns(2,12);
+					width : 16.6%;
+					&:nth-of-type(6n){
+						@include omega;
+					}
+					margin-right : auto;
 				}
-				float : left;
+				margin-right : auto;
+				&>a{
+					width : 100%;
+					min-width : 100%;
+				}
 				border-left : 1px solid $grey1;
 				&:first-child{
 					border : 0px;
@@ -308,15 +338,19 @@ ul.main-nav{
 
 					// }
 					display : inline-block ;
-					
+					width : 100%;
 
 					
 					position : relative;
 					right : auto;
 					left : auto;
 					top : auto;
+					li{
+						width : 100%;
+					}
 					a{
-						padding : 5px 15px;
+						padding : 5px 10px;
+						min-width : 100%;
 					}
 				}
 				&.menu-item-has-children>a:after{
@@ -332,15 +366,15 @@ ul.main-nav{
 			}
 		}
 		
-		&:hover>ul.sub-menu>li>ul{
+		&:hover>ul.sub-menu>.sub-menu-wrap>li>ul{
 			display : inline-block;
 			visibility: visible !important;
 			opacity : 1 !important;
 			animation : none !important;
 			-webkit-animation: none !important;
 		}
-		&>ul.sub-menu>li:hover>ul>li,
-		&>ul.sub-menu>li>ul>li{
+		&>ul.sub-menu>.sub-menu-wrap>li:hover>ul>li,
+		&>ul.sub-menu>.sub-menu-wrap>li>ul>li{
 			animation : none !important;
 			-webkit-animation: none !important;
 
