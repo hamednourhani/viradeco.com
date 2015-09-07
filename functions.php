@@ -10,6 +10,7 @@ sidebars, comments, ect.
 
 // LOAD viradeco CORE (if you remove this, the theme will break)
 require_once( 'library/viradeco.php' );
+require_once( 'library/notifications.php' );
 
 //Include and setup custom metaboxes and fields.
 if( !class_exists("CMB2") ){
@@ -1085,6 +1086,9 @@ function viradeco_create_account(){
                          //user has been created
                          $user = new WP_User( $user_id );
                          $user->set_role( 'subscriber' );
+
+                         //send notification email 
+                         wp_new_user_notification( $user_id );
                          
                         update_user_meta( $user_id, 'first_name', $fname );
                         update_user_meta( $user_id, 'last_name', $lname );

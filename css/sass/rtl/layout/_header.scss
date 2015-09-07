@@ -9,6 +9,9 @@
 			left: auto;
 		}
 	}
+	#lang_sel_list {
+	   float : left;
+	}
 	
 }
 .hero{
@@ -68,6 +71,10 @@ nav.main-menu{
 			    
 
 		}
+	}
+	a.menu-toggler{
+			float : right ;
+			
 	}
 	
 }
@@ -144,9 +151,9 @@ ul.main-nav{
 			left : auto;
 			
 			
-			@include at-breakpoint(60em){
-				width : 67em;
-				max-width : 67em;
+			@include at-breakpoint(64em){
+				width : 57em;
+				max-width : 57em;
 			}
 
 			
@@ -162,9 +169,9 @@ ul.main-nav{
 					margin-left : auto;
 
 				
-				@include at-breakpoint(60em){
+				@include at-breakpoint(62em){
 					@include span-columns(2,12);
-					width : 16.6%;
+					width : 15%;
 					// &:nth-of-type(6n){
 					// 	@include omega;
 					// }

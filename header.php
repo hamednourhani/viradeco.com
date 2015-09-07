@@ -76,6 +76,26 @@
 
 				<nav role="navigation" class="main-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
 					<section class="layout">
+						
+						<div id="responsive-menu" class="responsive-menu">
+							<a id="close-responsive" class="close-responsive">
+								<i class="fa fa-close"></i>
+							</a>
+							<?php wp_nav_menu(array(
+				    					         'container' => false,                           // remove nav container
+				    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
+				    					         'menu' => __( 'The Main Menu', 'viradeco' ),  // nav name
+				    					         'menu_class' => 'nav responsive-nav cf',               // adding custom nav class
+				    					         'theme_location' => 'responsive-nav',                 // where it's located in the theme
+				    					         'before' => '',                                 // before the menu
+				        			               'after' => '',                                  // after the menu
+				        			               'link_before' => '',                            // before each link
+				        			               'link_after' => '',                             // after each link
+				        			               'depth' => 3,                                   // limit the depth of the nav
+				    					         'fallback_cb' => ''                             // fallback function (if there is one)
+							)); ?>
+						</div>
+
 						<?php $walker = new Menu_With_Image; ?>
 						<?php wp_nav_menu(array(
     					         'container' => false,                           // remove nav container
@@ -95,6 +115,8 @@
 						<div class="search-area">
 							<?php get_search_form( true ); ?>
 						</div>
+
+
 					</section>
 					
 				</nav>

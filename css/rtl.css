@@ -107,14 +107,17 @@ body {
   .top-bar .lang-icon {
     padding-right: 8px;
     padding-left: auto; }
+  /* line 12, sass/rtl/layout/_header.scss */
+  .top-bar #lang_sel_list {
+    float: left; }
 
-/* line 16, sass/rtl/layout/_header.scss */
+/* line 19, sass/rtl/layout/_header.scss */
 .hero .site-desc {
   font-size: 110%;
   font-weight: 600;
   float: left;
   position: relative; }
-  /* line 26, sass/rtl/layout/_header.scss */
+  /* line 29, sass/rtl/layout/_header.scss */
   .hero .site-desc:after {
     position: absolute;
     bottom: 20px;
@@ -163,27 +166,30 @@ body {
   100% {
     opacity: 0;
     display: none; } }
-/* line 53, sass/rtl/layout/_header.scss */
+/* line 56, sass/rtl/layout/_header.scss */
 nav.main-menu .search-area {
   position: absolute;
   left: 30px;
   right: auto;
   top: 13px; }
-  /* line 59, sass/rtl/layout/_header.scss */
+  /* line 62, sass/rtl/layout/_header.scss */
   nav.main-menu .search-area input {
     float: left; }
-  /* line 63, sass/rtl/layout/_header.scss */
+  /* line 66, sass/rtl/layout/_header.scss */
   nav.main-menu .search-area:before {
     position: absolute;
     top: 8px;
     left: 7px;
     right: auto; }
-
 /* line 75, sass/rtl/layout/_header.scss */
+nav.main-menu a.menu-toggler {
+  float: right; }
+
+/* line 82, sass/rtl/layout/_header.scss */
 ul.main-nav {
   font-size: 110%;
   font-weight: bold; }
-  /* line 83, sass/rtl/layout/_header.scss */
+  /* line 90, sass/rtl/layout/_header.scss */
   ul.main-nav > li.menu-item-has-children > a:after {
     content: "\f0d7";
     padding-right: 5px;
@@ -192,43 +198,43 @@ ul.main-nav {
     left: 1px;
     right: auto;
     top: 41%; }
-  /* line 96, sass/rtl/layout/_header.scss */
+  /* line 103, sass/rtl/layout/_header.scss */
   ul.main-nav > li > ul.sub-menu, ul.main-nav li ul.sub-menu {
     position: absolute;
     top: 100%;
     right: -30%;
     left: auto; }
-    /* line 108, sass/rtl/layout/_header.scss */
+    /* line 115, sass/rtl/layout/_header.scss */
     ul.main-nav > li > ul.sub-menu li.menu-item-has-children > a:after, ul.main-nav li ul.sub-menu li.menu-item-has-children > a:after {
       content: "\f0d9";
       left: 14px;
       right: auto;
       position: absolute;
       top: 16px; }
-  /* line 120, sass/rtl/layout/_header.scss */
+  /* line 127, sass/rtl/layout/_header.scss */
   ul.main-nav > li > ul.sub-menu li ul {
     right: 100%;
     left: auto;
     top: 0; }
-  /* line 129, sass/rtl/layout/_header.scss */
+  /* line 136, sass/rtl/layout/_header.scss */
   ul.main-nav ul.sub-menu li:hover ul {
     right: 100%;
     left: auto;
     top: 0; }
-  /* line 136, sass/rtl/layout/_header.scss */
+  /* line 143, sass/rtl/layout/_header.scss */
   ul.main-nav li.item-home a:before {
     margin-left: 7px;
     margin-right: auto; }
-  /* line 141, sass/rtl/layout/_header.scss */
+  /* line 148, sass/rtl/layout/_header.scss */
   ul.main-nav > li.mega-menu > ul.sub-menu {
     right: -85%;
     left: auto; }
-    @media (min-width: 60em) {
-      /* line 141, sass/rtl/layout/_header.scss */
+    @media (min-width: 64em) {
+      /* line 148, sass/rtl/layout/_header.scss */
       ul.main-nav > li.mega-menu > ul.sub-menu {
-        width: 67em;
-        max-width: 67em; } }
-    /* line 153, sass/rtl/layout/_header.scss */
+        width: 57em;
+        max-width: 57em; } }
+    /* line 160, sass/rtl/layout/_header.scss */
     ul.main-nav > li.mega-menu > ul.sub-menu > .sub-menu-wrap > li {
       font-size: smaller;
       width: 23.84615%;
@@ -242,17 +248,17 @@ ul.main-nav {
       margin-left: auto;
       border-left: 0px;
       border-right: 1px solid #E6E6E6; }
-      @media (min-width: 60em) {
-        /* line 153, sass/rtl/layout/_header.scss */
+      @media (min-width: 62em) {
+        /* line 160, sass/rtl/layout/_header.scss */
         ul.main-nav > li.mega-menu > ul.sub-menu > .sub-menu-wrap > li {
           width: 15.38462%;
           float: right;
           margin-left: 1.53846%;
-          width: 16.6%;
+          width: 15%;
           margin-right: auto;
           margin-left: auto; } }
 
-/* line 193, sass/rtl/layout/_header.scss */
+/* line 200, sass/rtl/layout/_header.scss */
 li.menu-item > a img {
   float: right; }
 

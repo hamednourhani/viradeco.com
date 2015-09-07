@@ -18,6 +18,8 @@
 	    a{
 	    	background-color : $black1;
 	    }
+	    float : right;
+	    padding-right : 25px;
 	}
 }
 .hero{
@@ -32,7 +34,7 @@
 			max-width : 150px;
 		}
 		display: inline-block;
-		padding : 5px 10px 0px;
+		padding : 5px 0px 0px;
 		overflow: hidden;
 		margin-bottom: -38px;
 		-webkit-margin-after: -8px;
@@ -128,6 +130,103 @@ nav.main-menu{
 
 		}
 	}
+	a.menu-toggler{
+		display : inline-block;
+		float : left ;
+		margin : 10px;
+		padding : 5px 10px 3px;
+		border : 1px solid $grey2;
+		@include at-breakpoint($medium){
+			display : none;
+		}
+		i.fa-navicon{
+			
+			font-size : 140%;
+		}
+		&:hover{
+			cursor : pointer;
+		}
+	}
+	.responsive-menu{
+		display : block;
+		@include single-transition(all , 0.6s , ease-in-out);
+		@include at-breakpoint($medium) {
+		  	display: none;
+		}
+		z-index : 9999;
+		position : fixed;
+		right : -250px;
+		top : 0;
+		overflow: auto;
+		min-height :800px;
+		max-height : 100%;
+		width : 250px;
+		max-width : 100%;
+		background-color : $black1;
+		padding : 10px;
+		color : $white
+		a{
+			color : $white;
+		}
+		&.show-menu{
+			transform : translateX(-250px);
+		}
+		a.close-responsive{
+			color : $white;
+			padding : 2px 5px 0px;
+			border : 1px solid $white;
+			
+			font-size : 110%;
+			float : left;
+			&:hover{
+				cursor: pointer;
+			}
+		}
+		ul.responsive-nav{
+			margin-top : 30px;
+			padding : 20px;
+			font-size : 90%;
+			
+			&>li{
+				padding-bottom : 10px;
+				margin-bottom : 10px;
+				border-bottom : 1px solid $white;
+			}
+			
+			li{
+				
+				a{
+					color : $white;
+					line-height: 130%;
+					
+					&:hover{
+						color : $grey2;
+					}
+				}
+			}
+			ul.sub-menu{
+				margin-right : 30px;
+				a{
+					position : relative;
+					color : $grey2;
+					&:before{
+						@extend .fa;
+						content : "\f177";
+						position : absolute;
+						right : -20px;
+						top : 6px;
+						color : $grey1;
+
+					}
+					&:hover{
+						color : $grey2;
+					}
+				}
+			}
+
+
+		}
+	}
 	
 }
 	
@@ -142,7 +241,11 @@ ul.main-nav{
 		@include single-transition(all , 0.2s , ease-in-out);
 		color : $grey3;
 		padding : 20px 17px;
-		display: inline-block;
+		display : none;
+		
+		@include at-breakpoint($medium){
+			display : inline-block;
+		}
 		
 		&:hover{
 			// color : $black1;
@@ -295,9 +398,9 @@ ul.main-nav{
 			width : 45em;
 			max-width : 45em;
 			
-			@include at-breakpoint(60em){
-				width : 60em;
-				max-width : 60em;
+			@include at-breakpoint(64em){
+				width : 57em;
+				max-width :57em;
 			}
 
 			&>.sub-menu-wrap{
@@ -312,9 +415,9 @@ ul.main-nav{
 					// }
 					margin-right : auto;
 				
-				@include at-breakpoint(60em){
+				@include at-breakpoint(62em){
 					@include span-columns(2,12);
-					width : 16.6%;
+					width : 17%;
 					// &:nth-of-type(6n){
 					// 	@include omega;
 					// }

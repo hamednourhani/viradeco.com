@@ -249,6 +249,7 @@ function viradeco_theme_support() {
 	register_nav_menus(
 		array(
 			'main-menu' => __( 'The Main Menu', 'viradeco' ),   // main nav in header
+			'responsive-menu' => __( 'Responsive Menu', 'viradeco' ) // top menu  in footer
 		)
 	);
 

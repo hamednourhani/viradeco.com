@@ -357,7 +357,7 @@ body.archive{
 
 }
 .widget{
-	font-size : 100%;
+	font-size : 90%;
 	padding:20px;
 	background-color : $grey1;
 	margin-bottom : 20px;
@@ -474,3 +474,13 @@ ul.social-links{
 		background-color : $white;
 	}
 }
+.contact-odd, .contact-even {
+  padding: 15px; }
+  /* line 432, sass/layout/_main.scss */
+  .contact-odd h4, .contact-even h4 {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+    margin: 0px auto; }
