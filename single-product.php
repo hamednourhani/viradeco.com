@@ -28,8 +28,11 @@
 										<div class="product-features">
 											<?php if(!empty($product_features)){ ?>
 												<?php foreach($product_features[0] as $product_feature){?>
+												
+													<?php $feature_desc = ($product_feature['feature_desc'])?($product_feature['feature_desc']):""; ?>
+													
 													<h4 class="feature-header"><?php echo $product_feature['feature_name']; ?></h4>
-													<p class="feature-desc"><?php echo $product_feature['feature_desc']; ?></p>
+													<p class="feature-desc"><?php echo $feature_desc; ?></p>
 													 <ul class="feature-images">
 														<?php $counter = 1; ?>
 														<?php if(!empty($product_feature['_viradeco_group_image_list'])){ ?>
@@ -49,6 +52,12 @@
 											<?php } ?>
 										</div>
 									<?php get_template_part('library/post','meta'); ?>
+									<!-- comments template -->
+									
+										<div class="comment-area">
+											<?php comments_template(); ?>	
+										</div>
+									
 								</main>
 							</article>
 											

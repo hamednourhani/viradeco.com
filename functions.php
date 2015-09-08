@@ -1316,15 +1316,38 @@ function viradeco_save_extra_user_profile_fields( $user_id ) {
 
 
 //auto login user after registration
-function log_me_the_f_in( $user_id ) {
-    $user = get_user_by('id',$user_id);
-    $username = $user->user_nicename;
-    $user_id = $user->ID;
-    wp_set_current_user($user_id, $username);
-    wp_set_auth_cookie($user_id);
-    do_action('wp_login', $username, $user);
+// function log_me_the_f_in( $user_id ) {
+//     $user = get_user_by('id',$user_id);
+//     $username = $user->user_nicename;
+//     $user_id = $user->ID;
+//     wp_set_current_user($user_id, $username);
+//     wp_set_auth_cookie($user_id);
+//     do_action('wp_login', $username, $user);
+// }
+function viradeco_send_activation_email($user_id){
+  $hash = md5( $random_number );
+  add_user_meta( $user_id, 'hash', $hash );
+
+  $user_info = get_userdata($user_id);
+  $to = $user_info->user_email;           
+  $un = $user_info->user_name;           
+  $pw = $user_info->user_password;           
+
+  $subject = 'Member Verification'; 
+  $message = 'Hello,';
+  $message .= "\n\n";
+  $message .= 'Welcome...';
+  $message .= "\n\n";
+  $message .= 'Username: '.$un;
+  $message .= "\n";
+  $message .= 'Password: '.$pw;
+  $message .= "\n\n";
+  $message .= 'Please click this link to activate your account:';
+  $message .= home_url('/').'activate?id='.$un.'&key='.$hash;
+  $headers = 'From: noreply@test.com' . "\r\n";           
+  wp_mail($to, $subject, $message, $headers); 
 }
-add_action( 'user_register', 'log_me_the_f_in' );
+add_action( 'user_register', 'viradeco_send_activation_email' );
 
 //add columns to User panel list page
 function Viradeco_add_user_columns($column) {
