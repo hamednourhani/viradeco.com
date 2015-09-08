@@ -238,7 +238,7 @@ article,.hentry{
 	}
 	.vira_logout{
 		background-color: $black1;
-		@include border-radius(4px);
+		//@include border-radius(4px);
 		padding : 10px;
 	}
 	.forms_buttons{
@@ -249,7 +249,7 @@ article,.hentry{
 			margin : 10px;
 			color : $white;
 			background-color : $grey3;
-			@include border-radius(3px);
+			//@include border-radius(3px);
 			opacity : 0.85;
 			&:hover{
 				opacity : 1;
@@ -266,7 +266,7 @@ article,.hentry{
 			margin :10px; 
 			color : $white;
 			background-color: $red;
-			@include border-radius(3px);
+			//@include border-radius(3px);
 			opacity : 0.85;
 			&:hover{
 				opacity : 1;

@@ -13,7 +13,7 @@ body,html{
 
 }
 body {
-	font-family : $Bgothic,$serif;
+	font-family : $open-sans,$serif;
 	direction : ltr;
 	font-size : 100%;
 	margin : auto !important;
@@ -21,6 +21,10 @@ body {
 	p{
 		text-align : justify;
 		color : $grey3;
+	}
+	form{
+		text-align:left;
+		direction : ltr;
 	}		
 	
 }

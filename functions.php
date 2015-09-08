@@ -1051,6 +1051,9 @@ function viradeco_create_account(){
         $phone = esc_attr(( isset($_POST['phone']) ? $_POST['phone'] : '' ));
         $pass = esc_attr(( isset($_POST['upass']) ? $_POST['upass'] : '' ));
         $email = esc_attr(( isset($_POST['uemail']) ? $_POST['uemail'] : '' ));
+        $aspam = esc_attr(( isset($_POST['aspam']) ? $_POST['aspam'] : '' ));
+        $aspam_result = esc_attr(( isset($_POST['aspam_result']) ? $_POST['aspam_result'] : '' ));
+        $submited = esc_attr(( isset($_POST['submited']) ? $_POST['submited'] : '' ));
 
         
 
@@ -1077,7 +1080,7 @@ function viradeco_create_account(){
           //    var_dump(is_int($phone));
           // }
          
-          
+            if($aspam == $aspam_result){
               if ( !username_exists( $user )  && !email_exists( $email ) && 1 > count($user_errors->get_error_messages()) ) {
 
                  $user_id = wp_create_user( $user, $pass, $email );
@@ -1087,9 +1090,8 @@ function viradeco_create_account(){
                          $user = new WP_User( $user_id );
                          $user->set_role( 'subscriber' );
 
-                         //send notification email 
-                         wp_new_user_notification( $user_id );
                          
+                        
                         update_user_meta( $user_id, 'first_name', $fname );
                         update_user_meta( $user_id, 'last_name', $lname );
                         update_user_meta( $user_id, 'birthday', $birthday );
@@ -1109,6 +1111,10 @@ function viradeco_create_account(){
                          //Redirect
                          //wp_redirect( 'URL_where_you_want_redirect' );
                          //exit;
+                         
+
+                         viradeco_new_user_notification($user_id,$pass);
+                         log_me_the_f_in( $user_id );
                      } else {
                         
                          var_dump($user_id->get_error_message());
@@ -1117,7 +1123,11 @@ function viradeco_create_account(){
                  $user_errors->add( 'userexists',__('Another user have been registered by this User Name or Email','viradeco') );
 
               }
-        } else {
+            } else {
+                $user_errors->add( 'aspam',__('Anti Spam is Not correct!','viradeco') );         
+            }
+
+          } elseif($submited == "true") {
             $user_errors->add( 'requiredfields',__('Please fill the required fields : User Name - Email - Password','viradeco') );         
         }
     
@@ -1136,10 +1146,17 @@ function viradeco_user_register( $atts, $content = null ) {
 
     global $user_errors;
       
-      
+        $form_display = "";
+      if(count($user_errors->get_error_messages())>0){
+        $form_display = "form-display";
+      }
       
       $required = $user_errors->get_error_messages('requiredfields');
           $required = (!empty($required))?$required:array('');
+
+      $spam_error = $user_errors->get_error_messages('aspam');
+          $spam_error = (!empty($spam_error))?$spam_error:array('');
+
       $userexists = $user_errors->get_error_messages('userexists');
           $userexists = (!empty($userexists))?$userexists:array('');
       // $birthday = $user_errors->get_error_messages('birthday');
@@ -1150,13 +1167,18 @@ function viradeco_user_register( $atts, $content = null ) {
       //     $birthyear = (!empty($birthyear))?$birthyear:array('');
       $phone = $user_errors->get_error_messages('birthyearphone');
           $phone = (!empty($phone))?$phone:array('');
+      
+      $anti_no1 = rand(3,12);
+      $anti_no2 = rand(4,16);
+      $anti_spam = $anti_no1+$anti_no2;
 
     
     $register_form = '';
     $register_form .= '<div class="forms_buttons"><a href="#" id="register-show" class="register-show">'.__('Vira Club Registeration','viradeco').'</a>';
     $register_form .= '<a href="#" id="login-show" class="login-show">'.__('Login to Site','viradeco').'</a></div>';
-    $register_form .= '<div class="register-container">';
+    $register_form .= '<div class="register-container '.$form_display.' ">';
         $register_form .= '<label class="form_error">'.$required[0].'</label>';
+        $register_form .= '<label class="form_error">'.$spam_error[0].'</label>';
         $register_form .= '<label class="form_error">'.$userexists[0].'</label>';
         $register_form .= '<form method="post" class="register_form" name="registerForm">';
            $register_form .='<table>';
@@ -1175,6 +1197,8 @@ function viradeco_user_register( $atts, $content = null ) {
                 $register_form .= '<tr><th>'.__('Email','viradeco').'</th><td>'. '<input id="email" type="text" name="uemail" />'.'</td></tr>';
                 $register_form .= '<tr><th>'.__('Password','viradeco').'</th><td>'.'<input type="password" pattern=".{6,}"  name="upass" />'.'</td></tr>';
                 $register_form .= '<tr><th></th><td><small>'.__('At least 6 character.','viradeco').'</small></td></tr>';
+                $register_form .= '<tr><th>Anti Spam</th><td>'.$anti_no1 .' + '. $anti_no2.' = '.'<input id="anti_spam" type="number" min="1" max="40" name="aspam" />'.'<input value="'.$anti_spam.'" type="hidden"  name="aspam_result" />'.'</td></tr>';
+                $register_form .= '<tr><input value="true" type="hidden"  name="submited" /></tr>';
                 $register_form .= '<tr><td>'.'<input type="submit" value="'.__('Submit','viradeco').'" />'.'</td></tr>';
             $register_form .= '</table>';
         $register_form .= '</form>';
@@ -1315,39 +1339,39 @@ function viradeco_save_extra_user_profile_fields( $user_id ) {
 }
 
 
-//auto login user after registration
-// function log_me_the_f_in( $user_id ) {
-//     $user = get_user_by('id',$user_id);
-//     $username = $user->user_nicename;
-//     $user_id = $user->ID;
-//     wp_set_current_user($user_id, $username);
-//     wp_set_auth_cookie($user_id);
-//     do_action('wp_login', $username, $user);
-// }
-function viradeco_send_activation_email($user_id){
-  $hash = md5( $random_number );
-  add_user_meta( $user_id, 'hash', $hash );
-
-  $user_info = get_userdata($user_id);
-  $to = $user_info->user_email;           
-  $un = $user_info->user_name;           
-  $pw = $user_info->user_password;           
-
-  $subject = 'Member Verification'; 
-  $message = 'Hello,';
-  $message .= "\n\n";
-  $message .= 'Welcome...';
-  $message .= "\n\n";
-  $message .= 'Username: '.$un;
-  $message .= "\n";
-  $message .= 'Password: '.$pw;
-  $message .= "\n\n";
-  $message .= 'Please click this link to activate your account:';
-  $message .= home_url('/').'activate?id='.$un.'&key='.$hash;
-  $headers = 'From: noreply@test.com' . "\r\n";           
-  wp_mail($to, $subject, $message, $headers); 
+// auto login user after registration
+function log_me_the_f_in( $user_id ) {
+    $user = get_user_by('id',$user_id);
+    $username = $user->user_nicename;
+    $user_id = $user->ID;
+    wp_set_current_user($user_id, $username);
+    wp_set_auth_cookie($user_id);
+    do_action('wp_login', $username, $user);
 }
-add_action( 'user_register', 'viradeco_send_activation_email' );
+// function viradeco_send_activation_email($user_id){
+//   $hash = md5( $random_number );
+//   add_user_meta( $user_id, 'hash', $hash );
+
+//   $user_info = get_userdata($user_id);
+//   $to = $user_info->user_email;           
+//   $un = $user_info->user_name;           
+//   $pw = $user_info->user_password;           
+
+//   $subject = 'Member Verification'; 
+//   $message = 'Hello,';
+//   $message .= "\n\n";
+//   $message .= 'Welcome...';
+//   $message .= "\n\n";
+//   $message .= 'Username: '.$un;
+//   $message .= "\n";
+//   $message .= 'Password: '.$pw;
+//   $message .= "\n\n";
+//   $message .= 'Please click this link to activate your account:';
+//   $message .= home_url('/').'activate?id='.$un.'&key='.$hash;
+//   $headers = 'From: noreply@test.com' . "\r\n";           
+//   wp_mail($to, $subject, $message, $headers); 
+// }
+// add_action( 'user_register', 'viradeco_send_activation_email' );
 
 //add columns to User panel list page
 function Viradeco_add_user_columns($column) {
@@ -1378,3 +1402,42 @@ function viradeco_add_user_column_data( $val, $column_name, $user_id ) {
     return;
 }
 add_filter( 'manage_users_custom_column', 'viradeco_add_user_column_data', 10, 3 );
+
+function viradeco_viraclub_id($user_id){
+  global $wpdb;
+
+  $user = new WP_User( $user_id );
+
+  // Set your role
+    
+  $firstid = 2999;
+  wp_mail('info@itstar.ir','test','test');
+  //$user->exit;
+  var_dump($user);
+                        
+  $latestid=$wpdb->get_var("SELECT meta_value from $wpdb->usermeta where meta_key='viraclub' order by meta_value DESC limit 1;");
+  $latestid = ($latestid)?($latestid):($firstid);
+  update_user_meta( $user_id, 'first_name', $latestid+1 );
+
+  // Destroy user object
+  unset( $user );
+}
+
+//add_action( 'user_register', 'viradeco_viraclub_id' );
+function vira_login_redirect( $redirect_to, $request, $user ) {
+  //is there a user to check?
+  global $user;
+  if ( isset( $user->roles ) && is_array( $user->roles ) ) {
+    //check for admins
+    if ( in_array( 'administrator', $user->roles ) ) {
+      // redirect them to the default place
+      return $redirect_to;
+    } else {
+      return home_url();
+    }
+  } else {
+    return $redirect_to;
+  }
+}
+
+add_filter( 'login_redirect', 'vira_login_redirect', 10, 3 );

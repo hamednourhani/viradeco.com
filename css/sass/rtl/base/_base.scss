@@ -4,6 +4,10 @@ body {
 	direction : rtl;
 	font-size : 100%;
 	line-height : 180%;
+	form{
+		direction: rtl;
+		text-align: right;
+	}
 }
 .fa {
 	@include fa-icon;

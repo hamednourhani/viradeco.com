@@ -24,7 +24,7 @@
 								</header>
 								<main class="article-body">
 									<div class="project-features">
-										<?php $project_date = get_post_meta(get_the_ID(),'_viradeco_project_date'); ?>
+										<?php $project_date = get_post_meta(get_the_ID(),'_viradeco_project_date',1); ?>
 										<?php $project_meta = get_post_meta(get_the_ID(),'_viradeco_group_feature'); ?>
 										<div class="project-meta">
 											<ul class="project-features-list">
