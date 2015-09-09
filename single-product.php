@@ -55,7 +55,7 @@
 									<!-- comments template -->
 									
 										<div class="comment-area">
-											<?php comments_template(); ?>	
+											<?php comments_template('comments.php'); ?>	
 										</div>
 									
 								</main>

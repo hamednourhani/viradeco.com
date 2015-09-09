@@ -972,7 +972,7 @@ class Menu_With_Image extends Walker_Nav_Menu {
           $url = get_the_permalink($product->ID);
           $thumb = get_the_post_thumbnail($product->ID,'product-thumb');
           $name = $product->post_title;
-          $sub_content .='<li id="menu-item-'.$product->ID.'" class="menu-item menu-item-type-post_type menu-item-object-product"><a href="'.$url.'">'.$thumb.$name.'</a></li>';
+          $sub_content .='<li id="menu-item-'.$product->ID.'" class="menu-item product-item menu-item-type-post_type menu-item-object-product"><a href="'.$url.'">'.$thumb.$name.'</a></li>';
         endforeach;
         $sub_content .= '</ul>';
 

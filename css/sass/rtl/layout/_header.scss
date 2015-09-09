@@ -17,7 +17,7 @@
 .hero{
 	
 	.site-desc{
-		font-size : 110%;
+		font-size : 22px;
 		font-weight : 600;
 		// position : absolute;
 		// top : 40px;
@@ -32,6 +32,13 @@
 			right : 100%;
 			left : auto;
 			
+		}
+	}
+	.logo-wrapper{
+		a.menu-toggler{
+			
+			float : right ;
+					
 		}
 	}
 
@@ -72,16 +79,13 @@ nav.main-menu{
 
 		}
 	}
-	a.menu-toggler{
-			float : right ;
-			
-	}
+	
 	
 }
 	
 ul.main-nav{
 	//@include single-transition(all , 0.2s , ease-in-out);
-	font-size : 110%;
+	font-size : 100%;
 	font-weight : bold;
 	
 	
@@ -190,7 +194,10 @@ ul.main-nav{
 		}
 		
 		
-
+	.product-item {
+		font-family : "open-sans";
+		font-size : 12px;
+	}
 		
 	}
 	

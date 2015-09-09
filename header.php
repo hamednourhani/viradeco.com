@@ -66,11 +66,16 @@
 			<div class="hero">
 				<section class="layout">
 					<div class="logo-wrapper">
+						<!-- menu-toggler -->
+						<a id="menu-toggler" class="menu-toggler" >
+							<i class="fa fa-navicon"></i>
+						</a>
+
 						<a href="<?php echo get_bloginfo('url'); ?>">
 							<img src="<?php echo get_template_directory_uri();?>/images/viradeco-white-logo-140.png" alt="<?php echo get_bloginfo('name'); ?>"/>
 						</a>
 					</div>
-					<span class="site-desc"><?php echo __('Be Your Ideas Creator','viradeco'); ?></span>
+					<span class="site-desc"><?php echo __('Create Your Own Ideas','viradeco'); ?></span>
 				</section>
 			
 
