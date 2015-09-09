@@ -86,6 +86,10 @@
 							<a id="close-responsive" class="close-responsive">
 								<i class="fa fa-close"></i>
 							</a>
+
+							<a class="responsive-logo" href="<?php echo get_bloginfo('url'); ?>">
+								<img src="<?php echo get_template_directory_uri();?>/images/viradeco-white-logo-140.png" alt="<?php echo get_bloginfo('name'); ?>"/>
+							</a>
 							<?php wp_nav_menu(array(
 				    					         'container' => false,                           // remove nav container
 				    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)

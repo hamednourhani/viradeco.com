@@ -35,6 +35,14 @@
 		}
 	}
 	.logo-wrapper{
+		padding : 5px 0px 0px;
+		padding-left:40px;
+		padding-right  : auto;
+		@include at-breakpoint($medium) {
+			max-width : 150px;
+			padding : 5px 0px 0px;
+			
+		}
 		a.menu-toggler{
 			
 			float : right ;
@@ -76,6 +84,38 @@ nav.main-menu{
 			    left: 7px;
 			    right : auto;
 			    
+
+		}
+	}
+	.responsive-menu{
+		left : auto;
+		right : -250px;
+		top : 0;
+		
+		&.show-menu{
+			transform : translateX(-250px);
+		}
+		a.close-responsive{
+			
+			float : left;
+			
+		}
+		ul.responsive-nav{
+			
+			ul.sub-menu{
+				margin-left : auto;
+				margin-right : 30px;
+				a{
+					&:before{
+						@extend .fa;
+						left : auto;
+						right : -20px;
+					
+					}
+					
+				}
+			}
+
 
 		}
 	}

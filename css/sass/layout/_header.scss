@@ -30,18 +30,21 @@
 		width : 100%;
 		max-width : 100%;
 		text-align : center;
+		padding : 5px 0px 0px;
+		padding-right:40px;
 		@include at-breakpoint($medium) {
 			max-width : 150px;
+			padding : 5px 0px 0px;
 		}
 		display: inline-block;
-		padding : 5px 0px 0px;
+		
 		overflow: hidden;
 		margin-bottom: -38px;
 		-webkit-margin-after: -8px;
 		a.menu-toggler{
 			display : inline-block;
 			float : left ;
-			margin : 35px 8px;
+			margin : 35px 18px;
 			padding : 5px 10px 3px;
 			border : 1px solid $grey2;
 			@include at-breakpoint($medium){
@@ -113,10 +116,7 @@ nav.main-menu{
 		margin-top : -30px;
 		-webkit-margin-before: 0px;
 	}
-	display: none;
-	@include at-breakpoint($medium) {
-		  	display : block;
-	}
+	
 	.search-area{
 		display: none;
 		@include at-breakpoint($medium) {
@@ -161,7 +161,7 @@ nav.main-menu{
 		}
 		z-index : 9999;
 		position : fixed;
-		right : -250px;
+		left : -250px;
 		top : 0;
 		overflow: auto;
 		min-height :800px;
@@ -170,12 +170,17 @@ nav.main-menu{
 		max-width : 100%;
 		background-color : $black1;
 		padding : 10px;
+		padding-bottom: 100px;
 		color : $white
 		a{
 			color : $white;
 		}
+		a.responsive-logo{
+			display : inline-block;
+			padding : 0px 32px;
+		}
 		&.show-menu{
-			transform : translateX(-250px);
+			transform : translateX(250px);
 		}
 		a.close-responsive{
 			color : $white;
@@ -183,7 +188,7 @@ nav.main-menu{
 			border : 1px solid $white;
 			
 			font-size : 110%;
-			float : left;
+			float : right;
 			&:hover{
 				cursor: pointer;
 			}
@@ -219,7 +224,7 @@ nav.main-menu{
 						@extend .fa;
 						content : "\f177";
 						position : absolute;
-						right : -20px;
+						left : -20px;
 						top : 6px;
 						color : $grey1;
 
@@ -240,9 +245,12 @@ ul.main-nav{
 	//@include single-transition(all , 0.2s , ease-in-out);
 	font-size : 90%;
 	margin-bottom : -30px;
-
 	padding : 0;
 	 background-color : $white2;
+	 opacity : 0;
+	 @include at-breakpoint($medium){
+			opacity : 1; 
+		}
 	a{
 		@include single-transition(all , 0.2s , ease-in-out);
 		color : #929292;
@@ -251,6 +259,7 @@ ul.main-nav{
 		
 		@include at-breakpoint($medium){
 			display : inline-block;
+			opacity : 1; 
 		}
 		
 		&:hover{

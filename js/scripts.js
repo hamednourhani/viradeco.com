@@ -44,7 +44,7 @@ jQuery(document).ready(function($){
 	// },2000);
 	
 	$('a#menu-toggler').click(function(){
-		
+		console.log('click on menu toggler');
 		var responsive_container = $('div#responsive-menu');
 		var close_button = responsive_container.children('a#close-responsive');
 		var body_wrapper = $('.body-wrapper');
