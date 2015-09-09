@@ -85,10 +85,10 @@ body{
 			border : 1px solid $grey2;
 			border-bottom : 0px;
 			&:nth-of-type(2n){
-				background-color: $grey1;
+				background-color: darken($grey1,5%);
 			}
 			&.project-link:hover{
-				background-color: darken($grey1, 5%);
+				background-color: darken($grey1, 10%);
 			}
 			&:last-child{
 				border-bottom : 1px solid $grey2;
@@ -211,7 +211,7 @@ article,.hentry{
 			}
 			&:nth-of-type(2n){
 				span{
-					background-color: $grey1;
+					background-color: darken($grey1 , 5%);
 				}
 
 			}

@@ -1361,10 +1361,10 @@ body {
     border-bottom: 0px; }
     /* line 87, sass/layout/_main.scss */
     .primary ul.projects-list li:nth-of-type(2n) {
-      background-color: #F8F8F8; }
+      background-color: #ebebeb; }
     /* line 90, sass/layout/_main.scss */
     .primary ul.projects-list li.project-link:hover {
-      background-color: #ebebeb; }
+      background-color: #dfdfdf; }
     /* line 93, sass/layout/_main.scss */
     .primary ul.projects-list li:last-child {
       border-bottom: 1px solid #CCCCCC; }
@@ -1499,7 +1499,7 @@ article, .hentry {
               width: 60%; } }
       /* line 213, sass/layout/_main.scss */
       article .project-meta li:nth-of-type(2n) span, .hentry .project-meta li:nth-of-type(2n) span {
-        background-color: #F8F8F8; }
+        background-color: #ebebeb; }
   /* line 220, sass/layout/_main.scss */
   article.page404, .hentry.page404 {
     text-align: center; }
