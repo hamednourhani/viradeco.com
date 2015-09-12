@@ -484,7 +484,13 @@ ul.social-links{
     -webkit-margin-end: 0px;
     font-weight: bold;
     margin: 0px auto; }
-
+.contact-odd{
+	background-color: $grey1;
+	border : {
+		top : 1px solid $grey2;
+		bottom : 1px solid $grey2;
+	}
+}
 .comment-area{
 	img.avatar{
 		@include border-radius(50%);

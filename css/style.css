@@ -1764,68 +1764,74 @@ ul.social-links li {
   font-weight: bold;
   margin: 0px auto; }
 
-/* line 489, sass/layout/_main.scss */
+/* line 487, sass/layout/_main.scss */
+.contact-odd {
+  background-color: #F8F8F8;
+  border-top: 1px solid #CCCCCC;
+  border-bottom: 1px solid #CCCCCC; }
+
+/* line 495, sass/layout/_main.scss */
 .comment-area img.avatar {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%; }
-/* line 492, sass/layout/_main.scss */
+/* line 498, sass/layout/_main.scss */
 .comment-area .bypostauthor .fn {
   color: #BC3154;
   padding: 5px; }
-/* line 496, sass/layout/_main.scss */
+/* line 502, sass/layout/_main.scss */
 .comment-area .comment-metadata {
   font-size: smaller;
   float: right; }
-  /* line 500, sass/layout/_main.scss */
+  /* line 506, sass/layout/_main.scss */
   .comment-area .comment-metadata .edit-link {
     padding: 5px;
     color: #BC3154; }
-    /* line 503, sass/layout/_main.scss */
+    /* line 509, sass/layout/_main.scss */
     .comment-area .comment-metadata .edit-link:before {
       content: "\f040";
       padding: 5px;
       vertical-align: middle; }
-/* line 511, sass/layout/_main.scss */
+/* line 517, sass/layout/_main.scss */
 .comment-area .reply {
   float: right; }
-  /* line 513, sass/layout/_main.scss */
+  /* line 519, sass/layout/_main.scss */
   .comment-area .reply:before {
     content: "\f112";
     padding: 5px;
     vertical-align: middle;
     color: #BC3154; }
-/* line 522, sass/layout/_main.scss */
+/* line 528, sass/layout/_main.scss */
 .comment-area .comment {
   display: block;
   overflow: hidden; }
-  /* line 525, sass/layout/_main.scss */
+  /* line 531, sass/layout/_main.scss */
   .comment-area .comment .comment-body {
     overflow: hidden; }
-/* line 530, sass/layout/_main.scss */
+/* line 536, sass/layout/_main.scss */
 .comment-area .comment-content {
   padding: 20px; }
 @media (min-width: 45em) {
-  /* line 533, sass/layout/_main.scss */
+  /* line 539, sass/layout/_main.scss */
   .comment-area .depth-1 {
     margin-left: 0; } }
 @media (min-width: 45em) {
-  /* line 538, sass/layout/_main.scss */
+  /* line 544, sass/layout/_main.scss */
   .comment-area .depth-2 {
     margin-left: 20px; } }
 @media (min-width: 45em) {
-  /* line 543, sass/layout/_main.scss */
+  /* line 549, sass/layout/_main.scss */
   .comment-area .depth-3 {
     margin-left: 40px; } }
 @media (min-width: 45em) {
-  /* line 548, sass/layout/_main.scss */
+  /* line 554, sass/layout/_main.scss */
   .comment-area .depth-4 {
     margin-left: 60px; } }
-/* line 553, sass/layout/_main.scss */
+/* line 559, sass/layout/_main.scss */
 .comment-area .even > article {
   background-color: #F8F8F8; }
 
-/* line 558, sass/layout/_main.scss */
+/* line 564, sass/layout/_main.scss */
 #commentform label {
   float: left;
   padding: 0 10px;
