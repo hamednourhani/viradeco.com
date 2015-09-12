@@ -491,6 +491,9 @@ ul.social-links{
 		bottom : 1px solid $grey2;
 	}
 }
+div.panel-grid {
+    margin-bottom: 5px !important;
+}
 .comment-area{
 	img.avatar{
 		@include border-radius(50%);

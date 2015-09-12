@@ -1440,4 +1440,20 @@ function vira_login_redirect( $redirect_to, $request, $user ) {
   }
 }
 
-add_filter( 'login_redirect', 'vira_login_redirect', 10, 3 );
+add_filter( 'login_redirect', 'vira_login_redirect', 10, 3 ); 
+
+if ( ICL_LANGUAGE_CODE=='it' || ICL_LANGUAGE_CODE=='en'){ 
+  
+        remove_filter('the_title', 'ztjalali_persian_num');
+        remove_filter('the_content', 'ztjalali_persian_num');
+        remove_filter('the_excerpt', 'ztjalali_persian_num');
+        remove_filter('comment_text', 'ztjalali_persian_num');
+    // change arabic characters
+        remove_filter('the_content', 'ztjalali_ch_arabic_to_persian');
+        remove_filter('the_title', 'ztjalali_ch_arabic_to_persian');
+        remove_filter('the_excerpt', 'ztjalali_ch_arabic_to_persian');
+        remove_filter('comment_text', 'ztjalali_ch_arabic_to_persian');
+    
+
+
+} ?>

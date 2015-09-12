@@ -14,10 +14,18 @@
 	    z-index: 99;
 	    font-family: verdana, arial, sans-serif;
 	    padding: 5px;
+		
+		ul{
+			border : 0px;
+		}
+	    ul a.lang_sel_other,
+	     #lang_sel li ul a:link,
+	       ul a.lang_sel_other:visited,
+	       a.lang_sel_sel,
+		a.lang_sel_sel:visited {
+		    background-color: $black1;
+		}
 
-	    a{
-	    	background-color : $black1;
-	    }
 	    float : right;
 	    padding-right : 25px;
 	}
