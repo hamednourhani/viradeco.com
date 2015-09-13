@@ -25,7 +25,10 @@
 								</li>
 							<?php } ?>
 						</ul>
-					<?php } ?>				
+					<?php } ?>		
+					<nav class="pagination">
+						<?php viradeco_pagination(); ?>
+					</nav>			
 				</div><!-- primary -->
 
 				<div class="secondary">

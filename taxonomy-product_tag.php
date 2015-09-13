@@ -33,7 +33,9 @@
 					<?php } ?>				
 				</div><!-- primary -->
 
-				
+				<nav class="pagination">
+						<?php viradeco_pagination(); ?>
+					</nav>	
 			</section>
 		</div>
 		

@@ -272,21 +272,23 @@ function viradeco_comments( $comment, $args, $depth ) {
 function viradeco_pagination(){
   global $wp_query;
 
-      $big = 999999999; 
-      echo paginate_links( array(
-        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-        'format' => '?paged=%#%',
-        'current' => max( 1, get_query_var('paged') ),
-        'total' => $wp_query->max_num_pages,
-        'prev_text'    => __('<i class="fa fa-angle-double-right"></i>','viradeco'),
-        'next_text'    => __('<i class="fa fa-angle-double-left"></i>','viradeco')
-      ) );
+    if($wp_query->max_num_pages > 1){
+        $big = 999999999; 
+        echo /*__('Page : ','viradeco').*/paginate_links( array(
+          'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+          'format' => '?paged=%#%',
+          'current' => max( 1, get_query_var('paged') ),
+          'total' => $wp_query->max_num_pages,
+          'prev_text'    => __('<i class="fa fa-angle-double-right"></i>','viradeco'),
+          'next_text'    => __('<i class="fa fa-angle-double-left"></i>','viradeco')
+        ) );
+      }
 }
 
 
 function viradeco_SearchFilter($query) {
     if ($query->is_search) {
-      $query->set('post_type', array('post','news','notify'));
+      $query->set('post_type', array('product','project'));
     }
     return $query;
     }
@@ -1262,8 +1264,43 @@ function viradeco_user_profile( $atts, $content = null ) {
 }
 add_shortcode( 'vira_profile', 'viradeco_user_profile' );
 
+function viradeco_projects_in_cat( $atts, $content = null ) {
+   global $wp_query;
+    $a = shortcode_atts( array(
+        'cat' => '',
+        'qty' => -1,
+        // ...etc
+    ), $atts );
 
+$projects = get_posts(array(
+                            'post_type' => 'project',
+                            'posts_per_page' => $a['qty'],
+                            'project_cat'         => $a['cat'],
+                            )
+                        );
 
+  
+  if(!empty($projects)){ ?>
+    
+    <ul class="projects-list">
+      <li><span><?php echo __('Title','viradeco'); ?></span></li>
+     <?php foreach($projects as $project){
+        setup_postdata( $project ) ;
+        $project_date = get_post_meta($project->ID,'_viradeco_project_date',1);?>
+        
+        <li class="project-link">
+          <a href="<?php echo get_the_permalink($project->ID); ?>">
+            <span><?php echo esc_html($project_date).' - '; ?></span>
+            <span><?php echo $project->post_title; ?></span>
+          </a>
+          
+        </li>
+      <?php } ?>
+    </ul>
+  <?php } 
+  wp_reset_postdata();
+}
+add_shortcode( 'projects', 'viradeco_projects_in_cat' );
 //--------------------- user extra fields ----------------------
 add_action( 'show_user_profile', 'viradeco_extra_user_profile_fields' );
 add_action( 'edit_user_profile', 'viradeco_extra_user_profile_fields' );
@@ -1456,4 +1493,8 @@ if ( ICL_LANGUAGE_CODE=='it' || ICL_LANGUAGE_CODE=='en'){
     
 
 
-} ?>
+}
+
+
+
+?>

@@ -32,7 +32,10 @@
 								</main>
 							</article>
 						<?php } ?>
-					<?php } ?>				
+					<?php } ?>		
+					<nav class="pagination">
+						<?php viradeco_pagination(); ?>
+					</nav>		
 				</div><!-- primary -->
 				
 				<div class="secondary">

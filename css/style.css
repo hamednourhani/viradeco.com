@@ -2226,5 +2226,29 @@ body.pg-loading {
   35% {
     -webkit-transform: scale3D(0, 0, 1);
     transform: scale3D(0, 0, 1); } }
+/* line 1, sass/modules/_pagination.scss */
+nav.pagination {
+  display: block;
+  padding: 20px 10px;
+  text-align: center;
+  overflow: hidden;
+  *zoom: 1; }
+  /* line 6, sass/modules/_pagination.scss */
+  nav.pagination a.page-numbers, nav.pagination span.page-numbers {
+    border: 3px solid #CCCCCC;
+    padding: 5px 10px;
+    background-color: #F8F8F8; }
+    /* line 10, sass/modules/_pagination.scss */
+    nav.pagination a.page-numbers:hover, nav.pagination span.page-numbers:hover {
+      background-color: #111;
+      color: #F8F8F8; }
+    /* line 14, sass/modules/_pagination.scss */
+    nav.pagination a.page-numbers.current, nav.pagination span.page-numbers.current {
+      background-color: #111;
+      color: #F8F8F8; }
+  /* line 19, sass/modules/_pagination.scss */
+  nav.pagination span.page-numbers {
+    padding: 5px 12px; }
+
 /* setting style */
 /* utilities style */
