@@ -48,7 +48,10 @@
 	
 }
 article,.hentry{
-	
+	.featured-image.single-image{
+		float : right;
+		padding-right : 10px;
+	}
 	
 	.article-title{
 		font-size : 100%;

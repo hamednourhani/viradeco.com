@@ -24,6 +24,11 @@
 									</a>
 								</header>
 								<main class="article-body">
+									<div class="featured-image single-image">
+										<a href="<?php the_permalink(); ?>">
+											<?php the_post_thumbnail(); ?>
+										</a>
+									</div>
 									<?php the_excerpt(); ?>
 									<?php get_template_part('library/post','meta'); ?>
 								</main>

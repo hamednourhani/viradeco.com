@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Viradeco\n"
 "POT-Creation-Date: 2015-09-09 09:19+0430\n"
-"PO-Revision-Date: 2015-09-09 09:19+0430\n"
+"PO-Revision-Date: 2015-09-13 22:33+0430\n"
 "Last-Translator: \n"
 "Language-Team: iTstar <info@itstar.ir>\n"
 "Language: fa_IR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.3\n"
+"X-Generator: Poedit 1.8.4\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -131,11 +131,11 @@ msgstr "دیدگاه شما در دست بررسی است"
 
 #: functions.php:281
 msgid "<i class=\"fa fa-angle-double-right\"></i>"
-msgstr ""
+msgstr "<i class=\"fa fa-angle-double-left\"></i>"
 
 #: functions.php:282
 msgid "<i class=\"fa fa-angle-double-left\"></i>"
-msgstr ""
+msgstr "<i class=\"fa fa-angle-double-right\"></i>"
 
 #: functions.php:340
 msgid "Last Products Widget"

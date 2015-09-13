@@ -279,8 +279,8 @@ function viradeco_pagination(){
           'format' => '?paged=%#%',
           'current' => max( 1, get_query_var('paged') ),
           'total' => $wp_query->max_num_pages,
-          'prev_text'    => __('<i class="fa fa-angle-double-right"></i>','viradeco'),
-          'next_text'    => __('<i class="fa fa-angle-double-left"></i>','viradeco')
+          'prev_text'    => __('<i class="fa fa-angle-double-left"></i>','viradeco'),
+          'next_text'    => __('<i class="fa fa-angle-double-right"></i>','viradeco')
         ) );
       }
 }
@@ -1478,6 +1478,23 @@ function vira_login_redirect( $redirect_to, $request, $user ) {
 }
 
 add_filter( 'login_redirect', 'vira_login_redirect', 10, 3 ); 
+
+
+// function viradeco_search_form( $form ) {
+//   global $post,$wp_query,$wpdb;
+  
+   
+//   $form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
+//   <div><label class="screen-reader-text" for="s">' . __( 'Search for:' ) . '</label>
+//   <input type="text" value="' . get_search_query() . '" name="s" id="s" />
+//   <input type="hidden" name="lang" value="'.ICL_LANGUAGE_CODE.'"/>
+//   </div>
+//   </form>';
+
+//   return $form;
+// }
+
+//add_filter( 'get_search_form', 'viradeco_search_form' );
 
 if ( ICL_LANGUAGE_CODE=='it' || ICL_LANGUAGE_CODE=='en'){ 
   

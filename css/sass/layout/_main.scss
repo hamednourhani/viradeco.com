@@ -126,6 +126,11 @@ body{
 	
 }
 article,.hentry{
+
+	.featured-image.single-image{
+		float : left;
+		padding-right : 10px;
+	}
 	
 	padding : 20px;
 	.article-title{

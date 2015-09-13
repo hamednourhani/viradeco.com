@@ -21,14 +21,20 @@
 	    ul a.lang_sel_other,
 	     #lang_sel li ul a:link,
 	       ul a.lang_sel_other:visited,
+	       ul a.lang_sel_other,
 	       a.lang_sel_sel,
 		a.lang_sel_sel:visited {
-		    background-color: $black1;
+		    background-color: $black1 !important;
 		}
 
 	    float : right;
 	    padding-right : 25px;
+	    a:visited {
+		    background: $black1;
+		    
+		}
 	}
+	 
 }
 .hero{
 	background-color : $black2;

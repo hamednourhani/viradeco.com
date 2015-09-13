@@ -30,7 +30,7 @@
 											<ul class="project-features-list">
 												<li >
 													<span class="meta-name"><?php echo __('Date ','viradeco'); ?></span>
-													<span class="meta-value"><?php echo $project_date[0]; ?></span>
+													<span class="meta-value"><?php echo $project_date; ?></span>
 												</li>
 											<?php if(!empty($project_meta[0])){ ?>
 												<?php foreach($project_meta[0] as $meta){ ?>

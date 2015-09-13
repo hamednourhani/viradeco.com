@@ -22,8 +22,10 @@
 									</a>
 								</header>
 								<div class="featured-image single-image">
-									<?php the_post_thumbnail(); ?>
-								</div>
+										<a href="<?php the_permalink(); ?>">
+											<?php the_post_thumbnail(); ?>
+										</a>
+									</div>
 								<main class="article-body">
 									<?php the_excerpt(); ?>
 									

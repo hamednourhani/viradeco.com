@@ -27,6 +27,11 @@
 				
 								
 								<main class="article-body">
+									<div class="featured-image single-image">
+										<a href="<?php the_permalink(); ?>">
+											<?php the_post_thumbnail(); ?>
+										</a>
+									</div>
 									<?php the_excerpt(); ?>
 									
 								</main>
