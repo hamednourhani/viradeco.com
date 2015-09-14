@@ -443,7 +443,10 @@ ul.main-nav{
 					// 	@include omega;
 					// }
 					margin-right : auto;
-				
+					border-left : 1px solid $grey2;
+					&:first-child{
+						border : 0px;
+					}
 				@include at-breakpoint(62em){
 					@include span-columns(2,12);
 					width : 17%;
@@ -457,10 +460,8 @@ ul.main-nav{
 					width : 100%;
 					min-width : 100%;
 				}
-				border-left : 1px solid $grey1;
-				&:first-child{
-					border : 0px;
-				}
+				
+				
 				
 				ul.sub-menu{
 					// &>li{
@@ -514,16 +515,22 @@ ul.main-nav{
 
 		
 	}
+	.product-item {
+		font-size : 12px;
+	}
 
 }
-
-li.menu-item{
-	&>a img {
-	    float: left;
-	    vertical-align: -webkit-baseline-middle;
-	}
-	&>a span {
-	    vertical-align: text-top;
+li.mega-menu{
+	li.menu-item{
+		&>a img {
+		    float: left;
+		    margin-right : 5px;
+		    vertical-align: -webkit-baseline-middle;
+		}
+		&>a{
+		    vertical-align: text-top;
+		    text-align : left;
+		}
 	}
 }
 

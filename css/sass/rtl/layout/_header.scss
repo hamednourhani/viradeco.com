@@ -211,6 +211,12 @@ ul.main-nav{
 					// }
 					margin-right : auto;
 					margin-left : auto;
+					border-left : 0px;
+					border-right : 1px solid $grey2;
+
+					&:first-child{
+						border : 0px;
+					}
 
 				
 				@include at-breakpoint(62em){
@@ -225,8 +231,7 @@ ul.main-nav{
 				}
 				margin-right : auto;
 				margin-left : auto;
-				border-left : 0px;
-				border-right : 1px solid $grey1;
+				
 
 							
 				
@@ -242,12 +247,19 @@ ul.main-nav{
 	}
 	
 }
-
-li.menu-item{
-	&>a img {
-	    float: right;
-	    
+li.mega-menu{
+	li.menu-item{
+		&>a img {
+		    float: right;
+		    margin-right : 0px;
+		    margin-left : 5px;
+		    
+		}
+		&>a{
+			text-align : right;
+		    font-weight : normal;
+		}
+		
 	}
-	
 }
 

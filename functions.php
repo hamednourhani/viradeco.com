@@ -312,9 +312,9 @@ external fonts. If you're using Google Fonts, you
 can replace these fonts, change it in your scss files
 and be up and running in seconds.
 */
-function viradeco_fonts() {
-  wp_enqueue_style('googleFonts', 'http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
-}
+// function viradeco_fonts() {
+//   wp_enqueue_style('googleFonts', 'http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
+// }
 
 //add_action('wp_enqueue_scripts', 'viradeco_fonts');
 
@@ -675,12 +675,14 @@ class contact_info_widget extends WP_Widget {
         global $wp_query;
 
         $title = apply_filters( 'widget_title', $instance['title'] );
+        $address = $instance['address'];
         $phone = $instance['phone'];
         $fax = $instance['fax'];
         $email = $instance['email'];
         
                 
         $content = '<main class="widgetbody">';
+        $content .='<p><i class="fa fa-map-signs"></i>'.__('Address : ','viradeco').$address.'</p>';
         $content .='<p><i class="fa fa-phone"></i>'.__('Phone : ','viradeco').$phone.'</p>';
         $content .='<p><i class="fa fa-fax"></i>'.__('Fax : ','viradeco').$fax.'</p>';
         $content .='<p><i class="fa fa-envelope"></i>'.__('Email : ','viradeco').$email.'</p>';
@@ -702,6 +704,12 @@ class contact_info_widget extends WP_Widget {
             $title = $instance[ 'title' ];
         }else {
             $title = __( 'Last Posts', 'viradeco' );
+        }
+
+        if ( isset( $instance[ 'address' ] ) ) {
+            $address = $instance[ 'address' ];
+        }else {
+            $address = "No. ----";
         }
 
         if ( isset( $instance[ 'phone' ] ) ) {
@@ -729,6 +737,10 @@ class contact_info_widget extends WP_Widget {
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
         </p>
          <p>
+            <label for="<?php echo $this->get_field_id( 'address' ); ?>"><?php _e( 'Address :','viradeco' ); ?></label> 
+            <input class="widefat" id="<?php echo $this->get_field_id( 'address' ); ?>" name="<?php echo $this->get_field_name( 'address' ); ?>" type="text" value="<?php echo esc_attr( $address ); ?>" />
+        </p>
+         <p>
             <label for="<?php echo $this->get_field_id( 'phone' ); ?>"><?php _e( 'Phone Number :','viradeco' ); ?></label> 
             <input class="widefat" id="<?php echo $this->get_field_id( 'phone' ); ?>" name="<?php echo $this->get_field_name( 'phone' ); ?>" type="text" value="<?php echo esc_attr( $phone ); ?>" />
         </p>
@@ -750,6 +762,7 @@ class contact_info_widget extends WP_Widget {
     public function update( $new_instance, $old_instance ) {
         $instance = array();
         $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+        $instance['address'] = ( ! empty( $new_instance['address'] ) ) ? strip_tags( $new_instance['address'] ) : '';
         $instance['phone'] = ( ! empty( $new_instance['phone'] ) ) ? strip_tags( $new_instance['phone'] ) : '';
         $instance['fax'] = ( ! empty( $new_instance['fax'] ) ) ? strip_tags( $new_instance['fax'] ) : '';
         $instance['email'] = ( ! empty( $new_instance['email'] ) ) ? strip_tags( $new_instance['email'] ) : '';
@@ -1026,7 +1039,7 @@ class Menu_With_Image extends Walker_Nav_Menu {
 
 function viradeco_filter_search($query) {
     if ($query->is_search) {
-  $query->set('post_type', array('post', 'product','project'));
+  $query->set('post_type', array('product','project'));
     };
     return $query;
 };
@@ -1301,6 +1314,70 @@ $projects = get_posts(array(
   wp_reset_postdata();
 }
 add_shortcode( 'projects', 'viradeco_projects_in_cat' );
+
+
+/*-----------Vira Products in Cat-------------------------------*/
+function viradeco_products_in_cat( $atts, $content = null ) {
+   global $wp_query;
+    $a = shortcode_atts( array(
+        'cat' => '',
+        'title' => '',
+        'qty' => -1,
+        // ...etc
+    ), $atts );
+
+$products = get_posts(array(
+                            'post_type' => 'product',
+                            'posts_per_page' => $a['qty'],
+                            'product_cat'         => $a['cat'],
+                            )
+                        ); ?>
+
+  <section class="layout">
+    <div class="single-cat-title">
+      <h2><?php echo $a['title'] ?></h2>
+    </div>  
+  </section>
+  <?php if(!empty($products)){ ?>
+    
+    
+  <section class="layout">
+     <?php foreach($products as $product){
+        setup_postdata( $product ) ; ?>
+        
+          <article class="hentry">
+             
+              <header class="article-title">
+                <a href="<?php echo get_post_permalink($product->ID); ?>">
+                  <h3><?php echo $product->post_title; ?></h3>
+                </a>
+              </header>
+              <div class="featured-image single-image">
+                  <a href="<?php echo get_post_permalink($product->ID); ?>">
+                    <?php echo get_the_post_thumbnail($product->ID); ?>
+                  </a>
+                </div>
+              
+              <main class="article-body">
+
+                <?php 
+                      global $post;  
+                      $save_post = $post;
+                      $post = get_post($product->ID);
+                      $excerpt = get_the_excerpt();
+                      echo $excerpt;
+                      $post = $save_post;
+
+                ?>
+                
+              </main>
+            </article>
+      <?php } ?>
+    </section>
+  <?php } 
+  wp_reset_postdata();
+}
+add_shortcode( 'products', 'viradeco_products_in_cat' );
 //--------------------- user extra fields ----------------------
 add_action( 'show_user_profile', 'viradeco_extra_user_profile_fields' );
 add_action( 'edit_user_profile', 'viradeco_extra_user_profile_fields' );
@@ -1309,43 +1386,43 @@ function viradeco_extra_user_profile_fields( $user ) {
   <h3><?php _e("Extra profile information", "viradeco"); ?></h3>
   <table class="form-table">
     <tr>
-      <th><label for="birthday"><?php __("birthday",'viradeco'); ?></label></th>
+      <th><label for="birthday"><?php echo __("birthday",'viradeco'); ?></label></th>
       <td>
         <input type="text" name="birthday" id="Birth Day" class="regular-text" 
             value="<?php echo esc_attr( get_user_meta( $user->ID,'birthday' ,true) ); ?>" /><br />
-        <span class="description"><?php __("Please enter your Birthday.","viradeco"); ?></span>
+        <span class="description"><?php echo __("Please enter your Birthday.","viradeco"); ?></span>
     </td>
     </tr>
     <tr>
-      <th><label for="birthmonth"><?php __("Birth Month",'viradeco'); ?></label></th>
+      <th><label for="birthmonth"><?php echo __("Birth Month",'viradeco'); ?></label></th>
       <td>
         <input type="text" name="birthmonth" id="birthmonth" class="regular-text" 
             value="<?php echo esc_attr( get_user_meta( $user->ID,'birthmonth' ,true) ); ?>" /><br />
-        <span class="description"><?php __("Please enter your Birth Month.","viradeco"); ?></span>
+        <span class="description"><?php echo __("Please enter your Birth Month.","viradeco"); ?></span>
     </td>
     </tr>
     <tr>
-      <th><label for="birthyear"><?php __("Birth Year",'viradeco'); ?></label></th>
+      <th><label for="birthyear"><?php echo __("Birth Year",'viradeco'); ?></label></th>
       <td>
         <input type="text" name="birthyear" id="birthyear" class="regular-text" 
             value="<?php echo esc_attr( get_user_meta( $user->ID,'birthyear' ,true) ); ?>" /><br />
-        <span class="description"><?php __("Please enter your Birth Year.","viradeco"); ?></span>
+        <span class="description"><?php echo __("Please enter your Birth Year.","viradeco"); ?></span>
     </td>
     </tr>
     <tr>
-      <th><label for="phone"><?php __("Phone",'viradeco'); ?></label></th>
+      <th><label for="phone"><?php echo __("Phone",'viradeco'); ?></label></th>
       <td>
         <input type="text" name="phone" id="phone" class="regular-text" 
             value="<?php echo esc_attr( get_user_meta(  $user->ID ,'phone',true) ); ?>" /><br />
-        <span class="description"><?php __("Please enter your phone.","viradeco"); ?></span>
+        <span class="description"><?php echo __("Please enter your phone.","viradeco"); ?></span>
     </td>
     </tr>
     <tr>
-      <th><label for="job"><?php __("Job",'viradeco'); ?></label></th>
+      <th><label for="job"><?php echo __("Job",'viradeco'); ?></label></th>
       <td>
         <input type="text" name="job" id="job" class="regular-text" 
             value="<?php echo esc_attr( get_user_meta( $user->ID ,'job',true) ); ?>" /><br />
-        <span class="description"><?php __("Please enter your Job.","viradeco"); ?></span>
+        <span class="description"><?php echo __("Please enter your Job.","viradeco"); ?></span>
     </td>
     </tr>
     <tr>
@@ -1448,9 +1525,7 @@ function viradeco_viraclub_id($user_id){
   // Set your role
     
   $firstid = 2999;
-  wp_mail('info@itstar.ir','test','test');
-  //$user->exit;
-  var_dump($user);
+    
                         
   $latestid=$wpdb->get_var("SELECT meta_value from $wpdb->usermeta where meta_key='viraclub' order by meta_value DESC limit 1;");
   $latestid = ($latestid)?($latestid):($firstid);
@@ -1480,21 +1555,21 @@ function vira_login_redirect( $redirect_to, $request, $user ) {
 add_filter( 'login_redirect', 'vira_login_redirect', 10, 3 ); 
 
 
-// function viradeco_search_form( $form ) {
-//   global $post,$wp_query,$wpdb;
+function viradeco_search_form( $form ) {
+  global $post,$wp_query,$wpdb;
   
    
-//   $form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
-//   <div><label class="screen-reader-text" for="s">' . __( 'Search for:' ) . '</label>
-//   <input type="text" value="' . get_search_query() . '" name="s" id="s" />
-//   <input type="hidden" name="lang" value="'.ICL_LANGUAGE_CODE.'"/>
-//   </div>
-//   </form>';
+  $form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
+  <div><label class="screen-reader-text" for="s">' . __( 'Search for:' ) . '</label>
+  <input type="text" value="' . get_search_query() . '" name="s" id="s" />
+  <input type="hidden" name="lang" value="'.ICL_LANGUAGE_CODE.'"/>
+  </div>
+  </form>';
 
-//   return $form;
-// }
+  return $form;
+}
 
-//add_filter( 'get_search_form', 'viradeco_search_form' );
+add_filter( 'get_search_form', 'viradeco_search_form' );
 
 if ( ICL_LANGUAGE_CODE=='it' || ICL_LANGUAGE_CODE=='en'){ 
   

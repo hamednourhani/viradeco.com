@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Viradeco\n"
-"POT-Creation-Date: 2015-09-09 09:19+0430\n"
-"PO-Revision-Date: 2015-09-13 22:33+0430\n"
+"POT-Creation-Date: 2015-09-14 16:40+0430\n"
+"PO-Revision-Date: 2015-09-14 16:41+0430\n"
 "Last-Translator: \n"
 "Language-Team: iTstar <info@itstar.ir>\n"
 "Language: fa_IR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.4\n"
+"X-Generator: Poedit 1.8.3\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -129,316 +129,332 @@ msgstr ""
 msgid "Your comment is awaiting moderation."
 msgstr "دیدگاه شما در دست بررسی است"
 
-#: functions.php:281
-msgid "<i class=\"fa fa-angle-double-right\"></i>"
-msgstr "<i class=\"fa fa-angle-double-left\"></i>"
-
 #: functions.php:282
 msgid "<i class=\"fa fa-angle-double-left\"></i>"
 msgstr "<i class=\"fa fa-angle-double-right\"></i>"
 
-#: functions.php:340
+#: functions.php:283
+msgid "<i class=\"fa fa-angle-double-right\"></i>"
+msgstr "<i class=\"fa fa-angle-double-left\"></i>"
+
+#: functions.php:342
 msgid "Last Products Widget"
 msgstr "ابزارک آخرین محصولات"
 
-#: functions.php:343
+#: functions.php:345
 msgid "Display Last Products"
 msgstr "نمایش آخرین محصولات در یک دسته بندی خاص"
 
-#: functions.php:392
+#: functions.php:394
 msgid "Last Products"
 msgstr "آخرین محصولات"
 
-#: functions.php:407 functions.php:516 functions.php:624 functions.php:726
-#: functions.php:858
+#: functions.php:409 functions.php:518 functions.php:626 functions.php:736
+#: functions.php:873
 msgid "Title:"
 msgstr "عنوان : "
 
-#: functions.php:411
+#: functions.php:413
 msgid "product Numbers :"
 msgstr "تعداد محصولات : "
 
-#: functions.php:415
+#: functions.php:417
 msgid "Product Category :"
 msgstr "دسته بندی محصولات : "
 
-#: functions.php:450
+#: functions.php:452
 msgid "Last Projects Widget"
 msgstr "ابزارک آخرین پروژه ها"
 
-#: functions.php:453
+#: functions.php:455
 msgid "Display Last Projects"
 msgstr "نمایش آخرین پروژه ها"
 
-#: functions.php:501
+#: functions.php:503
 msgid "Last Projects"
 msgstr "آخرین پروژه ها"
 
-#: functions.php:520
+#: functions.php:522
 msgid "Project Numbers :"
 msgstr "تعداد پروژه ها: "
 
-#: functions.php:524
+#: functions.php:526
 msgid "Project Category :"
 msgstr "دسته بندی :"
 
-#: functions.php:556
+#: functions.php:558
 msgid "Last Posts By Category Widget"
 msgstr "آخرین مطالب یک دسته بندی"
 
-#: functions.php:559
+#: functions.php:561
 msgid "Display Last Posts in Category"
 msgstr "نمایش آخرین مطالب منتشر شده در یک دسته بندی خاص"
 
-#: functions.php:609 functions.php:702
+#: functions.php:611 functions.php:706
 msgid "Last Posts"
 msgstr "آخرین مطالب"
 
-#: functions.php:628
+#: functions.php:630
 msgid "Post Numbers :"
 msgstr "تعداد مطالب : "
 
-#: functions.php:632
+#: functions.php:634
 msgid "Post Category :"
 msgstr "دسته بندی مطالب : "
 
-#: functions.php:663
+#: functions.php:665
 msgid "Contact Informaion Widget"
 msgstr "ابزارک اطلاعات تماس"
 
-#: functions.php:666
+#: functions.php:668
 msgid "Display Contact Information"
 msgstr "نمایش اطلاعات تماس"
 
-#: functions.php:682
+#: functions.php:685
+msgid "Address : "
+msgstr "آدرس : "
+
+#: functions.php:686
 msgid "Phone : "
 msgstr "تلفن : "
 
-#: functions.php:683
+#: functions.php:687
 msgid "Fax : "
 msgstr "فکس : "
 
-#: functions.php:684
+#: functions.php:688
 msgid "Email : "
 msgstr "ایمیل : "
 
-#: functions.php:730
+#: functions.php:740
+msgid "Address :"
+msgstr "آدرس : "
+
+#: functions.php:744
 msgid "Phone Number :"
 msgstr "شماره تلفن : "
 
-#: functions.php:735
+#: functions.php:749
 msgid "Fax Number :"
 msgstr "شماره فکس : "
 
-#: functions.php:740
+#: functions.php:754
 msgid "Email Address :"
 msgstr "آدرس ایمیل : "
 
-#: functions.php:766
+#: functions.php:781
 msgid "Social Networks Widget"
 msgstr "ابزارک لینک های اجتماعی"
 
-#: functions.php:769
+#: functions.php:784
 msgid "Social Networks and Important links"
 msgstr "نمایش لینک های اجتماعی و لینک های مهم"
 
-#: functions.php:794
+#: functions.php:809
 msgid "Download Cataloge"
 msgstr "دانلود کاتالوگ"
 
-#: functions.php:795
+#: functions.php:810
 msgid "Send Email"
 msgstr "ارسال ایمیل"
 
-#: functions.php:796
+#: functions.php:811
 msgid "Login"
 msgstr "ورود"
 
-#: functions.php:814
+#: functions.php:829
 msgid "Social Links"
 msgstr "لینک های اجتماعی"
 
-#: functions.php:862
+#: functions.php:877
 msgid "Google Plus Url :"
 msgstr "آدرس گوگل پلاس :"
 
-#: functions.php:866
+#: functions.php:881
 msgid "Facebook Url :"
 msgstr "آدرس فیسبوک : "
 
-#: functions.php:870
+#: functions.php:885
 msgid "Linkedin Url :"
 msgstr "آدرس لینکداین : "
 
-#: functions.php:874
+#: functions.php:889
 msgid "Instagram Url :"
 msgstr "آدرس اینستاگرام : "
 
-#: functions.php:878
+#: functions.php:893
 msgid "Catalog Download url :"
 msgstr "آدرس صفحه یا لینک دانلود کاتالوگ : "
 
-#: functions.php:882
+#: functions.php:897
 msgid "Send Email Url :"
 msgstr "آدرس صفحه یا لینک ارسال ایمیل : "
 
-#: functions.php:886
+#: functions.php:901
 msgid "Login Url :"
 msgstr "آدرس ورود به سایت :"
 
-#: functions.php:1123
+#: functions.php:1138
 msgid "Another user have been registered by this User Name or Email"
 msgstr "کاربر دیگری قبلا با این شناسه کاربری یا ایمیل ثبت نام کرده است."
 
-#: functions.php:1127
+#: functions.php:1142
 msgid "Anti Spam is Not correct!"
 msgstr "کد امنیتی صحیح نمی باشد!"
 
-#: functions.php:1131
+#: functions.php:1146
 msgid "Please fill the required fields : User Name - Email - Password"
 msgstr "لطفا فیلدهای ضروری را تکمیل نمایید : شناسه کاربری - ایمیل - کلمه عبور"
 
-#: functions.php:1177
+#: functions.php:1192
 msgid "Vira Club Registeration"
 msgstr "عضویت در Vira Club"
 
-#: functions.php:1178
+#: functions.php:1193
 msgid "Login to Site"
 msgstr "ورود به سایت"
 
-#: functions.php:1185
+#: functions.php:1200
 msgid "First Name"
 msgstr "نام"
 
-#: functions.php:1186
+#: functions.php:1201
 msgid "Last Name"
 msgstr "نام خانوادگی"
 
-#: functions.php:1187
+#: functions.php:1202
 msgid "UserName"
 msgstr "شناسه کاربری"
 
-#: functions.php:1188
+#: functions.php:1203
 msgid "Birthday"
 msgstr "روز تولد"
 
-#: functions.php:1190 functions.php:1283
+#: functions.php:1205 functions.php:1397
 msgid "Birth Month"
 msgstr "ماه تولد"
 
-#: functions.php:1192 functions.php:1291
+#: functions.php:1207 functions.php:1405
 msgid "Birth Year"
 msgstr "سال تولد"
 
-#: functions.php:1194 functions.php:1307
+#: functions.php:1209 functions.php:1421
 msgid "Job"
 msgstr "زمینه شغلی"
 
-#: functions.php:1195 functions.php:1299 functions.php:1379
+#: functions.php:1210 functions.php:1413 functions.php:1493
 msgid "Phone"
 msgstr "تلفن"
 
-#: functions.php:1197 functions.php:1380
+#: functions.php:1212 functions.php:1494
 msgid "Email"
 msgstr "ایمیل"
 
-#: functions.php:1198
+#: functions.php:1213
 msgid "Password"
 msgstr "کلمه عبور"
 
-#: functions.php:1199
+#: functions.php:1214
 msgid "At least 6 character."
 msgstr "حداقل 6 کارکتر"
 
-#: functions.php:1202
+#: functions.php:1217
 msgid "Submit"
 msgstr "تایید"
 
-#: functions.php:1237
+#: functions.php:1252
 msgid "User Profile"
 msgstr "پروفایل کاربری"
 
-#: functions.php:1241
+#: functions.php:1256
 msgid "first name: "
 msgstr "نام: "
 
-#: functions.php:1242
+#: functions.php:1257
 msgid "last name: "
 msgstr "نام خانوادگی : "
 
-#: functions.php:1243
+#: functions.php:1258
 msgid "Username: "
 msgstr "شناسه کاربری : "
 
-#: functions.php:1245
+#: functions.php:1260
 msgid "Birthday: "
 msgstr "تاریخ تولد : "
 
-#: functions.php:1246
+#: functions.php:1261
 msgid "Phone: "
 msgstr "تلفن : "
 
-#: functions.php:1247
+#: functions.php:1262
 msgid "Email: "
 msgstr "ایمیل : "
 
-#: functions.php:1248
+#: functions.php:1263
 msgid "Job: "
 msgstr "زمینه شغلی : "
 
-#: functions.php:1250
+#: functions.php:1265
 msgid "Vira Club ID: "
 msgstr "کد عضویت : "
 
-#: functions.php:1253
+#: functions.php:1268
 msgid "Logout"
 msgstr "خروج"
 
-#: functions.php:1272
+#: functions.php:1299 taxonomy-project_cat.php:16
+msgid "Title"
+msgstr "عنوان"
+
+#: functions.php:1386
 msgid "Extra profile information"
 msgstr "مشخصات اضافی پروفایل"
 
-#: functions.php:1275
+#: functions.php:1389
 msgid "birthday"
 msgstr "روز تولد"
 
-#: functions.php:1279
+#: functions.php:1393
 msgid "Please enter your Birthday."
 msgstr "روز تولد را وارد نمایید"
 
-#: functions.php:1287
+#: functions.php:1401
 msgid "Please enter your Birth Month."
 msgstr "ماه تولد را وارد نمایید"
 
-#: functions.php:1295
+#: functions.php:1409
 msgid "Please enter your Birth Year."
 msgstr "سال تولد را وارد نمایید"
 
-#: functions.php:1303
+#: functions.php:1417
 msgid "Please enter your phone."
 msgstr "شماره تلفن را وارد نمایید"
 
-#: functions.php:1311
+#: functions.php:1425
 msgid "Please enter your Job."
 msgstr "زمینه شغلی را وارد نمایید"
 
-#: functions.php:1315
+#: functions.php:1429
 msgid "Vira club ID"
 msgstr "شماره عضویت"
 
-#: functions.php:1378
+#: functions.php:1492
 msgid "ViraClub ID"
 msgstr "شماره عضویت"
 
-#: header.php:73
-msgid "Create Your Own Ideas"
-msgstr "خالق لوکس ترین ایده های خود باشید"
+#: functions.php:1563 searchform.php:3
+msgid "Search for:"
+msgstr "جستجو برای : "
 
-#: header.php:87 library/viradeco.php:251
+#: header.php:78
+msgid "Create Your Own Ideas"
+msgstr "خالق ایده های خود باشید"
+
+#: header.php:96 library/viradeco.php:251
 msgid "The Main Menu"
 msgstr "فهرست اصلی"
 
-#: header.php:103
+#: header.php:112
 msgid "Main Menu"
 msgstr "منوی اصلی"
 
@@ -948,10 +964,6 @@ msgstr "ادامه"
 msgid "Read more &raquo;"
 msgstr "ادامه مطلب"
 
-#: searchform.php:3
-msgid "Search for:"
-msgstr "جستجو برای : "
-
 #: searchform.php:6
 msgid "Search"
 msgstr "جستجو"
@@ -959,10 +971,6 @@ msgstr "جستجو"
 #: single-project.php:32
 msgid "Date "
 msgstr "تاریخ"
-
-#: taxonomy-project_cat.php:16
-msgid "Title"
-msgstr "عنوان"
 
 #~ msgid "Be Your Ideas Creator"
 #~ msgstr "خالق ایده های خود باشید"

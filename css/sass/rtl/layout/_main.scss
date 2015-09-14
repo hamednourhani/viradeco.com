@@ -202,7 +202,31 @@ ul.social-links{
 
 	}
 }
+.all-products{
+	article {
+		@include span-columns(12,12);
+	 	@include at-breakpoint($medium){
+	 		@include span-columns(6,12);
+	 		margin-right : 0px;
+			&:nth-of-type(2n){
+				@include span-columns(6 omega ,12);
+			}
+	 	}
 
+	}
+	.single-cat-title{
+		
+		h3,h4,h2{
+			
+			&::after{
+				right : 0;
+				left : auto;
+			}
+						
+		}
+	}
+	
+}
 .comment-area{
 		
 	.comment-metadata{

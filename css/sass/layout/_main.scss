@@ -95,6 +95,7 @@ body{
 			}
 		}
 	}
+
 }
 .without-sidebar{
 	.primary{
@@ -473,7 +474,44 @@ ul.social-links{
 
 	}
 }
+.all-products{
+	article {
+		@include span-columns(12,12);
+	 	@include at-breakpoint($medium){
+	 		@include span-columns(6,12);
+			&:nth-of-type(2n){
+				@include span-columns(6 omega ,12);
+			}
+	 	}
 
+	}
+	.single-cat-title{
+		@include clearfix;
+		position : relative;
+		display : block;
+		border-bottom : 1px solid $grey2;
+		margin-bottom : 20px;
+		width : 100%;
+		h3,h4,h2{
+			margin : 0;
+			padding : 10px 0;
+			display : inline-block;
+			&::after{
+				@include single-transition(all 0.2s ease-out);
+				display : block;
+				content : "";
+				width : 30px;
+				height : 3px;
+				background-color : $red;
+				position : absolute;
+				bottom : 0px;
+				left : 0;
+			}
+						
+		}
+	}
+	
+}
 .contact-area{
 	aside{
 		background-color : $white;
