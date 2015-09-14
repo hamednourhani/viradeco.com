@@ -431,8 +431,11 @@ body.archive article {
         width: 49.23077%;
         float: left;
         margin-left: 0; } }
+  /* line 129, sass/rtl/layout/_main.scss */
+  body.archive article .article-title h3 {
+    font-family: "open-sans"; }
 
-/* line 132, sass/rtl/layout/_main.scss */
+/* line 135, sass/rtl/layout/_main.scss */
 .secondary {
   width: 100%;
   float: right;
@@ -442,96 +445,99 @@ body.archive article {
   padding-top: 20px;
   padding-bottom: 20px; }
   @media (min-width: 45em) {
-    /* line 132, sass/rtl/layout/_main.scss */
+    /* line 135, sass/rtl/layout/_main.scss */
     .secondary {
       width: 32.30769%;
       float: left;
       margin-left: 0;
       margin-right: auto; } }
 
-/* line 146, sass/rtl/layout/_main.scss */
+/* line 149, sass/rtl/layout/_main.scss */
 .widget {
   font-size: 100%; }
-  /* line 149, sass/rtl/layout/_main.scss */
+  /* line 152, sass/rtl/layout/_main.scss */
   .widget h4.widgettitle {
     position: relative; }
-    /* line 153, sass/rtl/layout/_main.scss */
+    /* line 156, sass/rtl/layout/_main.scss */
     .widget h4.widgettitle:after {
       position: absolute;
       bottom: 0px;
       right: 0;
       left: auto; }
-  /* line 165, sass/rtl/layout/_main.scss */
+  /* line 168, sass/rtl/layout/_main.scss */
   .widget i.fa:before {
     padding-left: 10px;
     padding-right: auto; }
-  /* line 170, sass/rtl/layout/_main.scss */
+  /* line 173, sass/rtl/layout/_main.scss */
   .widget.widget_last_products_widget li a {
     font-family: "open-sans";
     font-size: 14px; }
 
-/* line 183, sass/rtl/layout/_main.scss */
+/* line 186, sass/rtl/layout/_main.scss */
 ul.widget-list li img {
   margin: 5px 5px 5px 12px; }
 
-/* line 194, sass/rtl/layout/_main.scss */
+/* line 197, sass/rtl/layout/_main.scss */
 ul.social-links li a.sicon:before {
   margin: 0px 3px 0px 12px; }
 
-/* line 206, sass/rtl/layout/_main.scss */
+/* line 209, sass/rtl/layout/_main.scss */
 .all-products article {
   width: 100%;
   float: right;
   margin-left: 1.53846%;
   display: inline; }
   @media (min-width: 45em) {
-    /* line 206, sass/rtl/layout/_main.scss */
+    /* line 209, sass/rtl/layout/_main.scss */
     .all-products article {
       width: 49.23077%;
       float: right;
       margin-left: 1.53846%;
       margin-right: 0px; }
-      /* line 211, sass/rtl/layout/_main.scss */
+      /* line 214, sass/rtl/layout/_main.scss */
       .all-products article:nth-of-type(2n) {
         width: 49.23077%;
         float: left;
         margin-left: 0; } }
-/* line 221, sass/rtl/layout/_main.scss */
+  /* line 218, sass/rtl/layout/_main.scss */
+  .all-products article .article-title h3 {
+    font-family: "open-sans"; }
+/* line 227, sass/rtl/layout/_main.scss */
 .all-products .single-cat-title h3::after, .all-products .single-cat-title h4::after, .all-products .single-cat-title h2::after {
   right: 0;
   left: auto; }
 
-/* line 232, sass/rtl/layout/_main.scss */
+/* line 239, sass/rtl/layout/_main.scss */
 .comment-area .comment-metadata {
   float: left; }
-/* line 237, sass/rtl/layout/_main.scss */
+/* line 244, sass/rtl/layout/_main.scss */
 .comment-area .reply {
   float: left; }
 @media (min-width: 45em) {
-  /* line 243, sass/rtl/layout/_main.scss */
+  /* line 250, sass/rtl/layout/_main.scss */
   .comment-area .depth-1 {
     margin-right: 0;
     margin-left: auto; } }
 @media (min-width: 45em) {
-  /* line 249, sass/rtl/layout/_main.scss */
+  /* line 256, sass/rtl/layout/_main.scss */
   .comment-area .depth-2 {
     margin-right: 20px;
     margin-left: auto; } }
 @media (min-width: 45em) {
-  /* line 255, sass/rtl/layout/_main.scss */
+  /* line 262, sass/rtl/layout/_main.scss */
   .comment-area .depth-3 {
     margin-right: 40px;
     margin-left: auto; } }
 @media (min-width: 45em) {
-  /* line 261, sass/rtl/layout/_main.scss */
+  /* line 268, sass/rtl/layout/_main.scss */
   .comment-area .depth-4 {
     margin-left: auto;
     margin-right: 60px; } }
-/* line 267, sass/rtl/layout/_main.scss */
+/* line 274, sass/rtl/layout/_main.scss */
 .comment-area .even > article {
   background-color: #F8F8F8; }
 
-/* line 273, sass/rtl/layout/_main.scss */
+/* line 280, sass/rtl/layout/_main.scss */
 #commentform label {
   float: right;
   width: 33%; }

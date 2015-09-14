@@ -682,7 +682,7 @@ class contact_info_widget extends WP_Widget {
         
                 
         $content = '<main class="widgetbody">';
-        $content .='<p><i class="fa fa-map-signs"></i>'.__('Address : ','viradeco').$address.'</p>';
+        $content .='<p><i class="fa fa-map-marker"></i>'.__('Address : ','viradeco').$address.'</p>';
         $content .='<p><i class="fa fa-phone"></i>'.__('Phone : ','viradeco').$phone.'</p>';
         $content .='<p><i class="fa fa-fax"></i>'.__('Fax : ','viradeco').$fax.'</p>';
         $content .='<p><i class="fa fa-envelope"></i>'.__('Email : ','viradeco').$email.'</p>';

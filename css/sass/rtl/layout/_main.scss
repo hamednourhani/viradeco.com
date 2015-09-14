@@ -126,6 +126,9 @@ body.archive{
 				@include span-columns(6 omega ,12);
 			}
 		}
+		.article-title h3{
+			font-family : "open-sans";
+		}
 	}
 }
 
@@ -212,6 +215,9 @@ ul.social-links{
 				@include span-columns(6 omega ,12);
 			}
 	 	}
+	 	.article-title h3{
+	 		font-family : "open-sans";
+	 	}
 
 	}
 	.single-cat-title{
@@ -222,6 +228,7 @@ ul.social-links{
 				right : 0;
 				left : auto;
 			}
+
 						
 		}
 	}
