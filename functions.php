@@ -1557,14 +1557,22 @@ add_filter( 'login_redirect', 'vira_login_redirect', 10, 3 );
 
 function viradeco_search_form( $form ) {
   global $post,$wp_query,$wpdb;
-  
    
-  $form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
-  <div><label class="screen-reader-text" for="s">' . __( 'Search for:' ) . '</label>
-  <input type="text" value="' . get_search_query() . '" name="s" id="s" />
-  <input type="hidden" name="lang" value="'.ICL_LANGUAGE_CODE.'"/>
-  </div>
-  </form>';
+
+  if(ICL_LANGUAGE_CODE == 'en' || ICL_LANGUAGE_CODE == 'it'){
+      $form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
+      <div><label class="screen-reader-text" for="s">' . __( 'Search for:' ) . '</label>
+      <input type="text" value="' . get_search_query() . '" name="s" id="s" />
+      <input type="hidden" name="lang" value="'.ICL_LANGUAGE_CODE.'"/>
+      </div>
+      </form>';
+  } else {
+      $form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
+      <div><label class="screen-reader-text" for="s">' . __( 'Search for:' ) . '</label>
+      <input type="text" value="' . get_search_query() . '" name="s" id="s" />
+      </div>
+      </form>';
+  }
 
   return $form;
 }
