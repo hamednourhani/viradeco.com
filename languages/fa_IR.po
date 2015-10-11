@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Viradeco\n"
-"POT-Creation-Date: 2015-09-14 16:40+0430\n"
-"PO-Revision-Date: 2015-09-14 16:41+0430\n"
+"POT-Creation-Date: 2015-10-10 21:53+0330\n"
+"PO-Revision-Date: 2015-10-10 21:54+0330\n"
 "Last-Translator: \n"
 "Language-Team: iTstar <info@itstar.ir>\n"
 "Language: fa_IR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.3\n"
+"X-Generator: Poedit 1.8.4\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -342,11 +342,11 @@ msgstr "سال تولد"
 msgid "Job"
 msgstr "زمینه شغلی"
 
-#: functions.php:1210 functions.php:1413 functions.php:1493
+#: functions.php:1210 functions.php:1413 functions.php:1527
 msgid "Phone"
 msgstr "تلفن"
 
-#: functions.php:1212 functions.php:1494
+#: functions.php:1212 functions.php:1528
 msgid "Email"
 msgstr "ایمیل"
 
@@ -374,7 +374,7 @@ msgstr "نام: "
 msgid "last name: "
 msgstr "نام خانوادگی : "
 
-#: functions.php:1258
+#: functions.php:1258 functions.php:1481 functions.php:1511
 msgid "Username: "
 msgstr "شناسه کاربری : "
 
@@ -438,11 +438,35 @@ msgstr "زمینه شغلی را وارد نمایید"
 msgid "Vira club ID"
 msgstr "شماره عضویت"
 
-#: functions.php:1492
+#: functions.php:1479
+msgid "New User Have Registered "
+msgstr "کاربر جدید عضو سایت شد"
+
+#: functions.php:1483 functions.php:1513
+msgid "Password: "
+msgstr "کلمه عبور: "
+
+#: functions.php:1485 functions.php:1515
+msgid "ViraClub ID: "
+msgstr "شناسه ViraClub : "
+
+#: functions.php:1506
+msgid "Welcome to "
+msgstr "خوش آمدید به "
+
+#: functions.php:1507
+msgid "Hello,"
+msgstr "سلام، "
+
+#: functions.php:1509
+msgid "Welcome to Our Site"
+msgstr "به سایت ما خوش آمدید"
+
+#: functions.php:1526
 msgid "ViraClub ID"
 msgstr "شماره عضویت"
 
-#: functions.php:1563 searchform.php:3
+#: functions.php:1598 functions.php:1605 searchform.php:3
 msgid "Search for:"
 msgstr "جستجو برای : "
 

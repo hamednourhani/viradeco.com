@@ -1128,8 +1128,10 @@ function viradeco_create_account(){
                          //exit;
                          
 
-                         viradeco_new_user_notification($user_id,$pass);
-                         log_me_the_f_in( $user_id );
+                        viradeco_send_registration_admin_email($user_id);
+                        viradeco_user_registration_welcome_email($user_id);
+
+                        log_me_the_f_in( $user_id );
                      } else {
                         
                          var_dump($user_id->get_error_message());
@@ -1462,30 +1464,67 @@ function log_me_the_f_in( $user_id ) {
     wp_set_auth_cookie($user_id);
     do_action('wp_login', $username, $user);
 }
-// function viradeco_send_activation_email($user_id){
-//   $hash = md5( $random_number );
-//   add_user_meta( $user_id, 'hash', $hash );
 
-//   $user_info = get_userdata($user_id);
-//   $to = $user_info->user_email;           
-//   $un = $user_info->user_name;           
-//   $pw = $user_info->user_password;           
 
-//   $subject = 'Member Verification'; 
-//   $message = 'Hello,';
-//   $message .= "\n\n";
-//   $message .= 'Welcome...';
-//   $message .= "\n\n";
-//   $message .= 'Username: '.$un;
-//   $message .= "\n";
-//   $message .= 'Password: '.$pw;
-//   $message .= "\n\n";
-//   $message .= 'Please click this link to activate your account:';
-//   $message .= home_url('/').'activate?id='.$un.'&key='.$hash;
-//   $headers = 'From: noreply@test.com' . "\r\n";           
-//   wp_mail($to, $subject, $message, $headers); 
-// }
-// add_action( 'user_register', 'viradeco_send_activation_email' );
+function viradeco_send_registration_admin_email($user_id){
+  // $hash = md5( $random_number );
+  // add_user_meta( $user_id, 'hash', $hash );
+  
+  
+
+  $message = '';
+  $user_info = get_userdata($user_id);
+  $to = get_option('admin_email');           
+  $un = $user_info->display_name;           
+  $pw = $user_info->user_pass;
+  $viraclub_id = get_user_meta( $user_id, 'viraclub', 1);
+
+  $subject = __('New User Have Registered ','viradeco').get_option('blogname'); 
+  
+  $message .= __('Username: ','viradeco').$un;
+  $message .= "\n";
+  $message .= __('Password: ','viradeco').$pw;
+  $message .= "\n\n";
+  $message .= __('ViraClub ID: ','viradeco').'V'.$viraclub_id;
+
+    
+  //$message .= 'Please click this link to activate your account:';
+  // $message .= home_url('/').'activate?id='.$un.'&key='.$hash;
+  $headers = 'From: <info@viradeco.com>' . "\r\n";           
+  wp_mail($to, $subject, $message); 
+}
+add_action( 'user_register', 'viradeco_send_registration_admin_email' );
+
+
+function viradeco_user_registration_welcome_email($user_id){
+  // $hash = md5( $random_number );
+  // add_user_meta( $user_id, 'hash', $hash );
+  
+  $admin_email = get_option('admin_email');
+
+  $user_info = get_userdata($user_id);
+  $to = $user_info->user_email;           
+  $un = $user_info->display_name;           
+  $pw = $user_info->user_pass;
+  $viraclub_id = get_user_meta( $user_id, 'viraclub', 1);
+
+  $subject = __('Welcome to ','viradeco').get_option('blogname'); 
+  $message = __('Hello,','viradeco').$un;
+  $message .= "\n\n";
+  $message .= __('Welcome to Our Site','viradeco');
+  $message .= "\n\n";
+  $message .= __('Username: ','viradeco').$un;
+  $message .= "\n";
+  $message .= __('Password: ','viradeco').$pw;
+  $message .= "\n\n";
+  $message .= __('ViraClub ID: ','viradeco').'V'.$viraclub_id;
+  //$message .= 'Please click this link to activate your account:';
+  // $message .= home_url('/').'activate?id='.$un.'&key='.$hash;
+  $headers = 'From: <info@viradeco.com>'."\r\n";           
+  wp_mail($to, $subject, $message); 
+}
+add_action( 'user_register', 'viradeco_user_registration_welcome_email' );
+
 
 //add columns to User panel list page
 function Viradeco_add_user_columns($column) {
