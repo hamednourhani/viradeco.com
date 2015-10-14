@@ -162,13 +162,13 @@ function viradeco_scripts_and_styles() {
 
 		//adding scripts file in the footer
 		
-		wp_register_script( 'modernizr-viradeco', get_stylesheet_directory_uri() . '/js/lib/modernizr-viradeco.js', array(), '', false );
+		
 		
 		wp_register_script( 'scrolltofixed', get_stylesheet_directory_uri() . '/js/lib/jquery-scrolltofixed-min.js', array('jquery'), '', true );
 		wp_register_script( 'onscreen', get_stylesheet_directory_uri() . '/js/lib/jquery.onscreen.min.js', array('jquery'), '', true );
 		wp_register_script( 'respond-js', get_stylesheet_directory_uri() . '/js/lib/respond.js', array(), '', false );
 		wp_register_script( 'pie', get_stylesheet_directory_uri() . '/js/lib/PIE.js', array('jquery'), '', false );
-		wp_register_script( 'flexie', get_stylesheet_directory_uri() . '/js//lib/flexie.js', array('jquery'), '', false );
+		wp_register_script( 'flexie', get_stylesheet_directory_uri() . '/js/lib/flexie.js', array('jquery'), '', false );
 		wp_register_script( 'selectivizr', get_stylesheet_directory_uri() . '/js/lib/selectivizr-min.js', array(), '', false );
 		wp_register_script( 'cssfx', get_stylesheet_directory_uri() . '/js/lib/cssfx.js', array(), '', false );
 		wp_register_script( 'viradeco-js', get_stylesheet_directory_uri() . '/js/scripts.js', array('jquery','scrolltofixed','onscreen'), '', true );
