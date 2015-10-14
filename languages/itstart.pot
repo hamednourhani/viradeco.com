@@ -1,0 +1,1429 @@
+# Copyright (C) 2015 iTstar
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: viradeco 1.0\n"
+"Report-Msgid-Bugs-To: http://itstar.ir/contact-us\n"
+"POT-Creation-Date: 2015-10-14 12:28:14+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: iTstar <info@itstar.ir>\n"
+"X-Generator: grunt-wp-i18n 0.5.3\n"
+
+#: 404.php:20
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr ""
+
+#: 404.php:21
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: comments.php:18
+msgid "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr ""
+
+#: comments.php:28
+msgid "Reply<i class=\" fa fa-mail-reply\"></i>"
+msgstr ""
+
+#: comments.php:34
+msgid "<i class=\"icon-left-open\"></i> Older Comments"
+msgstr ""
+
+#: comments.php:35
+msgid "Newer Comments <i class=\"icon-right-open\"></i>"
+msgstr ""
+
+#: comments.php:40
+msgid "Comments are closed."
+msgstr ""
+
+#: footer.php:11
+msgid "Vira Co © 2015. All rights reserved."
+msgstr ""
+
+#: footer.php:14
+msgid "Designed by "
+msgstr ""
+
+#: footer.php:15
+msgid "Farakaranet "
+msgstr ""
+
+#: functions.php:92
+msgid "Slider Size"
+msgstr ""
+
+#: functions.php:93
+msgid "Slider Thumb"
+msgstr ""
+
+#: functions.php:121
+msgid "1200px by 500px"
+msgstr ""
+
+#: functions.php:122
+msgid "30px by 30px"
+msgstr ""
+
+#: functions.php:123
+msgid "53px by 53px"
+msgstr ""
+
+#: functions.php:124
+msgid "130px by 130px"
+msgstr ""
+
+#: functions.php:179
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:180
+msgid "The first (primary) sidebar."
+msgstr ""
+
+#: functions.php:188
+msgid "Footer First"
+msgstr ""
+
+#: functions.php:189
+msgid "The first footer widget area"
+msgstr ""
+
+#: functions.php:197
+msgid "Footer Second"
+msgstr ""
+
+#: functions.php:198
+msgid "The second footer widget area"
+msgstr ""
+
+#: functions.php:253
+msgid "<cite class=\"fn\">%1$s</cite> %2$s"
+msgstr ""
+
+#: functions.php:253
+msgid "(Edit)"
+msgstr ""
+
+#: functions.php:254
+msgid "F jS, Y"
+msgstr ""
+
+#: functions.php:259
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: functions.php:282
+msgid "<i class=\"fa fa-angle-double-left\"></i>"
+msgstr ""
+
+#: functions.php:283
+msgid "<i class=\"fa fa-angle-double-right\"></i>"
+msgstr ""
+
+#: functions.php:342
+msgid "Last Products Widget"
+msgstr ""
+
+#: functions.php:345
+msgid "Display Last Products"
+msgstr ""
+
+#: functions.php:394
+msgid "Last Products"
+msgstr ""
+
+#: functions.php:409 functions.php:518 functions.php:626 functions.php:736
+#: functions.php:873
+msgid "Title:"
+msgstr ""
+
+#: functions.php:413
+msgid "product Numbers :"
+msgstr ""
+
+#: functions.php:417
+msgid "Product Category :"
+msgstr ""
+
+#: functions.php:452
+msgid "Last Projects Widget"
+msgstr ""
+
+#: functions.php:455
+msgid "Display Last Projects"
+msgstr ""
+
+#: functions.php:503
+msgid "Last Projects"
+msgstr ""
+
+#: functions.php:522
+msgid "Project Numbers :"
+msgstr ""
+
+#: functions.php:526
+msgid "Project Category :"
+msgstr ""
+
+#: functions.php:558
+msgid "Last Posts By Category Widget"
+msgstr ""
+
+#: functions.php:561
+msgid "Display Last Posts in Category"
+msgstr ""
+
+#: functions.php:611 functions.php:706
+msgid "Last Posts"
+msgstr ""
+
+#: functions.php:630
+msgid "Post Numbers :"
+msgstr ""
+
+#: functions.php:634
+msgid "Post Category :"
+msgstr ""
+
+#: functions.php:665
+msgid "Contact Informaion Widget"
+msgstr ""
+
+#: functions.php:668
+msgid "Display Contact Information"
+msgstr ""
+
+#: functions.php:685
+msgid "Address : "
+msgstr ""
+
+#: functions.php:686
+msgid "Phone : "
+msgstr ""
+
+#: functions.php:687
+msgid "Fax : "
+msgstr ""
+
+#: functions.php:688
+msgid "Email : "
+msgstr ""
+
+#: functions.php:740
+msgid "Address :"
+msgstr ""
+
+#: functions.php:744
+msgid "Phone Number :"
+msgstr ""
+
+#: functions.php:749
+msgid "Fax Number :"
+msgstr ""
+
+#: functions.php:754
+msgid "Email Address :"
+msgstr ""
+
+#: functions.php:781
+msgid "Social Networks Widget"
+msgstr ""
+
+#: functions.php:784
+msgid "Social Networks and Important links"
+msgstr ""
+
+#: functions.php:809
+msgid "Download Cataloge"
+msgstr ""
+
+#: functions.php:810
+msgid "Send Email"
+msgstr ""
+
+#: functions.php:811
+msgid "Login"
+msgstr ""
+
+#: functions.php:829
+msgid "Social Links"
+msgstr ""
+
+#: functions.php:877
+msgid "Google Plus Url :"
+msgstr ""
+
+#: functions.php:881
+msgid "Facebook Url :"
+msgstr ""
+
+#: functions.php:885
+msgid "Linkedin Url :"
+msgstr ""
+
+#: functions.php:889
+msgid "Instagram Url :"
+msgstr ""
+
+#: functions.php:893
+msgid "Catalog Download url :"
+msgstr ""
+
+#: functions.php:897
+msgid "Send Email Url :"
+msgstr ""
+
+#: functions.php:901
+msgid "Login Url :"
+msgstr ""
+
+#: functions.php:1140
+msgid "Another user have been registered by this User Name or Email"
+msgstr ""
+
+#: functions.php:1144
+msgid "Anti Spam is Not correct!"
+msgstr ""
+
+#: functions.php:1148
+msgid "Please fill the required fields : User Name - Email - Password"
+msgstr ""
+
+#: functions.php:1194
+msgid "Vira Club Registeration"
+msgstr ""
+
+#: functions.php:1195
+msgid "Login to Site"
+msgstr ""
+
+#: functions.php:1202
+msgid "First Name"
+msgstr ""
+
+#: functions.php:1203
+msgid "Last Name"
+msgstr ""
+
+#: functions.php:1204
+msgid "UserName"
+msgstr ""
+
+#: functions.php:1205
+msgid "Birthday"
+msgstr ""
+
+#: functions.php:1207 functions.php:1399
+msgid "Birth Month"
+msgstr ""
+
+#: functions.php:1209 functions.php:1407
+msgid "Birth Year"
+msgstr ""
+
+#: functions.php:1211 functions.php:1423
+msgid "Job"
+msgstr ""
+
+#: functions.php:1212 functions.php:1415 functions.php:1532
+msgid "Phone"
+msgstr ""
+
+#: functions.php:1214 functions.php:1533
+msgid "Email"
+msgstr ""
+
+#: functions.php:1215
+msgid "Password"
+msgstr ""
+
+#: functions.php:1216
+msgid "At least 6 character."
+msgstr ""
+
+#: functions.php:1219
+msgid "Submit"
+msgstr ""
+
+#: functions.php:1254
+msgid "User Profile"
+msgstr ""
+
+#: functions.php:1258
+msgid "first name: "
+msgstr ""
+
+#: functions.php:1259
+msgid "last name: "
+msgstr ""
+
+#: functions.php:1260 functions.php:1484 functions.php:1516
+msgid "Username: "
+msgstr ""
+
+#: functions.php:1262
+msgid "Birthday: "
+msgstr ""
+
+#: functions.php:1263
+msgid "Phone: "
+msgstr ""
+
+#: functions.php:1264
+msgid "Email: "
+msgstr ""
+
+#: functions.php:1265
+msgid "Job: "
+msgstr ""
+
+#: functions.php:1267
+msgid "Vira Club ID: "
+msgstr ""
+
+#: functions.php:1270
+msgid "Logout"
+msgstr ""
+
+#: functions.php:1301 taxonomy-project_cat.php:16
+msgid "Title"
+msgstr ""
+
+#: functions.php:1388
+msgid "Extra profile information"
+msgstr ""
+
+#: functions.php:1391
+msgid "birthday"
+msgstr ""
+
+#: functions.php:1395
+msgid "Please enter your Birthday."
+msgstr ""
+
+#: functions.php:1403
+msgid "Please enter your Birth Month."
+msgstr ""
+
+#: functions.php:1411
+msgid "Please enter your Birth Year."
+msgstr ""
+
+#: functions.php:1419
+msgid "Please enter your phone."
+msgstr ""
+
+#: functions.php:1427
+msgid "Please enter your Job."
+msgstr ""
+
+#: functions.php:1431
+msgid "Vira club ID"
+msgstr ""
+
+#: functions.php:1482
+msgid "New User Have Registered "
+msgstr ""
+
+#: functions.php:1486 functions.php:1518
+msgid "Password: "
+msgstr ""
+
+#: functions.php:1488 functions.php:1520
+msgid "ViraClub ID: "
+msgstr ""
+
+#: functions.php:1511
+msgid "Welcome to "
+msgstr ""
+
+#: functions.php:1512
+msgid "Hello,"
+msgstr ""
+
+#: functions.php:1514
+msgid "Welcome to Our Site"
+msgstr ""
+
+#: functions.php:1531
+msgid "ViraClub ID"
+msgstr ""
+
+#: functions.php:1603 functions.php:1610 searchform.php:3
+msgid "Search for:"
+msgstr ""
+
+#: header.php:78
+msgid "Create Your Own Ideas"
+msgstr ""
+
+#: header.php:96 library/viradeco.php:272
+msgid "The Main Menu"
+msgstr ""
+
+#: header.php:112
+msgid "Main Menu"
+msgstr ""
+
+#: library/banner-maker.php:26
+msgid "Search Results for: %s"
+msgstr ""
+
+#: library/cmb/example-functions.php:82
+msgid "Test Metabox"
+msgstr ""
+
+#: library/cmb/example-functions.php:93 library/cmb/example-functions.php:380
+msgid "Test Text"
+msgstr ""
+
+#: library/cmb/example-functions.php:94 library/cmb/example-functions.php:106
+#: library/cmb/example-functions.php:114 library/cmb/example-functions.php:122
+#: library/cmb/example-functions.php:131 library/cmb/example-functions.php:139
+#: library/cmb/example-functions.php:153 library/cmb/example-functions.php:160
+#: library/cmb/example-functions.php:168 library/cmb/example-functions.php:185
+#: library/cmb/example-functions.php:194 library/cmb/example-functions.php:202
+#: library/cmb/example-functions.php:209 library/cmb/example-functions.php:216
+#: library/cmb/example-functions.php:230 library/cmb/example-functions.php:243
+#: library/cmb/example-functions.php:256 library/cmb/example-functions.php:268
+#: library/cmb/example-functions.php:277 library/cmb/example-functions.php:285
+#: library/cmb/example-functions.php:294 library/cmb/example-functions.php:301
+#: library/cmb/example-functions.php:315 library/cmb/example-functions.php:381
+#: library/cmb/example-functions.php:475 library/cmb/example-functions.php:483
+#: library/cmb/example-functions.php:490 library/cmb/example-functions.php:497
+#: library/cmb/example-functions.php:504 library/cmb/example-functions.php:511
+#: library/cmb/example-functions.php:518 library/cmb/example-functions.php:556
+msgid "field description (optional)"
+msgstr ""
+
+#: library/cmb/example-functions.php:105
+msgid "Test Text Small"
+msgstr ""
+
+#: library/cmb/example-functions.php:113
+msgid "Test Text Medium"
+msgstr ""
+
+#: library/cmb/example-functions.php:121
+msgid "Website URL"
+msgstr ""
+
+#: library/cmb/example-functions.php:130
+msgid "Test Text Email"
+msgstr ""
+
+#: library/cmb/example-functions.php:138
+msgid "Test Time"
+msgstr ""
+
+#: library/cmb/example-functions.php:145 library/cmb/example-functions.php:146
+msgid "Time zone"
+msgstr ""
+
+#: library/cmb/example-functions.php:152
+msgid "Test Date Picker"
+msgstr ""
+
+#: library/cmb/example-functions.php:159
+msgid "Test Date Picker (UNIX timestamp)"
+msgstr ""
+
+#: library/cmb/example-functions.php:167
+msgid "Test Date/Time Picker Combo (UNIX timestamp)"
+msgstr ""
+
+#: library/cmb/example-functions.php:184
+msgid "Test Money"
+msgstr ""
+
+#: library/cmb/example-functions.php:193
+msgid "Test Color Picker"
+msgstr ""
+
+#: library/cmb/example-functions.php:201
+msgid "Test Text Area"
+msgstr ""
+
+#: library/cmb/example-functions.php:208
+msgid "Test Text Area Small"
+msgstr ""
+
+#: library/cmb/example-functions.php:215
+msgid "Test Text Area for Code"
+msgstr ""
+
+#: library/cmb/example-functions.php:222
+msgid "Test Title Weeeee"
+msgstr ""
+
+#: library/cmb/example-functions.php:223
+msgid "This is a title description"
+msgstr ""
+
+#: library/cmb/example-functions.php:229
+msgid "Test Select"
+msgstr ""
+
+#: library/cmb/example-functions.php:235 library/cmb/example-functions.php:248
+#: library/cmb/example-functions.php:260
+msgid "Option One"
+msgstr ""
+
+#: library/cmb/example-functions.php:236 library/cmb/example-functions.php:249
+#: library/cmb/example-functions.php:261
+msgid "Option Two"
+msgstr ""
+
+#: library/cmb/example-functions.php:237 library/cmb/example-functions.php:250
+#: library/cmb/example-functions.php:262
+msgid "Option Three"
+msgstr ""
+
+#: library/cmb/example-functions.php:242
+msgid "Test Radio inline"
+msgstr ""
+
+#: library/cmb/example-functions.php:255
+msgid "Test Radio"
+msgstr ""
+
+#: library/cmb/example-functions.php:267
+msgid "Test Taxonomy Radio"
+msgstr ""
+
+#: library/cmb/example-functions.php:276
+msgid "Test Taxonomy Select"
+msgstr ""
+
+#: library/cmb/example-functions.php:284
+msgid "Test Taxonomy Multi Checkbox"
+msgstr ""
+
+#: library/cmb/example-functions.php:293
+msgid "Test Checkbox"
+msgstr ""
+
+#: library/cmb/example-functions.php:300
+msgid "Test Multi Checkbox"
+msgstr ""
+
+#: library/cmb/example-functions.php:306
+msgid "Check One"
+msgstr ""
+
+#: library/cmb/example-functions.php:307
+msgid "Check Two"
+msgstr ""
+
+#: library/cmb/example-functions.php:308
+msgid "Check Three"
+msgstr ""
+
+#: library/cmb/example-functions.php:314
+msgid "Test wysiwyg"
+msgstr ""
+
+#: library/cmb/example-functions.php:322
+msgid "Test Image"
+msgstr ""
+
+#: library/cmb/example-functions.php:323
+msgid "Upload an image or enter a URL."
+msgstr ""
+
+#: library/cmb/example-functions.php:329
+msgid "Multiple Files"
+msgstr ""
+
+#: library/cmb/example-functions.php:330 library/cmb-functions.php:151
+#: library/cmb-functions.php:281
+msgid "Upload or add multiple images/attachments."
+msgstr ""
+
+#: library/cmb/example-functions.php:337
+msgid "oEmbed"
+msgstr ""
+
+#: library/cmb/example-functions.php:338
+msgid ""
+"Enter a youtube, twitter, or instagram URL. Supports services listed at <a "
+"href=\"http://codex.wordpress.org/Embeds\">http://codex.wordpress.org/"
+"Embeds</a>."
+msgstr ""
+
+#: library/cmb/example-functions.php:371
+msgid "About Page Metabox"
+msgstr ""
+
+#: library/cmb/example-functions.php:402
+msgid "Repeating Field Group"
+msgstr ""
+
+#: library/cmb/example-functions.php:410
+msgid "Generates reusable form entries"
+msgstr ""
+
+#: library/cmb/example-functions.php:412
+msgid "Entry {#}"
+msgstr ""
+
+#: library/cmb/example-functions.php:413
+msgid "Add Another Entry"
+msgstr ""
+
+#: library/cmb/example-functions.php:414
+msgid "Remove Entry"
+msgstr ""
+
+#: library/cmb/example-functions.php:426
+msgid "Entry Title"
+msgstr ""
+
+#: library/cmb/example-functions.php:433
+msgid "Description"
+msgstr ""
+
+#: library/cmb/example-functions.php:434
+msgid "Write a short description for this entry"
+msgstr ""
+
+#: library/cmb/example-functions.php:440
+msgid "Entry Image"
+msgstr ""
+
+#: library/cmb/example-functions.php:446
+msgid "Image Caption"
+msgstr ""
+
+#: library/cmb/example-functions.php:467
+msgid "User Profile Metabox"
+msgstr ""
+
+#: library/cmb/example-functions.php:474
+msgid "Extra Info"
+msgstr ""
+
+#: library/cmb/example-functions.php:482
+msgid "Avatar"
+msgstr ""
+
+#: library/cmb/example-functions.php:489
+msgid "Facebook URL"
+msgstr ""
+
+#: library/cmb/example-functions.php:496
+msgid "Twitter URL"
+msgstr ""
+
+#: library/cmb/example-functions.php:503
+msgid "Google+ URL"
+msgstr ""
+
+#: library/cmb/example-functions.php:510
+msgid "Linkedin URL"
+msgstr ""
+
+#: library/cmb/example-functions.php:517
+msgid "User Field"
+msgstr ""
+
+#: library/cmb/example-functions.php:540
+msgid "Theme Options Metabox"
+msgstr ""
+
+#: library/cmb/example-functions.php:555
+msgid "Site Background Color"
+msgstr ""
+
+#: library/cmb/includes/CMB2.php:120
+msgid "Metabox configuration is required to have an ID parameter"
+msgstr ""
+
+#: library/cmb/includes/CMB2.php:326
+msgid "Click to toggle"
+msgstr ""
+
+#: library/cmb/includes/CMB2_Ajax.php:40
+msgid "Please Try Again"
+msgstr ""
+
+#: library/cmb/includes/CMB2_Ajax.php:135
+msgid "Remove Embed"
+msgstr ""
+
+#: library/cmb/includes/CMB2_Ajax.php:139
+msgid "No oEmbed Results Found for %s. View more info at"
+msgstr ""
+
+#: library/cmb/includes/CMB2_Field.php:891
+msgid "Add Group"
+msgstr ""
+
+#: library/cmb/includes/CMB2_Field.php:892
+msgid "Remove Group"
+msgstr ""
+
+#: library/cmb/includes/CMB2_Field.php:914
+#: library/cmb/includes/CMB2_Field.php:918
+msgid "None"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:86 library/cmb/includes/CMB2_JS.php:119
+msgid "Clear"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:87
+msgid "Default"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:88
+msgid "Select Color"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:89
+msgid "Current Color"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:110
+msgid "Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:111
+msgid "Su, Mo, Tu, We, Th, Fr, Sa"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:112
+msgid "Sun, Mon, Tue, Wed, Thu, Fri, Sat"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:113
+msgid ""
+"January, February, March, April, May, June, July, August, September, "
+"October, November, December"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:114
+msgid "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:115
+msgid "Next"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:116
+msgid "Prev"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:117
+msgid "Today"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:118 library/cmb/includes/CMB2_JS.php:128
+msgid "Done"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:122
+msgid "Choose Time"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:123
+msgid "Time"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:124
+msgid "Hour"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:125
+msgid "Minute"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:126
+msgid "Second"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:127
+msgid "Now"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:135
+msgid "Use this file"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:136 library/cmb/includes/CMB2_Types.php:983
+msgid "Remove Image"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:137 library/cmb/includes/CMB2_Types.php:356
+#: library/cmb/includes/CMB2_Types.php:1002
+msgid "Remove"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:138 library/cmb/includes/CMB2_Types.php:997
+msgid "File:"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:139
+#: library/cmb/includes/CMB2_Types.php:1000
+msgid "Download"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:140
+msgid "Select / Deselect All"
+msgstr ""
+
+#: library/cmb/includes/CMB2_Types.php:297
+msgid "Add Row"
+msgstr ""
+
+#: library/cmb/includes/CMB2_Types.php:734
+#: library/cmb/includes/CMB2_Types.php:782
+msgid "No terms"
+msgstr ""
+
+#: library/cmb/includes/CMB2_Types.php:847
+msgid "Add or Upload Files"
+msgstr ""
+
+#: library/cmb/includes/CMB2_Types.php:907
+msgid "Add or Upload File"
+msgstr ""
+
+#: library/cmb/includes/helper-functions.php:249
+msgid "Save"
+msgstr ""
+
+#: library/cmb-functions.php:112
+msgid "Product Features"
+msgstr ""
+
+#: library/cmb-functions.php:120
+msgid "Add Product features"
+msgstr ""
+
+#: library/cmb-functions.php:122 library/cmb-functions.php:222
+msgid "feature {#}"
+msgstr ""
+
+#: library/cmb-functions.php:123 library/cmb-functions.php:223
+msgid "Add Another feature"
+msgstr ""
+
+#: library/cmb-functions.php:124 library/cmb-functions.php:224
+msgid "Remove feature"
+msgstr ""
+
+#: library/cmb-functions.php:132 library/cmb-functions.php:232
+msgid "Feature Name"
+msgstr ""
+
+#: library/cmb-functions.php:133 library/cmb-functions.php:233
+msgid "write the feature name "
+msgstr ""
+
+#: library/cmb-functions.php:141
+msgid "Feature Description "
+msgstr ""
+
+#: library/cmb-functions.php:142
+msgid "write the feature Description if needed"
+msgstr ""
+
+#: library/cmb-functions.php:150 library/cmb-functions.php:280
+msgid "Images"
+msgstr ""
+
+#: library/cmb-functions.php:177
+msgid "Project Date"
+msgstr ""
+
+#: library/cmb-functions.php:190
+msgid "Date"
+msgstr ""
+
+#: library/cmb-functions.php:191
+msgid "Enter Project Date"
+msgstr ""
+
+#: library/cmb-functions.php:212
+msgid "Project Features"
+msgstr ""
+
+#: library/cmb-functions.php:220
+msgid "Add Project features"
+msgstr ""
+
+#: library/cmb-functions.php:241
+msgid "Feature Value"
+msgstr ""
+
+#: library/cmb-functions.php:242
+msgid "write the feature Value "
+msgstr ""
+
+#: library/cmb-functions.php:267
+msgid "Project Images"
+msgstr ""
+
+#: library/cmb-functions.php:309
+msgid "Page Banner"
+msgstr ""
+
+#: library/cmb-functions.php:322
+msgid "Banner"
+msgstr ""
+
+#: library/cmb-functions.php:323
+msgid "Choose Banner Mod, SlideShow , Image Banner or Nothing"
+msgstr ""
+
+#: library/cmb-functions.php:328
+msgid "Slider"
+msgstr ""
+
+#: library/cmb-functions.php:329
+msgid "Image"
+msgstr ""
+
+#: library/cmb-functions.php:342
+msgid "Slider Shortcode"
+msgstr ""
+
+#: library/cmb-functions.php:343
+msgid "write this page Revolotion Slider shortcode with alis name here"
+msgstr ""
+
+#: library/cmb-functions.php:350
+msgid "Banner Image"
+msgstr ""
+
+#: library/cmb-functions.php:351
+msgid "Upload an image to show as the banner"
+msgstr ""
+
+#: library/comment-form.php:8
+msgid ""
+"<span class=\"required\">Please fill the fields marked by <i "
+"class=\"icon-star\"></i></span>"
+msgstr ""
+
+#: library/comment-form.php:13
+msgid "Leave a Reply"
+msgstr ""
+
+#: library/comment-form.php:14
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: library/comment-form.php:15
+msgid "Cancel Reply<i class=\"fa fa-remove\"></i>"
+msgstr ""
+
+#: library/comment-form.php:16
+msgid "Post Comment"
+msgstr ""
+
+#: library/comment-form.php:18
+msgid "<i class=\"icon-doc-text\"></i> Comment"
+msgstr ""
+
+#: library/comment-form.php:19
+msgid "your message"
+msgstr ""
+
+#: library/comment-form.php:24
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+
+#: library/comment-form.php:30
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+
+#: library/comment-form.php:37
+msgid "Your email address will not be published."
+msgstr ""
+
+#: library/comment-form.php:42
+msgid ""
+"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> "
+"tags and attributes: %s"
+msgstr ""
+
+#: library/comment-form.php:50
+msgid "<i class=\"fa fa-user\"></i> Name"
+msgstr ""
+
+#: library/comment-form.php:50
+msgid "yourname"
+msgstr ""
+
+#: library/comment-form.php:56
+msgid "<i class=\"fa fa-envelope\"></i> Email"
+msgstr ""
+
+#: library/comment-form.php:56
+msgid "yourname@example.com"
+msgstr ""
+
+#: library/comment-form.php:63
+msgid "<i class=\"fa fa-link\"></i> Website"
+msgstr ""
+
+#: library/comment-form.php:64
+msgid "www.example.com"
+msgstr ""
+
+#: library/custom-post-type.php:31 library/custom-post-type.php:32
+msgid "Product"
+msgstr ""
+
+#: library/custom-post-type.php:33
+msgid "All Products"
+msgstr ""
+
+#: library/custom-post-type.php:34 library/custom-post-type.php:79
+msgid "Add New"
+msgstr ""
+
+#: library/custom-post-type.php:35
+msgid "Add New Products"
+msgstr ""
+
+#: library/custom-post-type.php:36 library/custom-post-type.php:81
+msgid "Edit"
+msgstr ""
+
+#: library/custom-post-type.php:37
+msgid "Edit Product"
+msgstr ""
+
+#: library/custom-post-type.php:38
+msgid "New Product"
+msgstr ""
+
+#: library/custom-post-type.php:39
+msgid "View Product"
+msgstr ""
+
+#: library/custom-post-type.php:40
+msgid "Search Products"
+msgstr ""
+
+#: library/custom-post-type.php:41 library/custom-post-type.php:86
+msgid "Nothing found in the Database."
+msgstr ""
+
+#: library/custom-post-type.php:42 library/custom-post-type.php:87
+msgid "Nothing found in Trash"
+msgstr ""
+
+#: library/custom-post-type.php:45
+msgid "This is a Product"
+msgstr ""
+
+#: library/custom-post-type.php:76 library/custom-post-type.php:77
+msgid "Project"
+msgstr ""
+
+#: library/custom-post-type.php:78
+msgid "All Projects"
+msgstr ""
+
+#: library/custom-post-type.php:80
+msgid "Add New Project"
+msgstr ""
+
+#: library/custom-post-type.php:82
+msgid "Edit Project"
+msgstr ""
+
+#: library/custom-post-type.php:83
+msgid "New Project"
+msgstr ""
+
+#: library/custom-post-type.php:84
+msgid "View Project"
+msgstr ""
+
+#: library/custom-post-type.php:85
+msgid "Search Projects"
+msgstr ""
+
+#: library/custom-post-type.php:90
+msgid "This is a Project"
+msgstr ""
+
+#: library/custom-post-type.php:135
+msgid "Product Categories"
+msgstr ""
+
+#: library/custom-post-type.php:136
+msgid "Product Category"
+msgstr ""
+
+#: library/custom-post-type.php:137
+msgid "Search Product Categories"
+msgstr ""
+
+#: library/custom-post-type.php:138
+msgid "All Product Categories"
+msgstr ""
+
+#: library/custom-post-type.php:139
+msgid "Parent Product Category"
+msgstr ""
+
+#: library/custom-post-type.php:140
+msgid "Parent Product Category:"
+msgstr ""
+
+#: library/custom-post-type.php:141
+msgid "Edit Product Category"
+msgstr ""
+
+#: library/custom-post-type.php:142
+msgid "Update Product Category"
+msgstr ""
+
+#: library/custom-post-type.php:143
+msgid "Add New Product Category"
+msgstr ""
+
+#: library/custom-post-type.php:144
+msgid "New Product Category Name"
+msgstr ""
+
+#: library/custom-post-type.php:160
+msgid "Product Tags"
+msgstr ""
+
+#: library/custom-post-type.php:161
+msgid "Product Tag"
+msgstr ""
+
+#: library/custom-post-type.php:162
+msgid "Search Product Tags"
+msgstr ""
+
+#: library/custom-post-type.php:163
+msgid "All Product Tags"
+msgstr ""
+
+#: library/custom-post-type.php:164
+msgid "Parent Product Tag"
+msgstr ""
+
+#: library/custom-post-type.php:165
+msgid "Parent Product Tag:"
+msgstr ""
+
+#: library/custom-post-type.php:166
+msgid "Edit Product Tag"
+msgstr ""
+
+#: library/custom-post-type.php:167
+msgid "Update Product Tag"
+msgstr ""
+
+#: library/custom-post-type.php:168
+msgid "Add New Product Tag"
+msgstr ""
+
+#: library/custom-post-type.php:169
+msgid "New Product Tag Name"
+msgstr ""
+
+#: library/custom-post-type.php:182
+msgid "Project Categories"
+msgstr ""
+
+#: library/custom-post-type.php:183
+msgid "Project Category"
+msgstr ""
+
+#: library/custom-post-type.php:184
+msgid "Search Project Categories"
+msgstr ""
+
+#: library/custom-post-type.php:185
+msgid "All Project Categories"
+msgstr ""
+
+#: library/custom-post-type.php:186
+msgid "Parent Project Category"
+msgstr ""
+
+#: library/custom-post-type.php:187
+msgid "Parent Project Category:"
+msgstr ""
+
+#: library/custom-post-type.php:188
+msgid "Edit Project Category"
+msgstr ""
+
+#: library/custom-post-type.php:189
+msgid "Update Project Category"
+msgstr ""
+
+#: library/custom-post-type.php:190
+msgid "Add New Project Category"
+msgstr ""
+
+#: library/custom-post-type.php:191
+msgid "New Project Category Name"
+msgstr ""
+
+#: library/custom-post-type.php:207
+msgid "Project Tags"
+msgstr ""
+
+#: library/custom-post-type.php:208
+msgid "Project Tag"
+msgstr ""
+
+#: library/custom-post-type.php:209
+msgid "Search Project Tags"
+msgstr ""
+
+#: library/custom-post-type.php:210
+msgid "All Project Tags"
+msgstr ""
+
+#: library/custom-post-type.php:211
+msgid "Parent Project Tag"
+msgstr ""
+
+#: library/custom-post-type.php:212
+msgid "Parent Project Tag:"
+msgstr ""
+
+#: library/custom-post-type.php:213
+msgid "Edit Project Tag"
+msgstr ""
+
+#: library/custom-post-type.php:214
+msgid "Update Project Tag"
+msgstr ""
+
+#: library/custom-post-type.php:215
+msgid "Add New Project Tag"
+msgstr ""
+
+#: library/custom-post-type.php:216
+msgid "New Project Tag Name"
+msgstr ""
+
+#: library/notifications.php:15
+msgid "New user registration in %s:"
+msgstr ""
+
+#: library/notifications.php:16 library/notifications.php:26
+msgid "Username: %s"
+msgstr ""
+
+#: library/notifications.php:17
+msgid "E-mail: %s"
+msgstr ""
+
+#: library/notifications.php:18 library/notifications.php:28
+msgid "Vira Club ID : V%s"
+msgstr ""
+
+#: library/notifications.php:20
+msgid "New User Registration"
+msgstr ""
+
+#: library/notifications.php:25
+msgid "Your Information : "
+msgstr ""
+
+#: library/notifications.php:27
+msgid "Password: %s"
+msgstr ""
+
+#: library/notifications.php:31
+msgid "Welcome to Vira"
+msgstr ""
+
+#: library/post-meta.php:11 library/post-meta.php:32 library/post-meta.php:48
+msgid "Tags :"
+msgstr ""
+
+#: library/related-links.php:20
+msgid "related sites"
+msgstr ""
+
+#: library/viradeco.php:87
+msgid "Page %s"
+msgstr ""
+
+#: library/viradeco.php:273
+msgid "Responsive Menu"
+msgstr ""
+
+#: library/viradeco.php:304
+msgid "No Related Posts Yet!"
+msgstr ""
+
+#: library/viradeco.php:349
+msgid "Read "
+msgstr ""
+
+#: library/viradeco.php:349
+msgid "Read more &raquo;"
+msgstr ""
+
+#: searchform.php:6
+msgid "Search"
+msgstr ""
+
+#: single-project.php:32
+msgid "Date "
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "viradeco"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://viradeco.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "viradeco Portal Theme by iTstar."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "iTstar"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.itstar.ir"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Front Page"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Products Page"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:109
+msgctxt "Valid formatDate string for jquery-ui datepicker"
+msgid "mm/dd/yy"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:129
+msgctxt ""
+"Valid formatting string, as per "
+"http://trentrichardson.com/examples/timepicker/"
+msgid "hh:mm TT"
+msgstr ""

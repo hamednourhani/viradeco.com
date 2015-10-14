@@ -2,15 +2,15 @@
 /* fonts */
 @font-face {
   font-family: "Weblogma_Yekan";
-  src: url('fonts/Weblogma_Yekan.eot?1389781388');
-  src: url('fonts/Weblogma_Yekan.eot?&1389781388#iefix') format('embedded-opentype'), url('fonts/Weblogma_Yekan.ttf?1389781390') format('truetype'), url('fonts/Weblogma_Yekan.woff?1389781380') format('woff');
+  src: url('fonts/Weblogma_Yekan.eot?1444813111');
+  src: url('fonts/Weblogma_Yekan.eot?&1444813111#iefix') format('embedded-opentype'), url('fonts/Weblogma_Yekan.ttf?1444813111') format('truetype'), url('fonts/Weblogma_Yekan.woff?1444813111') format('woff');
   font-weight: "Weblogma_Yekan.svg"; }
 @font-face {
   font-family: "BKoodakBold";
-  src: url('fonts/BKoodakBold.eot?1440393555');
-  src: url('fonts/BKoodakBold.eot?&1440393555#iefix') format('embedded-opentype'), url('fonts/BKoodakBold.ttf?1440393516') format('truetype'), url('fonts/BKoodakBold.woff?1440377834') format('woff'); }
+  src: url('fonts/BKoodakBold.eot?1444813111');
+  src: url('fonts/BKoodakBold.eot?&1444813111#iefix') format('embedded-opentype'), url('fonts/BKoodakBold.ttf?1444813111') format('truetype'), url('fonts/BKoodakBold.woff?1444813111') format('woff'); }
 /* ------------susy-------- */
-/* line 14, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.5/sass/susy/language/susyone/_grid.scss */
+/* line 14, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.5/sass/susy/language/susyone/_grid.scss */
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -360,7 +360,7 @@ li.mega-menu li.menu-item > a {
   margin-left: auto;
   margin-right: auto;
   position: relative; }
-  /* line 38, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
   .layout:after {
     content: "";
     display: table;
@@ -952,5 +952,9 @@ body.pg-loading {
   35% {
     -webkit-transform: scale3D(0, 0, 1);
     transform: scale3D(0, 0, 1); } }
+/* line 1, sass/rtl/modules/_slider.scss */
+.tp-bullets.preview1 {
+  direction: ltr; }
+
 /* setting style */
 /* utilities style */

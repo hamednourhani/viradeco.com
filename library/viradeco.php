@@ -129,7 +129,7 @@ SCRIPTS & ENQUEUEING
 // loading modernizr and jquery, and reply script
 function viradeco_scripts_and_styles() {
 
-  global $wp_styles; // call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
+  global $wp_styles,$wp_scripts; // call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
 
   if (!is_admin()) {
 
@@ -162,9 +162,15 @@ function viradeco_scripts_and_styles() {
 
 		//adding scripts file in the footer
 		
+		wp_register_script( 'modernizr-viradeco', get_stylesheet_directory_uri() . '/js/lib/modernizr-viradeco.js', array(), '', false );
 		
 		wp_register_script( 'scrolltofixed', get_stylesheet_directory_uri() . '/js/lib/jquery-scrolltofixed-min.js', array('jquery'), '', true );
 		wp_register_script( 'onscreen', get_stylesheet_directory_uri() . '/js/lib/jquery.onscreen.min.js', array('jquery'), '', true );
+		wp_register_script( 'respond-js', get_stylesheet_directory_uri() . '/js/lib/respond.js', array(), '', false );
+		wp_register_script( 'pie', get_stylesheet_directory_uri() . '/js/lib/PIE.js', array('jquery'), '', false );
+		wp_register_script( 'flexie', get_stylesheet_directory_uri() . '/js//lib/flexie.js', array('jquery'), '', false );
+		wp_register_script( 'selectivizr', get_stylesheet_directory_uri() . '/js/lib/selectivizr-min.js', array(), '', false );
+		wp_register_script( 'cssfx', get_stylesheet_directory_uri() . '/js/lib/cssfx.js', array(), '', false );
 		wp_register_script( 'viradeco-js', get_stylesheet_directory_uri() . '/js/scripts.js', array('jquery','scrolltofixed','onscreen'), '', true );
 		
 		
@@ -173,6 +179,9 @@ function viradeco_scripts_and_styles() {
 		//wp_enqueue_script( 'please-wait-custom' );
 		//wp_enqueue_script( 'viradeco-modernizr' );
 	
+		wp_enqueue_script( 'modernizr-viradeco' );
+
+
 		wp_enqueue_style('font-awesome' );
 		wp_enqueue_style( 'viradeco-stylesheet' );
 		if(is_rtl()){
@@ -181,16 +190,28 @@ function viradeco_scripts_and_styles() {
 		wp_enqueue_style( 'viradeco-ie-only' );
 
 		$wp_styles->add_data( 'viradeco-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
+		
+		
 
 		/*
 		I recommend using a plugin to call jQuery
 		using the google cdn. That way it stays cached
 		and your site will load faster.
 		*/
+		if(preg_match('/(?i)msie [5-8]/',$_SERVER['HTTP_USER_AGENT'])){
+			// if IE<=8
+			wp_enqueue_script( 'respond-js' );
+			wp_enqueue_script( 'pie' );
+			wp_enqueue_script( 'flexie' );
+			wp_enqueue_script( 'selectivizr' );
+			wp_enqueue_script( 'cssfx' );
+		}
+
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'scrolltofixed' );
 
 		wp_enqueue_script( 'onscreen' );
+		
 		wp_enqueue_script( 'viradeco-js' );
 		
 
