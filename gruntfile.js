@@ -9,6 +9,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-curl');
     grunt.loadNpmTasks('grunt-phpdocumentor');
+    grunt.loadNpmTasks('grunt-postcss');
     grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		
@@ -91,8 +92,26 @@ module.exports = function(grunt) {
 		           config : 'config.rb'
 		          
 		        }
+		    },//dev
+		    ie: {
+		        options: {
+		           //banner: '/*! <%= pkg.name %> <%= pkg.version %> style.css <%= grunt.template.today("yyyy-mm-dd h:MM:ss TT") %> */\n',
+		           config : 'ie-config.rb'
+		          
+		        }
 		    }//dev
 		},//compass
+
+		postcss: {
+	        options: {
+	            processors: [
+	                require('oldie')({/*options*/})
+	            ]
+	        },
+	        dist: {
+	            src: 'css/ie/*.css'
+	        }
+	    },
 
 		copy: {
 		     
@@ -162,7 +181,7 @@ module.exports = function(grunt) {
     		},//html
     		sass : {
     			files : ['css/sass/**/*.scss'],
-    			tasks : ['compass:dev','compass:dist','copy:css','clean']
+    			tasks : ['compass:dev','compass:dist','compass:ie','postcss:dist','copy:css','clean']
     		},
     		php : {
     			files : ['*.php','**/*.php'],

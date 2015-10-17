@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: viradeco 1.0\n"
 "Report-Msgid-Bugs-To: http://itstar.ir/contact-us\n"
-"POT-Creation-Date: 2015-10-14 12:34:23+00:00\n"
+"POT-Creation-Date: 2015-10-17 11:21:10+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -458,15 +458,15 @@ msgstr ""
 msgid "Search for:"
 msgstr ""
 
-#: header.php:78
+#: header.php:80
 msgid "Create Your Own Ideas"
 msgstr ""
 
-#: header.php:96 library/viradeco.php:272
+#: header.php:98 library/viradeco.php:285
 msgid "The Main Menu"
 msgstr ""
 
-#: header.php:112
+#: header.php:114
 msgid "Main Menu"
 msgstr ""
 
@@ -1364,19 +1364,19 @@ msgstr ""
 msgid "Page %s"
 msgstr ""
 
-#: library/viradeco.php:273
+#: library/viradeco.php:286
 msgid "Responsive Menu"
 msgstr ""
 
-#: library/viradeco.php:304
+#: library/viradeco.php:317
 msgid "No Related Posts Yet!"
 msgstr ""
 
-#: library/viradeco.php:349
+#: library/viradeco.php:362
 msgid "Read "
 msgstr ""
 
-#: library/viradeco.php:349
+#: library/viradeco.php:362
 msgid "Read more &raquo;"
 msgstr ""
 

@@ -139,21 +139,23 @@ function viradeco_scripts_and_styles() {
 		);
 		
 		// modernizr (without media query polyfill)
-		wp_register_script( 'please-wait', get_stylesheet_directory_uri() . '/js/lib/please-wait.min.js', array(), '', false );
-		wp_register_script( 'please-wait-custom', get_stylesheet_directory_uri() . '/js/please-wait-custom.js', array('please-wait'), '', false );
+		// wp_register_script( 'please-wait', get_stylesheet_directory_uri() . '/js/lib/please-wait.min.js', array(), '', false );
+		// wp_register_script( 'please-wait-custom', get_stylesheet_directory_uri() . '/js/please-wait-custom.js', array('please-wait'), '', false );
 
-		wp_localize_script( 'please-wait-custom', 'theme_info', $please_wait );
+		// wp_localize_script( 'please-wait-custom', 'theme_info', $please_wait );
 
 
 
-		wp_register_script( 'viradeco-modernizr', get_stylesheet_directory_uri() . '/js/lib/modernizr.custom.min.js', array(), '2.5.3', false );
+		
 
 		// register main stylesheet
 		
 		wp_register_style( 'font-awesome', get_stylesheet_directory_uri() . '/css/font-awesome.min.css', array(), '', 'all' );
 		wp_register_style( 'viradeco-stylesheet', get_stylesheet_directory_uri() . '/css/style.css', array(), '', 'all' );
+		wp_register_style( 'viradeco-ie-stylesheet', get_stylesheet_directory_uri() . '/css/ie/style.css', array(), '', 'all' );
 		wp_register_style( 'viradeco-rtl-stylesheet', get_stylesheet_directory_uri() . '/css/rtl.css', array('viradeco-stylesheet'), '', 'all' );
-		wp_register_style( 'viradeco-ie-only', get_stylesheet_directory_uri() . '/css/ie.css', array(), '' );
+		wp_register_style( 'viradeco-ie-rtl-stylesheet', get_stylesheet_directory_uri() . '/css/ie/rtl.css', array('viradeco-stylesheet'), '', 'all' );
+		wp_register_style( 'viradeco-ie-only', get_stylesheet_directory_uri() . '/css/ie/ie.css', array(), '' );
 
     // comment reply script for threaded comments
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
@@ -163,14 +165,15 @@ function viradeco_scripts_and_styles() {
 		//adding scripts file in the footer
 		
 		
-		
-		wp_register_script( 'scrolltofixed', get_stylesheet_directory_uri() . '/js/lib/jquery-scrolltofixed-min.js', array('jquery'), '', true );
-		wp_register_script( 'onscreen', get_stylesheet_directory_uri() . '/js/lib/jquery.onscreen.min.js', array('jquery'), '', true );
-		wp_register_script( 'respond-js', get_stylesheet_directory_uri() . '/js/lib/respond.js', array(), '', false );
+		wp_register_script( 'viradeco-modernizr', get_stylesheet_directory_uri() . '/js/lib/modernizr.custom.min.js', array(), '2.5.3', false );
+		wp_register_script( 'scrolltofixed', get_stylesheet_directory_uri() . '/js/lib/jquery-scrolltofixed-min.js', array('jquery'), '', false );
+		wp_register_script( 'onscreen', get_stylesheet_directory_uri() . '/js/lib/jquery.onscreen.min.js', array('jquery'), '', flase );
+		wp_register_script( 'html5shiv', get_stylesheet_directory_uri() . '/js/lib/html5shiv.js', array(), '', false );
+		// wp_register_script( 'respond-js', get_stylesheet_directory_uri() . '/js/lib/respond.js', array(), '', false );
 		wp_register_script( 'pie', get_stylesheet_directory_uri() . '/js/lib/PIE.js', array('jquery'), '', false );
 		wp_register_script( 'flexie', get_stylesheet_directory_uri() . '/js/lib/flexie.js', array('jquery'), '', false );
 		wp_register_script( 'selectivizr', get_stylesheet_directory_uri() . '/js/lib/selectivizr-min.js', array(), '', false );
-		wp_register_script( 'cssfx', get_stylesheet_directory_uri() . '/js/lib/cssfx.js', array(), '', false );
+		// wp_register_script( 'cssfx', get_stylesheet_directory_uri() . '/js/lib/cssfx.js', array(), '', false );
 		wp_register_script( 'viradeco-js', get_stylesheet_directory_uri() . '/js/scripts.js', array('jquery','scrolltofixed','onscreen'), '', true );
 		
 		
@@ -181,15 +184,32 @@ function viradeco_scripts_and_styles() {
 	
 		wp_enqueue_script( 'modernizr-viradeco' );
 
-
-		wp_enqueue_style('font-awesome' );
 		wp_enqueue_style( 'viradeco-stylesheet' );
 		if(is_rtl()){
 			wp_enqueue_style('viradeco-rtl-stylesheet');
 		}
-		wp_enqueue_style( 'viradeco-ie-only' );
 
-		$wp_styles->add_data( 'viradeco-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
+		if(preg_match('/(?i)msie [5-8]/',$_SERVER['HTTP_USER_AGENT'])){
+			// if IE<=8
+			wp_enqueue_script( 'html5shiv' );
+			
+			wp_enqueue_style( 'viradeco-ie-stylesheet' );
+			if(is_rtl()){
+				wp_enqueue_style('viradeco-ie-rtl-stylesheet');
+			}
+			wp_enqueue_style( 'viradeco-ie-only' );
+
+			wp_enqueue_script( 'firebug-lite' );
+			// wp_enqueue_script( 'respond-js' );
+			 wp_enqueue_script( 'pie' );
+			wp_enqueue_script( 'flexie' );
+			  wp_enqueue_script( 'selectivizr' );
+			// wp_enqueue_script( 'cssfx' );
+		}
+
+		wp_enqueue_style('font-awesome' );
+		
+
 		
 		
 
@@ -198,14 +218,7 @@ function viradeco_scripts_and_styles() {
 		using the google cdn. That way it stays cached
 		and your site will load faster.
 		*/
-		if(preg_match('/(?i)msie [5-8]/',$_SERVER['HTTP_USER_AGENT'])){
-			// if IE<=8
-			wp_enqueue_script( 'respond-js' );
-			wp_enqueue_script( 'pie' );
-			wp_enqueue_script( 'flexie' );
-			wp_enqueue_script( 'selectivizr' );
-			wp_enqueue_script( 'cssfx' );
-		}
+
 
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'scrolltofixed' );
