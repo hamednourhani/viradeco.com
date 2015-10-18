@@ -14,7 +14,7 @@ footer.site-footer,.site-footer{
 	
 }
 .products-area{
-	.widget.footer-first{
+	.products-widget-col{
 		@include span-columns(12,12);
 		@include at-breakpoint($medium){
 			@include span-columns(3,12);
@@ -22,6 +22,9 @@ footer.site-footer,.site-footer{
 				@include span-columns(3 omega,12);
 
 			}
+		}
+		.widget{
+			width : 100%;
 		}
 	}
 	

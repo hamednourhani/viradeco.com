@@ -8,15 +8,19 @@ footer.site-footer,.site-footer{
 	
 }
 .products-area{
-	.widget.footer-first{
+	.products-widget-col{
 		@include span-columns(12,12);
 		@include at-breakpoint($medium){
 			@include span-columns(3,12);
-			margin-right : auto;
+			margin-right: auto;
 			&:nth-of-type(4n){
+				
 				@include span-columns(3 omega,12);
 
 			}
+		}
+		.widget{
+			width : 100%;
 		}
 	}
 	

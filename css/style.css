@@ -2199,36 +2199,39 @@ footer.site-footer, .site-footer {
     font-size: 90%; }
 
 /* line 17, sass/layout/_footer.scss */
-.products-area .widget.footer-first {
+.products-area .products-widget-col {
   width: 100%;
   float: left;
   margin-right: 1.53846%;
   display: inline; }
   @media (min-width: 45em) {
     /* line 17, sass/layout/_footer.scss */
-    .products-area .widget.footer-first {
+    .products-area .products-widget-col {
       width: 23.84615%;
       float: left;
       margin-right: 1.53846%; }
       /* line 21, sass/layout/_footer.scss */
-      .products-area .widget.footer-first:nth-of-type(4n) {
+      .products-area .products-widget-col:nth-of-type(4n) {
         width: 23.84615%;
         float: right;
         margin-right: 0; } }
+  /* line 26, sass/layout/_footer.scss */
+  .products-area .products-widget-col .widget {
+    width: 100%; }
 
-/* line 30, sass/layout/_footer.scss */
+/* line 33, sass/layout/_footer.scss */
 .contact-area .widget.footer-second {
   width: 100%;
   float: left;
   margin-right: 1.53846%;
   display: inline; }
   @media (min-width: 45em) {
-    /* line 30, sass/layout/_footer.scss */
+    /* line 33, sass/layout/_footer.scss */
     .contact-area .widget.footer-second {
       width: 32.30769%;
       float: left;
       margin-right: 1.53846%; }
-      /* line 35, sass/layout/_footer.scss */
+      /* line 38, sass/layout/_footer.scss */
       .contact-area .widget.footer-second:nth-of-type(3n) {
         width: 32.30769%;
         float: right;

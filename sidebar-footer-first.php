@@ -2,7 +2,24 @@
 		
 		<div class="products-area">
 			<section class="layout">
-				<?php dynamic_sidebar( 'footer-first' ); ?>
+				 
+					<div class="products-widget-col">
+						<?php dynamic_sidebar( 'footer-first' ); ?>
+					</div>
+					
+					<div class="products-widget-col">
+						<?php dynamic_sidebar( 'footer-first-col2' ); ?>
+					</div>
+					
+					<div class="products-widget-col">
+						<?php dynamic_sidebar( 'footer-first-col3' ); ?>
+					</div>
+					
+					<div class="products-widget-col">
+						<?php dynamic_sidebar( 'footer-first-col4' ); ?>
+					</div>
+				
+
 				
 <!-- 
 				<aside class="widget oneFourth product-widget">
