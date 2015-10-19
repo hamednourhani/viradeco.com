@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Viradeco\n"
 "POT-Creation-Date: 2015-10-18 17:38+0330\n"
-"PO-Revision-Date: 2015-10-18 17:44+0330\n"
+"PO-Revision-Date: 2015-10-19 17:25+0330\n"
 "Last-Translator: \n"
 "Language-Team: iTstar <itstarir@gmail.com>\n"
 "Language: it_IT\n"
@@ -483,7 +483,7 @@ msgstr "Cerca :"
 
 #: header.php:80
 msgid "Create Your Own Ideas"
-msgstr "Crea le tue idee proprie"
+msgstr "Crea le tue idee"
 
 #: header.php:98 library/viradeco.php:285
 msgid "The Main Menu"
