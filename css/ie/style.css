@@ -1314,7 +1314,7 @@ nav.main-menu {
     /* line 210, ../sass/layout/_header.scss */
     nav.main-menu .responsive-menu ul.responsive-nav {
       margin-top: 30px;
-      padding: 20px;
+      padding: 20px 20px 50px 20px;
       font-size: 90%; }
       /* line 215, ../sass/layout/_header.scss */
       nav.main-menu .responsive-menu ul.responsive-nav > li {
@@ -1330,14 +1330,14 @@ nav.main-menu {
           color: #CCCCCC; }
       /* line 232, ../sass/layout/_header.scss */
       nav.main-menu .responsive-menu ul.responsive-nav ul.sub-menu {
-        margin-right: 30px; }
+        margin-left: 30px; }
         /* line 234, ../sass/layout/_header.scss */
         nav.main-menu .responsive-menu ul.responsive-nav ul.sub-menu a {
           position: relative;
           color: #CCCCCC; }
           /* line 237, ../sass/layout/_header.scss */
           nav.main-menu .responsive-menu ul.responsive-nav ul.sub-menu a:before {
-            content: "\f177";
+            content: "\f178";
             position: absolute;
             left: -20px;
             top: 6px;

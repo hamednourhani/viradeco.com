@@ -256,14 +256,15 @@ nav.main-menu .responsive-menu {
     margin-right: 30px; }
     /* line 109, sass/rtl/layout/_header.scss */
     nav.main-menu .responsive-menu ul.responsive-nav ul.sub-menu a:before {
+      content: "\f177";
       left: auto;
       right: -20px; }
 
-/* line 126, sass/rtl/layout/_header.scss */
+/* line 127, sass/rtl/layout/_header.scss */
 ul.main-nav {
   font-size: 100%;
   font-weight: bold; }
-  /* line 134, sass/rtl/layout/_header.scss */
+  /* line 135, sass/rtl/layout/_header.scss */
   ul.main-nav > li.menu-item-has-children > a:after {
     content: "\f0d7";
     padding-right: 5px;
@@ -272,43 +273,43 @@ ul.main-nav {
     left: 1px;
     right: auto;
     top: 41%; }
-  /* line 147, sass/rtl/layout/_header.scss */
+  /* line 148, sass/rtl/layout/_header.scss */
   ul.main-nav > li > ul.sub-menu, ul.main-nav li ul.sub-menu {
     position: absolute;
     top: 100%;
     right: -30%;
     left: auto; }
-    /* line 159, sass/rtl/layout/_header.scss */
+    /* line 160, sass/rtl/layout/_header.scss */
     ul.main-nav > li > ul.sub-menu li.menu-item-has-children > a:after, ul.main-nav li ul.sub-menu li.menu-item-has-children > a:after {
       content: "\f0d9";
       left: 14px;
       right: auto;
       position: absolute;
       top: 16px; }
-  /* line 171, sass/rtl/layout/_header.scss */
+  /* line 172, sass/rtl/layout/_header.scss */
   ul.main-nav > li > ul.sub-menu li ul {
     right: 100%;
     left: auto;
     top: 0; }
-  /* line 180, sass/rtl/layout/_header.scss */
+  /* line 181, sass/rtl/layout/_header.scss */
   ul.main-nav ul.sub-menu li:hover ul {
     right: 100%;
     left: auto;
     top: 0; }
-  /* line 187, sass/rtl/layout/_header.scss */
+  /* line 188, sass/rtl/layout/_header.scss */
   ul.main-nav li.item-home a:before {
     margin-left: 7px;
     margin-right: auto; }
-  /* line 192, sass/rtl/layout/_header.scss */
+  /* line 193, sass/rtl/layout/_header.scss */
   ul.main-nav > li.mega-menu > ul.sub-menu {
     right: -85%;
     left: auto; }
     @media (min-width: 64em) {
-      /* line 192, sass/rtl/layout/_header.scss */
+      /* line 193, sass/rtl/layout/_header.scss */
       ul.main-nav > li.mega-menu > ul.sub-menu {
         width: 57em;
         max-width: 57em; } }
-    /* line 204, sass/rtl/layout/_header.scss */
+    /* line 205, sass/rtl/layout/_header.scss */
     ul.main-nav > li.mega-menu > ul.sub-menu > .sub-menu-wrap > li {
       font-size: smaller;
       width: 23.84615%;
@@ -322,11 +323,11 @@ ul.main-nav {
       border-right: 1px solid #CCCCCC;
       margin-right: auto;
       margin-left: auto; }
-      /* line 217, sass/rtl/layout/_header.scss */
+      /* line 218, sass/rtl/layout/_header.scss */
       ul.main-nav > li.mega-menu > ul.sub-menu > .sub-menu-wrap > li:first-child {
         border: 0px; }
       @media (min-width: 62em) {
-        /* line 204, sass/rtl/layout/_header.scss */
+        /* line 205, sass/rtl/layout/_header.scss */
         ul.main-nav > li.mega-menu > ul.sub-menu > .sub-menu-wrap > li {
           width: 15.38462%;
           float: right;
@@ -334,17 +335,17 @@ ul.main-nav {
           width: 15%;
           margin-right: auto;
           margin-left: auto; } }
-  /* line 242, sass/rtl/layout/_header.scss */
+  /* line 243, sass/rtl/layout/_header.scss */
   ul.main-nav > li.mega-menu .product-item {
     font-family: "open-sans";
     font-size: 12px; }
 
-/* line 252, sass/rtl/layout/_header.scss */
+/* line 253, sass/rtl/layout/_header.scss */
 li.mega-menu li.menu-item > a img {
   float: right;
   margin-right: 0px;
   margin-left: 5px; }
-/* line 258, sass/rtl/layout/_header.scss */
+/* line 259, sass/rtl/layout/_header.scss */
 li.mega-menu li.menu-item > a {
   text-align: right;
   font-weight: normal; }

@@ -92,18 +92,22 @@
 							<a class="responsive-logo" href="<?php echo get_bloginfo('url'); ?>">
 								<img src="<?php echo get_template_directory_uri();?>/images/viradeco-white-logo-140.png" alt="<?php echo get_bloginfo('name'); ?>"/>
 							</a>
+							<?php //$responsive_walker = new Viradeco_walker_nav_menu; ?>
 							<?php wp_nav_menu(array(
 				    					         'container' => false,                           // remove nav container
 				    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
 				    					         'menu' => __( 'The Main Menu', 'viradeco' ),  // nav name
 				    					         'menu_class' => 'nav responsive-nav cf',               // adding custom nav class
-				    					         'theme_location' => 'responsive-nav',                 // where it's located in the theme
+				    					         'theme_location' => 'responsive-menu',                 // where it's located in the theme
+				    					         //'walker'          =>  $responsive_walker,
 				    					         'before' => '',                                 // before the menu
 				        			               'after' => '',                                  // after the menu
 				        			               'link_before' => '',                            // before each link
 				        			               'link_after' => '',                             // after each link
-				        			               'depth' => 3,                                   // limit the depth of the nav
-				    					         'fallback_cb' => ''                             // fallback function (if there is one)
+				        			               'depth' => 2,                                   // limit the depth of the nav
+				    					        'fallback_cb'     => '',
+				    					         
+				    					                                    // fallback function (if there is one)
 							)); ?>
 						</div>
 

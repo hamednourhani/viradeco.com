@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: viradeco 1.0\n"
 "Report-Msgid-Bugs-To: http://itstar.ir/contact-us\n"
-"POT-Creation-Date: 2015-10-18 09:35:32+00:00\n"
+"POT-Creation-Date: 2015-11-03 13:46:10+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -294,179 +294,179 @@ msgstr ""
 msgid "Login Url :"
 msgstr ""
 
-#: functions.php:1167
+#: functions.php:1229
 msgid "Another user have been registered by this User Name or Email"
 msgstr ""
 
-#: functions.php:1171
+#: functions.php:1233
 msgid "Anti Spam is Not correct!"
 msgstr ""
 
-#: functions.php:1175
+#: functions.php:1237
 msgid "Please fill the required fields : User Name - Email - Password"
 msgstr ""
 
-#: functions.php:1221
+#: functions.php:1283
 msgid "Vira Club Registeration"
 msgstr ""
 
-#: functions.php:1222
+#: functions.php:1284
 msgid "Login to Site"
 msgstr ""
 
-#: functions.php:1229
+#: functions.php:1291
 msgid "First Name"
 msgstr ""
 
-#: functions.php:1230
+#: functions.php:1292
 msgid "Last Name"
 msgstr ""
 
-#: functions.php:1231
+#: functions.php:1293
 msgid "UserName"
 msgstr ""
 
-#: functions.php:1232
+#: functions.php:1294
 msgid "Birthday"
 msgstr ""
 
-#: functions.php:1234 functions.php:1426
+#: functions.php:1296 functions.php:1488
 msgid "Birth Month"
 msgstr ""
 
-#: functions.php:1236 functions.php:1434
+#: functions.php:1298 functions.php:1496
 msgid "Birth Year"
 msgstr ""
 
-#: functions.php:1238 functions.php:1450
+#: functions.php:1300 functions.php:1512
 msgid "Job"
 msgstr ""
 
-#: functions.php:1239 functions.php:1442 functions.php:1559
+#: functions.php:1301 functions.php:1504 functions.php:1621
 msgid "Phone"
 msgstr ""
 
-#: functions.php:1241 functions.php:1560
+#: functions.php:1303 functions.php:1622
 msgid "Email"
 msgstr ""
 
-#: functions.php:1242
+#: functions.php:1304
 msgid "Password"
 msgstr ""
 
-#: functions.php:1243
+#: functions.php:1305
 msgid "At least 6 character."
 msgstr ""
 
-#: functions.php:1246
+#: functions.php:1308
 msgid "Submit"
 msgstr ""
 
-#: functions.php:1281
+#: functions.php:1343
 msgid "User Profile"
 msgstr ""
 
-#: functions.php:1285
+#: functions.php:1347
 msgid "first name: "
 msgstr ""
 
-#: functions.php:1286
+#: functions.php:1348
 msgid "last name: "
 msgstr ""
 
-#: functions.php:1287 functions.php:1511 functions.php:1543
+#: functions.php:1349 functions.php:1573 functions.php:1605
 msgid "Username: "
 msgstr ""
 
-#: functions.php:1289
+#: functions.php:1351
 msgid "Birthday: "
 msgstr ""
 
-#: functions.php:1290
+#: functions.php:1352
 msgid "Phone: "
 msgstr ""
 
-#: functions.php:1291
+#: functions.php:1353
 msgid "Email: "
 msgstr ""
 
-#: functions.php:1292
+#: functions.php:1354
 msgid "Job: "
 msgstr ""
 
-#: functions.php:1294
+#: functions.php:1356
 msgid "Vira Club ID: "
 msgstr ""
 
-#: functions.php:1297
+#: functions.php:1359
 msgid "Logout"
 msgstr ""
 
-#: functions.php:1328 taxonomy-project_cat.php:16
+#: functions.php:1390 taxonomy-project_cat.php:16
 msgid "Title"
 msgstr ""
 
-#: functions.php:1415
+#: functions.php:1477
 msgid "Extra profile information"
 msgstr ""
 
-#: functions.php:1418
+#: functions.php:1480
 msgid "birthday"
 msgstr ""
 
-#: functions.php:1422
+#: functions.php:1484
 msgid "Please enter your Birthday."
 msgstr ""
 
-#: functions.php:1430
+#: functions.php:1492
 msgid "Please enter your Birth Month."
 msgstr ""
 
-#: functions.php:1438
+#: functions.php:1500
 msgid "Please enter your Birth Year."
 msgstr ""
 
-#: functions.php:1446
+#: functions.php:1508
 msgid "Please enter your phone."
 msgstr ""
 
-#: functions.php:1454
+#: functions.php:1516
 msgid "Please enter your Job."
 msgstr ""
 
-#: functions.php:1458
+#: functions.php:1520
 msgid "Vira club ID"
 msgstr ""
 
-#: functions.php:1509
+#: functions.php:1571
 msgid "New User Have Registered "
 msgstr ""
 
-#: functions.php:1513 functions.php:1545
+#: functions.php:1575 functions.php:1607
 msgid "Password: "
 msgstr ""
 
-#: functions.php:1515 functions.php:1547
+#: functions.php:1577 functions.php:1609
 msgid "ViraClub ID: "
 msgstr ""
 
-#: functions.php:1538
+#: functions.php:1600
 msgid "Welcome to "
 msgstr ""
 
-#: functions.php:1539
+#: functions.php:1601
 msgid "Hello,"
 msgstr ""
 
-#: functions.php:1541
+#: functions.php:1603
 msgid "Welcome to Our Site"
 msgstr ""
 
-#: functions.php:1558
+#: functions.php:1620
 msgid "ViraClub ID"
 msgstr ""
 
-#: functions.php:1630 functions.php:1637 searchform.php:3
+#: functions.php:1692 functions.php:1699 searchform.php:3
 msgid "Search for:"
 msgstr ""
 
@@ -474,11 +474,11 @@ msgstr ""
 msgid "Create Your Own Ideas"
 msgstr ""
 
-#: header.php:98 library/viradeco.php:285
+#: header.php:99 library/viradeco.php:285
 msgid "The Main Menu"
 msgstr ""
 
-#: header.php:114
+#: header.php:118
 msgid "Main Menu"
 msgstr ""
 
@@ -1380,15 +1380,15 @@ msgstr ""
 msgid "Responsive Menu"
 msgstr ""
 
-#: library/viradeco.php:317
+#: library/viradeco.php:318
 msgid "No Related Posts Yet!"
 msgstr ""
 
-#: library/viradeco.php:362
+#: library/viradeco.php:363
 msgid "Read "
 msgstr ""
 
-#: library/viradeco.php:362
+#: library/viradeco.php:363
 msgid "Read more &raquo;"
 msgstr ""
 

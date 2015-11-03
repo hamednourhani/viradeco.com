@@ -108,6 +108,7 @@ nav.main-menu{
 				a{
 					&:before{
 						@extend .fa;
+						content : "\f177";
 						left : auto;
 						right : -20px;
 					
