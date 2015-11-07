@@ -47,14 +47,34 @@ jQuery(document).ready(function($){
 		console.log('click on menu toggler');
 		var responsive_container = $('div#responsive-menu');
 		var close_button = responsive_container.children('a#close-responsive');
-		var body_wrapper = $('.body-wrapper');
-		var menu_height = $(window).height();
-		responsive_container.css('height',menu_height).addClass('show-menu');
+		var body = $('body');
+		var menu_width = responsive_container.width();
+		var window_height = $(window).height();
+		var window_width = $(window).width();
+		
+		
+		responsive_container.css({
+									'height' : window_height,
+									'width' : window_height,
+								}).addClass('show-menu');
+		body.css({
+			'overflow' : 'hidden',
+		});
+
 		
 
 		close_button.click(function(event){
 			//event.stopPropagination();
-			responsive_container.removeClass('show-menu');
+			
+			body.css({
+					'overflow' : 'auto',
+				});
+			responsive_container.css({
+										'width' : menu_width,
+									}).removeClass('show-menu');
+			
+	
+
 		});
 
 		// body_wrapper.click(function(event){
@@ -62,6 +82,7 @@ jQuery(document).ready(function($){
 		// 	responsive_container.removeClass('show-menu');
 
 		// });
+
 	});
 	
 });	
