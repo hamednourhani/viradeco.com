@@ -38,7 +38,7 @@
 		padding : 5px 0px 0px;
 		padding-left:40px;
 		padding-right  : auto;
-		@include at-breakpoint($medium) {
+		@include at-breakpoint($slarg) {
 			max-width : 150px;
 			padding : 5px 0px 0px;
 			
@@ -196,7 +196,7 @@ ul.main-nav{
 			left : auto;
 			
 			
-			@include at-breakpoint(64em){
+			@include at-breakpoint($slarg){
 				width : 57em;
 				max-width : 57em;
 			}

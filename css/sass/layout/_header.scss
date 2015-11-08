@@ -46,7 +46,7 @@
 		text-align : center;
 		padding : 5px 0px 0px;
 		padding-right:40px;
-		@include at-breakpoint($medium) {
+		@include at-breakpoint($slarg) {
 			max-width : 150px;
 			padding : 5px 0px 0px;
 		}
@@ -61,7 +61,7 @@
 			margin : 35px 18px;
 			padding : 5px 10px 3px;
 			border : 1px solid $grey2;
-			@include at-breakpoint($medium){
+			@include at-breakpoint($slarg){
 				display : none;
 			}
 			i.fa-navicon{
@@ -76,7 +76,7 @@
 	.site-desc{
 		display : none;
 		font-size : 21px;
-		@include at-breakpoint($medium) {
+		@include at-breakpoint($slarg) {
 			display : inline-block;
 		}
 		// position : absolute;
@@ -133,7 +133,7 @@ nav.main-menu{
 	
 	.search-area{
 		display: none;
-		@include at-breakpoint($medium) {
+		@include at-breakpoint($slarg) {
 		  	display : inline-block;
 		}
 		position : absolute;
@@ -170,7 +170,7 @@ nav.main-menu{
 	.responsive-menu{
 		display : block;
 		@include single-transition(all , 0.6s , ease-in-out);
-		@include at-breakpoint($medium) {
+		@include at-breakpoint($slarg) {
 		  	display: none;
 		}
 		z-index : 9999;
@@ -184,7 +184,7 @@ nav.main-menu{
 		max-width : 100%;
 		background-color : $black1;
 		padding : 10px;
-		padding-bottom: 100px;
+		padding-bottom: 150px;
 		color : $white
 		a{
 			color : $white;
@@ -209,7 +209,7 @@ nav.main-menu{
 		}
 		ul.responsive-nav{
 			margin-top : 30px;
-			padding: 20px 20px 100px 20px;
+			padding: 20px 20px 200px 20px;
 			font-size : 90%;
 			
 			&>li{
@@ -262,7 +262,7 @@ ul.main-nav{
 	padding : 0;
 	 background-color : $white2;
 	 opacity : 0;
-	 @include at-breakpoint($medium){
+	 @include at-breakpoint($slarg){
 			opacity : 1; 
 		}
 	a{
@@ -271,7 +271,7 @@ ul.main-nav{
 		padding : 20px 17px;
 		display : none;
 		
-		@include at-breakpoint($medium){
+		@include at-breakpoint($slarg){
 			display : inline-block;
 			opacity : 1; 
 		}

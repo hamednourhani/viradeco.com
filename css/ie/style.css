@@ -624,20 +624,20 @@ p {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 17, ../sass/base/_variables.scss */
+/* line 18, ../sass/base/_variables.scss */
 .fullwidth {
   width: 100%;
   float: left;
   margin-right: 1.53846%;
   display: inline; }
 
-/* line 20, ../sass/base/_variables.scss */
+/* line 21, ../sass/base/_variables.scss */
 .oneSecond {
   width: 49.23077%;
   float: left;
   margin-right: 1.53846%;
   display: inline; }
-  /* line 22, ../sass/base/_variables.scss */
+  /* line 23, ../sass/base/_variables.scss */
   .oneSecond:first-child {
     width: 49.23077%;
     float: right;
@@ -645,13 +645,13 @@ p {
     *margin-left: -1em;
     display: inline; }
 
-/* line 28, ../sass/base/_variables.scss */
+/* line 29, ../sass/base/_variables.scss */
 .oneThird {
   width: 32.30769%;
   float: left;
   margin-right: 1.53846%;
   display: inline; }
-  /* line 30, ../sass/base/_variables.scss */
+  /* line 31, ../sass/base/_variables.scss */
   .oneThird:first-child {
     width: 32.30769%;
     float: right;
@@ -659,13 +659,13 @@ p {
     *margin-left: -1em;
     display: inline; }
 
-/* line 36, ../sass/base/_variables.scss */
+/* line 37, ../sass/base/_variables.scss */
 .oneFourth {
   width: 23.84615%;
   float: left;
   margin-right: 1.53846%;
   display: inline; }
-  /* line 38, ../sass/base/_variables.scss */
+  /* line 39, ../sass/base/_variables.scss */
   .oneFourth:first-child {
     width: 23.84615%;
     float: right;
@@ -673,14 +673,14 @@ p {
     *margin-left: -1em;
     display: inline; }
 
-/* line 43, ../sass/base/_variables.scss */
+/* line 44, ../sass/base/_variables.scss */
 .Fifth {
   width: 40.76923%;
   float: left;
   margin-right: 1.53846%;
   display: inline; }
 
-/* line 47, ../sass/base/_variables.scss */
+/* line 48, ../sass/base/_variables.scss */
 .lastGrid {
   float: right;
   margin-right: 0;
@@ -1108,10 +1108,6 @@ img.wp-smiley,
     overflow: hidden;
     margin-bottom: -38px;
     -webkit-margin-after: -8px; }
-    /* line 43, ../sass/layout/_header.scss */
-    .hero .logo-wrapper {
-  max-width: 150px;
-  padding: 5px 0px 0px; }
     /* line 58, ../sass/layout/_header.scss */
     .hero .logo-wrapper a.menu-toggler {
       display: inline-block;
@@ -1119,9 +1115,6 @@ img.wp-smiley,
       margin: 35px 18px;
       padding: 5px 10px 3px;
       border: 1px solid #CCCCCC; }
-      /* line 58, ../sass/layout/_header.scss */
-      .hero .logo-wrapper a.menu-toggler {
-  display: none; }
       /* line 67, ../sass/layout/_header.scss */
       .hero .logo-wrapper a.menu-toggler i.fa-navicon {
         font-size: 140%; }
@@ -1136,9 +1129,6 @@ img.wp-smiley,
     margin-top: 40px;
     padding: 10px;
     position: relative; }
-    /* line 76, ../sass/layout/_header.scss */
-    .hero .site-desc {
-  display: inline-block; }
     /* line 90, ../sass/layout/_header.scss */
     .hero .site-desc:after {
       display: inline-block;
@@ -1251,9 +1241,6 @@ nav.main-menu {
     margin-top: 5px;
     right: 30px;
     top: 13px; }
-    /* line 134, ../sass/layout/_header.scss */
-    nav.main-menu .search-area {
-  display: inline-block; }
     /* line 143, ../sass/layout/_header.scss */
     nav.main-menu .search-area input {
       float: right;
@@ -1299,12 +1286,9 @@ nav.main-menu {
     max-width: 100%;
     background-color: #111;
     padding: 10px;
-    padding-bottom: 100px;
+    padding-bottom: 150px;
     color: #fff a;
       color-color: #fff; }
-    /* line 170, ../sass/layout/_header.scss */
-    nav.main-menu .responsive-menu {
-  display: none; }
     /* line 192, ../sass/layout/_header.scss */
     nav.main-menu .responsive-menu a.responsive-logo {
       display: inline-block;
@@ -1325,7 +1309,7 @@ nav.main-menu {
     /* line 210, ../sass/layout/_header.scss */
     nav.main-menu .responsive-menu ul.responsive-nav {
       margin-top: 30px;
-      padding: 20px 20px 100px 20px;
+      padding: 20px 20px 200px 20px;
       font-size: 90%; }
       /* line 215, ../sass/layout/_header.scss */
       nav.main-menu .responsive-menu ul.responsive-nav > li {
@@ -1364,9 +1348,6 @@ ul.main-nav {
   padding: 0;
   background-color: #F8F8F8;
   filter: alpha(opacity=0); }
-  /* line 258, ../sass/layout/_header.scss */
-  ul.main-nav {
-  filter: alpha(opacity=100); }
   /* line 268, ../sass/layout/_header.scss */
   ul.main-nav a {
     -moz-transition: all 0.2s ease-in-out 0s;
@@ -1377,10 +1358,6 @@ ul.main-nav {
     color: #929292;
     padding: 20px 17px;
     display: none; }
-    /* line 268, ../sass/layout/_header.scss */
-    ul.main-nav a {
-  display: inline-block;
-  filter: alpha(opacity=100); }
     /* line 279, ../sass/layout/_header.scss */
     ul.main-nav a:hover {
       color: #F8F8F8;

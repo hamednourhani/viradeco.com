@@ -16,20 +16,20 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 17, sass/rtl/base/_variables.scss */
+/* line 19, sass/rtl/base/_variables.scss */
 .fullwidth {
   width: 100%;
   float: right;
   margin-left: 1.53846%;
   display: inline; }
 
-/* line 20, sass/rtl/base/_variables.scss */
+/* line 22, sass/rtl/base/_variables.scss */
 .oneSecond {
   width: 49.23077%;
   float: right;
   margin-left: 1.53846%;
   display: inline; }
-  /* line 22, sass/rtl/base/_variables.scss */
+  /* line 24, sass/rtl/base/_variables.scss */
   .oneSecond:nth-child(2n) {
     width: 49.23077%;
     float: left;
@@ -37,13 +37,13 @@
     *margin-right: -1em;
     display: inline; }
 
-/* line 28, sass/rtl/base/_variables.scss */
+/* line 30, sass/rtl/base/_variables.scss */
 .oneThird {
   width: 32.30769%;
   float: right;
   margin-left: 1.53846%;
   display: inline; }
-  /* line 30, sass/rtl/base/_variables.scss */
+  /* line 32, sass/rtl/base/_variables.scss */
   .oneThird:nth-child(3n) {
     width: 32.30769%;
     float: left;
@@ -51,13 +51,13 @@
     *margin-right: -1em;
     display: inline; }
 
-/* line 36, sass/rtl/base/_variables.scss */
+/* line 38, sass/rtl/base/_variables.scss */
 .oneFourth {
   width: 23.84615%;
   float: right;
   margin-left: 1.53846%;
   display: inline; }
-  /* line 38, sass/rtl/base/_variables.scss */
+  /* line 40, sass/rtl/base/_variables.scss */
   .oneFourth:nth-child(4n) {
     width: 23.84615%;
     float: left;
@@ -65,14 +65,14 @@
     *margin-right: -1em;
     display: inline; }
 
-/* line 43, sass/rtl/base/_variables.scss */
+/* line 45, sass/rtl/base/_variables.scss */
 .Fifth {
   width: 40.76923%;
   float: right;
   margin-left: 1.53846%;
   display: inline; }
 
-/* line 47, sass/rtl/base/_variables.scss */
+/* line 49, sass/rtl/base/_variables.scss */
 .lastGrid {
   float: left;
   margin-left: 0;
@@ -173,7 +173,7 @@ body {
   padding: 5px 0px 0px;
   padding-left: 40px;
   padding-right: auto; }
-  @media (min-width: 45em) {
+  @media (min-width: 65em) {
     /* line 37, sass/rtl/layout/_header.scss */
     .hero .logo-wrapper {
       max-width: 150px;
@@ -304,7 +304,7 @@ ul.main-nav {
   ul.main-nav > li.mega-menu > ul.sub-menu {
     right: -85%;
     left: auto; }
-    @media (min-width: 64em) {
+    @media (min-width: 65em) {
       /* line 193, sass/rtl/layout/_header.scss */
       ul.main-nav > li.mega-menu > ul.sub-menu {
         width: 57em;

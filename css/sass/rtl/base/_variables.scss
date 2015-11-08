@@ -12,7 +12,9 @@ $default-transition-delay    : 0s;
 $small : 30em;
 $xmedium : 34em;
 $medium : 45em;
+$slarg : 65em;
 $larg : 75em;
+
 
 .fullwidth{
 	@include span-columns(12,12);
