@@ -141,7 +141,7 @@ nav.main-menu{
 		right : 30px;
 		top : 13px;
 		input{
-			float : right;
+			float : left;
 			@include single-transition(all, 0.8s, ease-in-out);
 			width : 130px;
 			height : 32px;
@@ -160,7 +160,7 @@ nav.main-menu{
 			content : "\f002";
 			position : absolute;
 			    top: 8px;
-			    right: 7px;
+			    left: 7px;
 			    font-size: 110%;
 			    color: $grey2;
 

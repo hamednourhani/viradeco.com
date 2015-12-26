@@ -128,7 +128,7 @@
     					         'fallback_cb' => ''                             // fallback function (if there is one)
 						)); ?>
 						
-						<div class="search-area">
+						<div class="menu-search-area">
 							<?php get_search_form( true ); ?>
 						</div>
 

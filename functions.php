@@ -1723,6 +1723,14 @@ if ( ICL_LANGUAGE_CODE=='it' || ICL_LANGUAGE_CODE=='en'){
 
 }
 
-
+function viradeco_user_only( $atts, $content = null ){
+if( null != $content && current_user_can('read') ){
+return $content;
+} else {
+$mylink = get_permalink();
+return '<p>'.__(' -- Only registered Users can Download the Catalog -- ','viradeco').'</p>';
+}
+}
+add_shortcode('onlyusers', 'viradeco_user_only');
 
 ?>
